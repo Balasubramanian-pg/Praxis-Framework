@@ -28,8 +28,6 @@
 
 - Assurance, in this context, is the oversight function that checks that all these other aspects of quality are being performed correctly.
 
----
-
 ## The Targets and Responsibility for Assurance
 
 ### The Two Targets of Assurance
@@ -48,8 +46,6 @@
 - Assurance resources will often come from a dedicated support organisation or a Project Management Office (PMO).
 
 - It is the sponsor’s responsibility to use the results and recommendations from assurance to address any issues and, in doing so, instil confidence in the management of the work.
-
----
 
 ## Performing Assurance Effectively
 
@@ -83,8 +79,6 @@
 - The intended approach to assurance, the resources required, and the schedule of planned reviews are all set out in the **assurance management plan**.
 
 - Since it is the sponsor’s responsibility to implement assurance, this plan must be prepared by the sponsor or delegated to someone who is not involved in the day-to-day management of the work being assured.
-
----
 
 ## Assurance in Projects, Programmes, and Portfolios
 
@@ -122,8 +116,6 @@
 - Typically, the organisation’s **audit committee** has a general duty for ensuring that the main board has the assurance it needs across all its operations.
 
 - In a mature organisation, this means that the assurance of projects, programmes, and portfolios ultimately flows up through the organisation to the body responsible for overall **corporate governance**.
-
----
 
 ## Flashcard Q&A
 
