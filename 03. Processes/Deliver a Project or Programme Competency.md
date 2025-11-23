@@ -72,7 +72,7 @@
     
     - It includes checking that work packages are being properly authorised, progress is being tracked accurately, and issues are being escalated correctly.
 
-> [NOTE]  
+> [!NOTE]  
 > The principles of the delivery process remain the same regardless of scale, but the competency must be adapted to reflect the context. For a small project, the manager may be managing a handful of part-time resources. For a large programme, they may be co-ordinating a vast range of internal and external teams. This could require the competency to include references to more specific functional competencies, like Manage Contracts, or specific control techniques, like Earned Value Management.
 
 ## Knowledge and Understanding
@@ -120,3 +120,4 @@
 - _Q:_The formal acceptance of completed work signifies what?
 
     - **A:** The transfer of ownership of the products from the delivery team to the management team.
+
