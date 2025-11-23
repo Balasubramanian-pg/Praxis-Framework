@@ -1,26 +1,4 @@
----
-Title: Planning 29183b71d8f380609b66d178b7c98e9f
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Planning 29183b71d8f380609b66d178b7c98e9f.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
----
- 
-
-![](white%20120.svg)
-
 # Planning
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20120.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20120.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20120.svg)Section|Integrative management|
-|![](arrow-circle-down_gray%20120.svg)Sub Area|Delivery|
 
 # Comprehensive Study Notes: Planning
 
@@ -29,8 +7,6 @@ Topic: ''
 - **Definition**: Planning is the fundamental management function that determines **what** is to be delivered, **how much** it will cost, **when** it will be delivered, **how** it will be delivered, **who** will carry it out, and how all this will be **managed**.
 
 - Planning occurs broadly at two distinct levels: **governance** and **delivery**.
-
----
 
 ## 1. Governance Level Planning (Management Plans)
 
@@ -49,8 +25,6 @@ Topic: ''
 - **Content**: They list preferred techniques, provide templates for documentation, and define key roles and responsibilities for that function.
 
 - **Quality Planning**: Because these plans ensure the quality of the P3 management processes and their deliverables, developing the governance-level plans could also be termed **‘quality planning’**.
-
----
 
 ## 2. Delivery Level Planning (Delivery Plans)
 
@@ -84,8 +58,6 @@ Topic: ''
 
 7. **How much?** The cost of the work and how it will be funded, as determined by **financial management**.
 
----
-
 ## Planning in the Life Cycle
 
 - The P3 life cycle is designed to answer these seven questions in progressive stages.
@@ -112,8 +84,6 @@ Topic: ''
 - However, the plans should be developed in collaboration with the wider team to remove ambiguity, set realistic expectations, and develop commitment.
 
 - Specialist planning expertise (e.g., schedulers, cost engineers) may be provided by a support function.
-
----
 
 ## Planning in Projects, Programmes, and Portfolios
 
@@ -143,8 +113,6 @@ Topic: ''
 
 - An exception is a standard portfolio of contracted projects for different clients, where each client may specify their own standard approaches. In this case, the portfolio management team must concentrate on supporting the project teams in their use of these varied standards.
 
----
-
 ## Flashcard Q-&A
 
 - **Q:** What are the two main levels of planning?
@@ -160,4 +128,5 @@ Topic: ''
     - **A:** A technique used on large projects and programmes where earlier phases are planned in detail, while later phases are planned at a higher level until they get closer.
 
 - **Q:** Who owns the management and delivery plans?
+
     - **A:** The P3 Manager.
