@@ -1,27 +1,3 @@
----
-Title: Sponsorship 29183b71d8f3800bba9ce133e813a435
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Sponsorship 29183b71d8f3800bba9ce133e813a435.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
----
- 
-
-![](white%20147.svg)
-
-# Sponsorship
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20147.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20147.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%20147.svg)Section|Governance|
-|![](arrow-circle-down_gray%20147.svg)Sub Area|Context|
-
 # Comprehensive Study Notes: Sponsorship
 
 ## General Principles of Sponsorship
@@ -87,8 +63,6 @@ Topic: ''
 > [!TIP]  
 > While sponsors do not need to be former project or programme managers, their job is made significantly easier if they have a good understanding of the manager's role, challenges, and processes.
 
----
-
 ## Sponsorship in Projects, Programmes, and Portfolios
 
 - The specific application of the sponsor role must reflect the context and complexity of the work being undertaken.
@@ -142,8 +116,6 @@ Topic: ''
 > [!NOTE]  
 > One effective way for a portfolio sponsor to drive improvement is by using a capability maturity framework. This provides a structured approach to assessing and developing the organisation's P3 management practices.
 
----
-
 ## Flashcard Q&A
 
 - **Q:** What is the single most important thing a sponsor is accountable for?
@@ -159,4 +131,5 @@ Topic: ''
     - **A:** It must reflect the complexity of the stakeholder environment, not just the technical scope or budget.
 
 - **Q:** How does sponsorship at the portfolio level differ from project sponsorship?
+
     - **A:** A portfolio sponsor is accountable for the overall effectiveness of the portfolio in achieving strategic objectives, rather than a single business case. Their role is also focused on promoting the P3M profession and improving organisational capability.
