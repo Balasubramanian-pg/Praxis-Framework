@@ -1,15 +1,3 @@
----
-Title: Assurance
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Assurance.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
----
- 
 # Comprehensive Study Notes: Assurance
 
 ## General Principles of Assurance
