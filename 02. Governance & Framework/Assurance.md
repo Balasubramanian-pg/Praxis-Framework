@@ -94,7 +94,7 @@
     
     - To add to this complexity, the programme manager often fulfils the role of **sponsor** for the component projects. In this position, they have responsibility for _project_ assurance but must remain independent from _programme_ assurance.
 
-> [NOTE]  
+> [!NOTE]  
 > A more mature organisation may collect all its assurance resources into a central function, such as a PMO, that is independent of all projects, programmes, and potentially even portfolios.
 
 ### Complex Environments and Integrated Assurance
