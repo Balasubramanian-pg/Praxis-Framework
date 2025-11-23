@@ -1,16 +1,3 @@
----
-Title: Deliver a Project or Programme 29283b71d8f380d7a4f2d977ab764eba
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Deliver a Project or Programme 29283b71d8f380d7a4f2d977ab764eba.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
----
- 
-
 # Deliver a Project or Programme
 
 # Comprehensive Study Notes: Deliver a Project or Programme Competency
@@ -30,8 +17,6 @@ Topic: ''
     - Formally accept work as it is completed.
     
     - Maintain effective communication with all stakeholders throughout delivery.
-
----
 
 ## Performance Criteria
 
@@ -90,8 +75,6 @@ Topic: ''
 > [NOTE]  
 > The principles of the delivery process remain the same regardless of scale, but the competency must be adapted to reflect the context. For a small project, the manager may be managing a handful of part-time resources. For a large programme, they may be co-ordinating a vast range of internal and external teams. This could require the competency to include references to more specific functional competencies, like Manage Contracts, or specific control techniques, like Earned Value Management.
 
----
-
 ## Knowledge and Understanding
 
 - An individual needs to know and understand the following principles and concepts:
@@ -120,8 +103,6 @@ Topic: ''
 - **How assurance applies to the process**
     - Understanding how to review the delivery process to provide confidence that it is being managed effectively and in accordance with the project or programme management plan.
 
----
-
 ## Flashcard Q&A
 
 - **Q:** The delivery process is based on what four-step management cycle?
@@ -137,4 +118,5 @@ Topic: ''
     - **A:** A new plan created to show how a major issue (an "exception") will be resolved. It must be submitted to the sponsor for approval.
 
 - _Q:_The formal acceptance of completed work signifies what?
+
     - **A:** The transfer of ownership of the products from the delivery team to the management team.
