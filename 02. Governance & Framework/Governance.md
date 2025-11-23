@@ -1,16 +1,3 @@
----
-Title: Governance 29283b71d8f380f79a61fc2522227726
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Governance 29283b71d8f380f79a61fc2522227726.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
----
- 
-
 # Governance
 
 # Comprehensive Study Notes: Governance in P3 Management
@@ -177,4 +164,5 @@ Topic: ''
     - **A:** A Project Support Office (PSO) is typically administrative, supporting a single project. A Centre of Excellence (CoE) is a strategic function focused on improving capability maturity and standards across the organisation.
 
 - **Q:** Why is governance particularly challenging in a joint venture?
+
     - **A:** Because it involves merging the different cultures, processes, and objectives of two or more organisations, requiring carefully negotiated agreements on decision-making, risk, and dispute resolution.
