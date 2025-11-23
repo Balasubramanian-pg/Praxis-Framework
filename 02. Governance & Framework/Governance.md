@@ -63,8 +63,6 @@
     
     - **Ethics**: Ensuring all team members act with integrity and in the best interests of the stakeholders.
 
----
-
 ## The Host Organisation's Role in Governance
 
 - Governance begins at the top. The board of the **host organisation** must ensure that P3 management is visibly and proactively promoted and supported.
@@ -82,8 +80,6 @@
 - **CoE (Centre of Excellence)**: Usually concentrates on improving capability maturity, developing standards and best practices, and supporting continuing professional development (CPD).
 
 - **CoP (Community of Practice)**: A less formal structure focused on sharing knowledge and experience among practitioners.
-
----
 
 ## Governance at the Project, Programme, and Portfolio Levels
 
@@ -125,8 +121,6 @@
 
 - However, even with different frameworks, the **core values** and ethical principles of governance should remain consistent across the entire organisation and align with corporate governance.
 
----
-
 ## Governance in Joint Ventures
 
 > [!WARNING]  
@@ -143,8 +137,6 @@
     4. **Approval Mechanisms**: Formal gates or checkpoints that give the owners the opportunity to re-evaluate their continued participation.
     
     5. **Procedures**: Clear procedures for progress reporting, independent reviews, and, crucially, dispute resolution.
-
----
 
 ## Flashcard Q&A
 
