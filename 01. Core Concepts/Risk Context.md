@@ -1,27 +1,3 @@
----
-Title: Risk context 29183b71d8f380b3b7e9d9e31abae55d
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Risk context 29183b71d8f380b3b7e9d9e31abae55d.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
----
- 
-
-![](white%20136.svg)
-
-# Risk context
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20136.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20136.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20136.svg)Section|Risk management|
-|![](arrow-circle-down_gray%20136.svg)Sub Area|Management|
-
 # Comprehensive Study Notes: Risk Context
 
 ## General Principles of Risk Context
@@ -131,4 +107,5 @@ Topic: ''
     - **A:** A risk-averse person may assess the probability and impact of a threat as higher than a risk-seeking person, leading to inconsistent and subjective assessments.
 
 - **Q:** Does every project in a portfolio need to have the same risk appetite as the overall portfolio?
+
     - **A:** No. The portfolio must be balanced with the overall risk appetite in mind, but it can contain a mix of high-risk and low-risk projects to achieve this balance.
