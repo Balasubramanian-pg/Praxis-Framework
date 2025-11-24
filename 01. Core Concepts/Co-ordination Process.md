@@ -9,7 +9,7 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 * Avoids duplication of effort, ambiguity, and operational silos
 * Drives timely decision-making and transparent communication
 
-> **info**
+> [!info]
 > Coordination is woven into every Praxis function. It is not a separate role; it is a collective discipline.
 
 ## Core Intent
@@ -82,4 +82,5 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 ## Closing Thought
 
 When coordination is done well, teams don’t feel controlled; they feel empowered. They understand how their work contributes to something larger. And the organization gains velocity with purpose.
+
 
