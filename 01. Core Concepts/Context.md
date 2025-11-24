@@ -1,16 +1,3 @@
----
-Title: Context 29283b71d8f38090a7d4d577db8d662b
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Context 29283b71d8f38090a7d4d577db8d662b.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
----
- 
-
 # Context
 
 # Comprehensive Study Notes: The P3 Management Context
@@ -228,4 +215,5 @@ Topic: ''
     - **A:** It ensures that valuable experience—both successes and failures—is captured and reused, which helps the entire organization learn and improve its delivery capability.
 
 - **Q:** How does a leader's professionalism influence a project?
+
     - **A:** A leader's professional conduct (e.g., integrity, accountability, communication) sets the standard for the team, fosters a positive environment, and builds trust with stakeholders, which is critical for success.
