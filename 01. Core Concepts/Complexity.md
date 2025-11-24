@@ -1,27 +1,3 @@
----
-Title: Complexity 29183b71d8f380658bafc8a9c56c20f5
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Complexity 29183b71d8f380658bafc8a9c56c20f5.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
----
- 
-
-![](white%2037.svg)
-
-# Complexity
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2037.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2037.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2037.svg)Section|Setting|
-|![](arrow-circle-down_gray%2037.svg)Sub Area|Context|
-
 # Comprehensive Study Notes: Complexity in P3 Management
 
 ## Introduction to Complexity
@@ -202,4 +178,5 @@ Topic: ''
     - **A:** Because what is innovative and complex for one organisation (e.g., its first-ever programme) might be standard practice and therefore less complex for another.
 
 - **Q:** Why is creating a universal complexity model a "pointless exercise"?
+
     - **A:** Because complexity itself is too complex, subjective, and context-dependent. However, organisation-specific models can be very useful for decision-making.
