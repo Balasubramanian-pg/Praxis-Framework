@@ -27,8 +27,6 @@
 
 - **Nurture (**`**Governance**` **&** `**Professionalism**`**)**: Refers to the conscious efforts made to manage the work and develop the capabilities to deliver it successfully. It is how the organization responds to and shapes its environment.
 
----
-
 ## 1. The Setting (Nature)
 
 - The **setting** comprises the factors that define the fundamental properties of a project, programme, or portfolio. It's the starting point and primary determinant of how the work should be managed and governed.
@@ -99,8 +97,6 @@
 - **Q:** Why is understanding the setting the crucial first step?
     - **A:** Because the setting is the primary factor that determines how the project, programme, or portfolio needs to be governed and managed.
 
----
-
 ## 2. Governance (Nurture - Part I)
 
 - **Governance** is the framework of authority and accountability that defines and controls how projects, programmes, and portfolios are managed to achieve their objectives. It is the "nurture" aspect, as it is consciously designed and implemented in response to the setting.
@@ -158,8 +154,6 @@
 
 - **Q:** How does good governance empower a project team?
     - **A:** It provides clarity on their authority, defines how to handle issues, and ensures they have the support and direction needed from leadership to succeed.
-
----
 
 ## 3. Professionalism (Nurture - Part II)
 
