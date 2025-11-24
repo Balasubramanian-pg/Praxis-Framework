@@ -34,7 +34,7 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 * **Consistency** in applying methods, standards, and controls
 * **Integration** of decisions and dependencies
 
-> **note**
+> [!NOTE]
 > Praxis treats coordination as a bridge between people, systems, and delivery practices.
 
 ## Key Activities in Praxis Coordination
@@ -52,7 +52,7 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 * Maintain stakeholder commitment throughout change
 * Surface concerns early and ensure feedback loops are active
 
-> **tip**
+> [!TIP]
 > Build a culture where coordination feels like empowerment, not policing.
 
 ## Tools and Enablers
@@ -76,12 +76,9 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 * Amplify every individual’s impact by connecting their work to the shared mission
 * Elevate innovation by making coordination a catalyst rather than a constraint
 
-> **info**
+> [!INFO]
 > Coordination in Praxis is about creating coherence without sacrificing agility.
 
 ## Closing Thought
 
 When coordination is done well, teams don’t feel controlled; they feel empowered. They understand how their work contributes to something larger. And the organization gains velocity with purpose.
-
-
-
