@@ -1,7 +1,3 @@
-Here is the closure process within the **Praxis Framework**, reimagined through the lens of culture, empathy, and continuous learning.
-
-***
-
 # The Art of Finite Transitions: A Praxis Closure Narrative
 
 > "To hit refresh, we must not only know when to start, but how to finish with empathy and precision. Closure is not an ending; it is the redeployment of energy into the next wave of innovation."
@@ -69,3 +65,4 @@ If we execute this process with a growth mindset, we achieve three specific thin
 ***
 
 *This is how we move from doing work to driving impact. We close to open anew.*
+
