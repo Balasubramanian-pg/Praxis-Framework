@@ -76,9 +76,10 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 * Amplify every individual’s impact by connecting their work to the shared mission
 * Elevate innovation by making coordination a catalyst rather than a constraint
 
-> [!INFO]
+> [!IMPORTANT]
 > Coordination in Praxis is about creating coherence without sacrificing agility.
 
 ## Closing Thought
 
 When coordination is done well, teams don’t feel controlled; they feel empowered. They understand how their work contributes to something larger. And the organization gains velocity with purpose.
+
