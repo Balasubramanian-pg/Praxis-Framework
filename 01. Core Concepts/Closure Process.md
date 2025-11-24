@@ -46,7 +46,7 @@ output: Updated_Knowledge_Base # This fuels the next project
 *   **The Process:** Archiving records and officially dissolving the governance structure. The project board gives its final sign-off.
 *   **The Outcome:** Clarity, compliance, and a clean slate for the organization.
 
-> **The Praxis Mandate:**
+> [!Tip]
 > You cannot start the next chapter if you are still editing the previous one. Administrative closure is the definitive "Save" button on the project.
 
 ### 5. Benefits Realization: The Long Tail of Impact
@@ -62,7 +62,6 @@ If we execute this process with a growth mindset, we achieve three specific thin
 2.  **Culture Creation:** We signal to the team that their work matters and is complete.
 3.  **Knowledge Compounding:** We ensure that every project makes the organization smarter than it was before.
 
-***
-
 *This is how we move from doing work to driving impact. We close to open anew.*
+
 
