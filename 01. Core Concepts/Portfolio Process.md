@@ -32,7 +32,6 @@ Topic: ''
 > [IMPORTANT]  
 > The portfolio process model shown in the Praxis Framework is common to all types of portfolio. The differences in scale and complexity are addressed by how the process is applied and tailored, not by using a different process.
 
----
 
 ## The Praxis Portfolio Process Model
 
@@ -64,7 +63,6 @@ Topic: ''
     
     - **Closing** down projects and programmes as they complete or are no longer required.
 
----
 
 ## Flashcard Q&A
 
