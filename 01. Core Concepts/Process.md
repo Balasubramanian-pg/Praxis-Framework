@@ -23,7 +23,6 @@ Topic: ''
     
     2. One separate model for **portfolios**.
 
----
 
 ## The Unified Project and Programme Process Model
 
@@ -48,7 +47,6 @@ Topic: ''
 > [IMPORTANT]  
 > The Praxis method for projects and programmes is not a "one size fits all" approach. It is a single, scalable framework that is adapted to the context and complexity of the specific work being undertaken.
 
----
 
 ## The Portfolio Process Model
 
@@ -58,7 +56,6 @@ Topic: ''
 
 - For example, a structured portfolio will place a much heavier emphasis on the strategic alignment and balancing activities within the process model than a standard portfolio would. The underlying process, however, remains consistent.
 
----
 
 ## Flashcard Q&A
 
