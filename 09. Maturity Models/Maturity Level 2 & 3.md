@@ -21,7 +21,6 @@ Topic: ''
 
 - These levels are about an organisation recognising the need to develop and support competent P3 managers and providing them with the structures (processes) to consistently achieve their goals.
 
----
 
 ## The Foundational Principle of Maturity
 
@@ -38,7 +37,6 @@ Topic: ''
     
     - To reach a level of maturity for **programme management**, the component projects must be managed at a similar level of maturity.
 
----
 
 ## Generic Attributes of Maturity Levels 2 and 3
 
@@ -51,7 +49,6 @@ Topic: ''
 |**Assurance**|The process is checked to ensure that it is being performed **effectively** (i.e., it is achieving its goals).|The process is checked to ensure it is based on **organisational standards**, has been **tailored** to the context, and is being performed **efficiently**.|
 |**Improvement**|Improvements to processes and procedures are **opportunistic and informal**.|Processes and procedures are **regularly reviewed**. Improvements are made as necessary and are **formally disseminated** throughout the P3 management community.|
 
----
 
 ## Detailed Explanation of Attributes
 
@@ -79,7 +76,6 @@ Topic: ''
 
 - **Level 3**: Process improvement is a formal, proactive activity. There is a defined mechanism for regularly reviewing the standard processes, collecting feedback and lessons learned, and formally updating and disseminating the improved processes throughout the entire P3 management community (e.g., via a PMO or a knowledge management system).
 
----
 
 ## Flashcard Q&A
 
