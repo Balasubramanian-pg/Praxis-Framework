@@ -39,7 +39,6 @@ Topic: ''
     
     - Ensure that the management of the work is relevant and effective.
 
----
 
 ## The Integrative Management Functions
 
@@ -108,7 +107,6 @@ Topic: ''
 
 - **Integration**: Assurance is an independent review that cuts across all functions. It checks whether the plans are being followed, if control is effective, if risks are being managed, and if the business case remains valid, providing the sponsor with confidence that the work is being managed effectively and remains on track.
 
----
 
 ## Flashcard Q&A
 
