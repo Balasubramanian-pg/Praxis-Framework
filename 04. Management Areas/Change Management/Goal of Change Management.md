@@ -41,7 +41,6 @@ Topic: ''
 
 - Different change management models (e.g., from Kotter, Carnall, or Lewin) are often appropriate for different types of organisational metaphors.
 
----
 
 ## The Change Management Procedure
 
@@ -95,7 +94,6 @@ Topic: ''
 
 - The more the combination of A, B, and D exceeds the cost of the change (X), the more likely it is that the change will succeed. If any of A, B, or D is zero, the product is zero, and the change will fail.
 
----
 
 ## Change Management in Projects, Programmes, and Portfolios
 
@@ -127,7 +125,6 @@ Topic: ''
 
 - The portfolio team must be aware of the cumulative impact of change on the organisation. For example, if multiple projects and programmes are imposing change on a single business unit simultaneously, this can have a negative effect, either because the unit cannot accommodate that level of change or because the multiple changes conflict with each other. The portfolio team is responsible for managing this overall "change capacity".
 
----
 
 ## Flashcard Q&A
 
