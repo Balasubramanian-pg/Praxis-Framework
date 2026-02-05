@@ -27,7 +27,6 @@ Topic: ''
     
     - Optimise the realisation of **opportunities** within the scope of the work.
 
----
 
 ## Performance Criteria
 
@@ -85,7 +84,6 @@ Topic: ''
 > [NOTE]  
 > The approach an organisation takes to managing risk is highly dependent upon its risk context (its attitude and appetite for risk). This competency must be adjusted to meet the different appetites and attitudes relevant to the specific work. For example, the risk profile of an entrepreneurial tech company is very different from that of an aid charity working in a war zone, and the competency of their staff must reflect this.
 
----
 
 ## Knowledge and Understanding
 
@@ -124,7 +122,6 @@ Topic: ''
 - **How assurance applies to risk management**
     - Understanding how to review the risk management function to ensure that the process is being followed correctly and is effective.
 
----
 
 ## Flashcard Q&A
 
