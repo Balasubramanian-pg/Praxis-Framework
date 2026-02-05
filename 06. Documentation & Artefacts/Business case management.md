@@ -41,7 +41,6 @@ Topic: ''
 
 - **Delivery and Closure**: Once approved, the business case must be kept up to date, reflecting any approved changes. It is then used as the primary reference document at all subsequent **gate reviews** (e.g., at the end of a stage or tranche) to determine if the work remains justified and should continue.
 
----
 
 ## The Structure and Content of a Business Case
 
@@ -86,7 +85,6 @@ Topic: ''
 > [!IMPORTANT]  
 > The business case is owned by the sponsor. The sponsor has ultimate accountability for the business case and for ensuring that the benefits it promises are actually achieved.
 
----
 
 ## The Business Case in Projects, Programmes, and Portfolios
 
@@ -134,7 +132,6 @@ Topic: ''
 
 - **Consistency**: The co-ordination of business cases within a programme or portfolio is far easier if there is a consistent approach. In complex environments, guidance should be provided on how all component business cases will be structured and what techniques (e.g., for financial appraisal) should be used.
 
----
 
 ## Flashcard Q&A
 
