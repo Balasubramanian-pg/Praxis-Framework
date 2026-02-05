@@ -63,7 +63,6 @@ Topic: ''
 > [!IMPORTANT]  
 > Both of these perspectives are heavily reliant on establishing an overarching culture of sustainability. While project and programme teams can influence the culture within their temporary organisations, this will be difficult to achieve and maintain unless it exists within a supportive wider organisational culture.
 
----
 
 ## Integrating Sustainability into the P3 Life Cycle
 
@@ -147,7 +146,6 @@ Topic: ''
     
     - The team must ensure that the planned sustainable operational practices are in place and understood by the new owner to ensure the long-term sustainability goals are met.
 
----
 
 ## Flashcard Q&A
 
