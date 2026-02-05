@@ -38,7 +38,6 @@ Topic: ''
 
 - **Timing**: Investment appraisal is very focused on the **early phases** of a project or programme. It is performed in parallel with the early work on developing management plans and delivery plans.
 
----
 
 ## The Investment Appraisal Procedure
 
@@ -64,7 +63,6 @@ Topic: ''
 4. **Report Results**:
     - The results of the appraisal are formally reported, usually as the core justification section of the **business case**.
 
----
 
 ## Key Concepts in Investment Appraisal
 
@@ -115,7 +113,6 @@ Topic: ''
 > [CAUTION]  
 > Appraisals should not be overly dependent on non-financial benefits. Anything can be justified through purely subjective views of value. The quantifiable financial benefits should provide a robust foundation for the business case.
 
----
 
 ## Investment Appraisal in Projects, Programmes, and Portfolios
 
@@ -145,7 +142,6 @@ Topic: ''
 
 - As the higher-potential ideas are captured, they will be subjected to more detailed and rigorous appraisal techniques like NPV and IRR to support the **prioritisation and balancing** activities.
 
----
 
 ## Flashcard Q-&A
 
