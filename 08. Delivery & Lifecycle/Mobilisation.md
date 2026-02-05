@@ -50,7 +50,6 @@ Topic: ''
 
 - **During Delivery**: Mobilisation also occurs to a lesser extent as each new **tranche or stage** is started and finished.
 
----
 
 ## The Mobilisation Procedure
 
@@ -91,7 +90,6 @@ Topic: ''
 
 - **Acquiring Internal Resources**: In a **matrix organisation**, resources often retain their departmental home while also having a role in the project. The P3 manager’s resource plans may conflict with business-as-usual demands. Good conflict management and influencing skills are essential to negotiate for these resources.
 
----
 
 ## Demobilisation
 
@@ -103,7 +101,6 @@ Topic: ''
 
 - **Planning for Demobilisation**: As the need to demobilise approaches, formal plans must be drawn up to dispose of assets, redeploy staff, and, if necessary, reinstate premises to their previous condition.
 
----
 
 ## Mobilisation in Projects, Programmes, and Portfolios
 
@@ -133,7 +130,6 @@ Topic: ''
 
 - The mobilisation of a portfolio requires strong support and commitment at the **host organisation’s board level** to ensure that it is thorough and resilient. Only then will the portfolio infrastructure become properly embedded in the organisation as the preferred way of delivering projects and programmes.
 
----
 
 ## Flashcard Q&A
 
