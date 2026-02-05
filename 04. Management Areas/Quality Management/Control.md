@@ -40,7 +40,6 @@ Topic: ''
     
     3. Take action as required to either achieve the original planning targets or agree on revised targets.
 
----
 
 ## The Three Categories of Control
 
@@ -80,7 +79,6 @@ Topic: ''
 
 - **Linkage**: The outputs of post-control (lessons learned) are a key input to the "review previous lessons" activity in the identification process of future initiatives.
 
----
 
 ## Control Methods and Techniques
 
@@ -114,7 +112,6 @@ Topic: ''
 > [!NOTE]  
 > It is the P3 manager’s responsibility to collect progress data and prepare reports, highlighting areas that need attention. In some cases, this work will be done by a support function, freeing the manager to concentrate on decision-making and implementing corrective action.
 
----
 
 ## Control in Projects, Programmes, and Portfolios
 
@@ -156,7 +153,6 @@ Topic: ''
 > [!IMPORTANT]  
 > As work becomes more complex, it is vital to focus on Key Performance Indicators (KPIs) rather than trying to monitor everything in great detail. The role of a support office (PSO/PMO) becomes indispensable as complexity increases, providing timely and accurate information to enable good decision-making.
 
----
 
 ## Flashcard Q&A
 
