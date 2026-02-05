@@ -28,7 +28,6 @@ Topic: ''
 > [NOTE]  
 > This competency is about managing the people and process side of change within the business, not the technical change to the project's scope (which is handled by change control).
 
----
 
 ## Performance Criteria
 
@@ -73,7 +72,6 @@ Topic: ''
 > [IMPORTANT]  
 > The amount of organisational change required can vary considerably, as can the consequences of managing it badly. This competency is relevant to several roles (e.g., Programme Manager, Business Change Manager) that have different perspectives on change. The application of the competency must be matched to the importance of change management in the context of the work and the specific role.
 
----
 
 ## Knowledge and Understanding
 
@@ -123,7 +121,6 @@ Topic: ''
 - **How assurance applies to change management**
     - Understanding how to review the change management function to ensure its activities are being performed effectively and are leading to the successful adoption of the change.
 
----
 
 ## Flashcard Q&A
 
