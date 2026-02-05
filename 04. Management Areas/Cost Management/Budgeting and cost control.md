@@ -25,7 +25,6 @@ Topic: ''
     
     3. Implement systems to manage and control income and expenditure.
 
----
 
 ## The Budgeting and Cost Control Procedure
 
@@ -47,7 +46,6 @@ Topic: ''
 6. **Control Cost**:
     - As the work gets underway, this step involves tracking actual costs against the budget and taking corrective action as needed.
 
----
 
 ## The Components of a P3 Budget
 
@@ -78,7 +76,6 @@ Topic: ''
 > [IMPORTANT]  
 > The three major components of a P3 budget are, therefore: the base cost estimate, the contingency reserve, and the management reserve.
 
----
 
 ## The Cost Control Process
 
@@ -118,7 +115,6 @@ Topic: ''
 
 - Completing an overspent project may still be considered worthwhile if the remaining cost to complete the work is less than the eventual value that will be realised.
 
----
 
 ## Application in Projects, Programmes, and Portfolios
 
@@ -152,7 +148,6 @@ Topic: ''
 
 - Strategic portfolios are often aligned with corporate financial cycles. Their budgets are less concerned with the cost of delivering a specific result and more to do with **what can be delivered within a defined budget**.
 
----
 
 ## Flashcard Q&A
 
