@@ -1,5 +1,6 @@
 # The Art of Finite Transitions: A Praxis Closure Narrative
 
+>[!Note]
 > "To hit refresh, we must not only know when to start, but how to finish with empathy and precision. Closure is not an ending; it is the redeployment of energy into the next wave of innovation."
 
 In the Praxis Framework, the **Closure** process is the bridge between the temporary nature of a project and the permanent reality of business operations. It is where we transform *output* into *outcome*.
@@ -63,5 +64,6 @@ If we execute this process with a growth mindset, we achieve three specific thin
 3.  **Knowledge Compounding:** We ensure that every project makes the organization smarter than it was before.
 
 *This is how we move from doing work to driving impact. We close to open anew.*
+
 
 
