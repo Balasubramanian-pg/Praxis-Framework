@@ -36,7 +36,6 @@ Topic: ''
     
     - Help the **profession** to collectively evolve, innovate, and improve.
 
----
 
 ## The Three Core Aspects of a Community of Practice
 
@@ -112,7 +111,6 @@ Topic: ''
     
     - **Accreditations**: Some formal CoPs (like professional bodies) offer professional certifications and accreditations as part of their practice.
 
----
 
 ## Benefits of a Thriving Community of Practice
 
@@ -130,7 +128,6 @@ Topic: ''
 - **Driving Innovation**:
     - Innovation often arises when different perspectives and experiences are brought together. The shared experience within a CoP creates a fertile ground for developing new ideas, solving complex problems, and improving existing practices.
 
----
 
 ## Challenges and Sustainability
 
@@ -149,7 +146,6 @@ Topic: ''
     
     - **Time Allocation**: Crucially, P3 managers must be allowed and encouraged to dedicate time to take part in CoP activities as part of their regular work, not just in their spare time. It must be seen as a valuable investment, not an overhead.
 
----
 
 ## Flashcard Q&A
 
