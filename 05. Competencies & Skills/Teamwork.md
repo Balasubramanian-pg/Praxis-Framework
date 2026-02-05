@@ -46,7 +46,6 @@ Topic: ''
 
 - **Organisational Maturity**: Familiarity with the nature of P3 work throughout an organisation naturally arises from higher levels of capability maturity and functions like communities of practice.
 
----
 
 ## Models of Teamwork
 
@@ -83,7 +82,6 @@ Topic: ''
 
 - **Example**: A P3 manager needs to be prepared for the high potential for conflict that arises when a team in its "storming" phase is working on the project's "definition" phase, a time when requirements and plans are being debated.
 
----
 
 ## Maintaining Team Performance
 
@@ -100,7 +98,6 @@ Topic: ''
 
 - **Virtual Teams**: In the digital age, the P3 manager faces the additional challenge of maintaining a sense of teamwork among members who are not physically co-located and may be spread across different offices, continents, and time zones.
 
----
 
 ## Teamwork in Projects, Programmes, and Portfolios
 
@@ -141,7 +138,6 @@ Topic: ''
 > [!NOTE]  
 > Maintaining a team ethos across the broad, diverse, and constantly changing communities within a programme or portfolio will require excellent communication and leadership skills on the part of the P3 manager, closely supported by the sponsor.
 
----
 
 ## Flashcard Q&A
 
