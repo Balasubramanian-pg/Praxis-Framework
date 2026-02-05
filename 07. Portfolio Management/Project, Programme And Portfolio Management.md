@@ -50,7 +50,6 @@ Topic: ''
 > [!IMPORTANT]  
 > A consistent approach to P3 management, executed by competent resources, is the central pillar for developing organisational capability maturity. A mature organisation is one that can successfully deliver its objectives on a regular and predictable basis.
 
----
 
 ## Project and Programme Management
 
@@ -131,7 +130,6 @@ Topic: ''
 - **Business Change Manager**:
     - Where the scope includes benefits that require organisational change, Business Change Managers (BCMs) are responsible for ensuring a successful transition from the old way of working to the new and for the subsequent benefits realisation.
 
----
 
 ## Portfolio Management
 
@@ -168,7 +166,6 @@ Topic: ''
 > [!NOTE]  
 > The management of a structured portfolio is a dynamic and continuous process. It must constantly review the balance of investment and benefit, creating new projects and programmes and closing existing ones as necessary to maintain strategic alignment.
 
----
 
 ## Flashcard Q&A
 
