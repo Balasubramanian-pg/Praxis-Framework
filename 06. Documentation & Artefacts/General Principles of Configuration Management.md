@@ -50,7 +50,6 @@ Topic: ''
 
 - It also ensures that adequate procedures are in place to provide continuing maintenance of products for the duration of the full product life cycle.
 
----
 
 ## The Configuration Management Procedure
 
@@ -100,7 +99,6 @@ Topic: ''
 > [NOTE]  
 > A form of configuration management (primarily version control) can also be applied to the key management documentation to ensure everyone is working from the correct versions of plans and reports.
 
----
 
 ## Configuration Management in Projects, Programmes, and Portfolios
 
@@ -128,7 +126,6 @@ Topic: ''
 
 - However, where different project and programme deliverables from across the portfolio must come together to meet a single strategic objective, the portfolio management team must track the configuration of these different deliverables to ensure that their final integration achieves the required result.
 
----
 
 ## Flashcard Q&A
 
