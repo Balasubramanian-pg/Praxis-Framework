@@ -32,7 +32,6 @@ Topic: ''
 > [!IMPORTANT]  
 > This competency is a high-level summary of several others. On more complex projects and programmes, it is likely that this competency will be supplemented or replaced by more detailed, specialist competencies for Procurement, Contract Management, and Mobilisation. The level of detail required must be tailored to the context of the work and the specific role.
 
----
 
 ## Performance Criteria
 
@@ -95,7 +94,6 @@ Topic: ''
     
     - It includes checking that procurement processes are fair and transparent, contracts are being managed effectively, and resources are being used efficiently.
 
----
 
 ## Knowledge and Understanding
 
@@ -128,7 +126,6 @@ Topic: ''
 - **How assurance applies to resource management**
     - Understanding how to audit and review the resource management function to ensure that policies are being followed, procurement is ethical, and resources are being managed efficiently.
 
----
 
 ## Flashcard Q&A
 
