@@ -42,7 +42,6 @@ Topic: ''
 > 
 > - The scale of the work requires its own dedicated financial control systems.
 
----
 
 ## Level 2 Capability Attributes
 
@@ -69,7 +68,6 @@ Topic: ''
 - **Financial Control**
     - Actual costs are captured accurately and are used to track performance against the budget.
 
----
 
 ## Level 3 Capability Attributes
 
@@ -93,7 +91,6 @@ Topic: ''
 - **Financial Control**
     - Financial systems are able to track actual costs against specific **categories of cost**, as defined in a formal **Cost Breakdown Structure (CBS)**, allowing for much more detailed analysis and control.
 
----
 
 ## Flashcard Q&A
 
