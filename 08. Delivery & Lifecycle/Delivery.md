@@ -39,7 +39,6 @@ Topic: ''
 
 - Some functions operate across and integrate these six fundamental components. These are collected together under the general title of **integrative management**.
 
----
 
 ## The Generic Delivery Procedure
 
@@ -73,7 +72,6 @@ Topic: ''
     
     - It involves reviewing the performance of the function, gathering data, and reporting progress and issues to the relevant stakeholders.
 
----
 
 ## Applying the Procedures in the Life Cycle
 
@@ -101,7 +99,6 @@ Topic: ''
 
 - **Initiation Step**: The initiation and mobilisation of resources will be divided between the latter part of the **definition process** (getting ready for delivery) and the beginning of the **delivery process** (starting the main work).
 
----
 
 ## Flashcard Q&A
 
