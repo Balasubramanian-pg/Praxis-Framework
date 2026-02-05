@@ -55,7 +55,6 @@ Topic: ''
 
 - The **gap** between the organisation's expectations and an individual's current ability is what needs to be addressed by planned learning and development programmes.
 
----
 
 ## Methods and Approaches to Learning and Development
 
@@ -81,7 +80,6 @@ Topic: ''
 
 - **The Small Organisation Approach**: Smaller organisations will rely more on internal support, such as coaching and mentoring from senior staff, and the use of external training providers.
 
----
 
 ## Roles and Responsibilities
 
@@ -111,7 +109,6 @@ Topic: ''
     
     - Provision of development and training opportunities.
 
----
 
 ## Continuing Professional Development (CPD)
 
@@ -139,14 +136,12 @@ Topic: ''
 
 - This provides a formal structure that can be used to both guide personal development plans and officially highlight an individual’s commitment to their profession.
 
----
 
 ## A Dynamic Approach
 
 > [!IMPORTANT]  
 > The learning and development needs of organisations, teams, and individuals are in a constant state of flux. They are continuously changing as everyone attempts to meet the new challenges and competitive forces of the marketplace. This reality requires a dynamic and flexible approach to learning and development, using all the tools and methods available.
 
----
 
 ## Flashcard Q&A
 
