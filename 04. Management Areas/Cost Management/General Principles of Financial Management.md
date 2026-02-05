@@ -43,7 +43,6 @@ Topic: ''
     
     3. **Budgeting and Cost Control**: This involves estimating the costs, predicting the cash flow based on the schedule, setting the formal budget, and then applying controls to monitor actual expenditure against that budget.
 
----
 
 ## The Financial Management Procedure
 
@@ -89,7 +88,6 @@ Topic: ''
 > [IMPORTANT]  
 > The approach to financial management is highly dependent on the policies, procedures, and standards of the host organisation. These, in turn, are affected by the regulatory and legislative environment. The finance management plan must comply with all appropriate standards and enable the exchange of information with the host organisation’s corporate financial systems.
 
----
 
 ## Financial Management in Projects, Programmes, and Portfolios
 
@@ -118,7 +116,6 @@ Topic: ''
 
 - **Consistency is a major challenge**, particularly where the work is international (requiring different currencies and accounting standards) or involves multiple companies (e.g., a joint venture). Finance and accounting policies must be consistent across all components to allow for accurate consolidation and reporting.
 
----
 
 ## Flashcard Q&A
 
