@@ -35,7 +35,6 @@ Topic: ''
 > [!IMPORTANT]  
 > A failure to correctly assess and adapt to the environment is a common source of project, programme, and portfolio failure. The management approach must be tailored to fit the specific environmental context.
 
----
 
 ## The Host Organisation and Structural Relationships
 
@@ -60,7 +59,6 @@ Topic: ''
 > [!NOTE]  
 > The maturity of the host organisation often dictates these structures. An organisation with a high P3 maturity level is more likely to have a well-defined portfolio structure that coordinates all projects and programmes.
 
----
 
 ## Contractual and Commercial Environment
 
@@ -111,7 +109,6 @@ Topic: ''
     
     - **Value**: How "value" is defined and measured can vary greatly (e.g., profit vs. social good).
 
----
 
 ## Additional Environmental Factors
 
@@ -125,7 +122,6 @@ Topic: ''
 
 - **Public Sector Needs**: Work in the public sector often requires a higher degree of accountability and transparency than in the private sector, influencing reporting and stakeholder engagement.
 
----
 
 ## Assessing and Interacting with the Environment
 
@@ -166,7 +162,6 @@ Topic: ''
 
 - The management team must continuously monitor the environment to identify emerging issues that pose a threat and opportunities that can be leveraged.
 
----
 
 ## Flashcard Q&A
 
