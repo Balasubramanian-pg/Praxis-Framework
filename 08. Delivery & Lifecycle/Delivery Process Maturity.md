@@ -41,7 +41,6 @@ Topic: ''
 > 
 > - Where the work includes delegated work packages using the **development process**, the maturity of the two processes should be the same. The delivery process cannot be at Level 3 if the development process is only at Level 2.
 
----
 
 ## Level 2 Maturity Attributes
 
@@ -74,7 +73,6 @@ Topic: ''
 - **Accept completed work**
     - Deliverables are formally accepted by the management team.
 
----
 
 ## Level 3 Maturity Attributes
 
@@ -107,7 +105,6 @@ Topic: ''
 - **Accept completed work**
     - Deliverables are subject to a **consistent acceptance procedure**, including formal **sign-off and handover**.
 
----
 
 ## Flashcard Q&A
 
