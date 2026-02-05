@@ -30,7 +30,6 @@ Topic: ''
 
 - Few of these techniques are unique to P3 management, but they are all tailored and applied to suit the P3 context.
 
----
 
 ## 1. Risk Identification Techniques
 
@@ -58,7 +57,6 @@ Topic: ''
     
     - **Checklists and Prompt Lists**: In more mature organisations, information from past work may have been collated and structured into checklists as part of a formal knowledge management system.
 
----
 
 ## 2. Risk Assessment Techniques
 
@@ -92,7 +90,6 @@ Topic: ''
     
     - **Decision Trees**: Can be used to quantitatively compare the effect of different decisions and a series of subsequent chance events. This is particularly useful for assessing secondary or tertiary risks and influencing the decisions taken in risk response planning.
 
----
 
 ## 3. Risk Response Planning Techniques
 
@@ -118,7 +115,6 @@ Topic: ''
     
     - **Reject**: Acknowledge the opportunity but decide not to pursue it.
 
----
 
 ## Application in Projects, Programmes, and Portfolios
 
@@ -137,7 +133,6 @@ Topic: ''
 > [WARNING]  
 > A common fault is to employ overly sophisticated techniques to address perceived shortcomings in risk management when the real problem lies in a poor understanding of the risk context (the attitudes and behaviours of the people involved).
 
----
 
 ## Flashcard Q&A
 
