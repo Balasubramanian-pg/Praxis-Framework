@@ -29,7 +29,7 @@ Topic: ''
 
 - **Large Structured Portfolio**: At the other end of the scale, a large multinational organisation may have a structured portfolio of projects and programmes designed to meet the **strategic objectives** of a five-year business planning cycle.
 
-> [IMPORTANT]  
+> [!IMPORTANT]  
 > The portfolio process model shown in the Praxis Framework is common to all types of portfolio. The differences in scale and complexity are addressed by how the process is applied and tailored, not by using a different process.
 
 
@@ -79,4 +79,5 @@ Topic: ''
     - **A:** No, the process model is the same for both. The differences in portfolio type are addressed by how the process is applied and tailored.
 
 - **Q:** What is the primary purpose of a small, standard portfolio, often called the "management of projects"?
+
     - **A:** To co-ordinate resources efficiently and embed good management practice consistently across all projects.
