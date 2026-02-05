@@ -23,7 +23,6 @@ Topic: ''
 
 - **Nature**: These competencies are not unique to project, programme, and portfolio management. They are the universal "soft skills" of leadership, communication, and teamwork, but they are defined and applied here specifically within the P3 context. They are often expressed in terms of personal behaviours and personality characteristics.
 
----
 
 ## The Relationship Between Functions and Competencies
 
@@ -54,7 +53,6 @@ Topic: ''
 
 - This shift emphasizes that a competency is not about knowing the theory of conflict management; it is about being able to _actually manage conflict_ effectively in a real-world P3 environment.
 
----
 
 ## Tailoring Interpersonal Competencies
 
@@ -62,7 +60,6 @@ Topic: ''
 
 - The framework is designed to be adaptable. Organisations can add additional, more specific behavioural indicators to these competencies as part of tailoring Praxis to their own culture and needs.
 
----
 
 ## Flashcard Q&A
 
