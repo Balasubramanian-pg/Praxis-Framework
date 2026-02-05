@@ -46,7 +46,6 @@ Topic: ''
     
     - This function works in close conjunction with **investment appraisal** (part of financial management), which investigates the financial implications of the different technical options.
 
----
 
 ## The Solutions Development Procedure
 
@@ -80,7 +79,6 @@ Topic: ''
         
         - **Validation**: This is the term used to ensure that the **right product is being built**. It is a check against the original _requirements_ and the business case to ensure the solution still meets the stakeholders' needs.
 
----
 
 ## Solutions Development in Projects, Programmes, and Portfolios
 
@@ -109,7 +107,6 @@ Topic: ''
 
 - However, the **portfolio management team** may set high-level guidelines or policies regarding innovation and risk appetite that will **constrain the types of solutions** that can be considered by the component projects and programmes. For example, a portfolio might mandate the use of a specific technology platform or forbid the use of high-risk, unproven technologies.
 
----
 
 ## Flashcard Q&A
 
