@@ -34,7 +34,6 @@ Topic: ''
 > <br><br>  
 > If the project or programme makes significant use of both internal and external resources and involves letting formal contracts, it would be more appropriate to use the individual capability models for each function to get a more accurate assessment.
 
----
 
 ## Level 2 Capability Attributes
 
@@ -58,7 +57,6 @@ Topic: ''
 - **Close**
     - Demobilisation is planned.
 
----
 
 ## Level 3 Capability Attributes
 
@@ -94,7 +92,6 @@ Topic: ''
     
     - Contracts are **closed formally** according to their legal terms.
 
----
 
 ## Flashcard Q&A
 
