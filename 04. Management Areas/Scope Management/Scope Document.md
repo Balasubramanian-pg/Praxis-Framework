@@ -19,7 +19,6 @@ Topic: ''
 
 - **Definition**: Scope documents are the collection of documents that collectively describe the **objectives of the work**. They define what the project, programme, or portfolio is intended to achieve and deliver.
 
----
 
 ## The Two Main Types of Scope Documents
 
@@ -50,7 +49,6 @@ Topic: ''
 - **Example**:
     - **Specification**: This is the primary example. The purpose of a specification is always to describe a deliverable in detail. However, the content of a specification for a new software application will be completely different from the specification for a new bridge or a pharmaceutical drug. Therefore, no single template could possibly cover all contexts.
 
----
 
 ## Flashcard Q&A
 
