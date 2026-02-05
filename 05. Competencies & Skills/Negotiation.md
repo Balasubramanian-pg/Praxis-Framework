@@ -58,7 +58,6 @@ Topic: ''
     
     - An ability to close a negotiation in a way that secures the desired outcome.
 
----
 
 ## Flavours and Styles of Negotiation
 
@@ -81,7 +80,6 @@ Topic: ''
 > [!NOTE]  
 > Every individual has a natural preference for the way they negotiate. Models like R.G. Shell's, which is based on Blake and Mouton’s managerial grid, can help individuals understand their own preferred style (e.g., competing, collaborating, compromising, etc.) and adapt it to the situation.
 
----
 
 ## The Negotiation Procedure
 
@@ -125,7 +123,6 @@ Topic: ''
 > [!CAUTION]  
 > Negotiation is easy to get wrong. The cardinal sin is to enter into negotiations unprepared. This can easily lead to mistakes, such as making opening offers that are clearly unacceptable or rushing discussions under pressure, which can produce outcomes that are difficult to implement. It is important to stay calm and know when to take a break. The result of a negotiation will have repercussions throughout the remainder of the life cycle, so it is worth the investment to get it right.
 
----
 
 ## Negotiation in Projects, Programmes, and Portfolios
 
@@ -150,7 +147,6 @@ Topic: ''
 
 - The hierarchy of management teams also provides a natural and formal **mechanism for escalation** should a negotiation at a lower level be unsuccessful. This escalation path should be defined in the relevant management plans, typically the resource management plan.
 
----
 
 ## Flashcard Q&A
 
