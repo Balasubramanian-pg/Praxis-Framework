@@ -32,7 +32,6 @@ Topic: ''
 > [!NOTE]  
 > Understanding and analyzing the setting is the crucial first step in P3 management. The choice of management methods, governance structures, and the required competencies of the team all depend on a thorough assessment of the setting.
 
----
 
 ## 1. Inherent Nature of the Work (Complexity)
 
@@ -92,7 +91,6 @@ Topic: ''
 - **Q:** What are the two main types of complexity?
     - **A:** Structural complexity (the number and variety of parts) and dynamic complexity (the unpredictable behavior of the system over time).
 
----
 
 ## 2. The Surrounding Environment
 
@@ -159,7 +157,6 @@ Topic: ''
 - **Q:** Why is the organizational environment a key factor?
     - **A:** The host organization's culture, maturity, and structure determine the level of support, the availability of resources, and the reporting and decision-making processes the work must align with.
 
----
 
 ## 3. The Decision to Govern as a Project, Programme, or Portfolio
 
