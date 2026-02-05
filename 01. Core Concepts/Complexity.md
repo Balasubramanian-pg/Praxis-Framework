@@ -155,7 +155,6 @@
 
 - This understanding leads to the most critical principle for success: the vital need to **tailor all aspects of the discipline**—governance, functions, methods, competencies, and tools—to the specific circumstances of each project, programme, or portfolio.
 
----
 
 ## Flashcard Q&A
 
