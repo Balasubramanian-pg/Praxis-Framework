@@ -41,7 +41,6 @@ Topic: ''
 > [-NOTE]  
 > There is a strong correlation between the "initiate" and "close" steps in organisation management and the "mobilise" and "demobilise" steps in the mobilisation function. The key difference is that organisation management deals with the management team, while mobilisation deals with the delivery resources.
 
----
 
 ## The Four Levels of a P3 Organisation
 
@@ -89,7 +88,6 @@ Topic: ''
 
 - This dual reporting structure can create conflict between the two sources of authority and is a key challenge that must be recognised and managed.
 
----
 
 ## Organisation Structures in Projects, Programmes, and Portfolios
 
@@ -123,7 +121,6 @@ Topic: ''
 
 - In this context, the PMO is synonymous with the **portfolio management team**. It manages the portfolio and may also be responsible for the overall development and promotion of P3 management in the host organisation.
 
----
 
 ## Flashcard Q&A
 
