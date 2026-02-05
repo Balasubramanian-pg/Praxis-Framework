@@ -30,7 +30,6 @@ Topic: ''
 > <br><br>  
 > This summary is best suited for an organisation that runs less complex projects which include benefits management. In more complex situations (e.g., large business change programmes) or more specific contexts (e.g., a contracting organisation that doesn't manage benefits), it is better to use the relevant capability models for the individual scope management functions to get a more accurate assessment.
 
----
 
 ## Level 2 Capability Attributes
 
@@ -56,7 +55,6 @@ Topic: ''
     
     - The implementation of the benefits is planned at a high level.
 
----
 
 ## Level 3 Capability Attributes
 
@@ -90,7 +88,6 @@ Topic: ''
     
     - **Quantitative metrics** are used to confirm the achievement of benefits, allowing for objective measurement against the business case.
 
----
 
 ## Flashcard Q&A
 
