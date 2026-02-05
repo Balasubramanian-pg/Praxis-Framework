@@ -52,7 +52,6 @@ Topic: ''
     
     - Specialist advice or consultancy.
 
----
 
 ## The Procurement Procedure
 
@@ -89,7 +88,6 @@ Topic: ''
 > [CAUTION]  
 > Throughout the procurement procedure, care must be taken to ensure that a contract is not entered into casually. It should be made clear in all meetings and documents that the proceedings are "subject to contract" until a formal agreement is signed. Procurement records must be carefully maintained to mitigate the risk of unsuccessful suppliers challenging the decision.
 
----
 
 ## Key Concepts in Procurement
 
@@ -111,7 +109,6 @@ Topic: ''
 
 - For each package, the relative importance of time, cost, and quality needs to be considered, as this will greatly influence how contract incentives or service levels are designed.
 
----
 
 ## Procurement in Projects, Programmes, and Portfolios
 
@@ -145,7 +142,6 @@ Topic: ''
 
 - Framework contracts are not appropriate for all goods and services. There will still be many specialist suppliers who have to be selected locally to meet the specific needs of individual projects.
 
----
 
 ## Flashcard Q&A
 
