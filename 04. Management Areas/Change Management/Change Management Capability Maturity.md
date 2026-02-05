@@ -34,7 +34,6 @@ Topic: ''
 > 
 > - **Level 3** is an important goal for programmes with complex change objectives.
 
----
 
 ## Level 2 Capability Attributes
 
@@ -58,7 +57,6 @@ Topic: ''
 - **Sustain**
     - Representatives of the organisational areas that have changed (e.g., Business Change Managers) are assigned the **responsibility for supporting and maintaining** the new management processes and behaviours after the initial implementation.
 
----
 
 ## Level 3 Capability Attributes
 
@@ -87,7 +85,6 @@ Topic: ''
     
     - The **effectiveness of the change** is periodically assessed alongside, and as part of, **benefits realisation** reviews, creating a direct link between the two.
 
----
 
 ## Flashcard Q&A
 
