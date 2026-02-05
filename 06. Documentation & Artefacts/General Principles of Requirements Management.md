@@ -28,7 +28,6 @@ Topic: ''
 
 - A clear and agreed expression of requirements and their associated acceptance criteria is essential for the success of any P3 initiative. Requirements may be expressed as physical deliverables (outputs), business benefits, aspirations, functions, or technical needs.
 
----
 
 ## The Requirements Management Procedure
 
@@ -84,7 +83,6 @@ Topic: ''
     
     - **Prioritised**: Its importance is understood relative to other requirements.
 
----
 
 ## Value Management
 
@@ -94,7 +92,6 @@ Topic: ''
 
 - The goal of value management is not to simply maximise the satisfaction of requirements, nor to simply minimise the use of resources, but to establish the **balance that maximises the ratio of the two**.
 
----
 
 ## Requirements Management in Projects, Programmes, and Portfolios
 
@@ -138,7 +135,6 @@ Topic: ''
         
         2. **Co-ordinate** the many localised requirements management processes to monitor for gaps, overlaps, and conflicts between the different initiatives in the portfolio.
 
----
 
 ## Flashcard Q&A
 
