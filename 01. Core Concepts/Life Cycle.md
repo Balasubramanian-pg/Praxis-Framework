@@ -58,7 +58,6 @@ Topic: ''
 > [!NOTE]  
 > This fundamental structure can be adapted to many different contexts, such as work performed by a contractor, a project within a programme, or work where the scope evolves over time. The complexity of the scope is a major factor influencing the final shape of the life cycle.
 
----
 
 ## Governance and the Life Cycle
 
@@ -76,7 +75,6 @@ Topic: ''
     
     - **Benefit Reviews**: These reviews formally measure the achievement of benefits against the baseline defined in the business case.
 
----
 
 ## Serial vs. Parallel Life Cycles: The Two Main Approaches
 
@@ -97,7 +95,6 @@ Topic: ''
 > [!TIP]  
 > Parallel life cycles are the foundation for delivery methods such as Agile and concurrent engineering. It's important to distinguish the overall P3 management life cycle from the specific technical development life cycle (e.g., Waterfall, V-Model, Scrum) used to create the product itself.
 
----
 
 ## The Project Life Cycle
 
@@ -121,7 +118,6 @@ Topic: ''
 
 - This can be viewed as a single iterative cycle that is repeated as many times as necessary to deliver the full scope, after which the project is closed. This is the core concept behind Agile methods.
 
----
 
 ## The Programme Life Cycle
 
@@ -143,7 +139,6 @@ Topic: ''
 > [!NOTE]  
 > The realisation of benefits will almost always continue long after the programme itself has formally closed. The sponsor and Business Change Managers typically remain in their roles to ensure the full value promised in the business case is achieved.
 
----
 
 ## The Portfolio Life Cycle
 
@@ -165,7 +160,6 @@ Topic: ''
     
     4. **Balancing**: The portfolio is then reviewed and adjusted to ensure it is balanced in terms of risk, resource usage, cash flow, and the cumulative impact of change across the business.
 
----
 
 ## Flashcard Q&A
 
