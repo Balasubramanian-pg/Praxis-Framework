@@ -25,7 +25,6 @@ Topic: ''
     
     - Present **schedule reports** in a format that is suitable for different stakeholders.
 
----
 
 ## Performance Criteria
 
@@ -79,7 +78,6 @@ Topic: ''
 > [NOTE]  
 > Scheduling approaches are closely linked to the context of the work. The performance criteria can be tailored to cover more complex situations, such as the consolidation of multiple schedules for a programme or the audit and approval of contractor schedules.
 
----
 
 ## Knowledge and Understanding
 
@@ -129,7 +127,6 @@ Topic: ''
 - **How assurance applies to schedule management**
     - Understanding how to review the schedule to ensure it is realistic, based on sound logic and estimates, and is being managed according to the schedule management plan.
 
----
 
 ## Flashcard Q&A
 
