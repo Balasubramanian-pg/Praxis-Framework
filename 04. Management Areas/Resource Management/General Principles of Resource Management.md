@@ -57,7 +57,6 @@ Topic: ''
     
     - It also covers the reverse exercise of **demobilisation** when the resources are no longer required.
 
----
 
 ## The Resource Management Procedure
 
@@ -103,7 +102,6 @@ Topic: ''
 > [!CAUTION]  
 > All too often, arrangements for the provision of internal resources are informal and undocumented. This can lead to the P3 manager having no real control over whether the right resources are available at the right time. Even small projects benefit from some form of documented agreement between the management team and the departments providing the resources.
 
----
 
 ## Resource Management in Projects, Programmes, and Portfolios
 
@@ -138,7 +136,6 @@ Topic: ''
 
 - This is a key part of the portfolio management process, where the team must prioritise the allocation of limited resources to the initiatives that provide the most strategic value.
 
----
 
 ## Flashcard Q&A
 
