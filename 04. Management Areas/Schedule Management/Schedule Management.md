@@ -30,7 +30,6 @@ Topic: ''
 > <br><br>  
 > The maturity model reflects this progression. Level 2 represents an "adequate" approach, while Level 3 represents a more sophisticated and proactive approach that reduces risk and increases stakeholder satisfaction.
 
----
 
 ## Level 2 Capability Attributes
 
@@ -63,7 +62,6 @@ Topic: ''
 - **Report**
     - **Standard reports** are distributed at regular intervals to stakeholders.
 
----
 
 ## Level 3 Capability Attributes
 
@@ -93,7 +91,6 @@ Topic: ''
 - **Report**
     - Stakeholders are regularly provided with schedule reports that are **tailored to their differing needs**, rather than receiving a single standard report.
 
----
 
 ## Flashcard Q&A
 
