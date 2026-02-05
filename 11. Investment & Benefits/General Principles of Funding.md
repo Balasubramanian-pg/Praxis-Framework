@@ -27,7 +27,6 @@ Topic: ''
     
     3. Manage the **release of funds** throughout the life cycle.
 
----
 
 ## The Funding Procedure
 
@@ -62,7 +61,6 @@ Topic: ''
 > [IMPORTANT]  
 > Whether they are internal or external, and whether they are direct recipients of benefits or not, funders must be treated as key stakeholders and managed accordingly.
 
----
 
 ## Funding in Projects, Programmes, and Portfolios
 
@@ -104,7 +102,6 @@ Topic: ''
     
     - For example, if there is uncertainty regarding future funding availability, long-term secured funds should be used for the longer, high-priority programmes, while short-term funds should be matched to shorter-term projects.
 
----
 
 ## Flashcard Q&A
 
