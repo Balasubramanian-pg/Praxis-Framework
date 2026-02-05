@@ -29,7 +29,6 @@ Topic: ''
 > [IMPORTANT]  
 > Where scope is well defined early in the life cycle, it is essential for success that any subsequent changes to the approved baselines are rigorously controlled. A formal change control procedure must be established and maintained.
 
----
 
 ## The Change Control Procedure
 
@@ -90,7 +89,6 @@ Topic: ''
 > [NOTE]  
 > There is always the possibility that urgent changes are imposed or pushed through without due process. These should always be retrospectively put through the change control procedure to ensure their impact is properly documented and assessed.
 
----
 
 ## Change Control in Projects, Programmes, and Portfolios
 
@@ -124,7 +122,6 @@ Topic: ''
 
 - Instead of simply approving or rejecting a change request, the portfolio version of the procedure may result in the **reprioritisation**, or even the **cancellation**, of some projects or programmes and the identification and initiation of new ones to align with the new strategy.
 
----
 
 ## Flashcard Q&A
 
