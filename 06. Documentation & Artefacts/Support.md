@@ -109,7 +109,6 @@ Topic: ''
 > [!IMPORTANT]  
 > The shape of the support infrastructure must reflect its context, but its component groups must always have a clearly defined purpose and scope. The roles and levels of authority of these support groups must be clearly communicated to the delivery teams and reinforced periodically to avoid confusion and conflict.
 
----
 
 ## Support in Projects, Programmes, and Portfolios
 
@@ -162,7 +161,6 @@ Topic: ''
 
 - The specific remit of the PMO is decided by whether the portfolio is a **standard portfolio** (focusing on efficiency and consistency) or a **structured portfolio** (focusing on delivering strategic objectives).
 
----
 
 ## Flashcard Q&A
 
