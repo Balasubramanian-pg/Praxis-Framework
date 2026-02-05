@@ -51,7 +51,6 @@ Topic: ''
     
     - **Examples**: Uncertainty about the performance or reliability of a component when using innovative technology. At a more mundane level, every set of plans has a degree of uncertainty because they are based on estimates of varying accuracy.
 
----
 
 ## The Risk Management Procedure
 
@@ -95,7 +94,6 @@ Topic: ''
 > [IMPORTANT]  
 > The procedure is iterative. For example, the assessment of a risk or the planning of a response may lead to the identification of new, secondary risks.
 
----
 
 ## The Human Side of Risk
 
@@ -108,7 +106,6 @@ Topic: ''
 > [NOTE]  
 > The management of general health and safety risks (hazards) is usually excluded from P3 risk management, as this is traditionally handled by a separate, specialist function within the organisation.
 
----
 
 ## Risk Management in Projects, Programmes, and Portfolios
 
@@ -146,7 +143,6 @@ Topic: ''
 
 - These same issues of co-ordination and management across levels apply to large complex projects and portfolios, albeit with slightly different emphases.
 
----
 
 ## Flashcard Q&A
 
