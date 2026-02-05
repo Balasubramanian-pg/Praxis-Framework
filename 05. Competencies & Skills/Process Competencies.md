@@ -23,7 +23,6 @@ Topic: ''
 
 - **Purpose**: They define the knowledge and performance criteria required for an individual to be considered competent in the practical enactment and management of the P3 life cycle phases. They are about being able to successfully navigate a project, programme, or portfolio through its entire life cycle.
 
----
 
 ## The Relationship Between Processes and Competencies
 
@@ -54,7 +53,6 @@ Topic: ''
 
 - This shift in language emphasizes that a competency is not about knowing the theory of the identification process; it is about being able to _actually execute_ that process to take an idea and develop it into a viable brief.
 
----
 
 ## Flashcard Q&A
 
