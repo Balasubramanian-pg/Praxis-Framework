@@ -58,7 +58,6 @@ Topic: ''
     
     - This approach primarily addresses the second goal of leadership (inspiring the team) and is reflected in the many leadership models that link the style of the leader to the development and maturity of the team being led.
 
----
 
 ## Leadership Models and Contextual Factors
 
@@ -92,7 +91,6 @@ Topic: ''
 > [!WARNING]  
 > Every individual has their own preferred, natural style of leadership. By far the hardest part of leadership for a P3 manager is having to consciously exhibit different styles of leadership for different teams at different phases of the life cycle, most of which will not be their preferred style.
 
----
 
 ## Leadership in Projects, Programmes, and Portfolios
 
@@ -142,7 +140,6 @@ Topic: ''
 
 - This kind of direct connection between leadership, the portfolio, and corporate strategy is a typical characteristic of a mature organisation.
 
----
 
 ## Flashcard Q&A
 
