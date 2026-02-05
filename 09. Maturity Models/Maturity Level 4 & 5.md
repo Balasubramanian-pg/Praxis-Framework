@@ -26,7 +26,6 @@ Topic: ''
 > [!NOTE]  
 > In the Praxis approach to assessing capability maturity, these high-level functions are typically assessed as part of the portfolio management processes. This is because the portfolio level has the strategic oversight and permanence required to implement and manage organisation-wide quantitative measurement and improvement initiatives.
 
----
 
 ## Level 4: Quantitatively Managed
 
@@ -65,7 +64,6 @@ Topic: ''
     
     - Level 4 learning and development is about **collective, ongoing assessment** to confirm that the organisation's overall levels of knowledge and competence are being maintained and to understand the **return on investment** from training initiatives.
 
----
 
 ## Level 5: Optimising
 
@@ -106,7 +104,6 @@ Topic: ''
     
     - At this level, the organisation expects its P3 managers to take personal **responsibility for their own development** and will formally track the effort individuals put into their CPD.
 
----
 
 ## Flashcard Q&A
 
