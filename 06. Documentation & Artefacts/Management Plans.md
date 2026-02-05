@@ -48,7 +48,6 @@ Topic: ''
     
     - **Definition Phase**: During the definition process, these standard governance documents are then formally **tailored** to the specific context of the project or programme, providing detailed guidance for all subsequent work.
 
----
 
 ## The Structure of a Management Plan
 
@@ -76,7 +75,6 @@ Topic: ''
     
     - Detailed recommendations on the **tools and techniques** to be used in each step.
 
----
 
 ## Tailoring and Application
 
@@ -89,7 +87,6 @@ Topic: ''
 > [!WARNING]  
 > There is a danger that the list of potential management plans can appear highly bureaucratic and time-consuming to prepare. This is a misunderstanding of their purpose. A simple, one-page risk management plan for a small project is infinitely better than no plan at all. The goal is to apply the right level of thought and documentation for the level of complexity.
 
----
 
 ## Flashcard Q&A
 
