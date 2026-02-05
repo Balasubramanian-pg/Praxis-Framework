@@ -34,7 +34,6 @@ Topic: ''
 > [IMPORTANT]  
 > The complexity of the scope is the main distinguishing factor between work that is managed as a project, a programme, or a portfolio. A key element in this decision is whether achieving the objectives requires significant changes to business-as-usual. Extensive and complex change is a strong indicator that programme governance is more appropriate.
 
----
 
 ## The Five Areas of Scope Management
 
@@ -77,7 +76,6 @@ Topic: ''
 > 
 > - **Change Management**: The work involved in changing working practices in _business-as-usual_ to realise benefits.
 
----
 
 ## Managing Scope: Linear vs. Flexible Approaches
 
@@ -105,7 +103,6 @@ Topic: ''
 
 - An important factor that runs through all areas of scope management is **value management**. This is a discipline that brings together a set of procedures and techniques to ensure that the investment in a project, programme, or portfolio is optimised for the potential return it can deliver.
 
----
 
 ## Scope Management in Projects, Programmes, and Portfolios
 
@@ -149,7 +146,6 @@ Topic: ''
     
     - The portfolio management team helps project and programme sponsors shape their proposals to ensure they align with the portfolio's scope and strategic objectives.
 
----
 
 ## Flashcard Q&A
 
