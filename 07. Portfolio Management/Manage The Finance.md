@@ -29,7 +29,6 @@ Topic: ''
     
     - **Monitor and control** expenditure against the budget.
 
----
 
 ## Performance Criteria
 
@@ -81,7 +80,6 @@ Topic: ''
 > [NOTE]  
 > This competency summarises several others (Investment Appraisal, Funding, Budgeting and Cost Control) and should be adjusted to fit the context. Managing finance in a P3 environment inevitably links to, and may overlap with, corporate finance systems. When applying this competency, it is crucial to reflect what is within the authority of the P3 organisation versus what is controlled by the host organisation’s financial systems.
 
----
 
 ## Knowledge and Understanding
 
@@ -122,7 +120,6 @@ Topic: ''
 - **How assurance applies to financial management**
     - Understanding how to audit and review the financial management function to ensure that policies are being followed, costs are being reported accurately, and the work remains financially viable.
 
----
 
 ## Flashcard Q&A
 
