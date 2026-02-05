@@ -47,7 +47,6 @@ Topic: ''
     
     6. **Maintain Schedule**: Monitor progress against the schedule, update it with actuals, and re-forecast future dates as part of the control function.
 
----
 
 ## Key Concepts in Schedule Management
 
@@ -83,7 +82,6 @@ Topic: ''
 
 - Schedule reports must be tailored to the audience. A simple **milestone chart** may be appropriate for a senior executive, while a detailed Gantt chart is needed by the delivery team.
 
----
 
 ## Scheduling in Projects, Programmes, and Portfolios
 
@@ -113,7 +111,6 @@ Topic: ''
 
 - The portfolio management process must continuously balance changing resource demands and prioritise the allocation of limited resources, all of which depends on accurate and timely schedule information aggregated from the component projects and programmes.
 
----
 
 ## Flashcard Q&A
 
