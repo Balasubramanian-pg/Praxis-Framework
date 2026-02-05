@@ -40,7 +40,6 @@ Topic: ''
     
     3. Early identification of resource capacity **bottlenecks and conflicts**.
 
----
 
 ## The Resource Scheduling Procedure
 
@@ -62,7 +61,6 @@ Topic: ''
     
     - The purpose of this final step is to use resource-limited scheduling techniques to modify the timings of activities to deal with these peaks and troughs.
 
----
 
 ## Consumable vs. Reusable Resources
 
@@ -82,7 +80,6 @@ Topic: ''
         
         - Reusable resources are rarely, if ever, limitless, and the schedule needs to be reviewed to take these limitations into account. This leads to the techniques of resource-limited scheduling.
 
----
 
 ## Resource-Limited Scheduling Techniques
 
@@ -107,7 +104,6 @@ Topic: ''
 > [NOTE]  
 > In reality, a simple smoothing or levelling of all resources simultaneously does not reflect the true situation. Some resources may be flexible while others are not. A better understanding can be achieved through a form of sensitivity analysis where resources are scheduled individually to see their specific impact. Techniques like Critical Chain can also be used to address these issues in a different way.
 
----
 
 ## Resource Scheduling in Projects, Programmes, and Portfolios
 
@@ -139,7 +135,6 @@ Topic: ''
 
 - This is a key part of the **balancing** activity in the portfolio management process.
 
----
 
 ## Flashcard Q&A
 
