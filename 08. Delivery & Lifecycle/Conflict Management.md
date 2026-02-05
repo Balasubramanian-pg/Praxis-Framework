@@ -65,7 +65,6 @@ Topic: ''
 > [!IMPORTANT]  
 > Given the high potential for conflict to adversely affect objectives, a skilled P3 manager must focus on conflict management to pre-empt and avoid negative conflict before it occurs, not just on conflict resolution after it has erupted.
 
----
 
 ## Positive vs. Negative Conflict
 
@@ -85,7 +84,6 @@ Topic: ''
     
     - Ultimately, this can result in delays or even the complete failure to deliver the objectives.
 
----
 
 ## Identifying and Resolving Negative Conflict
 
@@ -135,7 +133,6 @@ Topic: ''
 
 - Different styles are needed in different circumstances. Perhaps the hardest skill in conflict resolution is consciously adopting a style that is personally unnatural but is the right one for the specific situation.
 
----
 
 ## Conflict in Projects, Programmes, and Portfolios
 
@@ -162,7 +159,6 @@ Topic: ''
     
     - A programme or portfolio management team needs to maintain an overview of all significant conflicts being addressed to ensure consistency and prevent escalation.
 
----
 
 ## Flashcard Q&A
 
