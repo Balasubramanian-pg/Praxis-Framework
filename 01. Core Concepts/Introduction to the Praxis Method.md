@@ -29,7 +29,6 @@ Topic: ''
 
 - The method provides a **life cycle-based approach** to applying these functions and tools in a structured and consistent way.
 
----
 
 ## The Two Process Models
 
@@ -51,7 +50,6 @@ Topic: ''
 
 - For this reason, Praxis provides a separate and distinct process model specifically for the management of portfolios.
 
----
 
 ## The Method as an Integration Hub
 
@@ -79,7 +77,6 @@ Topic: ''
 - This is also a **two-way relationship**:
     - In return, the competency definitions provide a **benchmark** for assessing an individual's performance of the processes described in the method.
 
----
 
 ## Flashcard Q&A
 
