@@ -44,7 +44,6 @@ Topic: ''
     
     - **Configuration Management Plan**: To ensure that versions are controlled and that everyone is working from the correct baseline.
 
----
 
 ## Examples of Common Delivery Documents
 
@@ -70,7 +69,6 @@ Topic: ''
 
 - **Work Packages**: Documents that define and authorise a specific piece of work to be done by a team or individual.
 
----
 
 ## Flashcard Q-&A
 
