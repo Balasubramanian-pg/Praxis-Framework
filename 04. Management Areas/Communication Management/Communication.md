@@ -55,7 +55,6 @@ Topic: ''
     
     - These are modified by many other factors, such as whether they are **formal** or **informal**; **active** or **passive**; **conscious** or **unconscious**.
 
----
 
 ## The Communication Process and its Components
 
@@ -85,7 +84,6 @@ Topic: ''
 > [!NOTE]  
 > An effective P3 manager and sponsor must take all these factors into account when deciding on the content, structure, and channel for their communications to ensure the message is received as intended.
 
----
 
 ## Channels and Barriers of Communication
 
@@ -106,7 +104,6 @@ Topic: ''
         
         - **Hidden Barriers**: These can be more difficult to identify and overcome, and include a history of conflict between parties or a general lack of trust.
 
----
 
 ## Communication, Documentation, and Maturity
 
@@ -123,7 +120,6 @@ Topic: ''
 
 - Since communication is the primary means by which tacit knowledge (experience) is converted into explicit knowledge (documented information), it is a vital part of the broader **knowledge management** function.
 
----
 
 ## Communication in Projects, Programmes, and Portfolios
 
@@ -163,7 +159,6 @@ Topic: ''
         
         2. Perhaps more importantly, on creating a **culture of effective communication** within a strong ethical framework.
 
----
 
 ## Flashcard Q&A
 
