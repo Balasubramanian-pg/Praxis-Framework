@@ -28,7 +28,6 @@ Topic: ''
 > [!NOTE]  
 > Scope is the primary factor in deciding whether to manage work as a project or a programme. A competent individual can manage scope appropriately, whether it's a simple, well-defined project output or a complex programme with multiple benefits and organisational changes.
 
----
 
 ## Performance Criteria
 
@@ -79,7 +78,6 @@ Topic: ''
 > [!IMPORTANT]  
 > This competency summarises several others (e.g., Manage Requirements, Manage Benefits). The specific knowledge criteria required will need to be adjusted based on the context. For example, a project manager on a simple project may not need deep knowledge of benefits management, as this might be handled by a parent programme.
 
----
 
 ## Knowledge and Understanding
 
@@ -135,7 +133,6 @@ Topic: ''
 > [!WARNING]  
 > One of the most common causes of project failure is an inability to manage scope effectively. This can manifest as poorly defined requirements at the start ("scope definition failure") or uncontrolled changes during delivery ("scope creep"). This competency is therefore critical to success.
 
----
 
 ## Flashcard Q&A
 
