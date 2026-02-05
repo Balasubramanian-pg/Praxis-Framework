@@ -38,7 +38,6 @@ Topic: ''
     
     3. Determine where there is **flexibility** (float) in the schedule.
 
----
 
 ## The Time Scheduling Procedure
 
@@ -57,7 +56,6 @@ Topic: ''
 > [NOTE]  
 > In reality, these steps are by no means sequential. The model will be adjusted, constraints will be reviewed, and the calculation will be repeated many times in an iterative process to arrive at the optimum schedule.
 
----
 
 ## Key Techniques and Concepts in Time Scheduling
 
@@ -109,7 +107,6 @@ Topic: ''
     
     - It measures progress in terms of the "value" of the work completed rather than just the elapsed time, providing more accurate predictions of future performance.
 
----
 
 ## Time Scheduling in Projects, Programmes, and portfolios
 
@@ -141,7 +138,6 @@ Topic: ''
 
 - The portfolio's main concern with time scheduling relates to resource and financial capacity planning, which requires consistent and accurate high-level schedule information from its components.
 
----
 
 ## Flashcard Q&A
 
