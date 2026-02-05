@@ -49,7 +49,6 @@ Topic: ''
     
     - Maintain effective communications with all stakeholders.
 
----
 
 ## The Activities of the Delivery Process
 
@@ -106,7 +105,6 @@ Topic: ''
 
 - Formal acceptance signifies the **transfer of ownership** of the work and its products from the delivery team to the management team.
 
----
 
 ## Managing Complexity in Delivery
 
@@ -130,7 +128,6 @@ Topic: ''
         
         - The interface with these delegated delivery teams is managed through the **Development Process**.
 
----
 
 ## Flashcard Q&A
 
