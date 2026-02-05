@@ -39,7 +39,6 @@ Topic: ''
     
     - **Requirement**: This external view implicitly requires the capability maturity of different organisations to be comparable, meaning they should have been assessed against the same model.
 
----
 
 ## The Praxis Capability Maturity Model Approach
 
@@ -54,7 +53,6 @@ Topic: ''
 > [NOTE]  
 > This approach is not dissimilar to the approach taken by ISO9000 for quality. Each organisation can develop a system to suit its own context but, provided the system aligns with the core principles, it can still be accredited to a universally accepted standard. This is achieved by setting the attributes that describe the different levels of maturity at a fairly high level and supplementing them with advice on their application.
 
----
 
 ## The Structure of the Praxis Model (Based on CMMI®)
 
@@ -92,7 +90,6 @@ Topic: ''
     
     - This does not imply an organisation has a different maturity level for each process. The overall maturity level is the one achieved across _all_ the processes that are relevant to the organisation's context.
 
----
 
 ## How Maturity Relates to the Other Praxis Sections
 
@@ -112,7 +109,6 @@ Topic: ''
     
     - The maturity model provides the organisational context for the development and application of individual competencies.
 
----
 
 ## Flashcard Q&A
 
