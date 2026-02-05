@@ -19,7 +19,6 @@ Topic: ''
 
 - In the Praxis Framework, P3 management documents are organised into three main categories. This structure helps to clarify the purpose and content of each type of documentation.
 
----
 
 ## The Three Categories of Documents
 
@@ -47,7 +46,6 @@ Topic: ''
 
 - **Examples**: Schedules, Risk Register, Change Log, Progress Reports, Work Packages.
 
----
 
 ## How Praxis Organises Documentation
 
@@ -66,7 +64,6 @@ Topic: ''
 > 
 > - It also appears in the resource page for the **Definition Process** (the Method process where it is first created in detail).
 
----
 
 ## Flashcard Q&A
 
