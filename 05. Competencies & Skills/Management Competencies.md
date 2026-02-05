@@ -21,7 +21,6 @@ Topic: ''
 
 - It defines the required knowledge and performance criteria for an individual to be considered competent in performing these core P3 management functions.
 
----
 
 ## Structure of Management Competencies
 
@@ -31,7 +30,6 @@ Topic: ''
     
     2. **Interpersonal Competencies**: These relate to the "soft skills" required to effectively lead and interact with people (e.g., Leadership, Communication, Negotiation).
 
----
 
 ## Relationship with Context Functions
 
@@ -46,7 +44,6 @@ Topic: ''
 > 
 > Therefore, the competency for the Sponsorship _function_ is covered by the competency defined for the Sponsorship _process_. This ensures that the required skills for being an effective sponsor are fully defined within the competency framework.
 
----
 
 ## Flashcard Q&A
 
