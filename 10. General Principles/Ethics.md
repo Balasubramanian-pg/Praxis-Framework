@@ -40,7 +40,6 @@ Topic: ''
     
     2. Raise the standards of **professionalism** by which P3 managers are judged, and in doing so, raise the overall status of the P3 management profession.
 
----
 
 ## The Subjective and Contextual Nature of Ethics
 
@@ -61,7 +60,6 @@ Topic: ''
 > [!WARNING]  
 > Sometimes, these different sets of guidelines may conflict with one another. While statutory legislation clearly takes precedence, a P3 manager must be acutely aware of where professional codes and company codes may differ. If a professional believes there are conflicts or significant differences in the various codes, they must seek advice or formal direction from a relevant authority (e.g., their professional body, their company's legal department, or their sponsor).
 
----
 
 ## Ethics in Practice
 
@@ -85,7 +83,6 @@ Topic: ''
 
 - This can be achieved through dedicated training, the provision of specific guidance for difficult situations, and including ethical conduct as part of the formal **assurance** process.
 
----
 
 ## Broader Ethical Considerations
 
@@ -100,7 +97,6 @@ Topic: ''
 
 - In this environment, the P3 manager needs to be able to not only _take_ ethical decisions but also be able to clearly _explain_ those decisions in a way that maintains the commitment and trust of all stakeholders.
 
----
 
 ## Flashcard Q&A
 
