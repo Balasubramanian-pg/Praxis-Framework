@@ -26,7 +26,6 @@ Topic: ''
 > [!IMPORTANT]  
 > This generic model can, and should, be tailored to the specific context of the work. Each process is supported by competence and maturity definitions that remain relevant even if the Praxis process is replaced with a corresponding process from another guide, such as PRINCE2® or ISO21500.
 
----
 
 ## The Generic Project and Programme Process Model
 
@@ -90,7 +89,6 @@ Topic: ''
     
     - It describes the interface between the overall management team and the teams that are physically creating the products.
 
----
 
 ## Tailoring the Process Model for Different Contexts
 
@@ -115,7 +113,6 @@ Topic: ''
 
 - **Contractor Responsibilities**: The contractor's process model is then limited to the elements they are responsible for, which is primarily the **Delivery Process** (building the output) and the **Closure Process** (handing it over), along with their own internal sponsorship and definition activities to manage their side of the contract.
 
----
 
 ## Flashcard Q&A
 
