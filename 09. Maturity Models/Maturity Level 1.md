@@ -23,7 +23,6 @@ Topic: ''
 
 - Instead, there are more **fundamental differences** in culture, behaviour, and integration that distinguish immature and mature organisations.
 
----
 
 ## The Maturity Levels in Praxis
 
@@ -67,7 +66,6 @@ Topic: ''
 
 - **Key Characteristic**: Effective P3 management in these organisations is **resilient**. It is resistant to the pressures of political, economic, and environmental change because the processes are so well-established, measured, and continuously improved.
 
----
 
 ## Flashcard Q&A
 
