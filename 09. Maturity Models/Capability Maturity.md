@@ -51,7 +51,6 @@ Topic: ''
 > [!NOTE]  
 > A key concept in CMMI® and Praxis is the use of two distinct but related scales: one for capability and one for maturity. Capability addresses the performance of individual functions or process areas, while maturity addresses the performance of the overarching, integrated life cycle processes.
 
----
 
 ## The Two Scales: Capability vs. Maturity
 
@@ -137,14 +136,12 @@ Topic: ''
 > - A more robust and therefore less risky delivery environment.  
 >     Levels 4 and 5 are primarily concerned with becoming more **efficient**, meaning the benefits of Level 3 are retained but less effort is expended in maintaining them.
 
----
 
 ## Context is Key
 
 > [!TIP]  
 > Maturity is sensitive to the context of the projects, programmes, and portfolios an organisation undertakes. The Praxis approach is similar to ISO9000 quality standards in that an organisation defines its own required scope of capability maturity against which it will benchmark and improve. It is not necessary to achieve high capability in functions or processes that an organisation does not normally perform.
 
----
 
 ## Application in Projects, Programmes, and Portfolios
 
@@ -182,7 +179,6 @@ Topic: ''
     
     - Progression to the highest levels of maturity (Level 4 and 5) requires more than just mature components. It requires the application of a defined, mature **portfolio management process** itself, including quantitative management and continuous optimisation of the entire portfolio.
 
----
 
 ## Flashcard Q&A
 
