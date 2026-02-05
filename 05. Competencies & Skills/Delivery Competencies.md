@@ -21,7 +21,6 @@ Topic: ''
 
 - **Purpose**: They define the knowledge and performance criteria required for an individual to be considered competent in the practical application and implementation of the core technical and procedural functions of P3 management.
 
----
 
 ## Relationship Between Functions and Competencies
 
@@ -52,7 +51,6 @@ Topic: ''
 
 - This subtle shift in language emphasizes that a competency is not about knowing the theory of stakeholder management; it is about being able to _actually manage stakeholders_ effectively in a real-world project, programme, or portfolio environment.
 
----
 
 ## Flashcard Q&A
 
