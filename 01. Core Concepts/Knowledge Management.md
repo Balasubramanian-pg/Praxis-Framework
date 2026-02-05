@@ -59,7 +59,6 @@ Topic: ''
 
 - **Level 4 Capability**: A key attribute is the implementation of an integrated and structured knowledge management system across the organisation.
 
----
 
 ## Tacit vs. Explicit Knowledge
 
@@ -89,7 +88,6 @@ Topic: ''
 > [!NOTE]  
 > The Praxis Framework itself is a prime example of this concept. It is designed to be a foundation on which tacit knowledge from the entire P3 management community can be recorded and made explicit in a highly accessible way.
 
----
 
 ## Establishing Knowledge Management
 
@@ -113,7 +111,6 @@ Topic: ''
 
 - It can **motivate management team members** who see a vehicle for them to help improve P3 management at an organisational level through their personal contributions and experience.
 
----
 
 ## Application in Projects, Programmes, and Portfolios
 
@@ -150,7 +147,6 @@ Topic: ''
 
 - This would typically be proposed and justified during the portfolio's **initiation process**.
 
----
 
 ## Flashcard Q&A
 
