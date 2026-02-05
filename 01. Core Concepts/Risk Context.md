@@ -68,7 +68,6 @@
 
 - During the definition process, functions like solutions development will be heavily influenced by the stakeholders’ risk appetite. A high-risk, high-return solution would be acceptable to risk-seeking stakeholders but not to those who are risk-averse.
 
----
 
 ## Risk Context in Projects, Programmes, and Portfolios
 
@@ -90,7 +89,6 @@
 
 - Instead, the projects and programmes must be categorised, prioritised, and **balanced** with the overall acceptable level of risk for the portfolio in mind. A portfolio might deliberately contain a mix of low-risk and high-risk initiatives to achieve a balanced risk profile.
 
----
 
 ## Flashcard Q&A
 
