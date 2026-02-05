@@ -40,7 +40,6 @@ Topic: ''
     
     4. Formally **conclude** contracts at the end of the work.
 
----
 
 ## The Contract Management Procedure
 
@@ -62,7 +61,6 @@ Topic: ''
 5. **Conclude Contract**:
     - Once the work is complete, this step confirms that all legal obligations under the contract have been discharged.
 
----
 
 ## The Nature of a Contract
 
@@ -122,7 +120,6 @@ Topic: ''
     
     - **Dispute management** procedures.
 
----
 
 ## Administering the Contract
 
@@ -145,7 +142,6 @@ Topic: ''
 
 - The responsibilities for administering these long-term liabilities need to be considered and documented, often in a **follow-on actions report**.
 
----
 
 ## Contract Management in Projects, Programmes, and Portfolios
 
@@ -165,7 +161,6 @@ Topic: ''
 
 - **Interdependencies**: The P3 manager must understand the interdependencies between multiple contracts. The actions (or inactions) of one supplier may adversely affect another, leading to a contractual dispute. All such interdependencies should be considered, and the contracts should be drafted accordingly to manage these risks.
 
----
 
 ## Flashcard Q&A
 
