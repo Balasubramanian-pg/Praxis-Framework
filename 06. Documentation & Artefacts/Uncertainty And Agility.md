@@ -42,7 +42,6 @@ Topic: ''
 
 - Projects and programmes are designed to achieve a unique set of objectives outlined in a business case. The more innovative or extensive the scope of this work, the greater the chance it will be affected by VUCA factors.
 
----
 
 ## From VUCA to Uncertainty: The Core Driver
 
@@ -59,7 +58,6 @@ Topic: ''
     
     - **Extrinsic Uncertainty**: Uncertainty that arises from the world outside the defined boundaries of the work (e.g., economic changes, new regulations, weather).
 
----
 
 ## How Standard P3 Functions Manage Uncertainty
 
@@ -86,7 +84,6 @@ Topic: ''
 > [!IMPORTANT]  
 > While nearly every element of project delivery plays a role in reducing uncertainty, it can never be completely eliminated. The goal is to manage uncertainty, not to pretend it doesn't exist.
 
----
 
 ## Defining Agility: The Response to Uncertainty
 
@@ -104,7 +101,6 @@ Topic: ''
 
 - Conversely, in more predictable contexts with low levels of uncertainty, we can afford to plan further ahead with more confidence, and the need for high agility is less critical.
 
----
 
 ## The Continuum of Agility
 
@@ -121,7 +117,6 @@ Topic: ''
 > 
 > - **Low Uncertainty requires Low Agility.**
 
----
 
 ## Illustrating the Continuum: Practical Examples
 
@@ -141,7 +136,6 @@ Topic: ''
 
 - **Agility Application**: Only a small amount of uncertainty can be resolved upfront. Most of it must be resolved through an iterative and incremental development process, gathering user feedback and adapting the product in small steps. This requires a high-agility approach.
 
----
 
 ## Factors Affecting Agility: Enablers and Constraints
 
@@ -167,7 +161,6 @@ Topic: ''
     
     - This reduces the autonomy of individual teams and constrains the level of agility that can be effectively applied.
 
----
 
 ## Agility vs. Agile: A Critical Distinction
 
@@ -188,7 +181,6 @@ Topic: ''
 > [!IMPORTANT]  
 > Agility is the broad concept that covers all approaches. Agile is a specific subset of high-agility methods. Saying a project needs to be "agile" is not the same as saying it needs to use "Agile".
 
----
 
 ## Applying Agility in Practice
 
@@ -196,7 +188,6 @@ Topic: ''
 
 - This assessment is not necessarily for the entire project or programme as a whole. Different components of the same initiative may have different levels of uncertainty and therefore require different levels of agility in their management.
 
----
 
 ## Flashcard Q&A
 
