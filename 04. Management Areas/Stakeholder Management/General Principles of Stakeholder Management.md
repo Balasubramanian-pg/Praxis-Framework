@@ -42,7 +42,6 @@ Topic: ''
     
     - **Risk management** is based on understanding stakeholder appetite for, and attitude to, risk.
 
----
 
 ## The Stakeholder Management Procedure
 
@@ -97,7 +96,6 @@ Topic: ''
 > [!IMPORTANT]  
 > Stakeholder management becomes more complex because stakeholders’ views, roles, or allegiances can change throughout the life cycle. For this reason, the stakeholder management steps (Identify, Assess, Plan Communications, Engage) must be repeated throughout the life cycle as part of an ongoing cycle of review.
 
----
 
 ## Stakeholder Management in Projects, Programmes, and Portfolios
 
@@ -142,7 +140,6 @@ Topic: ''
 > [!WARNING]  
 > Stakeholder management can be one of the most challenging activities within a structured portfolio. The broad and significant change management across the entire portfolio can be undermined if there are local areas of the organisation with poor stakeholder commitment.
 
----
 
 ## Flashcard Q&A
 
