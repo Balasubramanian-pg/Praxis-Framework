@@ -59,7 +59,6 @@ Topic: ''
 
 - Because the deployment of competent people across all these roles is so critical, it is a key characteristic of **level 2 capability maturity**. The competencies defined in the Praxis Framework are designed to describe how an individual should perform in an organisation operating at that level.
 
----
 
 ## Competency Frameworks
 
@@ -87,7 +86,6 @@ Topic: ''
     
     - Conducting fair and objective **competency-based appraisals**.
 
----
 
 ## The Components of a Competency
 
@@ -106,7 +104,6 @@ Topic: ''
 > [!TIP]  
 > Experience and behaviour are often highly sensitive to the specific environment and context in which the competency is being applied. For this reason, generic competency frameworks (like those found in Praxis) more often define competencies in terms of knowledge and performance. The more context-specific elements of experience and behaviour are then typically added as part of a full role description for a specific job in a specific organisation.
 
----
 
 ## Applying Competence Frameworks in Practice
 
@@ -118,7 +115,6 @@ Topic: ''
 
 - Even then, these selected competencies may need to be further **tailored** to suit the specific situations and challenges of the work.
 
----
 
 ## Flashcard Q&A
 
