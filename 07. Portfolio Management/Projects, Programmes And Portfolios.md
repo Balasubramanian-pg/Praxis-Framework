@@ -41,7 +41,6 @@ Topic: ''
 > [!IMPORTANT]  
 > The ultimate goal of P3 management is to achieve capability maturity. This is accomplished when competent people in a mature organisation can tailor the management approach to each set of circumstances, starting with the governance structure.
 
----
 
 ## The Key Distinguishing Factor: Complexity of Scope
 
@@ -69,7 +68,6 @@ Topic: ''
     
     - **Example**: Reduced staff travel costs between offices and lower overall facilities management costs.
 
----
 
 ## Projects
 
@@ -84,7 +82,6 @@ Topic: ''
 > [!NOTE]  
 > Projects and programmes are similar in that they are both unique and temporary. This similarity is reflected in frameworks like Praxis, which define common life cycle processes that can be adapted for both.
 
----
 
 ## Programmes
 
@@ -104,7 +101,6 @@ Topic: ''
     
     - A change management stream (to ensure staff adapt to the new ways of working).
 
----
 
 ## Portfolios
 
@@ -137,7 +133,6 @@ Topic: ''
 > [!TIP]  
 > An organisation can have multiple portfolios, often distinguished by factors in their environment, such as geography (e.g., the European Portfolio), operating division (e.g., the Research & Development Portfolio), or regulatory context (e.g., a utility company's regulated vs. non-regulated portfolios).
 
----
 
 ## Flashcard Q&A
 
