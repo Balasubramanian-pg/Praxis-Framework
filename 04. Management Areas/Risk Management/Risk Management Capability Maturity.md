@@ -32,7 +32,6 @@ Topic: ''
 > <br><br>  
 > It is not uncommon for risk management to be over-complicated in relation to the complexity of the work. For example, at Level 2, there may be an over-zealous identification of many minor risks, which can reduce the effectiveness of the function even though the basic goals are achieved. At Level 3, better weighting and analysis ensure that the effort and response planning are proportionate to the significance of the risks.
 
----
 
 ## Level 2 Capability Attributes
 
@@ -53,7 +52,6 @@ Topic: ''
 - **Implement Responses**
     - The planned risk responses are implemented.
 
----
 
 ## Level 3 Capability Attributes
 
@@ -91,7 +89,6 @@ Topic: ''
     
     - The **effectiveness** of the implemented responses is actively **monitored**, and the results are fed back into revised plans and future risk assessments.
 
----
 
 ## Flashcard Q&A
 
