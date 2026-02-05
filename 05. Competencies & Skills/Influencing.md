@@ -52,7 +52,6 @@ Topic: ''
     
     - The stakeholder management function identifies numerous people that the P3 manager needs to influence. This influence may be required to overcome objections, secure resources, or even ask them to help influence others.
 
----
 
 ## The Practice of Influencing
 
@@ -95,7 +94,6 @@ Topic: ''
 > [!IMPORTANT]  
 > While an individual’s ability to influence is based largely on their personality and behaviour, it is also dependent on their position in the organisation. Sometimes, even the most skilled P3 manager will need the support of their sponsor, simply because the influencing skills need to be backed up by the kind of authority or credibility that is linked to seniority.
 
----
 
 ## Influencing in Projects, Programmes, and Portfolios
 
@@ -135,7 +133,6 @@ Topic: ''
 
 - This influencing role does not necessarily stop at the boundaries of the host organisation. A portfolio is often the most visible aspect of P3 management to the outside world. If the host organisation wishes to gain support from shareholders, public bodies, or customers, then influence must be available and exercised at the highest executive level.
 
----
 
 ## Flashcard Q&A
 
