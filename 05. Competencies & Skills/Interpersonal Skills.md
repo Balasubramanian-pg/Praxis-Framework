@@ -26,7 +26,6 @@ Topic: ''
 
 - When a manager applies these skills with **professionalism** and within an **ethical framework**, they will engender the **trust and respect** that are critical for success.
 
----
 
 ## The Praxis Wheel of Interpersonal Skills
 
@@ -52,7 +51,6 @@ Topic: ''
 
 8. **Communication** (at the heart of the wheel, central to all skills)
 
----
 
 ## Breakdown of Key Skills and Their Application
 
@@ -101,7 +99,6 @@ Topic: ''
     
     - It is the central skill that enables all others to be performed effectively.
 
----
 
 ## Flashcard Q&A
 
