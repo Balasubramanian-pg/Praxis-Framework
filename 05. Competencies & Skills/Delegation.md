@@ -78,7 +78,6 @@ Topic: ''
 > [!NOTE]  
 > Delegation is an essential component of developing high-performing teams. A competent P3 manager must develop the skills to overcome these personal and organisational obstacles.
 
----
 
 ## Delegation in Projects, Programmes, and Portfolios
 
@@ -119,7 +118,6 @@ Topic: ''
 > [!IMPORTANT]  
 > At all levels, the delegator has a responsibility to keep the delegatee fully informed. This means not only communicating the changes to the work itself but also taking the time to explain the reasons for the change. This maintains trust and ensures the delegatee remains aligned with the overall objectives.
 
----
 
 ## Flashcard Q&A
 
