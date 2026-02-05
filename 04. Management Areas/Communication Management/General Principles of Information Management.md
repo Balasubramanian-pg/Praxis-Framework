@@ -31,7 +31,6 @@ Topic: ''
 > [NOTE]  
 > It is important to distinguish between data and information. Data is the raw facts and figures collected during the work. Information is the output of analysing and interpreting that data to make it meaningful and useful for decision-making.
 
----
 
 ## The Information Management Procedure
 
@@ -79,7 +78,6 @@ Topic: ''
 > [IMPORTANT]  
 > A key part of information management is configuration management, which controls the versions of key documents to ensure that everyone is working from the correct and most up-to-date information. The information management plan will define how information is classified, stored, and controlled.
 
----
 
 ## Key Concepts in Information Management
 
@@ -109,7 +107,6 @@ Topic: ''
 
 - It makes sense for the information management system and the knowledge management system to work in a similar and compatible way.
 
----
 
 ## Information Management in Projects, Programmes, and Portfolios
 
@@ -136,7 +133,6 @@ Topic: ''
 > [NOTE]  
 > The portfolio management team is likely to have responsibility for both knowledge management and the development of capability maturity. Since information management is closely linked to both of these areas, the portfolio management team must take a long-term, strategic view to ensure that good practice is embedded in the organisation.
 
----
 
 ## Flashcard Q&A
 
