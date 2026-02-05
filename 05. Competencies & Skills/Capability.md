@@ -27,7 +27,6 @@ Topic: ''
 
 - **Cumulative Nature**: The goals are cumulative. This means to reach level 3 in a function, the organisation must have achieved all the generic and specific goals for both level 2 and level 3.
 
----
 
 ## The Capability Levels
 
@@ -59,7 +58,6 @@ Topic: ''
 
 - The function is performed using a centrally defined standard approach that is **tailored** to the context of each specific project or programme.
 
----
 
 ## Generic Goals of Capability
 
@@ -89,7 +87,6 @@ Topic: ''
 
 - Collect and utilise **lessons learned**.
 
----
 
 ## Generic Attributes and Indicators
 
@@ -116,7 +113,6 @@ Topic: ''
 |**Initiate**||Members of the management team are competent in the function.|All relevant roles include responsibilities and performance criteria in their descriptions.|
 |**Specific Goals**|||The procedural attributes designed to achieve the specific goals of each individual function are described in their respective sections.|
 
----
 
 ## Flashcard Q&A
 
