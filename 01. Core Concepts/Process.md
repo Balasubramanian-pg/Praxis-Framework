@@ -44,7 +44,7 @@ Topic: ''
 
 - This approach supports the core principle, embraced by Praxis, that describing projects and programmes as two, mutually exclusive types of initiative has more to do with the human desire to categorise than with real, practical differences in how they are managed.
 
-> [IMPORTANT]  
+> [!IMPORTANT]  
 > The Praxis method for projects and programmes is not a "one size fits all" approach. It is a single, scalable framework that is adapted to the context and complexity of the specific work being undertaken.
 
 
