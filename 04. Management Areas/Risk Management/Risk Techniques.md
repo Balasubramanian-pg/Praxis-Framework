@@ -1,26 +1,27 @@
 ---
-Title: Risk techniques 29183b71d8f380c8b9e9ff066899d140
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Risk techniques 29183b71d8f380c8b9e9ff066899d140.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Risk techniques"
+aliases:
+  - "Risk techniques"
+  - "Risk Techniques"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/risk-management
+  - type/concept
+pillar: "Knowledge"
+section: "Risk management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20140.svg)
-
-# Risk techniques
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20140.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20140.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20140.svg)Section|Risk management|
-|![](arrow-circle-down_gray%20140.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Risk management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Risk Techniques
 
@@ -34,11 +35,11 @@ Topic: ''
 ## 1. Risk Identification Techniques
 
 - Risk identification draws on many different sources of information. Many other P3 management functions are, in effect, a form of risk management. For example:
-    
+
     - **Stakeholder management** identifies stakeholders who may oppose the work (a risk).
-    
+
     - **Schedule management** identifies estimating uncertainties (a risk) and addresses them with techniques like Monte Carlo analysis.
-    
+
     - **Financial management** identifies cost uncertainties (a risk) and accommodates them through contingency reserves.
 
 - Risk identification must integrate with these other functions and also pick up all other sources of risk.
@@ -46,15 +47,15 @@ Topic: ''
 ### Common Identification Techniques
 
 - Many techniques are simply different ways of extracting risk-related information from people who have knowledge of the work and its context.
-    
+
     - **Interviews**: Conducted on a one-to-one basis with individuals who have specific knowledge or expertise.
-    
+
     - **Risk Workshops**: Bringing groups together for brainstorming sessions to identify risks collectively.
-    
+
     - **Delphi Technique**: A structured communication technique used to co-ordinate a group of experts to reach a consensus, often used when the experts are not in the same location or to avoid the influence of dominant personalities.
-    
+
     - **Lessons Learned Reviews**: Information from previous, similar projects, programmes, and portfolios should never be overlooked. This involves looking at past lessons learned reports and archived risk registers.
-    
+
     - **Checklists and Prompt Lists**: In more mature organisations, information from past work may have been collated and structured into checklists as part of a formal knowledge management system.
 
 
@@ -67,9 +68,9 @@ Topic: ''
 - **Focus**: This approach focuses on **individual risk events** and is primarily based on educated opinion and expert judgement.
 
 - **Core Technique**: The most common technique is based on assessing two properties of a risk event:
-    
+
     1. Its **probability** (or the likelihood that it will happen).
-    
+
     2. Its **impact** on the objectives if it does happen.
 
 - The results are often plotted on a **Probability-Impact Matrix** to help prioritise the risks.
@@ -81,13 +82,13 @@ Topic: ''
 - **Focus**: This approach focuses more on **overall uncertainty**, particularly estimating uncertainty.
 
 - **Typical Techniques**:
-    
+
     - **PERT (Program Evaluation and Review Technique)**: Uses a three-point estimate (optimistic, most likely, pessimistic) for activity durations to calculate a weighted average, providing a more realistic estimate than a single point.
-    
+
     - **Monte Carlo Analysis**: A computer-based simulation technique that runs a schedule or cost model hundreds or thousands of times, using random values from a probability distribution for each uncertain variable (like activity duration or cost). The result is a probability distribution for the overall project finish date or cost.
-    
+
     - **Sensitivity Analysis**: A technique used to determine which risks have the most potential impact on the project. It helps to understand how the uncertainty of each project element affects the project objective when all other uncertain elements are held at their baseline values. A common output is a **Tornado Diagram**.
-    
+
     - **Decision Trees**: Can be used to quantitatively compare the effect of different decisions and a series of subsequent chance events. This is particularly useful for assessing secondary or tertiary risks and influencing the decisions taken in risk response planning.
 
 
@@ -96,23 +97,23 @@ Topic: ''
 - The principles of response planning are very similar for all types of risk. The two main categories of response are for threats and opportunities.
 
 - **Possible Risk Responses for Threats**:
-    
+
     - **Avoid**: Change the plan to eliminate the threat entirely.
-    
+
     - **Reduce**: Take action to reduce the probability or impact of the threat.
-    
+
     - **Transfer**: Shift the negative impact of the threat to a third party (e.g., through insurance or a fixed-price contract).
-    
+
     - **Accept**: Acknowledge the risk but take no proactive action. This may involve having a contingency plan.
 
 - **Possible Risk Responses for Opportunities**:
-    
+
     - **Exploit**: Change the plan to ensure the opportunity happens.
-    
+
     - **Enhance**: Take action to increase the probability or positive impact of the opportunity.
-    
+
     - **Share**: Allocate ownership of the opportunity to a third party who is best able to capture the benefit (e.g., in a joint venture).
-    
+
     - **Reject**: Acknowledge the opportunity but decide not to pursue it.
 
 
@@ -123,14 +124,14 @@ Topic: ''
 - **Larger, Complex Projects**: These will include significant levels of uncertainty and can make good use of quantitative techniques like Monte Carlo analysis. The main issue management may face is communicating the probabilistic results to stakeholders who are expecting a single, deterministic date or cost. The ease with which this can be done is a good indication of the organisation's maturity.
 
 - **Programmes and Portfolios**:
-    
+
     - The risk management plan must outline the use of techniques to ensure **consistency** across all component projects. Without consistency, it is difficult to aggregate risk information from the components to get a valid picture of the overall risk.
-    
+
     - It is impractical to apply some detailed quantitative assessment techniques (like a network-based Monte Carlo analysis) at the consolidated programme or portfolio level.
-    
+
     - **Structured portfolios**, which are directly affected by the external environment, need to identify risks from the broadest range of sources. They may use strategic techniques such as **PESTLE** (Political, Economic, Social, Technological, Legal, Environmental) to assess these external sources of risk to the strategic objectives.
 
-> [WARNING]  
+> [WARNING]
 > A common fault is to employ overly sophisticated techniques to address perceived shortcomings in risk management when the real problem lies in a poor understanding of the risk context (the attitudes and behaviours of the people involved).
 
 
@@ -150,3 +151,15 @@ Topic: ''
 
 - **Q:** What is PESTLE analysis and at what level would it most likely be used?
     - **A:** It is a technique for assessing external sources of risk (Political, Economic, Social, Technological, Legal, Environmental). It would most likely be used at the **structured portfolio** level to assess risks to strategic objectives.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Risk management Overview]]
+- **Previous**: [[Risk Register]]
+
+### Related Concepts & Artefacts
+- [[Risk Management Plan]]
+- [[Risk Register]]
+- [[Manage Risk Competency|Manage Risk]]
+- [[Delivery Process]]
