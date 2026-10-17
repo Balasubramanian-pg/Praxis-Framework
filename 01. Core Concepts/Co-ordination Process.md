@@ -1,3 +1,28 @@
+---
+title: "Co-ordination process"
+aliases:
+  - "Co-ordination process"
+  - "Co-ordination Process"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/process
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `process`
+
 # Co-ordination process
 
 Coordination in the **Praxis Framework** is about enabling teams, suppliers, and stakeholders to move in a unified direction. It is practical, human-centered, and outcome-driven. In the words of a leadership mindset: we empower people to align purpose with delivery. And we build clarity so execution becomes a shared responsibility.
@@ -9,8 +34,7 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 * Avoids duplication of effort, ambiguity, and operational silos
 * Drives timely decision-making and transparent communication
 
-> [!TIP]
-> Coordination is woven into every Praxis function. It is not a separate role; it is a collective discipline.
+> [!TIP] Coordination is woven into every Praxis function. It is not a separate role; it is a collective discipline.
 
 ## Core Intent
 
@@ -52,8 +76,7 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 * Maintain stakeholder commitment throughout change
 * Surface concerns early and ensure feedback loops are active
 
-> [!TIP]
-> Build a culture where coordination feels like empowerment, not policing.
+> [!TIP] Build a culture where coordination feels like empowerment, not policing.
 
 ## Tools and Enablers
 
@@ -83,3 +106,14 @@ Coordination in the **Praxis Framework** is about enabling teams, suppliers, and
 
 When coordination is done well, teams don’t feel controlled; they feel empowered. They understand how their work contributes to something larger. And the organization gains velocity with purpose.
 
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[Closure Process]]
+- **Next**: [[Complexity]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
