@@ -1,27 +1,27 @@
 ---
-Title: Project, programme and portfolio management 29183b71d8f3800daceaf5bdf36c9e39
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Project, programme and portfolio management
-  29183b71d8f3800daceaf5bdf36c9e39.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Project, programme and portfolio management"
+aliases:
+  - "Project, programme and portfolio management"
+  - "Project, Programme And Portfolio Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance
+  - type/concept
+pillar: "Knowledge"
+section: "Governance"
+subarea: "Context"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20127.svg)
-
-# Project, programme and portfolio management
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20127.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20127.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%20127.svg)Section|Governance|
-|![](arrow-circle-down_gray%20127.svg)Sub Area|Context|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Project, Programme, and Portfolio Management (P3M)
 
@@ -32,33 +32,33 @@ Topic: ''
 ### Goals of P3 Management
 
 - The two primary goals of P3 management are to:
-    
+
     1. Deliver the required objectives to stakeholders in a **planned and controlled manner**.
-    
+
     2. Govern and manage the processes that deliver these objectives **effectively and efficiently**.
 
 ### Benefits of Effective P3 Management
 
 - A significant investment in effective P3 management provides benefits to both the host organisation and the individuals involved in the work. These benefits include:
-    
+
     - Increasing the likelihood of **achieving the desired results**.
-    
+
     - Ensuring the **effective and efficient use** of resources.
-    
+
     - Satisfying the needs of different and often competing **stakeholders**.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > A consistent approach to P3 management, executed by competent resources, is the central pillar for developing organisational capability maturity. A mature organisation is one that can successfully deliver its objectives on a regular and predictable basis.
 
 
 ## Project and Programme Management
 
 - Projects and programmes share many fundamental similarities. Both are:
-    
+
     - **Unique**: They are one-off undertakings.
-    
+
     - **Transient**: They have a defined start and end.
-    
+
     - **Objective-driven**: They are undertaken to achieve a specific set of stated objectives.
 
 - **The Key Distinction**: The primary difference between a project and a programme is the need to accommodate different degrees of **complexity of scope**. The differences between project management and programme management practices mirror this distinction.
@@ -102,29 +102,29 @@ Topic: ''
 ### Key Roles and Competencies
 
 - **Sponsor and Manager**:
-    
+
     - They share responsibility for the elements above.
-    
+
     - The **sponsor** is ultimately **accountable** for the achievement of the business case.
-    
+
     - The **manager** (Project or Programme Manager) is responsible for the **day-to-day running** of the work.
 
 - **Managerial Competence**:
-    
+
     - A manager needs to be competent in six key aspects of delivery:
-        
+
         1. Scope Management
-        
+
         2. Schedule Management
-        
+
         3. Finance Management
-        
+
         4. Risk Management
-        
+
         5. Resource Management
-        
+
         6. Change Management (if relevant to the scope)
-    
+
     - Crucially, competence in interpersonal skills such as **leadership, influencing, communication, and conflict management** is also vitally important for success.
 
 - **Business Change Manager**:
@@ -140,11 +140,11 @@ Topic: ''
 - **Focus**: A standard portfolio contains projects and/or programmes with largely **independent objectives**. The primary focus of management is on increasing the **effectiveness and efficiency** of how this work is delivered across the organisation.
 
 - **Core Components**:
-    
+
     - **Establishing an Infrastructure**: Creating a support structure (e.g., a PMO) to help projects and programmes succeed.
-    
+
     - **Defining Consistent Processes**: Creating and mandating the use of common management procedures and processes to be used across all work.
-    
+
     - **Co-ordinating Limited Resources**: Managing the overall demand for resources against the available supply and optimising their allocation across the portfolio.
 
 ### Structured Portfolio Management
@@ -154,16 +154,16 @@ Topic: ''
 - It includes all the components of standard portfolio management, plus several additional strategic elements.
 
 - **Additional Core Elements**:
-    
+
     - **Maintaining Strategic Alignment**: Continuously reviewing and maintaining a balanced portfolio that is aligned with the organisation's strategic objectives, even as those objectives or external conditions change.
-    
+
     - **Improving Delivery via Portfolio-wide View**: Using a high-level perspective to manage and coordinate risk, resources, dependencies, and schedules across the entire portfolio.
-    
+
     - **Co-ordinating Change Capacity**: Understanding the organisation's ability to absorb change and coordinating the portfolio to ensure that the cumulative impact of all projects and programmes does not overwhelm the business.
-    
+
     - **Reducing Costs and Redundancy**: Identifying and removing overlapping or poorly performing projects and programmes to free up investment for more valuable initiatives.
 
-> [!NOTE]  
+> [!NOTE]
 > The management of a structured portfolio is a dynamic and continuous process. It must constantly review the balance of investment and benefit, creating new projects and programmes and closing existing ones as necessary to maintain strategic alignment.
 
 
@@ -183,3 +183,15 @@ Topic: ''
 
 - **Q:** What is the main difference between a Standard Portfolio and a Structured Portfolio?
     - **A:** A **Standard Portfolio** focuses on managing independent projects efficiently and effectively. A **Structured Portfolio** focuses on managing interdependent projects and programmes to achieve the organisation's strategic objectives.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance Overview]]
+- **Previous**: [[Manage The Finance]]
+- **Next**: [[Projects, Programmes And Portfolios]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
