@@ -3,266 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>praxis.framework - Data & Business Intelligence P3M</title>
+  <title>praxis docs - Data & Business Intelligence P3M</title>
   
   <!-- Font: Avenir Next Cyr via CDN -->
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/avenir-next-cyr">
   
-  <!-- App Stylesheet -->
+  <!-- App Stylesheet (Atlas Docs Modern Dark Architecture) -->
   <link rel="stylesheet" href="site/css/style.css">
 </head>
 <body>
 
-  <!-- Top Navigation Header (Matches Screenshot Minimalist Architecture) -->
+  <!-- Top Navigation Header (Matches Atlas Docs Header Layout) -->
   <header class="app-header">
+    
+    <!-- Brand Logo: praxis docs -->
     <a href="#/home" class="brand-wrapper">
-      <div class="brand-logo-icon">
-        <!-- 8-Point Asterisk Star Icon matching Screenshot -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
-          <line x1="12" y1="3" x2="12" y2="21"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="5.64" y1="5.64" x2="18.36" y2="18.36"></line>
-          <line x1="5.64" y1="19.07" x2="18.36" y2="5.64"></line>
-        </svg>
-      </div>
-      <span class="brand-title">praxis.framework</span>
+      <span class="brand-title">praxis</span>
+      <span class="brand-badge">docs</span>
     </a>
 
-    <!-- Center Search Bar: Q Search praxis.framework -->
-    <div class="search-container">
-      <div class="search-input-wrapper">
-        <span class="search-icon-slot">
-          <i data-lucide="search"></i>
-        </span>
-        <input type="text" id="searchInput" class="search-input" placeholder="Search praxis.framework" autocomplete="off">
-        <span class="search-shortcut">/</span>
+    <!-- Center Search Bar + ASK AI Pill Button -->
+    <div class="header-center">
+      <div class="search-container">
+        <div class="search-input-wrapper">
+          <span class="search-icon-slot">
+            <i data-lucide="search"></i>
+          </span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search Documentation" autocomplete="off">
+          <span class="search-shortcut">⌘K</span>
+        </div>
+        <div id="searchResults" class="search-results"></div>
       </div>
-      <div id="searchResults" class="search-results"></div>
+
+      <!-- ASK AI Pill Button (from screenshot) -->
+      <button class="ask-ai-pill" type="button" onclick="window.triggerAskAI()" title="Ask AI about Praxis">
+        <i data-lucide="sparkles"></i>
+        <span>ASK AI</span>
+      </button>
     </div>
 
-    <!-- Header Right Actions -->
+    <!-- Header Right Social & Mode Icons -->
     <div class="header-actions">
-      <a href="https://github.com/Balasubramanian-pg/Praxis-Framework" target="_blank" class="nav-link-btn" title="View Source on GitHub">
+      <a href="https://github.com/Balasubramanian-pg/Praxis-Framework" target="_blank" class="icon-action-btn" title="GitHub Repository">
         <i data-lucide="github"></i>
-        <span>GitHub</span>
       </a>
+      <a href="https://discord.gg" target="_blank" class="icon-action-btn" title="Community Discord">
+        <i data-lucide="message-square"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="icon-action-btn" title="X / Twitter">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="width: 14px; height: 14px;">
+          <path d="M4 4l16 16M4 20L20 4"></path>
+        </svg>
+      </a>
+      <button class="icon-action-btn" type="button" title="Dark Mode Active">
+        <i data-lucide="moon"></i>
+      </button>
     </div>
+
   </header>
 
-  <!-- App Main Layout Container -->
+  <!-- 3-Column Application Layout Container -->
   <div class="app-container">
 
-    <!-- Left Sidebar: Tree Navigation Hierarchy with Connecting Lines -->
+    <!-- Column 1: Left Navigation Sidebar -->
     <aside class="app-sidebar">
       <nav id="sidebarNav"></nav>
     </aside>
 
-    <!-- Main Content Panel -->
+    <!-- Column 2: Main Content Area -->
     <main class="app-content">
 
-      <!-- Dashboard / Overview View (Matches Uploaded Screenshot Layout) -->
+      <!-- Dashboard / Welcome View (Matches Atlas Docs Layout) -->
       <section id="dashboardView" class="dashboard-view">
         
-        <!-- Large Page Heading -->
-        <h1 class="overview-title">Overview</h1>
+        <!-- Eyebrow Category -->
+        <div class="article-eyebrow" id="welcomeIntro">Welcome</div>
         
-        <!-- Intro Paragraph with Blue Link -->
-        <p class="overview-lead">
-          Praxis Framework is the free, community-driven, integrated framework for project, programme, and portfolio management (P3M), uniquely specialized for <strong>Data Engineering, Analytics, and Business Intelligence</strong> initiatives across modern lakehouses and data platforms. Explore the comprehensive <a href="#/article/00%20-%20Praxis%20Framework%20Overview">P3M blueprint</a> or browse core disciplines below.
+        <!-- Large Page Heading -->
+        <h1 class="article-title">Quick Introduction</h1>
+        
+        <!-- Lead Description Text -->
+        <p class="article-body-text">
+          Praxis is a language-independent, community-driven framework for managing and delivering Data Engineering, Analytics, and Business Intelligence initiatives using modern DevOps and DataOps principles. It offers two core workflows:
         </p>
 
-        <!-- Quick Action Chips Row (3 Bordered White Cards with Right Arrow) -->
-        <div class="action-chips-row">
-          <a href="#/article/00%20-%20Praxis%20Framework%20Overview" class="action-chip-card">
-            <span>Explore 4 Core Pillars</span>
-            <i data-lucide="arrow-right" class="chip-arrow"></i>
-          </a>
-          <a href="#/article/04.%20Management%20Areas/00%20-%20Overview" class="action-chip-card">
-            <span>Data & BI P3M Blueprint</span>
-            <i data-lucide="arrow-right" class="chip-arrow"></i>
-          </a>
-          <a href="#/article/06.%20Documentation%20%26%20Artefacts/00%20-%20Overview" class="action-chip-card">
-            <span>Artefacts & Templates</span>
-            <i data-lucide="arrow-right" class="chip-arrow"></i>
-          </a>
+        <!-- Workflow Bullet Points -->
+        <ul style="list-style: none; margin-bottom: 28px; padding-left: 0;">
+          <li style="margin-bottom: 14px; font-size: 15px; line-height: 1.75; color: var(--text-body);">
+            <strong style="color: #f8fafc;">• Declarative (Knowledge & FinOps):</strong> Similar to Terraform, Praxis establishes governance baselines against the desired state of data assets. Manage cloud compute budgets (<a href="#/article/General%20Principles%20of%20Financial%20Management">FinOps</a>), data contracts, and organizational context.
+          </li>
+          <li style="margin-bottom: 14px; font-size: 15px; line-height: 1.75; color: var(--text-body);">
+            <strong style="color: #f8fafc;">• Versioned (Method & Medallion):</strong> Unlike traditional waterfall guides, Praxis automatically structures schema migrations and pipeline lifecycles across Medallion layers (Bronze, Silver, Gold). Teams can plan, lint, and deploy data pipelines with automated test gates.
+          </li>
+        </ul>
+
+        <!-- Section 1: Installation -->
+        <h2 class="content-h2" id="installationSec">Installation</h2>
+
+        <!-- Tabbed Platform Switcher (like macOS+Linux, Homebrew, etc.) -->
+        <div class="code-tabs-header">
+          <button class="code-tab-btn active" type="button" onclick="window.selectCodeTab('macos', this)">macOS + Linux</button>
+          <button class="code-tab-btn" type="button" onclick="window.selectCodeTab('homebrew', this)">Homebrew</button>
+          <button class="code-tab-btn" type="button" onclick="window.selectCodeTab('docker', this)">Docker</button>
+          <button class="code-tab-btn" type="button" onclick="window.selectCodeTab('databricks', this)">Databricks</button>
+          <button class="code-tab-btn" type="button" onclick="window.selectCodeTab('snowflake', this)">Snowflake</button>
+          <button class="code-tab-btn" type="button" onclick="window.selectCodeTab('dbt', this)">dbt</button>
+          <button class="code-tab-btn" type="button" onclick="window.selectCodeTab('fabric', this)">Fabric</button>
         </div>
 
-        <!-- Section 1: Core Pillars (Matches 3-Card Row with Colored Icon Boxes) -->
-        <h2 class="section-heading">Core Pillars</h2>
-        
-        <div class="feature-cards-grid">
-          
-          <!-- Card 1: Blue Icon Box -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box blue">
-                <i data-lucide="book-open"></i>
-              </div>
-              <div class="card-title">Knowledge & FinOps</div>
-            </div>
-            <p class="card-description">
-              Fundamental P3M functions, cloud compute governance, Databricks DBUs, and project environment analysis.
-            </p>
-            <a href="#/article/1.%20Knowledge" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
-          </div>
+        <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 10px;">
+          To download and install the latest release of the Praxis P3M CLI, simply run the following in your terminal:
+        </p>
 
-          <!-- Card 2: Purple Icon Box -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box purple">
-                <i data-lucide="git-merge"></i>
-              </div>
-              <div class="card-title">Method & Medallion</div>
-            </div>
-            <p class="card-description">
-              Agile delivery lifecycle spanning discovery, lakehouse architecture, and Bronze, Silver, Gold pipeline sprints.
-            </p>
-            <a href="#/article/2%20Method" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
-          </div>
-
-          <!-- Card 3: Amber Icon Box -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box amber">
-                <i data-lucide="award"></i>
-              </div>
-              <div class="card-title">Competence & Maturity</div>
-            </div>
-            <p class="card-description">
-              Individual performance criteria for data roles and a 5-level DataOps organizational maturity benchmark.
-            </p>
-            <a href="#/article/Capability%20Maturity" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
-          </div>
-
+        <!-- Dark Terminal Code Block -->
+        <div class="terminal-box">
+          <span class="terminal-command" id="terminalCommand">curl -sSf https://praxis-framework.org/install.sh | sh</span>
+          <button class="terminal-copy-btn" type="button" onclick="window.copyCodeSnippet(this)" title="Copy to clipboard">
+            <i data-lucide="copy"></i>
+          </button>
         </div>
 
-        <!-- Section 2: Management Areas (Data & BI Focus) -->
-        <h2 class="section-heading">10 Management Areas (Data & BI Focus)</h2>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.6;">
+          The framework templates and Obsidian wiki vault are released under the Creative Commons Attribution-ShareAlike 4.0 license. Follow the instructions <a href="#/article/00%20-%20Praxis%20Framework%20Overview">here</a> to explore the Master MOC.
+        </p>
 
-        <div class="feature-cards-grid management-cards-grid">
+        <!-- Section 2: Schema-as-Code & Architecture -->
+        <h2 class="content-h2" id="schemaAsCodeSec">Schema-as-Code</h2>
+        <p class="article-body-text">
+          Choose your preferred way to represent the desired state of your data platform.
+        </p>
 
-          <!-- Risk -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box rose">
-                <i data-lucide="shield-alert"></i>
-              </div>
-              <div class="card-title">Risk Management</div>
+        <!-- 3-Card Comparison Grid (SQL, Atlas HCL, ORM style from screenshot) -->
+        <div class="comparison-grid">
+
+          <!-- Card 1: SQL & Medallion -->
+          <div class="comparison-card">
+            <div class="card-code-preview">
+              <div><span class="keyword">CREATE table</span> users (</div>
+              <div style="padding-left: 14px;">id <span class="type">int</span> PRIMARY KEY,</div>
+              <div style="padding-left: 14px;">name <span class="type">varchar</span>(<span class="keyword">100</span>)</div>
+              <div>);</div>
             </div>
-            <p class="card-description">
-              Mitigating schema drift, upstream silent data corruption, and SLA pipeline breaches.
-            </p>
-            <a href="#/article/General%20Principles%20of%20Risk%20Management" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
+            <div class="card-text-body">
+              <div class="card-heading">SQL & Medallion</div>
+              <p class="card-subtext">
+                Describe your database schema and Medallion transformations (Bronze, Silver, Gold) with native SQL.
+              </p>
+            </div>
           </div>
 
-          <!-- Scope -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box emerald">
-                <i data-lucide="database"></i>
-              </div>
-              <div class="card-title">Scope & Contracts</div>
+          <!-- Card 2: Declarative Contracts (Atlas HCL style) -->
+          <div class="comparison-card">
+            <div class="card-code-preview">
+              <div>table <span class="string">"users"</span> {</div>
+              <div style="padding-left: 14px;">schema = schema.example</div>
+              <div style="padding-left: 14px;">column <span class="string">"id"</span> {</div>
+              <div style="padding-left: 28px;">null = <span class="keyword">false</span></div>
+              <div style="padding-left: 28px;">type = <span class="type">int</span></div>
+              <div style="padding-left: 14px;">}</div>
+              <div>}</div>
             </div>
-            <p class="card-description">
-              Medallion scoping, producer-consumer data contracts, and semantic data models.
-            </p>
-            <a href="#/article/Scope%20Management" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
+            <div class="card-text-body">
+              <div class="card-heading">Data Contracts & FinOps</div>
+              <p class="card-subtext">
+                The declarative language allows developers to describe data contracts and enforce FinOps budget caps.
+              </p>
+            </div>
           </div>
 
-          <!-- Finance / FinOps -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box indigo">
-                <i data-lucide="dollar-sign"></i>
+          <!-- Card 3: Modern DataOps & Ecosystem (ORM style) -->
+          <div class="comparison-card">
+            <div class="card-code-preview">
+              <div class="tech-icons">
+                <span style="font-weight: 800; color: #38bdf8;">Python</span>
+                <span style="font-weight: 800; color: #fb7185;">dbt</span>
+                <span style="font-weight: 800; color: #fbbf24;">Spark</span>
+                <span style="font-weight: 800; color: #a855f7;">Fabric</span>
               </div>
-              <div class="card-title">Finance & FinOps</div>
             </div>
-            <p class="card-description">
-              Databricks DBU budgets, Snowflake credit attribution, and cloud warehouse governance.
-            </p>
-            <a href="#/article/General%20Principles%20of%20Financial%20Management" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
-          </div>
-
-          <!-- Quality & Control -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box cyan">
-                <i data-lucide="check-circle-2"></i>
-              </div>
-              <div class="card-title">Quality & Control</div>
+            <div class="card-text-body">
+              <div class="card-heading">DataOps Ecosystem</div>
+              <p class="card-subtext">
+                Represent your pipeline models using your preferred modern data stack tools and automated quality test gates.
+              </p>
             </div>
-            <p class="card-description">
-              Automated DataOps testing gates: freshness, completeness, and schema validity.
-            </p>
-            <a href="#/article/Control" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
-          </div>
-
-          <!-- Resource -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box purple">
-                <i data-lucide="users"></i>
-              </div>
-              <div class="card-title">Resource & Roles</div>
-            </div>
-            <p class="card-description">
-              Role definitions for Data Engineers, Analytics Engineers (dbt), and BI Developers.
-            </p>
-            <a href="#/article/General%20Principles%20of%20Resource%20Management" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
-          </div>
-
-          <!-- Change Management -->
-          <div class="feature-card">
-            <div class="card-top-row">
-              <div class="card-icon-box amber">
-                <i data-lucide="refresh-cw"></i>
-              </div>
-              <div class="card-title">Change & Adoption</div>
-            </div>
-            <p class="card-description">
-              Deprecating shadow Excel pipelines and driving executive adoption of certified BI.
-            </p>
-            <a href="#/article/Goal%20of%20Change%20Management" class="card-read-more">
-              <span>Read more</span>
-              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-            </a>
           </div>
 
         </div>
 
       </section>
 
-      <!-- Article Reader View (Clean Markdown with Marked.js & Obsidian Callouts) -->
-      <section id="articleView" class="article-view">
-        <div id="breadcrumbBar" class="breadcrumb-bar"></div>
+      <!-- Article Reader View (Clean Markdown with Marked.js & Dark Callouts) -->
+      <section id="articleView" class="article-view" style="display: none;">
+        <div class="article-eyebrow" id="articleEyebrow"></div>
         <article id="articleContainer" class="article-container"></article>
       </section>
 
     </main>
+
+    <!-- Column 3: Right "On this page" TOC Sidebar (Atlas Docs Style) -->
+    <aside class="app-toc">
+      <div class="toc-title">Installation</div>
+      <ul class="toc-list" id="tocList"></ul>
+      
+      <!-- Quick Action Buttons in TOC -->
+      <div class="toc-actions">
+        <button class="toc-action-btn" type="button" onclick="window.copyCurrentPageLink(this)" title="Copy page link">
+          <i data-lucide="copy"></i>
+          <span>Copy Page</span>
+        </button>
+        <button class="toc-action-btn" type="button" onclick="window.triggerAskAI()" title="Ask AI about this article">
+          <i data-lucide="sparkles"></i>
+          <span>Ask AI about this page</span>
+        </button>
+      </div>
+    </aside>
 
   </div>
 
@@ -285,8 +240,6 @@
   <script>
     if (typeof mermaid === 'undefined') {
       document.write('<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"><\/script>');
-    } else {
-      mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
     }
   </script>
 
