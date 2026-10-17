@@ -1,6 +1,5 @@
 // ==========================================================================
-// Praxis Documentation Portal - Main Application Logic
-// Uses: marked.js for GFM parsing, Lucide Icons, Mermaid.js diagrams
+// Praxis Documentation Portal - Atlas Docs Modern Dark Architecture
 // ==========================================================================
 
 (function() {
@@ -12,10 +11,11 @@
   const dashboardView = document.getElementById("dashboardView");
   const articleView = document.getElementById("articleView");
   const articleContainer = document.getElementById("articleContainer");
-  const breadcrumbBar = document.getElementById("breadcrumbBar");
+  const articleEyebrow = document.getElementById("articleEyebrow");
   const sidebarNav = document.getElementById("sidebarNav");
   const searchInput = document.getElementById("searchInput");
   const searchResults = document.getElementById("searchResults");
+  const tocList = document.getElementById("tocList");
 
   // Configure marked if loaded
   if (typeof marked !== "undefined") {
@@ -27,7 +27,29 @@
     });
   }
 
-  // Helper for Lucide icons rendering
+  // Configure Mermaid for Dark Theme
+  if (typeof mermaid !== "undefined") {
+    try {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'dark',
+        themeVariables: {
+          darkMode: true,
+          background: '#11141a',
+          primaryColor: '#1e293b',
+          primaryTextColor: '#f8fafc',
+          primaryBorderColor: '#38bdf8',
+          lineColor: '#64748b',
+          secondaryColor: '#1e2230',
+          tertiaryColor: '#161922'
+        }
+      });
+    } catch (e) {
+      console.warn("Mermaid dark theme init notice:", e);
+    }
+  }
+
+  // Refresh Lucide Icons helper
   function refreshIcons() {
     if (window.lucide && typeof window.lucide.createIcons === "function") {
       window.lucide.createIcons();
@@ -47,16 +69,14 @@
     abstract: "book-open"
   };
 
-  // Markdown Parser using marked.js + Obsidian Extensions
+  // Markdown Parser
   function parseMarkdown(md) {
     if (!md) return "";
 
     // 1. Remove YAML frontmatter
     let text = md.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
 
-    // 2. Pre-process Obsidian Callouts:
-    // > [!TYPE] Title
-    // > Body content...
+    // 2. Pre-process Obsidian Callouts
     text = text.replace(/^>\s*\[!(NOTE|TIP|WARNING|IMPORTANT|INFO|CAUTION|NAV|SUMMARY|ABSTRACT)\]\s*([^\r\n]*)\r?\n((?:>[^\r\n]*\r?\n?)+)/gim, function(match, type, title, body) {
       const typeLower = type.toLowerCase();
       const cleanTitle = title.trim() || type.toUpperCase();
@@ -73,22 +93,21 @@
       return `[${display}](#/article/${encodeURIComponent(cleanTarget)})`;
     });
 
-    // 4. Render through marked.js if available
+    // 4. Render through marked.js
     let html = "";
     if (typeof marked !== "undefined" && marked.parse) {
       html = marked.parse(text);
     } else {
-      // Fallback simple paragraph renderer
       html = text.split(/\n{2,}/).map(p => `<p>${p}</p>`).join("");
     }
 
-    // 5. Transform Mermaid Diagrams
+    // 5. Wrap Mermaid code blocks
     html = html.replace(/<pre><code class="language-mermaid">([\s\S]*?)<\/code><\/pre>/gi, function(match, code) {
       const unescaped = code.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
       return `<div class="mermaid-container"><div class="mermaid">${unescaped}</div></div>`;
     });
 
-    // 6. Wrap regular code blocks with header & copy button
+    // 6. Wrap standard code blocks with copy button
     html = html.replace(/<pre><code(?: class="language-([^"]*)")?>([\s\S]*?)<\/code><\/pre>/gi, function(match, lang, code) {
       const language = lang || "text";
       return `
@@ -107,11 +126,11 @@
     return html;
   }
 
-  // Global Code Copy Function
+  // Copy Code Snippet Handler
   window.copyCodeSnippet = function(button) {
-    const wrapper = button.closest(".code-block-wrapper");
+    const wrapper = button.closest(".code-block-wrapper") || button.closest(".terminal-box");
     if (!wrapper) return;
-    const codeEl = wrapper.querySelector("pre code");
+    const codeEl = wrapper.querySelector("pre code") || wrapper.querySelector(".terminal-command");
     if (!codeEl) return;
     const text = codeEl.innerText;
 
@@ -125,151 +144,181 @@
     });
   };
 
-  // Render Sidebar Tree Navigation (Matches Screenshot Layout)
+  // Copy Current Page Link Handler
+  window.copyCurrentPageLink = function(btn) {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i data-lucide="check"></i> Copied URL!';
+      refreshIcons();
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        refreshIcons();
+      }, 2000);
+    });
+  };
+
+  // Ask AI Modal or Quick Insights
+  window.triggerAskAI = function() {
+    searchInput.focus();
+    searchInput.placeholder = "Ask AI: e.g. How does Medallion architecture fit into Praxis Scope?";
+  };
+
+  // Interactive Code Tabs Switcher on Welcome Page
+  const tabCommands = {
+    "macos": "curl -sSf https://praxis-framework.org/install.sh | sh",
+    "homebrew": "brew install praxis-framework/tap/praxis",
+    "docker": "docker run -it -p 8080:8080 ghcr.io/balasubramanian-pg/praxis:latest",
+    "databricks": "pip install praxis-databricks-finops",
+    "snowflake": "CREATE OR REPLACE RESOURCE MONITOR praxis_finops_monitor WITH CREDIT_QUOTA = 500;",
+    "dbt": "dbt run --select tag:praxis_quality_gate",
+    "fabric": "Install-Module Microsoft.Fabric.PraxisGovernance"
+  };
+
+  window.selectCodeTab = function(tabName, btn) {
+    document.querySelectorAll(".code-tab-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const cmdEl = document.getElementById("terminalCommand");
+    if (cmdEl && tabCommands[tabName]) {
+      cmdEl.textContent = tabCommands[tabName];
+    }
+  };
+
+  // Render Sidebar Navigation
   function renderSidebar() {
     sidebarNav.innerHTML = "";
 
-    // 1. Top Section: Overview Root
-    const overviewEl = document.createElement("div");
-    overviewEl.innerHTML = `
-      <a href="#/home" class="sidebar-root-item active" id="sidebarOverviewItem">
-        <div class="sidebar-root-icon-box">
-          <i data-lucide="home"></i>
-        </div>
-        <span>Overview</span>
+    // 1. Core items
+    const topNav = document.createElement("div");
+    topNav.innerHTML = `
+      <a href="#/home" class="sidebar-nav-link active" id="sidebarWelcomeLink">
+        <span>Welcome</span>
       </a>
-
-      <!-- Tree Branch with Connecting Vertical Line (from screenshot) -->
-      <div class="sidebar-tree-branch">
-        <a href="#/article/01.%20Core%20Concepts/00%20-%20Overview" class="sidebar-tree-link">01. Core Concepts</a>
-        <a href="#/article/02.%20Governance%20%26%20Framework/00%20-%20Overview" class="sidebar-tree-link">02. Governance & Framework</a>
-        <a href="#/article/03.%20Processes/00%20-%20Overview" class="sidebar-tree-link">03. Method & Processes</a>
-        <a href="#/article/04.%20Management%20Areas/00%20-%20Overview" class="sidebar-tree-link">04. Management Areas</a>
-        <a href="#/article/05.%20Competencies%20%26%20Skills/00%20-%20Overview" class="sidebar-tree-link">05. Competencies & Skills</a>
-        <a href="#/article/06.%20Documentation%20%26%20Artefacts/00%20-%20Overview" class="sidebar-tree-link">06. Artefacts & Templates</a>
-        <a href="#/article/07.%20Portfolio%20Management/00%20-%20Overview" class="sidebar-tree-link">07. Portfolio Management</a>
-        <a href="#/article/08.%20Delivery%20%26%20Lifecycle/00%20-%20Overview" class="sidebar-tree-link">08. Delivery & Lifecycle</a>
-        <a href="#/article/09.%20Maturity%20Models/00%20-%20Overview" class="sidebar-tree-link">09. Capability Maturity</a>
-      </div>
-    `;
-    sidebarNav.appendChild(overviewEl);
-
-    // 2. Navigation Categories with Lucide Open Source Icons
-    const categoriesSection = document.createElement("div");
-    categoriesSection.innerHTML = `
-      <a href="#/article/00%20-%20Praxis%20Framework%20Overview" class="sidebar-category-item">
-        <div class="category-icon"><i data-lucide="compass"></i></div>
-        <span>Explore All 22 MOCs</span>
+      <a href="#/article/00%20-%20Praxis%20Framework%20Overview" class="sidebar-nav-link">
+        <span>Get Started</span>
       </a>
-      <a href="#/article/1.%20Knowledge" class="sidebar-category-item">
-        <div class="category-icon"><i data-lucide="layers"></i></div>
-        <span>Knowledge & FinOps</span>
-      </a>
-      <a href="#/article/04.%20Management%20Areas/00%20-%20Overview" class="sidebar-category-item">
-        <div class="category-icon"><i data-lucide="sliders"></i></div>
-        <span>10 Management Areas</span>
-      </a>
-      <a href="#/article/2%20Method" class="sidebar-category-item">
-        <div class="category-icon"><i data-lucide="git-branch"></i></div>
-        <span>Method & Processes</span>
-      </a>
-      <a href="#/article/3%20Competence" class="sidebar-category-item">
-        <div class="category-icon"><i data-lucide="users"></i></div>
-        <span>Competencies & Roles</span>
-      </a>
-      <a href="#/article/4%20Maturity" class="sidebar-category-item">
-        <div class="category-icon"><i data-lucide="award"></i></div>
-        <span>Capability Maturity</span>
+      <a href="#/article/Complexity" class="sidebar-nav-link">
+        <span>Praxis vs Others</span>
       </a>
     `;
-    sidebarNav.appendChild(categoriesSection);
+    sidebarNav.appendChild(topNav);
 
-    // 3. Section Header: DATA & BI SPECIALIZATIONS (like IDENTITY in screenshot)
-    const biSection = document.createElement("div");
-    biSection.innerHTML = `
-      <div class="sidebar-section-header">Data & BI Specialization</div>
-      <div style="display: flex; flex-direction: column; gap: 2px;">
-        <a href="#/article/Scope%20Management" class="sidebar-tree-link">Data Engineering (Medallion)</a>
-        <a href="#/article/General%20Principles%20of%20Financial%20Management" class="sidebar-tree-link">Cloud Data FinOps</a>
-        <a href="#/article/General%20Principles%20of%20Risk%20Management" class="sidebar-tree-link">Schema Drift & Risk</a>
-        <a href="#/article/Control" class="sidebar-tree-link">DataOps & Quality Gates</a>
-        <a href="#/article/Goal%20of%20Change%20Management" class="sidebar-tree-link">Semantic Models & Adoption</a>
-      </div>
-    `;
-    sidebarNav.appendChild(biSection);
+    // 2. Expandable Pillars & Core Sections
+    const pillars = [
+      { name: "01. Core Concepts", moc: "01. Core Concepts/00 - Overview" },
+      { name: "02. Governance & Framework", moc: "02. Governance & Framework/00 - Overview" },
+      { name: "03. Processes & Lifecycle", moc: "03. Processes/00 - Overview" },
+      { name: "04. Management Areas (10)", moc: "04. Management Areas/00 - Overview" },
+      { name: "05. Competencies & Skills", moc: "05. Competencies & Skills/00 - Overview" },
+      { name: "06. Artefacts & Templates", moc: "06. Documentation & Artefacts/00 - Overview" },
+      { name: "07. Portfolio Management", moc: "07. Portfolio Management/00 - Overview" },
+      { name: "08. Delivery & Lifecycle", moc: "08. Delivery & Lifecycle/00 - Overview" },
+      { name: "09. Capability Maturity", moc: "09. Maturity Models/00 - Overview" }
+    ];
 
-    // 4. Complete Vault Folder Hierarchy (Collapsible Navigation Groups)
+    pillars.forEach(p => {
+      const item = document.createElement("a");
+      item.className = "sidebar-nav-link";
+      item.href = `#/article/${encodeURIComponent(p.moc)}`;
+      item.dataset.id = p.moc;
+      item.innerHTML = `
+        <span>${p.name}</span>
+        <svg class="sidebar-chevron lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      `;
+      sidebarNav.appendChild(item);
+    });
+
+    // 3. Section Header: DATA & BI SPECIALIZATION
+    const biHeader = document.createElement("div");
+    biHeader.className = "sidebar-section-header";
+    biHeader.textContent = "Data & BI Specialization";
+    sidebarNav.appendChild(biHeader);
+
+    const biLinks = [
+      { title: "Medallion Architecture", id: "Scope Management" },
+      { title: "Data FinOps & Budgets", id: "General Principles of Financial Management" },
+      { title: "DataOps & Quality Gates", id: "Control" },
+      { title: "Schema Drift & Risk", id: "General Principles of Risk Management" },
+      { title: "Semantic Models & BI", id: "Goal of Change Management" }
+    ];
+
+    biLinks.forEach(b => {
+      const link = document.createElement("a");
+      link.className = "sidebar-nav-link";
+      link.href = `#/article/${encodeURIComponent(b.id)}`;
+      link.dataset.id = b.id;
+      link.innerHTML = `<span>${b.title}</span>`;
+      sidebarNav.appendChild(link);
+    });
+
+    // 4. Complete Vault Folder Hierarchy (Collapsible)
     const vaultHeader = document.createElement("div");
     vaultHeader.className = "sidebar-section-header";
-    vaultHeader.textContent = "Browse Vault Structure";
+    vaultHeader.textContent = "Vault Structure";
     sidebarNav.appendChild(vaultHeader);
 
-    navTree.forEach((group) => {
+    navTree.forEach(group => {
       const groupEl = document.createElement("div");
-      groupEl.className = "nav-group";
+      groupEl.className = "sidebar-group";
 
       const header = document.createElement("div");
-      header.className = "nav-group-header";
+      header.className = "sidebar-nav-link";
       header.innerHTML = `
-        <span class="nav-group-title">${group.clean_name}</span>
-        <svg class="nav-group-arrow lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span>${group.clean_name}</span>
+        <svg class="sidebar-chevron lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       `;
       header.addEventListener("click", () => {
         groupEl.classList.toggle("expanded");
       });
 
-      const itemsEl = document.createElement("div");
-      itemsEl.className = "nav-group-items";
+      const subItemsEl = document.createElement("div");
+      subItemsEl.className = "sidebar-sub-items";
 
-      // Direct articles in group
       group.articles.forEach(art => {
         const item = document.createElement("a");
-        item.className = "sidebar-tree-link";
+        item.className = "sidebar-sub-link";
         item.href = `#/article/${encodeURIComponent(art.id)}`;
         item.textContent = art.title;
         item.dataset.id = art.id;
-        itemsEl.appendChild(item);
+        subItemsEl.appendChild(item);
       });
 
-      // Subfolders (e.g. 04. Management Areas subfolders)
       if (group.sub_folders && group.sub_folders.length > 0) {
         group.sub_folders.forEach(sub => {
           const subGroup = document.createElement("div");
-          subGroup.className = "nav-group";
+          subGroup.className = "sidebar-group";
 
           const subHeader = document.createElement("div");
-          subHeader.className = "nav-group-header";
-          subHeader.style.fontSize = "12px";
-          subHeader.style.padding = "4px 8px";
+          subHeader.className = "sidebar-nav-link";
+          subHeader.style.fontSize = "12.5px";
           subHeader.innerHTML = `
-            <span class="nav-group-title">${sub.name}</span>
-            <svg class="nav-group-arrow lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <span>${sub.name}</span>
+            <svg class="sidebar-chevron lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
           `;
           subHeader.addEventListener("click", (e) => {
             e.stopPropagation();
             subGroup.classList.toggle("expanded");
           });
 
-          const subItemsEl = document.createElement("div");
-          subItemsEl.className = "nav-group-items";
+          const subSubItems = document.createElement("div");
+          subSubItems.className = "sidebar-sub-items";
 
           sub.articles.forEach(subArt => {
             const item = document.createElement("a");
-            item.className = "sidebar-tree-link";
+            item.className = "sidebar-sub-link";
             item.href = `#/article/${encodeURIComponent(subArt.id)}`;
             item.textContent = subArt.title;
             item.dataset.id = subArt.id;
-            subItemsEl.appendChild(item);
+            subSubItems.appendChild(item);
           });
 
           subGroup.appendChild(subHeader);
-          subGroup.appendChild(subItemsEl);
-          itemsEl.appendChild(subGroup);
+          subGroup.appendChild(subSubItems);
+          subItemsEl.appendChild(subGroup);
         });
       }
 
       groupEl.appendChild(header);
-      groupEl.appendChild(itemsEl);
+      groupEl.appendChild(subItemsEl);
       sidebarNav.appendChild(groupEl);
     });
 
@@ -293,15 +342,29 @@
     window.scrollTo(0, 0);
 
     // Active state in sidebar
-    document.querySelectorAll(".sidebar-tree-link, .sidebar-category-item").forEach(el => el.classList.remove("active"));
-    const overviewItem = document.getElementById("sidebarOverviewItem");
-    if (overviewItem) overviewItem.classList.add("active");
+    document.querySelectorAll(".sidebar-nav-link, .sidebar-sub-link").forEach(el => el.classList.remove("active"));
+    const welcome = document.getElementById("sidebarWelcomeLink");
+    if (welcome) welcome.classList.add("active");
 
+    // Static TOC for Welcome Page (Matches Atlas Docs TOC)
+    buildStaticWelcomeTOC();
     refreshIcons();
   }
 
+  function buildStaticWelcomeTOC() {
+    if (!tocList) return;
+    tocList.innerHTML = `
+      <li class="toc-item active"><a href="#welcomeIntro">Quick Introduction</a></li>
+      <li class="toc-item"><a href="#installationSec">Installation</a></li>
+      <li class="toc-item"><a href="#schemaAsCodeSec">Schema-as-Code</a></li>
+      <li class="toc-item h3"><a href="#schemaAsCodeSec">Medallion Lakehouse</a></li>
+      <li class="toc-item h3"><a href="#schemaAsCodeSec">Data Contracts & FinOps</a></li>
+      <li class="toc-item h3"><a href="#schemaAsCodeSec">DataOps & Semantic Models</a></li>
+    `;
+  }
+
   function showArticle(articleId) {
-    // Find article (exact match, or base name fallback)
+    // Find article
     let article = articles[articleId];
     if (!article) {
       const base = articleId.split("/").pop();
@@ -310,49 +373,43 @@
 
     if (!article) {
       articleContainer.innerHTML = `
-        <h1>Document Not Found</h1>
-        <p>The requested note <code>${articleId}</code> could not be found in the vault.</p>
-        <p><a href="#/home">Return to Overview</a></p>
+        <h1 class="article-title">Document Not Found</h1>
+        <p class="article-body-text">The requested note <code>${articleId}</code> could not be found in the vault.</p>
+        <p><a href="#/home">Return to Welcome Overview</a></p>
       `;
-      breadcrumbBar.innerHTML = `<a class="breadcrumb-link" href="#/home">Overview</a> <span class="breadcrumb-sep">&gt;</span> <span class="breadcrumb-current">Not Found</span>`;
+      if (articleEyebrow) articleEyebrow.textContent = "Error";
       dashboardView.style.display = "none";
       articleView.style.display = "block";
       refreshIcons();
       return;
     }
 
-    // Set Breadcrumbs
-    const sectionName = article.section || "General";
-    breadcrumbBar.innerHTML = `
-      <a class="breadcrumb-link" href="#/home">Overview</a>
-      <span class="breadcrumb-sep">&gt;</span>
-      <a class="breadcrumb-link" href="#/article/${encodeURIComponent(article.folder + '/00 - Overview')}">${sectionName}</a>
-      <span class="breadcrumb-sep">&gt;</span>
-      <span class="breadcrumb-current">${article.title}</span>
-    `;
+    if (articleEyebrow) {
+      articleEyebrow.textContent = article.section || "Documentation";
+    }
 
     // Render Article Body
     const renderedBody = parseMarkdown(article.body);
     articleContainer.innerHTML = renderedBody;
 
-    // Build Related Notes / Backlinks Section
-    renderRelatedNotes(article);
-
     dashboardView.style.display = "none";
     articleView.style.display = "block";
     window.scrollTo(0, 0);
 
-    // Highlight in sidebar & expand parent
-    const overviewItem = document.getElementById("sidebarOverviewItem");
-    if (overviewItem) overviewItem.classList.remove("active");
+    // Dynamic TOC for Article View
+    buildArticleTOC();
 
-    document.querySelectorAll(".sidebar-tree-link").forEach(el => {
+    // Highlight in sidebar & expand parent
+    const welcome = document.getElementById("sidebarWelcomeLink");
+    if (welcome) welcome.classList.remove("active");
+
+    document.querySelectorAll(".sidebar-nav-link, .sidebar-sub-link").forEach(el => {
       if (el.dataset && (el.dataset.id === article.id || el.dataset.id === article.base_name)) {
         el.classList.add("active");
-        let parent = el.closest(".nav-group");
+        let parent = el.closest(".sidebar-group");
         while (parent) {
           parent.classList.add("expanded");
-          parent = parent.parentElement.closest(".nav-group");
+          parent = parent.parentElement.closest(".sidebar-group");
         }
       } else {
         el.classList.remove("active");
@@ -370,38 +427,44 @@
     }
   }
 
-  // Related Notes Renderer
-  function renderRelatedNotes(article) {
-    // Find candidate notes in same folder or related by pillar
-    const candidates = [];
-    for (const [id, art] of Object.entries(articles)) {
-      if (id !== art.id) continue;
-      if (art.id === article.id) continue;
-      if (art.folder === article.folder && !art.id.endsWith("00 - Overview")) {
-        candidates.push(art);
-      }
+  // Dynamic TOC generator from article headings
+  function buildArticleTOC() {
+    if (!tocList) return;
+    tocList.innerHTML = "";
+
+    const headings = articleContainer.querySelectorAll("h1, h2, h3");
+    if (headings.length === 0) {
+      tocList.innerHTML = `<li class="toc-item"><a href="#">Overview</a></li>`;
+      return;
     }
 
-    if (candidates.length === 0) return;
+    headings.forEach((h, idx) => {
+      let slug = h.id;
+      if (!slug) {
+        slug = "heading-" + idx;
+        h.id = slug;
+      }
 
-    const slice = candidates.slice(0, 4);
-    const relatedSection = document.createElement("div");
-    relatedSection.className = "related-notes-section";
-    relatedSection.innerHTML = `
-      <div class="related-notes-title">Related Vault Notes</div>
-      <div class="related-notes-grid">
-        ${slice.map(c => `
-          <a href="#/article/${encodeURIComponent(c.id)}" class="related-note-card">
-            <div class="related-note-name">${c.title}</div>
-            <div class="related-note-desc">${c.section} &bull; ${c.type}</div>
-          </a>
-        `).join("")}
-      </div>
-    `;
-    articleContainer.appendChild(relatedSection);
+      const li = document.createElement("li");
+      li.className = "toc-item" + (h.tagName.toLowerCase() === "h3" ? " h3" : "");
+      if (idx === 0) li.classList.add("active");
+
+      const a = document.createElement("a");
+      a.href = "#" + slug;
+      a.textContent = h.textContent.replace(/^#+\s*/, "");
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        h.scrollIntoView({ behavior: "smooth", block: "start" });
+        document.querySelectorAll(".toc-item").forEach(item => item.classList.remove("active"));
+        li.classList.add("active");
+      });
+
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
   }
 
-  // Live Full-Text Search
+  // Live Search Input Handler
   searchInput.addEventListener("input", function() {
     const q = this.value.trim().toLowerCase();
     if (!q) {
@@ -428,7 +491,7 @@
     matches.sort((a, b) => b.score - a.score);
 
     if (matches.length === 0) {
-      searchResults.innerHTML = '<div style="padding: 16px; color: var(--text-muted); font-size: 13px;">No documents found matching your query.</div>';
+      searchResults.innerHTML = '<div style="padding: 14px; color: var(--text-muted); font-size: 13px;">No documentation found.</div>';
       searchResults.style.display = "block";
       return;
     }
@@ -436,7 +499,7 @@
     searchResults.innerHTML = matches.slice(0, 8).map(m => `
       <div class="search-result-item" onclick="window.location.hash='#/article/${encodeURIComponent(m.article.id)}'; document.getElementById('searchResults').style.display='none'; document.getElementById('searchInput').value='';">
         <div class="search-result-title">${m.article.title}</div>
-        <div class="search-result-meta">${m.article.section} &bull; ${m.article.type} &bull; ${(m.article.summary || "").slice(0, 80)}...</div>
+        <div class="search-result-meta">${m.article.section} &bull; ${m.article.type} &bull; ${(m.article.summary || "").slice(0, 75)}...</div>
       </div>
     `).join("");
     searchResults.style.display = "block";
@@ -449,9 +512,9 @@
     }
   });
 
-  // Keyboard shortcut (/) to focus search
+  // Shortcut key (/) or (Ctrl+K)
   document.addEventListener("keydown", function(e) {
-    if (e.key === "/" && document.activeElement !== searchInput) {
+    if ((e.key === "/" || (e.ctrlKey && e.key === "k") || (e.metaKey && e.key === "k")) && document.activeElement !== searchInput) {
       e.preventDefault();
       searchInput.focus();
     } else if (e.key === "Escape") {
