@@ -1,6 +1,32 @@
-# Praxis-Framework
+---
+title: "Praxis Framework Knowledge Vault"
+type: "home"
+tags:
+  - praxis-framework
+  - root
+  - p3m
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+# Praxis Framework Knowledge Vault
+
+> [!TIP] Interactive Obsidian Wiki
+> This repository is fully structured as an **Obsidian Knowledge Vault / Wiki**.
+> - **Start Here**: **[[00 - Praxis Framework Overview|Open the Master MOC Dashboard]]**
+> - **Explore Pillars**:
+>   - **Pillar 1: Knowledge**: [[01. Core Concepts/00 - Overview|Core Concepts]] | [[04. Management Areas/00 - Overview|Management Areas]]
+>   - **Pillar 2: Method**: [[03. Processes/00 - Overview|Processes]] | [[06. Documentation & Artefacts/00 - Overview|Artefacts]] | [[07. Portfolio Management/00 - Overview|Portfolios]] | [[08. Delivery & Lifecycle/00 - Overview|Delivery]]
+>   - **Pillar 3: Competence**: [[05. Competencies & Skills/00 - Overview|Competencies & Skills]]
+>   - **Pillar 4: Capability Maturity**: [[09. Maturity Models/00 - Overview|Maturity Models]]
+
+---
 
 # **Praxis Framework: Part 1 - Knowledge**
+
 
 ## **1.1 Overview**
 
