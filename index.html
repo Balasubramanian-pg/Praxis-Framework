@@ -6,10 +6,1025 @@
   <title>praxis docs - Data & Business Intelligence P3M</title>
   
   <!-- Font: Avenir Next Cyr via CDN -->
-  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/avenir-next-cyr">
-  
+    
   <!-- App Stylesheet (Atlas Docs Modern Dark Architecture) -->
   <link rel="stylesheet" href="site/css/style.css">
+  <!-- Inlined Bulletproof Modern Dark Theme & Avenir Next Cyr Fonts -->
+  <style>
+/* ==========================================================================
+   Praxis Framework Documentation Portal
+   Design: Atlas Docs Modern Dark Architecture (Ariga Atlas Aesthetic)
+   Font: Avenir Next Cyr (Local Self-Hosted + System Fallbacks)
+   Icons: Lucide Open Source Library (Zero Emojis)
+   ========================================================================== */
+
+/* Local Self-Hosted Avenir Next Cyr Fonts */
+@font-face {
+  font-family: 'Avenir Next Cyr';
+  font-style: normal;
+  font-weight: 400;
+  src: url('site/fonts/AvenirNextCyr-Regular.woff') format('woff'),
+       local('Avenir Next Cyr Regular'), local('Avenir Next Cyr'), local('Avenir Next');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next Cyr';
+  font-style: normal;
+  font-weight: 500;
+  src: url('site/fonts/AvenirNextCyr-Medium.woff') format('woff'),
+       local('Avenir Next Cyr Medium'), local('Avenir Next Medium');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next Cyr';
+  font-style: normal;
+  font-weight: 700;
+  src: url('site/fonts/AvenirNextCyr-Bold.woff') format('woff'),
+       local('Avenir Next Cyr Bold'), local('Avenir Next Bold');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next Cyr';
+  font-style: normal;
+  font-weight: 800;
+  src: url('site/fonts/AvenirNextCyr-Heavy.woff') format('woff'),
+       local('Avenir Next Cyr Heavy'), local('Avenir Next Heavy');
+  font-display: swap;
+}
+
+:root {
+  /* Atlas Docs Pitch-Dark Palette */
+  --bg-page: #0b0d11;
+  --bg-sidebar: #0b0d11;
+  --bg-surface: #11141a;
+  --bg-elevated: #161922;
+  --bg-hover: #1c202c;
+  --bg-active: #1e2230;
+
+  /* Borders */
+  --border-subtle: #1c202c;
+  --border-card: #222736;
+  --border-focus: #38bdf8;
+
+  /* Typography */
+  --text-primary: #f8fafc;
+  --text-heading: #ffffff;
+  --text-body: #94a3b8;
+  --text-muted: #64748b;
+  --text-light: #475569;
+
+  /* Accents */
+  --accent-cyan: #38bdf8;
+  --accent-cyan-hover: #0ea5e9;
+  --accent-indigo: #818cf8;
+  --accent-purple: #a855f7;
+  --accent-rose: #fb7185;
+  --accent-emerald: #34d399;
+  --accent-amber: #fbbf24;
+
+  /* Dimensions */
+  --header-height: 60px;
+  --sidebar-width: 260px;
+  --toc-width: 220px;
+  --content-max-width: 860px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: #0b0d11 !important;
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Avenir Next Cyr', 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  color: var(--text-body);
+  background-color: var(--bg-page) !important;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lucide Icon Defaults */
+.lucide-icon, i[data-lucide], svg.lucide {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+  vertical-align: middle;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* ==========================================================================
+   Header Navigation Bar (Atlas Docs Top Bar)
+   ========================================================================== */
+.app-header {
+  height: var(--header-height);
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+
+/* Brand Logo (atlas docs style) */
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand-title {
+  font-family: 'Avenir Next Cyr', 'Avenir Next', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.brand-badge {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--accent-cyan);
+  margin-left: 2px;
+}
+
+/* Center Search Container (Rounded Pill Bar) */
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-container {
+  position: relative;
+  width: 320px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  padding: 0 14px;
+  height: 36px;
+  transition: all 0.15s ease;
+}
+
+.search-input-wrapper:focus-within {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+}
+
+.search-icon-slot {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--text-primary);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.search-shortcut {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: #202534;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-left: 6px;
+}
+
+/* Search Dropdown Results */
+.search-results {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+}
+
+.search-result-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: var(--bg-elevated);
+}
+
+.search-result-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.search-result-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ASK AI Pill Button (from screenshot) */
+.ask-ai-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 14px;
+  background: rgba(251, 113, 133, 0.08);
+  border: 1px solid rgba(251, 113, 133, 0.35);
+  border-radius: var(--radius-pill);
+  color: #fda4af;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ask-ai-pill:hover {
+  background: rgba(251, 113, 133, 0.16);
+  border-color: #fb7185;
+  color: #ffffff;
+}
+
+.ask-ai-pill svg {
+  width: 14px;
+  height: 14px;
+  color: #fb7185;
+}
+
+/* Header Right Social & Mode Icons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-action-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease;
+}
+
+.icon-action-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+/* ==========================================================================
+   3-Column Application Layout
+   ========================================================================== */
+.app-container {
+  display: flex;
+  min-height: calc(100vh - var(--header-height));
+  position: relative;
+  background: var(--bg-page);
+}
+
+/* Left Navigation Sidebar */
+.app-sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  border-right: 1px solid var(--border-subtle);
+  background: var(--bg-sidebar);
+  height: calc(100vh - var(--header-height));
+  position: sticky;
+  top: var(--header-height);
+  overflow-y: auto;
+  padding: 24px 16px 40px;
+}
+
+.app-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.app-sidebar::-webkit-scrollbar-thumb {
+  background: #1e2230;
+  border-radius: 4px;
+}
+
+/* Active Highlight Pill in Sidebar (like Welcome in screenshot) */
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all 0.12s ease;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.sidebar-nav-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.sidebar-nav-link.active {
+  background: var(--bg-active) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.sidebar-chevron {
+  color: var(--text-light);
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-group.expanded > .sidebar-nav-link .sidebar-chevron {
+  transform: rotate(90deg);
+}
+
+.sidebar-sub-items {
+  display: none;
+  margin-left: 14px;
+  padding-left: 10px;
+  border-left: 1px solid var(--border-subtle);
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.sidebar-group.expanded > .sidebar-sub-items {
+  display: block;
+}
+
+.sidebar-sub-link {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  transition: all 0.12s ease;
+}
+
+.sidebar-sub-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+.sidebar-sub-link.active {
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+/* Sidebar Section Divider / Header */
+.sidebar-section-header {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  margin-top: 22px;
+  margin-bottom: 8px;
+  padding-left: 12px;
+}
+
+/* Center Content Column */
+.app-content {
+  flex: 1;
+  min-width: 0;
+  padding: 40px 56px 80px;
+  max-width: var(--content-max-width);
+  background: var(--bg-page);
+}
+
+/* Right TOC Column (On this page) */
+.app-toc {
+  width: var(--toc-width);
+  min-width: var(--toc-width);
+  height: calc(100vh - var(--header-height));
+  position: sticky;
+  top: var(--header-height);
+  overflow-y: auto;
+  padding: 40px 20px 40px 10px;
+  font-size: 13px;
+  background: var(--bg-page);
+}
+
+.toc-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  margin-bottom: 14px;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.toc-item a {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: block;
+  line-height: 1.4;
+  transition: all 0.12s ease;
+}
+
+.toc-item a:hover {
+  color: var(--text-primary);
+}
+
+.toc-item.active a {
+  color: var(--accent-cyan) !important;
+  font-weight: 600;
+}
+
+.toc-item.h3 {
+  padding-left: 12px;
+}
+
+.toc-actions {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toc-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 12.5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.15s ease;
+  font-family: inherit;
+}
+
+.toc-action-btn:hover {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Main Article Typography (Atlas Docs Style)
+   ========================================================================== */
+.article-eyebrow {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.article-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-heading) !important;
+  margin-bottom: 18px;
+  line-height: 1.25;
+}
+
+.article-body-text {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--text-body);
+  margin-bottom: 24px;
+}
+
+.article-body-text a, .article-container a {
+  color: var(--accent-cyan) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.article-body-text a:hover, .article-container a:hover {
+  color: #7dd3fc !important;
+}
+
+/* Section Titles */
+.content-h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+  margin-top: 40px;
+  margin-bottom: 14px;
+}
+
+/* Tabbed Code Switcher (like macOS+Linux, Homebrew, etc.) */
+.code-tabs-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--border-card);
+  margin-top: 18px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+}
+
+.code-tab-btn {
+  padding: 8px 2px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.code-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.code-tab-btn.active {
+  color: var(--text-heading);
+  border-bottom-color: var(--accent-cyan);
+}
+
+/* Terminal / Code Box */
+.terminal-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13.5px;
+  color: var(--text-primary);
+}
+
+.terminal-copy-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.terminal-copy-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+
+/* 3-Card Comparison Grid (Schema-as-Code style from screenshot) */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.comparison-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.comparison-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.card-code-preview {
+  background: var(--bg-elevated);
+  padding: 18px 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e2e8f0;
+  border-bottom: 1px solid var(--border-card);
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-code-preview .keyword {
+  color: #f43f5e;
+}
+.card-code-preview .type {
+  color: #38bdf8;
+}
+.card-code-preview .string {
+  color: #34d399;
+}
+.card-code-preview .tech-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.card-text-body {
+  padding: 18px 16px;
+  flex: 1;
+}
+
+.card-heading {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 6px;
+}
+
+.card-subtext {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Article Markdown Styling (marked.js & Obsidian Callouts in Dark Mode)
+   ========================================================================== */
+.article-container h1 {
+  font-family: 'Avenir Next Cyr', 'Avenir Next', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-heading);
+  margin-top: 12px;
+  margin-bottom: 18px;
+  line-height: 1.25;
+}
+
+.article-container h2 {
+  font-family: 'Avenir Next Cyr', 'Avenir Next', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+  margin-top: 40px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.article-container h3 {
+  font-family: 'Avenir Next Cyr', 'Avenir Next', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.article-container h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+
+.article-container p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--text-body);
+  margin-bottom: 16px;
+}
+
+.article-container strong {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.article-container hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 32px 0;
+}
+
+.article-container ul, .article-container ol {
+  margin-top: 6px;
+  margin-bottom: 18px;
+  padding-left: 22px;
+}
+
+.article-container li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-body);
+  margin-bottom: 6px;
+}
+
+.article-container li > ul, .article-container li > ol {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  padding-left: 18px;
+}
+
+/* Code & Code Blocks */
+.article-container code:not(pre code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  background: var(--bg-elevated);
+  color: var(--accent-cyan);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-card);
+}
+
+.code-block-wrapper {
+  margin: 20px 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  background: var(--bg-surface);
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: var(--bg-elevated);
+  font-size: 12px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.copy-code-btn {
+  background: transparent;
+  border: 1px solid var(--border-card);
+  color: var(--text-muted);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.copy-code-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.article-container pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+  background: var(--bg-surface);
+  color: #e2e8f0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* Tables in Dark Mode */
+.article-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.article-container th {
+  background: var(--bg-elevated);
+  color: var(--text-heading);
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-card);
+  border-right: 1px solid var(--border-card);
+}
+
+.article-container td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+  color: var(--text-body);
+}
+
+.article-container th:last-child, .article-container td:last-child {
+  border-right: none;
+}
+
+.article-container tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.article-container tr:hover td {
+  background: var(--bg-elevated);
+}
+
+/* Obsidian Callouts in Dark Mode */
+.callout {
+  margin: 22px 0;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-left: 4px solid var(--accent-cyan);
+}
+
+.callout-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.callout-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.callout-title {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--text-heading);
+}
+
+.callout-body {
+  font-size: 14.5px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.callout-body p:last-child {
+  margin-bottom: 0;
+}
+
+.callout-note {
+  border-left-color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.05);
+}
+.callout-note .callout-icon, .callout-note .callout-title {
+  color: var(--accent-cyan);
+}
+
+.callout-tip {
+  border-left-color: var(--accent-emerald);
+  background: rgba(52, 211, 153, 0.05);
+}
+.callout-tip .callout-icon, .callout-tip .callout-title {
+  color: var(--accent-emerald);
+}
+
+.callout-warning, .callout-caution {
+  border-left-color: var(--accent-amber);
+  background: rgba(251, 191, 36, 0.05);
+}
+.callout-warning .callout-icon, .callout-warning .callout-title {
+  color: var(--accent-amber);
+}
+
+.callout-important {
+  border-left-color: var(--accent-rose);
+  background: rgba(251, 113, 133, 0.05);
+}
+.callout-important .callout-icon, .callout-important .callout-title {
+  color: var(--accent-rose);
+}
+
+.callout-nav {
+  border-left-color: var(--accent-indigo);
+  background: rgba(129, 140, 248, 0.05);
+}
+.callout-nav .callout-icon, .callout-nav .callout-title {
+  color: var(--accent-indigo);
+}
+
+.callout-info {
+  border-left-color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.05);
+}
+.callout-info .callout-icon, .callout-info .callout-title {
+  color: var(--accent-cyan);
+}
+
+/* Mermaid Diagrams Container (Dark) */
+.mermaid-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin: 28px 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+  .app-toc {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-sidebar {
+    display: none;
+  }
+  .app-content {
+    padding: 28px 20px 60px;
+  }
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .search-container {
+    width: 200px;
+  }
+}
+
+  </style>
 </head>
 <body>
 
