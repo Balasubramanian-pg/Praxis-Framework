@@ -1,23 +1,49 @@
 ---
-Title: Realise benefits 29183b71d8f380909985e11a08e6fabe
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Realise benefits 29183b71d8f380909985e11a08e6fabe.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Realise Benefits Competency"
+aliases:
+  - "Benefit Realisation"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/benefits-management
+  - type/competency
+pillar: "Competence"
+section: "Benefits Management"
+subarea: "Management Competencies"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20130.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Benefits Management]]
+> **Pillar**: Competence | **Type**: `competency`
 
-# Realise benefits
+# Realise Benefits Competency
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20130.svg)Area|Competence|
-|![](arrow-circle-down_gray%20130.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%20130.svg)Section|Deliver a project or programme|
-|![](arrow-circle-down_gray%20130.svg)Sub Area|Management competencies|
+> [!SUMMARY] Overview
+> Demonstrates the capability to transition outputs into operations and monitor post-implementation benefit realisation.
+
+## Purpose
+The **Realise Benefits** competency focuses on the post-handover phase where business operations utilize new capabilities to achieve planned performance improvements.
+
+## Performance Criteria
+1. Verify operational adoption and proficiency in newly delivered systems.
+2. Measure actual KPIs against pre-project baselines.
+3. Optimize business processes to maximize benefit yield.
+4. Document realized benefits in post-project reviews.
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Benefits Management Overview]]
+- **Previous**: [[Procurement Overall Goal]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
