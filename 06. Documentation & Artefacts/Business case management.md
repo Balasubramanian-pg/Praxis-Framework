@@ -1,14 +1,26 @@
 ---
-Title: Business case management 29183b71d8f380b3b7bcfd8ec159f00b
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Business case management 29183b71d8f380b3b7bcfd8ec159f00b.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Business case management"
+aliases:
+  - "Business case management"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/documentation-artefacts
+  - type/artefact
+pillar: "Method"
+section: "Documentation & Artefacts"
+subarea: "Management"
+type: "artefact"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Documentation & Artefacts]]
+> **Pillar**: Method | **Type**: `artefact`
 
 # Comprehensive Study Notes: Business Case Management
 
@@ -19,16 +31,16 @@ Topic: ''
 ### The Goals of Business Case Management
 
 - The primary goals of this function are to:
-    
+
     1. Summarise the context and delivery approach of the work in a **single, coherent document**.
-    
+
     2. Explain the **desirability, achievability, and viability** of the proposed work.
-    
+
     3. Develop the primary document that will be used to support a **‘go/no-go’ decision** at all gates in the life cycle.
-    
+
     4. **Update and maintain** the business case throughout the life cycle to reflect the current status of the work.
 
-> [!NOTE]  
+> [!NOTE]
 > Unlike most other delivery functions, there is no specific "Business Case Management Procedure." The development of the business case is adequately covered by the activities within the main Praxis process model, primarily the identification process and the definition process.
 
 ### The Role of the Business Case in the Life Cycle
@@ -45,44 +57,44 @@ Topic: ''
 ## The Structure and Content of a Business Case
 
 - A typical business case includes three main sections:
-    
+
     1. **Context**: The background of the project or programme and a clear explanation of why it is needed.
-    
+
     2. **Delivery Summary**: A top-level, integrated view of the work, covering stakeholders, scope, schedule, finance, risk, resources, and change.
-    
+
     3. **Justification**: A clear and compelling explanation of why the work should be undertaken, based on three key tests.
 
 ### The Three Tests of Justification
 
 - The justification for any project or programme comprises three distinct tests. The work must be:
-    
+
     1. **Desirable**:
-        
+
         - This is determined from **requirements management**.
-        
+
         - It demonstrates that the objectives of the work are genuinely required and wanted by the stakeholders.
-    
+
     2. **Achievable**:
-        
+
         - This is determined from a combination of functions.
-        
+
         - **Benefits management** defines the benefits and confirms they are achievable.
-        
+
         - **Solutions management** specifies the outputs and confirms they are technically achievable.
-        
+
         - **Planning** establishes the practicality of the work within any given time and resource constraints.
-    
+
     3. **Viable**:
-        
+
         - This is determined from a combination of financial and risk assessments.
-        
+
         - **Investment appraisal** (part of the finance function) assesses the financial return on investment.
-        
+
         - **Risk management** assesses the exposure to risk in performing the work and whether that level of risk is acceptable.
 
 ### Ownership of the Business Case
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The business case is owned by the sponsor. The sponsor has ultimate accountability for the business case and for ensuring that the benefits it promises are actually achieved.
 
 
@@ -93,19 +105,19 @@ Topic: ''
 - A project business case must include the value of the benefits as well as the costs of producing the output. However, some projects are only concerned with delivering an output, which leads to different business case perspectives.
 
 - **Client-Contractor Scenario**:
-    
+
     - In a typical client-contractor relationship, the client and contractor have different business cases for the same project.
-    
+
     - The **client’s business case** is based on the cost of the output versus the value of the benefits it will bring.
-    
+
     - The **contractor’s business case** is based simply on the profit element of the contract price.
-    
+
     - This difference can be a source of conflict. Each party must be realistic and understand the driving factors in the other’s business case.
 
 - **Project within a Programme**:
-    
+
     - Where a project is delivering an output for a parent programme, the initial business case may not have been produced by the project manager.
-    
+
     - However, the project manager will likely be responsible for **updating the business case** and ensuring that the project's contribution to the overall programme benefits remains achievable and viable.
 
 ### Programmes
@@ -113,18 +125,18 @@ Topic: ''
 - Programmes are usually broken down into **tranches**. It is a very good practice to have a separate business case for each tranche.
 
 - **Benefits of a Tranche-Based Business Case**:
-    
+
     - It ensures that each major phase or chunk of the programme can be justified in its own right.
-    
+
     - If the programme needs to be terminated early, the completed tranches will have already produced a measurable financial return.
-    
+
     - If the first tranche of the programme is fairly short, it ensures that stakeholders see some early benefits (sometimes known as **"quick wins"**). This helps to build and maintain stakeholder commitment, which might otherwise wane if the first benefits take a long time to materialise.
 
 - **Interdependencies**: Problems affecting one project in a programme may have a knock-on effect on the business case of another project. The programme management team must constantly monitor the effect of these interdependencies between business cases.
 
 ### Portfolios
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > A portfolio does not require its own business case. This is because a portfolio is not a stand-alone enterprise; it is a collection of programmes, projects, and business-as-usual elements, each of which should have its own justification.
 
 - **Role of the Portfolio Team**: The portfolio management team uses the component business cases as a primary tool for managing the portfolio. The business cases are used to:
@@ -149,3 +161,14 @@ Topic: ''
 
 - **Q:** Does a portfolio have its own business case? Why or why not?
     - **A:** No. A portfolio is a collection of other initiatives (projects, programmes) which each have their own business case. The portfolio team uses these component business cases to manage and prioritise the portfolio.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Documentation & Artefacts Overview]]
+- **Next**: [[Configuration Management]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
