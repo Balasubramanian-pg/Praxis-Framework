@@ -1,17 +1,26 @@
 ---
-Title: Management Competencies 29283b71d8f3800f90e2c02f91482f4c
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Management Competencies 29283b71d8f3800f90e2c02f91482f4c.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Management Competencies"
+aliases:
+  - "Management Competencies"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/competencies-skills
+  - type/competency
+pillar: "Competence"
+section: "Competencies & Skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Management Competencies
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Competencies & Skills]]
+> **Pillar**: Competence | **Type**: `competency`
 
 # Comprehensive Study Notes: Management Competencies
 
@@ -25,9 +34,9 @@ Topic: ''
 ## Structure of Management Competencies
 
 - Just like the management part of the Knowledge section, these competencies are divided into two main parts:
-    
+
     1. **Delivery Competencies**: These relate to the technical and procedural functions required to deliver the work (e.g., Scope Management, Risk Management, Financial Management).
-    
+
     2. **Interpersonal Competencies**: These relate to the "soft skills" required to effectively lead and interact with people (e.g., Leadership, Communication, Negotiation).
 
 
@@ -37,11 +46,11 @@ Topic: ''
 
 ### The Sponsorship Exception
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > There is one important exception to this rule: the Sponsorship function.
-> 
+>
 > While Sponsorship is a function within the "Context" section of Knowledge, it also has an equivalent **Sponsorship Process** in the Praxis Method.
-> 
+>
 > Therefore, the competency for the Sponsorship _function_ is covered by the competency defined for the Sponsorship _process_. This ensures that the required skills for being an effective sponsor are fully defined within the competency framework.
 
 
@@ -58,3 +67,15 @@ Topic: ''
 
 - **Q:** How is the competency for the "Sponsorship" function handled in the Praxis Framework?
     - **A:** The competency for the Sponsorship function is covered by the competency defined for the **Sponsorship Process** in the Method section.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Competencies & Skills Overview]]
+- **Previous**: [[Leadership]]
+- **Next**: [[Negotiate]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
