@@ -1,17 +1,27 @@
 ---
-Title: Overview 29283b71d8f3805a95bef6781c9d9721
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Overview 29283b71d8f3805a95bef6781c9d9721.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Overview"
+aliases:
+  - "Overview"
+  - "General Principles of Capability Maturity"
+tags:
+  - praxis-framework
+  - pillar/capability-maturity
+  - section/maturity-models
+  - type/maturity
+pillar: "Capability Maturity"
+section: "Maturity Models"
+subarea: "Management"
+type: "maturity"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Overview
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Maturity Models]]
+> **Pillar**: Capability Maturity | **Type**: `maturity`
 
 # Comprehensive Study Notes: Capability Maturity Overview
 
@@ -24,19 +34,19 @@ Topic: ''
 ### The Two Views of Capability Maturity
 
 1. **Internal View**:
-    
+
     - **Purpose**: This view is about improving the organisation for its own benefit.
-    
+
     - **Goals**: To develop the organisation’s ability so that more projects and programmes deliver their objectives (**effectiveness**) and less investment is wasted (**efficiency**).
-    
+
     - **Mechanism**: A large proportion of the benefit is achieved simply by examining internal processes and making sure they are embedded in the culture. The model acts as a catalyst for this internal improvement.
 
 2. **External View**:
-    
+
     - **Purpose**: This view concerns the reassurance of external stakeholders.
-    
+
     - **Example**: A customer investing in a project will have more confidence in a supplier that has a demonstrably high level of capability maturity.
-    
+
     - **Requirement**: This external view implicitly requires the capability maturity of different organisations to be comparable, meaning they should have been assessed against the same model.
 
 
@@ -45,12 +55,12 @@ Topic: ''
 - The underpinning principle of Praxis is that P3 management is made up of a broad set of components that are assembled and tailored to suit the context of each unique piece of work.
 
 - The Praxis capability maturity model aims to be:
-    
+
     - **Flexible** enough to be adaptable to different contexts.
-    
+
     - **Consistent** enough to allow for meaningful comparison between different organisations.
 
-> [NOTE]  
+> [NOTE]
 > This approach is not dissimilar to the approach taken by ISO9000 for quality. Each organisation can develop a system to suit its own context but, provided the system aligns with the core principles, it can still be accredited to a universally accepted standard. This is achieved by setting the attributes that describe the different levels of maturity at a fairly high level and supplementing them with advice on their application.
 
 
@@ -77,17 +87,17 @@ Topic: ''
 ### Describing the Levels
 
 - **For Capability (Functions)**:
-    
+
     - Praxis describes each function using a set of **indicators**.
-    
+
     - For each indicator, specific **attributes** are described that illustrate the different levels of capability.
-    
+
     - A large proportion of these indicators and attributes are common to all functions; these are collected together as the **generic goals of capability**.
 
 - **For Maturity (Processes)**:
-    
+
     - Maturity levels are described for each life cycle process (e.g., Identification Process, Definition Process).
-    
+
     - This does not imply an organisation has a different maturity level for each process. The overall maturity level is the one achieved across _all_ the processes that are relevant to the organisation's context.
 
 
@@ -96,17 +106,17 @@ Topic: ''
 - The capability maturity model acts as an integrator for the whole Praxis Framework.
 
 - **Relationship with Knowledge and Method**:
-    
+
     - The maturity model **derives its structure** directly from the **functions** in the Knowledge section and the **processes** in the Method section.
-    
+
     - In return, it describes a series of attributes that outline a standard development path for improving those functions and processes.
 
 - **Relationship with Competence**:
-    
+
     - Capability and maturity at **level 2** require the deployment of **competent people**.
-    
+
     - For this reason, the competencies defined in the Praxis Framework are pitched at the level required to perform in a level 2 organisation.
-    
+
     - The maturity model provides the organisational context for the development and application of individual competencies.
 
 
@@ -126,3 +136,15 @@ Topic: ''
 
 - **Q:** How is an organisation's overall maturity level judged?
     - **A:** It is the level achieved in **all the appropriate processes** for the context of its projects, programmes, and portfolios.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Maturity Models Overview]]
+- **Previous**: [[Change log]]
+- **Next**: [[Manage Conflict]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
