@@ -1,26 +1,27 @@
 ---
-Title: Solutions development 29183b71d8f380b29eeff3692ae214dc
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Solutions development 29183b71d8f380b29eeff3692ae214dc.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Solutions development"
+aliases:
+  - "Solutions development"
+  - "Solutions Development"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/scope-management
+  - type/concept
+pillar: "Knowledge"
+section: "Scope management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20144.svg)
-
-# Solutions development
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20144.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20144.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20144.svg)Section|Scope management|
-|![](arrow-circle-down_gray%20144.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Scope management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Solutions Development
 
@@ -31,52 +32,52 @@ Topic: ''
 ### The Goals of Solutions Development
 
 - The primary goals of this function are to:
-    
+
     1. Evaluate the baseline requirements and consider alternative solutions to achieve them.
-    
+
     2. Select the **optimum solution**.
-    
+
     3. Create a detailed **specification** for the selected solution.
 
 - **Relationship with Other Functions**:
-    
+
     - **Requirements management** produces a clear set of stakeholder requirements (the "what") but does not explain _how_ to meet them.
-    
+
     - **Solutions development** investigates the technical options for meeting those requirements (the "how").
-    
+
     - This function works in close conjunction with **investment appraisal** (part of financial management), which investigates the financial implications of the different technical options.
 
 
 ## The Solutions Development Procedure
 
 1. **Plan and Initiate**:
-    
+
     - Since the solutions development steps follow on naturally from those in the requirements management procedure, it would be unusual for it to have separate, dedicated planning and initiation steps. It is typically covered under the overarching scope management plan.
-    
+
     - However, in some contractual circumstances where requirements management and solutions development are the responsibility of different organisations (e.g., a client and a contractor), the procedures may be separate.
 
 2. **Evaluate Options**:
-    
+
     - This step looks at alternative approaches and assesses how well they will perform against a set of stated criteria.
-    
+
     - These criteria could include capital cost, speed of delivery, degree of risk, ongoing operational costs, and alignment with strategic goals.
-    
+
     - The techniques involved can range from simple **"make or buy"** considerations to the full-blown modelling and simulation of highly innovative solutions. A **value management** approach can be used to help select the options that provide the best value for money.
 
 3. **Select Solution**:
     - Based on the evaluation, one solution emerges and is selected as the optimum approach.
 
 4. **Develop Specification**:
-    
+
     - The selected solution is then developed into a detailed **specification**.
-    
+
     - In some cases, especially in large or agile projects, the detailed elements of the specification may only cover the early stages of development, with the specification for later stages being refined as the work proceeds.
 
 5. **Validate and Verify**:
     - The solution should be regularly checked against the requirements (which may themselves be subject to change). This checking takes two forms:
-        
+
         - **Verification**: This is the term used to ensure that the solution is being **built right**. It is a check against the _specification_. This is part of quality control and configuration management.
-        
+
         - **Validation**: This is the term used to ensure that the **right product is being built**. It is a check against the original _requirements_ and the business case to ensure the solution still meets the stakeholders' needs.
 
 
@@ -96,7 +97,7 @@ Topic: ''
 
 - The equivalent of the specification for a programme of business change is the **blueprint**.
 
-- The blueprint describes the cumulative effect of the change on the organisation. It is a detailed picture of the future state, showing all the outcomes that will be created by the programme.  
+- The blueprint describes the cumulative effect of the change on the organisation. It is a detailed picture of the future state, showing all the outcomes that will be created by the programme.
     *-**Co-ordination Role**: Each project within the programme is aimed at delivering an output that contributes to the blueprint. The programme management team must **co-ordinate the solutions** proposed by the different projects and review their proposals.
 
 - This co-ordination is necessary to ensure the compatibility of solutions proposed by different projects and to identify common components or technology platforms that can be shared between projects to improve efficiency and consistency.
@@ -124,3 +125,15 @@ Topic: ''
 
 - **Q:** What is the main role of a programme management team in solutions development?
     - **A:** To co-ordinate and review the solutions proposed by its component projects to ensure they are compatible, efficient, and collectively contribute to the programme's blueprint.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Scope management Overview]]
+- **Previous**: [[Plan Delivery]]
+- **Next**: [[What does Control Mean]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
