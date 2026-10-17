@@ -1,17 +1,27 @@
 ---
-Title: Overview 29283b71d8f380969eeecf0cda6a7475
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Overview 29283b71d8f380969eeecf0cda6a7475.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Overview"
+aliases:
+  - "Overview"
+  - "Introduction to the Praxis Method"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/concept
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Overview
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: The Praxis Method Overview
 
@@ -20,9 +30,9 @@ Topic: ''
 - The **Praxis Method** is a core component of the Praxis Framework, sitting at the heart of the governance of any project, programme, or portfolio.
 
 - It comprises two key elements:
-    
+
     - **Process Models**: Structured sets of activities that guide the management of the work through its life cycle.
-    
+
     - **Documentation Descriptions**: Templates and guidance for the key documents used in P3 management.
 
 - The individual processes within the method make practical use of the functional procedures, tools, and techniques described elsewhere in the Praxis Framework.
@@ -53,7 +63,7 @@ Topic: ''
 
 ## The Method as an Integration Hub
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The processes and documentation in the method provide the central mechanism for the integration of the other main sections of the Praxis Framework (Knowledge, Competence, and Capability Maturity).
 
 - The diagram illustrates how the Method acts as the central hub, connecting the individual **Functions** (from the Knowledge section) with the desired outcomes of **Competence** and **Capability Maturity**.
@@ -65,9 +75,9 @@ Topic: ''
 - The method's processes are the mechanism that integrates individual **functions** (which are assessed for _capability_) into a coherent life cycle, allowing the organisation to achieve overall _maturity_.
 
 - This is a **two-way relationship**:
-    
+
     - The goals and activities of each process provide the basis for defining the **indicators used to measure maturity**.
-    
+
     - In return, the maturity model provides attributes and guidance that can be used to direct the **implementation and tailoring of the method**.
 
 ### Relationship with Competence
@@ -95,4 +105,14 @@ Topic: ''
 - **Q:** How does the Method relate to Competence?
     - **A:** The method's process goals and activities provide the structure for the knowledge and performance criteria that define what a competent person needs to do.
 
-[![](method-overview.png)](Overview%2029283b71d8f380969eeecf0cda6a7475/method-overview.png)
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[Integrative Management]]
+- **Next**: [[Knowledge Management]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
