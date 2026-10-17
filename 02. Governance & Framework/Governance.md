@@ -1,4 +1,26 @@
-# Governance
+---
+title: "Governance"
+aliases:
+  - "Governance"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance-framework
+  - type/concept
+pillar: "Knowledge"
+section: "Governance & Framework"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance & Framework]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Governance in P3 Management
 
@@ -11,15 +33,15 @@
 ### The Goals of P3 Governance
 
 - The primary goals of a P3 governance framework are to:
-    
+
     - Provide a system of **good practice** by which projects, programmes, and portfolios will be managed.
-    
+
     - Balance the differing and often competing needs of all **stakeholders**.
-    
+
     - Monitor the actions of the management team to mitigate the risk of inappropriate actions or decisions.
-    
+
     - Clearly define **roles and responsibilities** and ensure they are performed by competent people.
-    
+
     - Ensure ethical behaviour and promote **transparency** in all actions and reporting.
 
 ### Governance in the Broader Context
@@ -30,7 +52,7 @@
 
 - Many organisations must comply with external regulations and legislation, such as the UK Corporate Governance Code and the Sarbanes-Oxley Act (SOX) in the USA.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Initially, governance can be perceived as just another layer of managerial bureaucracy. However, its true purpose is strategic. Good governance minimizes the risk arising from change, helps to maximize the benefits of investment, and is a key driver for avoiding common reasons for project failure.
 
 ### Benefits of Good Governance
@@ -46,21 +68,21 @@
 ### Core Components of Governance (Praxis Framework)
 
 - While all topics in P3 management contribute to governance, the key areas are:
-    
+
     - **P3 Management**: The methods and frameworks used to deliver the work.
-    
+
     - **Knowledge Management**: The organisation’s ability to capture, learn from, and improve its capabilities.
-    
+
     - **Life Cycle**: The structured phases that underpin delivery.
-    
+
     - **Capability Maturity**: The development of increasing levels of effectiveness and efficiency.
-    
+
     - **Sponsorship**: The vital link between the P3 management team, strategic executive management, and business-as-usual operations.
 
 - Other critical functions include:
-    
+
     - **Stakeholder Management**: Applying principles of engagement and communication to all stakeholders in the P3 process.
-    
+
     - **Ethics**: Ensuring all team members act with integrity and in the best interests of the stakeholders.
 
 ## The Host Organisation's Role in Governance
@@ -112,30 +134,30 @@
 - Large organisations may have multiple portfolios, and there can be good reasons for them to have different governance frameworks.
 
 - These reasons are often contextual, driven by factors such as:
-    
+
     - Geography
-    
+
     - Political environments
-    
+
     - Specific regulatory requirements
 
 - However, even with different frameworks, the **core values** and ethical principles of governance should remain consistent across the entire organisation and align with corporate governance.
 
 ## Governance in Joint Ventures
 
-> [!WARNING]  
+> [!WARNING]
 > Governance can become particularly tricky when two or more organisations, often with different cultures and processes, combine in a joint venture to run a portfolio, programme, or large project.
 
 - In such cases, a clear and carefully agreed governance framework is critical for success. This should explicitly cover:
-    
+
     1. **Decision-Making**: Arrangements for joint authority in making decisions and managing contacts with owners, stakeholders, and third parties.
-    
+
     2. **Business Cases**: The business cases must clearly reflect the agreed apportionment of risk and reward between the partners.
-    
+
     3. **Integration**: Arrangements that recognise the existing governance structures and the technical strengths and weaknesses of each co-owner.
-    
+
     4. **Approval Mechanisms**: Formal gates or checkpoints that give the owners the opportunity to re-evaluate their continued participation.
-    
+
     5. **Procedures**: Clear procedures for progress reporting, independent reviews, and, crucially, dispute resolution.
 
 ## Flashcard Q&A
@@ -158,3 +180,15 @@
 - **Q:** Why is governance particularly challenging in a joint venture?
 
     - **A:** Because it involves merging the different cultures, processes, and objectives of two or more organisations, requiring carefully negotiated agreements on decision-making, risk, and dispute resolution.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance & Framework Overview]]
+- **Previous**: [[Govern A Portfolio]]
+- **Next**: [[Mandate]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
