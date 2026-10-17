@@ -1,14 +1,27 @@
 ---
-Title: Budgeting and cost control 29183b71d8f3800594d6eb253403efbf
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Budgeting and cost control 29183b71d8f3800594d6eb253403efbf.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Budgeting and cost control"
+aliases:
+  - "Budgeting and cost control"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/cost-management
+  - type/concept
+pillar: "Knowledge"
+section: "Cost Management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Cost Management]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
 # Comprehensive Study Notes: Budgeting and Cost Control
 
 ## General Principles of Budgeting and Cost Control
@@ -18,11 +31,11 @@ Topic: ''
 ### The Goals of Budgeting and Cost Control
 
 - The primary goals of this function are to:
-    
+
     1. Determine the **income and expenditure profiles** for the work.
-    
+
     2. Develop formal **budgets** and align them with the available funding.
-    
+
     3. Implement systems to manage and control income and expenditure.
 
 
@@ -56,9 +69,9 @@ Topic: ''
 - This is the cost of the work according to the schedule. It is typically made up of costs associated with resources, accommodation, consumables, expenses, and capital items.
 
 - These base costs have two pairs of possible attributes:
-    
+
     - **Direct vs. Indirect**: Direct costs are directly attributable to the P3 work. Indirect costs are overheads shared with other parts of the host organisation.
-    
+
     - **Fixed vs. Variable**: Fixed costs remain the same regardless of how the work proceeds (e.g., capital purchase). Variable costs fluctuate with the amount of work done (e.g., salaries, fees).
 
 - If the financial systems allow, costs can be broken down into a **Cost Breakdown Structure (CBS)**, which can be aligned with the Work Breakdown Structure (WBS) and Organisational Breakdown Structure (OBS).
@@ -73,7 +86,7 @@ Topic: ''
 
 - Highly innovative and uncertain work will require a larger management reserve than routine work.
 
-> [IMPORTANT]  
+> [IMPORTANT]
 > The three major components of a P3 budget are, therefore: the base cost estimate, the contingency reserve, and the management reserve.
 
 
@@ -88,11 +101,11 @@ Topic: ''
 ### Tracking Costs
 
 - As work proceeds, three types of costs must be tracked:
-    
+
     1. **Committed Costs**: Confirmed orders for future goods or services.
-    
+
     2. **Accruals**: Work that has been completed for which payment will be due.
-    
+
     3. **Actual Costs**: Money that has already been paid out.
 
 - The **Forecast Cost** (or Estimate at Completion) is the sum of commitments, accruals, actual expenditure, plus the estimated cost to complete the remaining work.
@@ -129,13 +142,13 @@ Topic: ''
 - As work becomes more complex, more sophisticated cost control techniques can be justified.
 
 - **Earned Value Management (EVM)** is a powerful technique that combines the tracking of costs with the tracking of progress.
-    
+
     - EVM takes the budget and uses it to represent the "value" of the work.
-    
+
     - The "earned value" of work performed can then be compared to the actual cost of performing it and the planned value.
-    
+
     - This enables much more accurate predictions of future cost and schedule performance based on actual performance to date.
-    
+
     - The overheads of implementing EVM can be significant, so it is unlikely to be effective on smaller projects unless mandated by a parent programme or portfolio.
 
 ### Programmes and Portfolios
@@ -165,3 +178,15 @@ Topic: ''
 
 - **Q:** What is Earned Value Management (EVM)?
     - **A:** A sophisticated control technique that integrates the tracking of cost, schedule, and scope to provide more accurate predictions of future performance.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Cost Management Overview]]
+- **Next**: [[Develop Budgets And Control Costs]]
+
+### Related Concepts & Artefacts
+- [[Finance Management Plan]]
+- [[Budgeting and cost control]]
+- [[Investment Appraisal]]
+- [[Manage The Business Case]]
