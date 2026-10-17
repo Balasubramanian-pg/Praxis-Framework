@@ -1,26 +1,27 @@
 ---
-Title: Projects, programmes and portfolios 29183b71d8f380159a92dd3e090eb402
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Projects, programmes and portfolios 29183b71d8f380159a92dd3e090eb402.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Projects, programmes and portfolios"
+aliases:
+  - "Projects, programmes and portfolios"
+  - "Projects, Programmes And Portfolios"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/setting
+  - type/concept
+pillar: "Knowledge"
+section: "Setting"
+subarea: "Context"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20128.svg)
-
-# Projects, programmes and portfolios
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20128.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20128.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%20128.svg)Section|Setting|
-|![](arrow-circle-down_gray%20128.svg)Sub Area|Context|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Setting]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Projects, Programmes, and Portfolios
 
@@ -30,7 +31,7 @@ Topic: ''
 
 - They are not rigid, separate categories but rather key points along a continuous range of work that an organisation might undertake.
 
-> [!NOTE]  
+> [!NOTE]
 > An effective analogy is the relationship between "colour" and the primary colours (red, blue, yellow). Just as all colours are combinations of the primaries, all organisational initiatives can be seen as combinations of project, programme, and portfolio characteristics. The art of P3 management is to blend these characteristics to fit each unique situation.
 
 - All P3 initiatives are discrete packages of work managed to achieve defined objectives. The way a package is managed depends entirely on its context.
@@ -38,7 +39,7 @@ Topic: ''
 
 - Some argue that the single term "project" is sufficient to cover all such work. However, distinguishing between the three provides a useful framework for tailoring governance and management to the specific needs of the initiative.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The ultimate goal of P3 management is to achieve capability maturity. This is accomplished when competent people in a mature organisation can tailor the management approach to each set of circumstances, starting with the governance structure.
 
 
@@ -51,21 +52,21 @@ Topic: ''
 ### Understanding Objectives: Outputs, Outcomes, and Benefits
 
 - **Outputs**:
-    
+
     - The tangible or intangible products, services, or results delivered by the work. They are the direct deliverables.
-    
+
     - **Example**: A new corporate HQ building.
 
 - **Outcomes**:
-    
+
     - The result of a change, normally affecting real-world behaviour and circumstances. Outcomes are the result of using the outputs. They are a stepping stone from outputs to benefits.
-    
+
     - **Example**: Staff are co-located and fully operational in the new HQ building.
 
 - **Benefits**:
-    
+
     - The measurable improvement resulting from an outcome which is perceived as an advantage by one or more stakeholders. Benefits are the "why" of the project or programme.
-    
+
     - **Example**: Reduced staff travel costs between offices and lower overall facilities management costs.
 
 
@@ -79,7 +80,7 @@ Topic: ''
 
 - **Example**: The construction of the new HQ building is the project. Its objective is to deliver the finished building (the output).
 
-> [!NOTE]  
+> [!NOTE]
 > Projects and programmes are similar in that they are both unique and temporary. This similarity is reflected in frameworks like Praxis, which define common life cycle processes that can be adapted for both.
 
 
@@ -92,13 +93,13 @@ Topic: ''
 - **Nature**: Like projects, programmes are unique and transient. Their success is measured not just by the delivery of outputs, but by the realization of strategic benefits.
 
 - **Example**: The initiative to "improve operational efficiency by centralising staff" is the programme. It would include:
-    
+
     - The construction project (for the building).
-    
+
     - An IT project (to set up new infrastructure).
-    
+
     - An HR project (to manage the relocation of staff).
-    
+
     - A change management stream (to ensure staff adapt to the new ways of working).
 
 
@@ -115,23 +116,22 @@ Topic: ''
 - Praxis defines two main types of portfolios, which are distinguished by the level of inter-relationship between their components.
 
 - **1. Standard Portfolio**:
-    
+
     - **Composition**: Comprises a set of largely independent projects and/or programmes.
-    
+
     - **Primary Objective**: To ensure that the component projects and programmes are managed in a **consistently effective and efficient way**. This includes resource management, standardised reporting, and consistent application of best practices.
-    
+
     - **Example**: A construction company's portfolio of client projects. Each project is for a different client and is independent of the others, but the company manages them as a portfolio to balance resources, manage risk, and ensure consistent quality. The company's portfolio of internal improvement projects might be another, separate standard portfolio.
 
 - **2. Structured Portfolio**:
-    
+
     - **Composition**: Comprises a set of projects and/or programmes that are united by a **common set of strategic objectives**.
-    
+
     - **Primary Objective**: To coordinate and manage the components to achieve a larger strategic goal. This requires more rigorous governance due to the **many inter-relationships** between the components.
-    
+
     - **Example**: An organisation that implements its annual strategic plan through a set of interconnected projects and programmes. This "rolling portfolio" is structured to ensure that all the initiatives are aligned and working together to deliver the organisation's strategy for that year.
 
-> [!TIP]  
-> An organisation can have multiple portfolios, often distinguished by factors in their environment, such as geography (e.g., the European Portfolio), operating division (e.g., the Research & Development Portfolio), or regulatory context (e.g., a utility company's regulated vs. non-regulated portfolios).
+> [!TIP] An organisation can have multiple portfolios, often distinguished by factors in their environment, such as geography (e.g., the European Portfolio), operating division (e.g., the Research & Development Portfolio), or regulatory context (e.g., a utility company's regulated vs. non-regulated portfolios).
 
 
 ## Flashcard Q&A
@@ -150,3 +150,15 @@ Topic: ''
 
 - **Q:** Are portfolios temporary like projects and programmes?
     - **A:** No. Portfolios are typically permanent or semi-permanent structures that align with an organisation's ongoing strategic management.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Setting Overview]]
+- **Previous**: [[Project, Programme And Portfolio Management]]
+- **Next**: [[Specification]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
