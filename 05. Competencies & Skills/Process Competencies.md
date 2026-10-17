@@ -1,17 +1,26 @@
 ---
-Title: Process Competencies 29283b71d8f38039ae37cb618317e5f9
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Process Competencies 29283b71d8f38039ae37cb618317e5f9.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Process Competencies"
+aliases:
+  - "Process Competencies"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/competencies-skills
+  - type/process
+pillar: "Competence"
+section: "Competencies & Skills"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Process Competencies
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Competencies & Skills]]
+> **Pillar**: Competence | **Type**: `process`
 
 # Comprehensive Study Notes: Process Competencies
 
@@ -34,21 +43,21 @@ Topic: ''
 
 ### Naming Convention: Process vs. Competency
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The titles of the competencies reflect the fact that competency is about the active implementation of the processes, rather than simply describing what the processes are.
 
 - This is illustrated by a simple change in the naming convention from a noun (the process) to a verb (the competency).
-    
+
     - The process is called the **Identification Process**.
-    
+
     - The corresponding competency is called **Identify a project or programme**.
-    
+
     - The process is called the **Definition Process**.
-    
+
     - The corresponding competency is called **Define a project or programme**.
-    
+
     - The process is called the **Closure Process**.
-    
+
     - The corresponding competency is called **Close a project or programme**.
 
 - This shift in language emphasizes that a competency is not about knowing the theory of the identification process; it is about being able to _actually execute_ that process to take an idea and develop it into a viable brief.
@@ -67,3 +76,15 @@ Topic: ''
 
 - **Q:** The competency "Define a project or programme" corresponds to which process in the Praxis Method?
     - **A:** The Definition Process.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Competencies & Skills Overview]]
+- **Previous**: [[Negotiation]]
+- **Next**: [[Solution Architecture]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
