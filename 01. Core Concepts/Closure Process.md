@@ -1,3 +1,28 @@
+---
+title: "The Art of Finite Transitions: A Praxis Closure Narrative"
+aliases:
+  - "The Art of Finite Transitions: A Praxis Closure Narrative"
+  - "Closure Process"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/process
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `process`
+
 # The Art of Finite Transitions: A Praxis Closure Narrative
 
 >[!Note]
@@ -16,9 +41,7 @@ Here is the structured narrative of that journey.
 | :--- | :--- | :--- |
 | **Physical Deliverables** | Formal transfer of ownership | Does the receiving team feel equipped? |
 | **Documentation** | Verification of accuracy | Is the knowledge accessible, not just stored? |
-| **Risk Logs** | Transfer of residual risks | Are we transparent about what remains unsolved? |
-
-### 2. The Performance Review: The Growth Mindset Loop
+| **Risk Logs** | Transfer of residual risks | Are we transparent about what remains unsolved? | ### 2. The Performance Review: The Growth Mindset Loop
 *   **The Story:** We often celebrate the launch but ignore the friction it took to get there. A culture that ignores its failures is a culture that refuses to grow. In Praxis closure, we pause to look at the delta between our initial business case and the final reality.
 *   **The Process:** We conduct the Post-Project Review. We do not look for blame; we look for learning. We ask: *Did we solve the customer's unmet need?*
 *   **The Outcome:** Institutional wisdom that prevents history from repeating itself.
@@ -66,4 +89,13 @@ If we execute this process with a growth mindset, we achieve three specific thin
 *This is how we move from doing work to driving impact. We close to open anew.*
 
 
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[4 Maturity]]
+- **Next**: [[Co-ordination Process]]
 
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
