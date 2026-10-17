@@ -1,3 +1,28 @@
+---
+title: "Comprehensive Study Notes: Assurance"
+aliases:
+  - "Comprehensive Study Notes: Assurance"
+  - "Assurance"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance-framework
+  - type/concept
+pillar: "Knowledge"
+section: "Governance & Framework"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance & Framework]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
 # Comprehensive Study Notes: Assurance
 
 ## General Principles of Assurance
@@ -7,11 +32,11 @@
 ### The Goals of Assurance
 
 - The primary goals of the assurance function are to:
-    
+
     1. Review management planning to ensure it is robust and appropriate.
-    
+
     2. Monitor the effectiveness of the P3 management functions and processes.
-    
+
     3. Give stakeholders (and particularly the sponsor) **confidence** that the work is being managed effectively and efficiently.
 
 ### Assurance and Quality
@@ -19,11 +44,11 @@
 - The term assurance is commonly used in the context of ‘quality assurance’.
 
 - The Praxis Framework does not treat quality as a separate function, since quality, in all its forms, is built into the entire framework.
-    
+
     - **Quality Planning** is covered in the **Planning** function.
-    
+
     - **Quality Control** is covered in the **Control** function.
-    
+
     - **Continual Improvement** is encompassed within **Capability Maturity**.
 
 - Assurance, in this context, is the oversight function that checks that all these other aspects of quality are being performed correctly.
@@ -33,14 +58,14 @@
 ### The Two Targets of Assurance
 
 - The targets of assurance can be split into two simple categories:
-    
+
     1. **The Objectives**: This refers to the outputs, outcomes, or benefits of the work. The role of assurance is to audit the management plans to ensure appropriate quality standards have been set for the objectives and to check that the results of quality control have been properly recorded and acted upon.
-    
+
     2. **The Processes**: This refers to the project, programme, or portfolio management processes themselves. The assurance function should check that the appropriate management plans are in place, that the processes and procedures defined within them are fit for purpose, and that competent resources are applying them correctly.
 
 ### Responsibility and Independence
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Assurance is the responsibility of the P3 sponsor. Anyone performing assurance must be independent of the management and delivery teams for the work they are assuring, and they must report their findings directly to the sponsor.
 
 - Assurance resources will often come from a dedicated support organisation or a Project Management Office (PMO).
@@ -58,17 +83,17 @@
 ### Principles for Positive Assurance
 
 1. **Assurance should be Risk-Based**:
-    
+
     - It should concentrate on the riskier areas of what is being assured, rather than being a laborious, box-ticking exercise in straightforward areas.
-    
+
     - **Examples**: If a project has particularly difficult stakeholder issues, is using highly innovative technology, or is being managed by a less experienced manager, then assurance should focus on those high-risk areas.
 
 2. **Assurance should Assist as well as Check**:
-    
+
     - Conflict is more likely if the assurance team simply turns up, checks procedures, and leaves a report.
-    
+
     - The assurance role should be one of **assisting and advising** as well as reviewing.
-    
+
     - People in assurance roles often move between many different projects and programmes. They are in the perfect position to promote good practices and disseminate lessons learned across the organisation.
 
 3. **Assurance should be seen as a sign of Commitment**:
@@ -87,22 +112,22 @@
 - For stand-alone projects, it is relatively straightforward to define what constitutes ‘independent’ assurance.
 
 - In programmes, it becomes more complex.
-    
+
     - The **programme organisation** is often responsible for assuring its **component projects**. Therefore, the people who assure the projects may be members of the programme management team.
-    
+
     - Crucially, these same people **cannot** then have responsibility for assuring the programme itself. Other, independent assurance resources must be used for that.
-    
+
     - To add to this complexity, the programme manager often fulfils the role of **sponsor** for the component projects. In this position, they have responsibility for _project_ assurance but must remain independent from _programme_ assurance.
 
-> [!NOTE]  
+> [!NOTE]
 > A more mature organisation may collect all its assurance resources into a central function, such as a PMO, that is independent of all projects, programmes, and potentially even portfolios.
 
 ### Complex Environments and Integrated Assurance
 
 - Some complex environments may need multiple assurance teams. For example, in a regulated industry, there may be:
-    
+
     - An **internal team** that focuses on effective and efficient management.
-    
+
     - An **external team** (e.g., a regulator) that focuses on conformance with regulations.
 
 - In these circumstances, the total assurance burden can become onerous. The sponsor must get the different teams to work in a co-ordinated manner, sharing information where possible and ensuring all aspects are covered without wasteful duplication. This approach is known as **integrated assurance**.
@@ -133,3 +158,14 @@
 
 - **Q:** What is "integrated assurance"?
     - **A:** An approach used in complex environments with multiple assurance teams, where the sponsor ensures the different teams work in a co-ordinated manner to avoid duplication and gaps.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance & Framework Overview]]
+- **Next**: [[Govern A Portfolio]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
