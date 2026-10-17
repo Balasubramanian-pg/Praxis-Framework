@@ -1,26 +1,27 @@
 ---
-Title: Configuration management 29183b71d8f38094b33bdbe63dab85b9
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Configuration management 29183b71d8f38094b33bdbe63dab85b9.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Configuration management"
+aliases:
+  - "Configuration management"
+  - "General Principles of Configuration Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/scope-management
+  - type/artefact
+pillar: "Knowledge"
+section: "Scope management"
+subarea: "Management"
+type: "artefact"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2039.svg)
-
-# Configuration management
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2039.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2039.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%2039.svg)Section|Scope management|
-|![](arrow-circle-down_gray%2039.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Scope management]]
+> **Pillar**: Knowledge | **Type**: `artefact`
 
 # Comprehensive Study Notes: Configuration Management
 
@@ -35,11 +36,11 @@ Topic: ''
 ### The Goals of Configuration Management
 
 - The primary goals of this function are to:
-    
+
     1. Identify the products that will be treated as **configuration items**.
-    
+
     2. Support the assessment of change requests and document the results of the **change control** process.
-    
+
     3. Maintain the validity of the configuration and the accuracy of the **configuration management system**.
 
 ### The Role of Configuration Management
@@ -54,49 +55,49 @@ Topic: ''
 ## The Configuration Management Procedure
 
 1. **Plan**:
-    
+
     - A **configuration management plan** (which may be a separate document or a section of the scope management plan) should describe the specific techniques to be used and the extent of their application.
-    
+
     - The plan should also identify the roles and responsibilities for carrying out configuration management.
 
 2. **Initiate**:
     - This step ensures that the required resources, including people, tools, and systems (e.g., a configuration management database), are in place.
 
 3. **Identify Configuration Items**:
-    
+
     - This involves breaking down the work into its component products, which will be treated as **configuration items**.
-    
+
     - A unique numbering or referencing system is created for these items.
-    
+
     - Configuration **baselines** are established. This step aligns closely with the preparation of a **Product Breakdown Structure (PBS)** in scope management.
 
 4. **Control Configuration**:
-    
+
     - This step ensures that all changes to baselined configuration items are formally requested, assessed, approved, and documented.
-    
+
     - An important aspect is the ability to identify the **inter-relationships** between different configuration items. This is essential information for the change control procedure, as the practicality of making a change to one product will be affected by its impact on interconnected products.
 
 5. **Account for Status**:
-    
+
     - Status accounting tracks the current status of every configuration item throughout its development (e.g., 'in development', 'in review', 'approved', 'changed').
-    
+
     - This provides full **traceability** for all items.
-    
+
     - Regular status reports can indicate if change requests are being processed in a timely manner and may highlight products that are subject to frequent change requests.
 
 6. **Verify and Audit**:
-    
+
     - This step is used to determine whether a product conforms to its requirements and its configuration information. An audit is typically undertaken at the end of a phase, stage, or tranche.
-    
+
     - Configuration audits take one of three forms:
-        
+
         - **Physical Audit**: Looks at the relevant elements of a configuration item to confirm that it meets its physical specification and that all necessary test documentation is complete.
-        
+
         - **Functional Audit**: Checks that a configuration item performs the function for which it was designed.
-        
+
         - **System Audit**: Checks that the configuration management _system_ itself is working, able to support the planned procedure, and performing the necessary functions. This is part of the assurance of the function.
 
-> [NOTE]  
+> [NOTE]
 > A form of configuration management (primarily version control) can also be applied to the key management documentation to ensure everyone is working from the correct versions of plans and reports.
 
 
@@ -143,3 +144,15 @@ Topic: ''
 
 - **Q:** Why is a consistent approach to configuration management important in a programme?
     - **A:** It makes it much simpler to assess whether a change to the products of one project will have any effect on the products of another project or on the overall programme benefits.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Scope management Overview]]
+- **Previous**: [[Follow-on Actions Report]]
+- **Next**: [[General Principles of Requirements Management]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
