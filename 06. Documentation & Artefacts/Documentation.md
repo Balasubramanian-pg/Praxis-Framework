@@ -1,17 +1,26 @@
 ---
-Title: Documentation 29283b71d8f380539073f33ea8100a35
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Documentation 29283b71d8f380539073f33ea8100a35.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Documentation"
+aliases:
+  - "Documentation"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/documentation-artefacts
+  - type/artefact
+pillar: "Method"
+section: "Documentation & Artefacts"
+subarea: "Management"
+type: "artefact"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Documentation
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Documentation & Artefacts]]
+> **Pillar**: Method | **Type**: `artefact`
 
 # Comprehensive Study Notes: P3 Management Documentation
 
@@ -53,15 +62,15 @@ Topic: ''
 
 - They are aligned with both the topics from the **Knowledge** section and the processes from the **Method** section.
 
-> [!NOTE]  
+> [!NOTE]
 > This cross-referencing is a key feature that helps users understand the context of each document. It shows both the functional area a document belongs to and the point in the life cycle where it is created or used.
-> 
+>
 > **Example**:
-> 
+>
 > - The **Risk Management Plan** is a governance document.
-> 
+>
 > - It appears in the resource page for the **Risk Management function** (its Knowledge area).
-> 
+>
 > - It also appears in the resource page for the **Definition Process** (the Method process where it is first created in detail).
 
 
@@ -81,3 +90,15 @@ Topic: ''
 
 - **Q:** How are documents cross-referenced in the Praxis Framework?
     - **A:** They are aligned with both the relevant topic from the Knowledge section (the function) and the relevant process from the Method section (the life cycle phase).
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Documentation & Artefacts Overview]]
+- **Previous**: [[Delivery Plan]]
+- **Next**: [[Finance Management Plan]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
