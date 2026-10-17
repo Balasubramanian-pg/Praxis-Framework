@@ -1,17 +1,26 @@
 ---
-Title: Delivery Documents 29283b71d8f38048874ce5f6f263f522
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Delivery Documents 29283b71d8f38048874ce5f6f263f522.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Delivery Documents"
+aliases:
+  - "Delivery Documents"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/documentation-artefacts
+  - type/artefact
+pillar: "Method"
+section: "Documentation & Artefacts"
+subarea: "Management"
+type: "artefact"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Delivery Documents
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Documentation & Artefacts]]
+> **Pillar**: Method | **Type**: `artefact`
 
 # Comprehensive Study Notes: Delivery Documents
 
@@ -26,22 +35,22 @@ Topic: ''
 - The specific delivery documents to be used, their format, and how they should be maintained are all defined in the **management plans** (the governance documents).
 
 - They are primarily created and used in the active management processes:
-    
+
     - **Delivery Process**
-    
+
     - **Development Process**
-    
+
     - **Boundaries Process**
 
 ### Dynamic Nature
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Delivery documents are the most dynamic of the three documentation groups. They are constantly being updated with progress, new information, and the results of management actions.
 
 - Because of their dynamic nature, they must be maintained in accordance with the principles set out in the:
-    
+
     - **Information Management Plan**: To ensure they are accurate, accessible, and distributed correctly.
-    
+
     - **Configuration Management Plan**: To ensure that versions are controlled and that everyone is working from the correct baseline.
 
 
@@ -50,21 +59,21 @@ Topic: ''
 - **Schedules / Plans**: Detailed timetables showing what work will be done and when (e.g., Gantt charts, milestone charts).
 
 - **Registers and Logs**: Dynamic lists used to track specific management items.
-    
+
     - **Risk Register**: Records identified risks, their assessment, and their response plans.
-    
+
     - **Issue Log**: Records and tracks issues that require management action.
-    
+
     - **Change Log**: Records all change requests and their status.
-    
+
     - **Lessons Log**: Captures lessons as they are learned throughout the life cycle.
 
 - **Reports**: Documents used to communicate status and performance.
-    
+
     - **Progress Report / Highlight Report**: Provides a regular summary of progress for stakeholders.
-    
+
     - **Checkpoint Report**: A more detailed, frequent report from a team to the P_3 manager.
-    
+
     - **Exception Report**: A report created to escalate an issue where tolerances have been or are predicted to be exceeded.
 
 - **Work Packages**: Documents that define and authorise a specific piece of work to be done by a team or individual.
@@ -86,3 +95,15 @@ Topic: ''
 
 - **Q:** Why is configuration management particularly important for delivery documents?
     - **A:** Because they are so dynamic, version control is essential to ensure everyone is working from the correct and most up-to-date information.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Documentation & Artefacts Overview]]
+- **Previous**: [[Definition Plan]]
+- **Next**: [[Delivery Plan]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
