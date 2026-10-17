@@ -1,23 +1,51 @@
 ---
-Title: Management process 29183b71d8f3800092c0f2a741a7fa51
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Management process 29183b71d8f3800092c0f2a741a7fa51.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Management Process"
+aliases:
+  - "P3 Management Process"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/processes
+  - type/process
+pillar: "Method"
+section: "Project and Programme Processes"
+subarea: "Process"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20106.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Project and Programme Processes]]
+> **Pillar**: Method | **Type**: `process`
 
-# Management process
+# Management Process
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20106.svg)Area|Maturity|
-|![](arrow-circle-down_gray%20106.svg)Pillar|Delivery process|
-|![](arrow-circle-down_gray%20106.svg)Section|Delivery process|
-|![](arrow-circle-down_gray%20106.svg)Sub Area|Delivery process|
+> [!SUMMARY] Overview
+> The day-to-day management activities performed by the project/programme manager to direct, coordinate, and control delivery.
+
+## Purpose
+The **Management Process** encapsulates the active leadership and coordination exercised by the project manager across the life cycle, operating the Plan-Do-Check-Act cycle.
+
+## Focus Areas
+- Delegating and monitoring work packages.
+- Tracking actuals against baselines.
+- Engaging stakeholders and motivating teams.
+- Resolving conflicts and mitigating risks.
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Project and Programme Processes Overview]]
+- **Previous**: [[Life Cycle]]
+- **Next**: [[Organisation Management]]
+
+### Related Concepts & Artefacts
+- [[Identification Process]]
+- [[Definition Process]]
+- [[Delivery Process]]
+- [[Closure Process]]
