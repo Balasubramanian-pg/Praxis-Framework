@@ -3,175 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praxis Framework Docs - Data & Business Intelligence P3M</title>
+  <title>praxis.framework - Data & Business Intelligence P3M</title>
+  
+  <!-- Font: Avenir Next Cyr via CDN -->
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/avenir-next-cyr">
+  
+  <!-- App Stylesheet -->
   <link rel="stylesheet" href="site/css/style.css">
 </head>
 <body>
 
-  <!-- Top Navigation Header -->
+  <!-- Top Navigation Header (Matches Screenshot Minimalist Architecture) -->
   <header class="app-header">
     <a href="#/home" class="brand-wrapper">
-      <div class="brand-icon">PX</div>
-      <div class="brand-title">Praxis Framework <span class="brand-badge">Docs</span></div>
+      <div class="brand-logo-icon">
+        <!-- 8-Point Asterisk Star Icon matching Screenshot -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <line x1="12" y1="3" x2="12" y2="21"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="5.64" y1="5.64" x2="18.36" y2="18.36"></line>
+          <line x1="5.64" y1="19.07" x2="18.36" y2="5.64"></line>
+        </svg>
+      </div>
+      <span class="brand-title">praxis.framework</span>
     </a>
 
-    <!-- Center Search Bar -->
+    <!-- Center Search Bar: Q Search praxis.framework -->
     <div class="search-container">
       <div class="search-input-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" class="search-input" placeholder="Search by Article & Content..." autocomplete="off">
+        <span class="search-icon-slot">
+          <i data-lucide="search"></i>
+        </span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search praxis.framework" autocomplete="off">
         <span class="search-shortcut">/</span>
       </div>
       <div id="searchResults" class="search-results"></div>
     </div>
 
-    <!-- Header Actions -->
+    <!-- Header Right Actions -->
     <div class="header-actions">
-      <div class="lang-badge">🇺🇸 ENG</div>
-      <a href="https://github.com/Balasubramanian-pg/Praxis-Framework" target="_blank" class="github-link">
+      <a href="https://github.com/Balasubramanian-pg/Praxis-Framework" target="_blank" class="nav-link-btn" title="View Source on GitHub">
+        <i data-lucide="github"></i>
         <span>GitHub</span>
       </a>
     </div>
   </header>
 
-  <!-- App Main Layout -->
+  <!-- App Main Layout Container -->
   <div class="app-container">
 
-    <!-- Left Sidebar -->
+    <!-- Left Sidebar: Tree Navigation Hierarchy with Connecting Lines -->
     <aside class="app-sidebar">
-      <div class="sidebar-title">Table Of Content</div>
       <nav id="sidebarNav"></nav>
-
-      <div class="sidebar-footer">
-        <a href="#/article/00%20-%20Praxis%20Framework%20Overview" class="support-button">
-          <span>Master MOC Dashboard</span>
-        </a>
-      </div>
     </aside>
 
     <!-- Main Content Panel -->
     <main class="app-content">
 
-      <!-- Dashboard View (Matches User's UI Screenshot) -->
+      <!-- Dashboard / Overview View (Matches Uploaded Screenshot Layout) -->
       <section id="dashboardView" class="dashboard-view">
         
-        <!-- Hero Banner -->
-        <div class="hero-section">
-          <div class="hero-illustration">
-            <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-          </div>
-          <div class="hero-text">
-            <h1>Documentation</h1>
-            <p>Welcome to the <strong>Praxis Framework</strong> documentation portal, specialized for <strong>Data Engineering, Analytics & Business Intelligence</strong> project management.</p>
-          </div>
+        <!-- Large Page Heading -->
+        <h1 class="overview-title">Overview</h1>
+        
+        <!-- Intro Paragraph with Blue Link -->
+        <p class="overview-lead">
+          Praxis Framework is the free, community-driven, integrated framework for project, programme, and portfolio management (P3M), uniquely specialized for <strong>Data Engineering, Analytics, and Business Intelligence</strong> initiatives across modern lakehouses and data platforms. Explore the comprehensive <a href="#/article/00%20-%20Praxis%20Framework%20Overview">P3M blueprint</a> or browse core disciplines below.
+        </p>
+
+        <!-- Quick Action Chips Row (3 Bordered White Cards with Right Arrow) -->
+        <div class="action-chips-row">
+          <a href="#/article/00%20-%20Praxis%20Framework%20Overview" class="action-chip-card">
+            <span>Explore 4 Core Pillars</span>
+            <i data-lucide="arrow-right" class="chip-arrow"></i>
+          </a>
+          <a href="#/article/04.%20Management%20Areas/00%20-%20Overview" class="action-chip-card">
+            <span>Data & BI P3M Blueprint</span>
+            <i data-lucide="arrow-right" class="chip-arrow"></i>
+          </a>
+          <a href="#/article/06.%20Documentation%20%26%20Artefacts/00%20-%20Overview" class="action-chip-card">
+            <span>Artefacts & Templates</span>
+            <i data-lucide="arrow-right" class="chip-arrow"></i>
+          </a>
         </div>
 
-        <!-- 2x2 Feature Cards Grid -->
-        <div class="cards-grid">
+        <!-- Section 1: Core Pillars (Matches 3-Card Row with Colored Icon Boxes) -->
+        <h2 class="section-heading">Core Pillars</h2>
+        
+        <div class="feature-cards-grid">
           
-          <!-- Card 1: Knowledge & FinOps -->
+          <!-- Card 1: Blue Icon Box -->
           <div class="feature-card">
-            <div class="card-header">
-              <div class="card-icon">⚡</div>
-              <div class="card-header-text">
-                <h3>Knowledge & FinOps</h3>
-                <p>Fundamental functions, cloud compute governance, and setting</p>
+            <div class="card-top-row">
+              <div class="card-icon-box blue">
+                <i data-lucide="book-open"></i>
               </div>
+              <div class="card-title">Knowledge & FinOps</div>
             </div>
-            <ul class="card-links">
-              <li><a href="#/article/Complexity">Complexity Continuum</a></li>
-              <li><a href="#/article/General%20Principles%20of%20Financial%20Management">Financial Management & FinOps</a></li>
-              <li><a href="#/article/General%20Principles%20of%20Risk%20Management">Data Risk Management Principles</a></li>
-            </ul>
+            <p class="card-description">
+              Fundamental P3M functions, cloud compute governance, Databricks DBUs, and project environment analysis.
+            </p>
+            <a href="#/article/1.%20Knowledge" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
           </div>
 
-          <!-- Card 2: Method & Lifecycle -->
+          <!-- Card 2: Purple Icon Box -->
           <div class="feature-card">
-            <div class="card-header">
-              <div class="card-icon">🔄</div>
-              <div class="card-header-text">
-                <h3>Method & Lifecycle</h3>
-                <p>Scalable life cycle processes from Data Discovery to Operations</p>
+            <div class="card-top-row">
+              <div class="card-icon-box purple">
+                <i data-lucide="git-merge"></i>
               </div>
+              <div class="card-title">Method & Medallion</div>
             </div>
-            <ul class="card-links">
-              <li><a href="#/article/Identification%20Process">Identification: Feasibility & Brief</a></li>
-              <li><a href="#/article/Definition%20Process">Definition: Lakehouse Architecture</a></li>
-              <li><a href="#/article/Delivery%20Process">Delivery: Medallion Pipeline Sprints</a></li>
-            </ul>
+            <p class="card-description">
+              Agile delivery lifecycle spanning discovery, lakehouse architecture, and Bronze, Silver, Gold pipeline sprints.
+            </p>
+            <a href="#/article/2%20Method" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
           </div>
 
-          <!-- Card 3: Competencies & Skills -->
+          <!-- Card 3: Amber Icon Box -->
           <div class="feature-card">
-            <div class="card-header">
-              <div class="card-icon">🎯</div>
-              <div class="card-header-text">
-                <h3>Competencies & Skills</h3>
-                <p>Performance and knowledge criteria for modern data roles</p>
+            <div class="card-top-row">
+              <div class="card-icon-box amber">
+                <i data-lucide="award"></i>
               </div>
+              <div class="card-title">Competence & Maturity</div>
             </div>
-            <ul class="card-links">
-              <li><a href="#/article/Competence">Competency Framework</a></li>
-              <li><a href="#/article/Delivery%20Competencies">Data Engineering Competencies</a></li>
-              <li><a href="#/article/Leadership">Technical Leadership & Teamwork</a></li>
-            </ul>
-          </div>
-
-          <!-- Card 4: Capability Maturity -->
-          <div class="feature-card">
-            <div class="card-header">
-              <div class="card-icon">📈</div>
-              <div class="card-header-text">
-                <h3>Capability Maturity</h3>
-                <p>5-Level organizational maturity model for data platforms</p>
-              </div>
-            </div>
-            <ul class="card-links">
-              <li><a href="#/article/Capability%20Maturity">Capability Maturity Model</a></li>
-              <li><a href="#/article/Maturity%20Level%201">Level 1: Ad-hoc & Spreadsheet Hell</a></li>
-              <li><a href="#/article/Maturity%20Level%204%20%26%205">Level 4 & 5: Quantitatively Managed DataOps</a></li>
-            </ul>
+            <p class="card-description">
+              Individual performance criteria for data roles and a 5-level DataOps organizational maturity benchmark.
+            </p>
+            <a href="#/article/Capability%20Maturity" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
           </div>
 
         </div>
 
-        <!-- Lower Two Column Section -->
-        <div class="articles-columns">
-          
-          <!-- Column 1: Popular Articles -->
-          <div>
-            <div class="column-title">Popular Articles ★</div>
-            <a href="#/article/General%20Principles%20of%20Risk%20Management" class="article-row-card">
-              <span>Risk Management in Data & Analytics</span>
-            </a>
-            <a href="#/article/Scope%20Management" class="article-row-card">
-              <span>Scope Management & Medallion Architecture</span>
-            </a>
-            <a href="#/article/Budgeting%20and%20cost%20control" class="article-row-card">
-              <span>Budgeting and Cost Control (FinOps)</span>
+        <!-- Section 2: Management Areas (Data & BI Focus) -->
+        <h2 class="section-heading">10 Management Areas (Data & BI Focus)</h2>
+
+        <div class="feature-cards-grid management-cards-grid">
+
+          <!-- Risk -->
+          <div class="feature-card">
+            <div class="card-top-row">
+              <div class="card-icon-box rose">
+                <i data-lucide="shield-alert"></i>
+              </div>
+              <div class="card-title">Risk Management</div>
+            </div>
+            <p class="card-description">
+              Mitigating schema drift, upstream silent data corruption, and SLA pipeline breaches.
+            </p>
+            <a href="#/article/General%20Principles%20of%20Risk%20Management" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
             </a>
           </div>
 
-          <!-- Column 2: New Articles -->
-          <div>
-            <div class="column-title">Core Templates & Artefacts</div>
-            <a href="#/article/Risk%20Management%20Plan" class="article-row-card">
-              <span>Risk Management Plan</span>
-              <span class="article-badge">Core</span>
+          <!-- Scope -->
+          <div class="feature-card">
+            <div class="card-top-row">
+              <div class="card-icon-box emerald">
+                <i data-lucide="database"></i>
+              </div>
+              <div class="card-title">Scope & Contracts</div>
+            </div>
+            <p class="card-description">
+              Medallion scoping, producer-consumer data contracts, and semantic data models.
+            </p>
+            <a href="#/article/Scope%20Management" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
             </a>
-            <a href="#/article/Risk%20Register" class="article-row-card">
-              <span>Risk Register (Data Risks Template)</span>
-              <span class="article-badge">New</span>
+          </div>
+
+          <!-- Finance / FinOps -->
+          <div class="feature-card">
+            <div class="card-top-row">
+              <div class="card-icon-box indigo">
+                <i data-lucide="dollar-sign"></i>
+              </div>
+              <div class="card-title">Finance & FinOps</div>
+            </div>
+            <p class="card-description">
+              Databricks DBU budgets, Snowflake credit attribution, and cloud warehouse governance.
+            </p>
+            <a href="#/article/General%20Principles%20of%20Financial%20Management" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
             </a>
-            <a href="#/article/Daily%20Log" class="article-row-card">
-              <span>Daily Log & DataOps Incident Diary</span>
-              <span class="article-badge">New</span>
+          </div>
+
+          <!-- Quality & Control -->
+          <div class="feature-card">
+            <div class="card-top-row">
+              <div class="card-icon-box cyan">
+                <i data-lucide="check-circle-2"></i>
+              </div>
+              <div class="card-title">Quality & Control</div>
+            </div>
+            <p class="card-description">
+              Automated DataOps testing gates: freshness, completeness, and schema validity.
+            </p>
+            <a href="#/article/Control" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Resource -->
+          <div class="feature-card">
+            <div class="card-top-row">
+              <div class="card-icon-box purple">
+                <i data-lucide="users"></i>
+              </div>
+              <div class="card-title">Resource & Roles</div>
+            </div>
+            <p class="card-description">
+              Role definitions for Data Engineers, Analytics Engineers (dbt), and BI Developers.
+            </p>
+            <a href="#/article/General%20Principles%20of%20Resource%20Management" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+
+          <!-- Change Management -->
+          <div class="feature-card">
+            <div class="card-top-row">
+              <div class="card-icon-box amber">
+                <i data-lucide="refresh-cw"></i>
+              </div>
+              <div class="card-title">Change & Adoption</div>
+            </div>
+            <p class="card-description">
+              Deprecating shadow Excel pipelines and driving executive adoption of certified BI.
+            </p>
+            <a href="#/article/Goal%20of%20Change%20Management" class="card-read-more">
+              <span>Read more</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
             </a>
           </div>
 
@@ -179,7 +256,7 @@
 
       </section>
 
-      <!-- Article Reader View -->
+      <!-- Article Reader View (Clean Markdown with Marked.js & Obsidian Callouts) -->
       <section id="articleView" class="article-view">
         <div id="breadcrumbBar" class="breadcrumb-bar"></div>
         <article id="articleContainer" class="article-container"></article>
@@ -189,8 +266,33 @@
 
   </div>
 
-  <!-- Content & App Scripts -->
+  <!-- Vendor Libraries: Marked.js, Lucide Icons, Mermaid.js -->
+  <script src="site/vendor/marked.min.js"></script>
+  <script>
+    if (typeof marked === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"><\/script>');
+    }
+  </script>
+
+  <script src="site/vendor/lucide.min.js"></script>
+  <script>
+    if (typeof lucide === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"><\/script>');
+    }
+  </script>
+
+  <script src="site/vendor/mermaid.min.js"></script>
+  <script>
+    if (typeof mermaid === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"><\/script>');
+    } else {
+      mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
+    }
+  </script>
+
+  <!-- Application Content & Routing Logic -->
   <script src="site/js/content.js"></script>
   <script src="site/js/app.js"></script>
+
 </body>
 </html>
