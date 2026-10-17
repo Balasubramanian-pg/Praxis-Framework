@@ -1,26 +1,26 @@
 ---
-Title: Procurement 29183b71d8f3802184c7f07c8acfdb7b
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Procurement 29183b71d8f3802184c7f07c8acfdb7b.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Procurement"
+aliases:
+  - "Procurement"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/resource-management
+  - type/concept
+pillar: "Knowledge"
+section: "Resource management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20123.svg)
-
-# Procurement
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20123.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20123.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20123.svg)Section|Resource management|
-|![](arrow-circle-down_gray%20123.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Resource management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Procurement
 
@@ -31,11 +31,11 @@ Topic: ''
 ### The Goals of Procurement
 
 - The primary goals of this function are to:
-    
+
     1. Identify potential **external suppliers**.
-    
+
     2. Select the most appropriate **external suppliers**.
-    
+
     3. Obtain firm commitment for the provision of **internal resources**.
 
 ### Internal vs. External Sources
@@ -45,11 +45,11 @@ Topic: ''
 - An **internal source** represents a department or division within the host organisation. The terms are typically governed by a less formal **Service Level Agreement (SLA)** or Terms of Reference.
 
 - Procurement typically includes the acquisition of:
-    
+
     - ‘Off the shelf’ goods and services.
-    
+
     - Bespoke goods or services designed specifically for the purchaser.
-    
+
     - Specialist advice or consultancy.
 
 
@@ -59,33 +59,33 @@ Topic: ''
     - This initial step is documented in the **resource management plan** and defines the procurement strategy.
 
 2. **Research Suppliers**:
-    
+
     - This involves identifying suppliers that have the required capability. This may result in a long list of potential suppliers.
-    
+
     - The host organisation may have a pre-approved supplier list that reduces the work needed here.
 
 3. **Pre-qualify Suppliers**:
-    
+
     - This step aims to reduce the long list to a manageable **shortlist**.
-    
+
     - This can be achieved through methods like a pre-qualification questionnaire, which clarifies the supplier's capacity, financial stability, and technical experience.
-    
+
     - Experience of the same suppliers from other projects or programmes should be researched, ideally through a formal knowledge management system or by speaking to other managers.
 
 4. **Select Supplier**:
-    
+
     - The shortlisted suppliers are asked to provide a full bid against a defined **Statement of Work**.
-    
+
     - Final selection is often based on a formal **tender** process. This can be an extensive procedure, and a P3 manager may need to seek specialist help.
-    
+
     - The requirements must be clear, and all suppliers must be given an equal and fair chance of success.
-    
+
     - Selection should include an appropriate risk analysis in addition to cost, time, and quality considerations.
 
 5. **Award Contract**:
     - This step involves the final negotiation and agreement of a formal contract.
 
-> [CAUTION]  
+> [CAUTION]
 > Throughout the procurement procedure, care must be taken to ensure that a contract is not entered into casually. It should be made clear in all meetings and documents that the proceedings are "subject to contract" until a formal agreement is signed. Procurement records must be carefully maintained to mitigate the risk of unsuccessful suppliers challenging the decision.
 
 
@@ -125,9 +125,9 @@ Topic: ''
 - The programme management team must decide which suppliers are to be managed at the project level and which are to be managed centrally at the programme level.
 
 - The programme team should consider consolidating procurement for:
-    
+
     - Suppliers providing goods or services to **multiple projects**.
-    
+
     - High-risk or specialist contracts that need particular procurement expertise.
 
 - This allows for **economies of scale** through pan-programme procurement.
@@ -135,9 +135,9 @@ Topic: ''
 ### Portfolios, Programmes, and Large Projects
 
 - At these larger scales, the management team can make use of more strategic procurement approaches:
-    
+
     - **Partnering and Alliancing**: Creating long-term, collaborative relationships with key suppliers.
-    
+
     - **Framework Contracts**: These are agreements that set out terms and conditions, including unit prices, for goods and services that can then be "called off" by individual projects as needed. This greatly reduces the procurement effort required at the lower levels.
 
 - Framework contracts are not appropriate for all goods and services. There will still be many specialist suppliers who have to be selected locally to meet the specific needs of individual projects.
@@ -159,3 +159,14 @@ Topic: ''
 
 - **Q:** What is a "framework contract"?
     - **A:** A long-term agreement with a supplier that sets out terms and unit prices, allowing individual projects to "call off" goods and services as needed without going through a full procurement process each time.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Resource management Overview]]
+- **Previous**: [[Manage Contracts]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
