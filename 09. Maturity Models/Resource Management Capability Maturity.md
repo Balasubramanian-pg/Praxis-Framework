@@ -1,37 +1,47 @@
 ---
-Title: Resource Management 29283b71d8f380229959d4a8153cef89
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Resource Management 29283b71d8f380229959d4a8153cef89.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Resource Management"
+aliases:
+  - "Resource Management"
+  - "Resource Management Capability Maturity"
+tags:
+  - praxis-framework
+  - pillar/capability-maturity
+  - section/maturity-models
+  - type/maturity
+pillar: "Capability Maturity"
+section: "Maturity Models"
+subarea: "Management"
+type: "maturity"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Resource Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Maturity Models]]
+> **Pillar**: Capability Maturity | **Type**: `maturity`
 
 # Comprehensive Study Notes: Resource Management Capability Maturity
 
 ## Overall Goal of Resource Management
 
 - The function of Resource Management should:
-    
+
     - Determine the best way to resource the work.
-    
+
     - Acquire and mobilise the necessary resources.
-    
+
     - Control resources throughout the life cycle.
-    
+
     - Demobilise resources at the end of the life cycle.
-    
+
     - Finalise all contractual arrangements.
 
-> [!IMPORTANT]  
-> This is a summary-level capability that combines the individual capabilities for the functions that make up resource management (Procurement, Mobilisation, etc.).  
-> <br><br>  
+> [!IMPORTANT]
+> This is a summary-level capability that combines the individual capabilities for the functions that make up resource management (Procurement, Mobilisation, etc.).
+> <br><br>
 > If the project or programme makes significant use of both internal and external resources and involves letting formal contracts, it would be more appropriate to use the individual capability models for each function to get a more accurate assessment.
 
 
@@ -43,15 +53,15 @@ Topic: ''
     - A procurement procedure exists to identify suppliers and acquire resources.
 
 - **Mobilise**
-    
+
     - Plans exist to show how the infrastructure will be mobilised.
-    
+
     - These plans are implemented.
 
 - **Control**
-    
+
     - Resource usage is monitored.
-    
+
     - Plans are updated accordingly based on actual usage.
 
 - **Close**
@@ -63,33 +73,33 @@ Topic: ''
 - At this level, resource management is performed according to a **defined, standard process** that is tailored to the context. The approach is proactive, formal where necessary, and considers the full life cycle of all resources.
 
 - **Procure**
-    
+
     - **Standard procedures** for procurement are **tailored** to suit the context of the work.
-    
+
     - External resources are acquired through a formal **tendering** process, and contract terms are actively **negotiated**.
-    
+
     - The management team works with operational departments to agree on formal **Service Level Agreements (SLAs)** for internal resources.
 
 - **Mobilise**
-    
+
     - The infrastructure is not just set up once; it is actively **adjusted throughout the life cycle** to meet changing needs.
-    
+
     - Mobilisation is performed at the beginning of each **stage or tranche**, not just at the start of the project.
 
 - **Control**
-    
+
     - Plans for **consumable resources** (e.g., materials) are reviewed regularly, and estimates are revised.
-    
+
     - **Capital assets** (e.g., machinery) are actively maintained throughout their use.
 
 - **Close**
-    
+
     - The close-out process is formal and comprehensive.
-    
+
     - Staff are formally **re-deployed** through HR processes.
-    
+
     - The residual **value of capital assets is realised** (e.g., through sale or transfer).
-    
+
     - Contracts are **closed formally** according to their legal terms.
 
 
@@ -106,3 +116,14 @@ Topic: ''
 
 - **Q:** How does the "Close" step at Level 3 demonstrate a more mature process than at Level 2?
     - **A:** At Level 2, demobilisation is simply planned. At Level 3, the process is formal and comprehensive, including the formal **re-deployment of staff**, realising the **value of capital assets**, and the **formal closure of contracts**.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Maturity Models Overview]]
+- **Previous**: [[Maturity Levels 4 And 5]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
