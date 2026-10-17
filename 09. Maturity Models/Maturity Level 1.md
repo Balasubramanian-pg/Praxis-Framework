@@ -1,17 +1,26 @@
 ---
-Title: Maturity Level 1 29283b71d8f3803ab517d95b35ea8c44
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Maturity Level 1 29283b71d8f3803ab517d95b35ea8c44.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Maturity Level 1"
+aliases:
+  - "Maturity Level 1"
+tags:
+  - praxis-framework
+  - pillar/capability-maturity
+  - section/maturity-models
+  - type/maturity
+pillar: "Capability Maturity"
+section: "Maturity Models"
+subarea: "Management"
+type: "maturity"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Maturity Level 1
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Maturity Models]]
+> **Pillar**: Capability Maturity | **Type**: `maturity`
 
 # Comprehensive Study Notes: Maturity
 
@@ -47,15 +56,15 @@ Topic: ''
 - **Description**: These are the core levels defined in detail in the Praxis capability maturity model.
 
 - **Behaviour**: These levels represent an organisation that recognises the need to:
-    
+
     - Develop and support **competent P3 managers**.
-    
+
     - Provide them with the **structures (processes and functions)** that allow them to **consistently achieve the goals** of the life cycle processes.
 
 - **Focus**:
-    
+
     - **Level 2** is about being **effective**—consistently getting the job done.
-    
+
     - **Level 3** is about being **efficient**—using standard, tailored processes to get the job done in a consistent and optimised way, and learning from experience.
 
 ### Level 4: Quantitatively Managed & Level 5: Optimising
@@ -83,3 +92,15 @@ Topic: ''
 
 - **Q:** How does the Praxis view of maturity differ from a simple, linear progression?
     - **A:** Praxis sees more fundamental differences between the levels related to culture, recognition, and resilience, rather than just executing the same processes with increasing rigour.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Maturity Models Overview]]
+- **Previous**: [[Manage Conflict]]
+- **Next**: [[Maturity Level 2 & 3]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
