@@ -1,26 +1,26 @@
 ---
-Title: Control 29183b71d8f38087b4a9c87c1a900d98
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Control 29183b71d8f38087b4a9c87c1a900d98.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Control"
+aliases:
+  - "Control"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/integrative-management
+  - type/concept
+pillar: "Knowledge"
+section: "Integrative management"
+subarea: "Delivery"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2043.svg)
-
-# Control
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2043.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2043.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%2043.svg)Section|Integrative management|
-|![](arrow-circle-down_gray%2043.svg)Sub Area|Delivery|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Integrative management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Control
 
@@ -33,11 +33,11 @@ Topic: ''
 ### The Goals of Control
 
 - The primary goals of the control function are to:
-    
+
     1. Review performance against the established **baselines** (from the planning function).
-    
+
     2. Evaluate the effect of actual performance to date on **future plans**.
-    
+
     3. Take action as required to either achieve the original planning targets or agree on revised targets.
 
 
@@ -50,13 +50,13 @@ Topic: ''
 - **Definition**: This is part of the day-to-day management of the work. The term ‘cybernetic’ is derived from the Greek for "helmsman," and a P3 manager uses cybernetic control to "steer" the project, programme, or portfolio on a continuous basis.
 
 - **Key Element**: The key element of cybernetic control is the **feedback loop**.
-    
+
     1. A system is monitored.
-    
+
     2. Feedback on performance is provided.
-    
+
     3. This feedback is compared to a norm (the baseline plan).
-    
+
     4. Action is taken to align the system back to the norm.
 
 - **Orders of Control**: The work of the P3 manager is, strictly speaking, **first-order** cybernetic control. The relationship between the P3 manager and their sponsor (who provides oversight and direction based on escalated issues) is **second-order** cybernetic control.
@@ -85,19 +85,19 @@ Topic: ''
 - Specific control methods are used according to the nature and complexity of what is being controlled. All six fundamental components of delivery (scope, schedule, cost, risk, change, resource) need to be controlled.
 
 - **Schedule Performance**: A common method for illustrating schedule performance is the use of **RAG reports** (Red, Amber, Green).
-    
+
     - **Green**: Performance is within tolerances and predicted to remain there.
-    
+
     - **Amber**: Performance is currently within tolerances but is predicted to exceed them soon.
-    
+
     - **Red**: Performance has already exceeded tolerances.
 
 - **Scope Control (Quality Control)**:
-    
+
     - In the context of creating outputs, control of scope is effectively the same as **quality control**.
-    
+
     - It has the most diverse range of techniques, covering inspection, testing, and measurement to verify that deliverables conform to specification, are fit for purpose, and meet stakeholder expectations.
-    
+
     - Example techniques include crushing concrete samples, reviewing user interfaces, x-raying welds, and following software test scripts.
 
 - **Integrated Control**:
@@ -109,7 +109,7 @@ Topic: ''
 
 - **Time-Driven Controls**: These are more typical of cybernetic control and involve regular, periodic activities such as weekly or monthly reports, periodic reviews, or regular progress meetings.
 
-> [!NOTE]  
+> [!NOTE]
 > It is the P3 manager’s responsibility to collect progress data and prepare reports, highlighting areas that need attention. In some cases, this work will be done by a support function, freeing the manager to concentrate on decision-making and implementing corrective action.
 
 
@@ -125,11 +125,11 @@ Topic: ''
     - The more sophisticated the method, the more accurate the predictions. EVM is more predictive than simple critical path analysis because it assumes future performance will be in line with _historical_ performance, not the _original_ plan.
 
 - **Agile Projects**:
-    
+
     - While traditional projects tend to focus first on controlling time and cost, agile projects focus on controlling **scope**.
-    
+
     - Control techniques like **Kanban** are used to control the flow of work within short, timeboxed sprints.
-    
+
     - **Burn-down charts** are often a better way of illustrating progress over a number of sprints than Gantt charts.
 
 ### Programmes and Portfolios
@@ -139,18 +139,18 @@ Topic: ''
 - This does not mean multiple people are controlling the project day-to-day. Each level of control deals with a **different degree of detail** and has a different span of control.
 
 - **Key System Requirements**: For this multi-level control system to work, it must explain for each level how:
-    
+
     - Tolerances will be set.
-    
+
     - Progress data will be gathered and reported.
-    
+
     - Interdependencies between different plans will be monitored.
-    
+
     - Progress information will be **consolidated upwards**.
-    
+
     - Decisions will be **communicated downwards**.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > As work becomes more complex, it is vital to focus on Key Performance Indicators (KPIs) rather than trying to monitor everything in great detail. The role of a support office (PSO/PMO) becomes indispensable as complexity increases, providing timely and accurate information to enable good decision-making.
 
 
@@ -173,3 +173,14 @@ Topic: ''
 
 - **Q:** In a multi-level programme or portfolio, what are two key requirements of the control system?
     - **A:** Any two from: explaining how tolerances are set, how data is reported, how interdependencies are monitored, how information is consolidated upwards, and how decisions are communicated downwards.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Integrative management Overview]]
+- **Next**: [[Exercise Control]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
