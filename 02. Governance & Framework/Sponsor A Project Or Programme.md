@@ -1,3 +1,28 @@
+---
+title: "The Discipline of Executive Sponsorship"
+aliases:
+  - "The Discipline of Executive Sponsorship"
+  - "Sponsor A Project Or Programme"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance-framework
+  - type/concept
+pillar: "Knowledge"
+section: "Governance & Framework"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance & Framework]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
 # The Discipline of Executive Sponsorship
 
 ## Introduction
@@ -49,3 +74,15 @@ The sponsor must possess the courage to kill a failing project. This requires hu
 ## Closing Reflection
 
 Sponsorship is the imposition of order upon the chaos of potential. It requires vision, articulation, and the strength to withstand the pressure of decision. It is not a passive role. It is the voluntary acceptance of weight. It is only through this disciplined acceptance of responsibility that value is created and sustained.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance & Framework Overview]]
+- **Previous**: [[Provide Assurance]]
+- **Next**: [[Sponsorship]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
