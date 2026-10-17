@@ -1,26 +1,27 @@
 ---
-Title: Life cycle 29183b71d8f380ad90feeedb8b26f727
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Life cycle 29183b71d8f380ad90feeedb8b26f727.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Life cycle"
+aliases:
+  - "Life cycle"
+  - "Life Cycle"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance
+  - type/concept
+pillar: "Knowledge"
+section: "Governance"
+subarea: "Context"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2090.svg)
-
-# Life cycle
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2090.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2090.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2090.svg)Section|Governance|
-|![](arrow-circle-down_gray%2090.svg)Sub Area|Context|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: The P3 Life Cycle
 
@@ -29,33 +30,33 @@ Topic: ''
 - **Definition**: A P3 life cycle illustrates the distinct phases that take an initial idea, capture stakeholder requirements, develop a set of objectives, and then deliver those objectives in a structured manner.
 
 - **Goals of Life Cycle Management**:
-    
+
     - To identify and define the phases of a life cycle that best match the context of the work.
-    
+
     - To structure governance activities and decision-making in accordance with these defined phases.
 
 - **Application to P3**:
-    
+
     - Projects and programmes are the primary mechanisms for _delivering_ objectives, so their life cycles are similar and focus on a progression from idea to delivery.
-    
+
     - Portfolios are more focused on _co-ordinating and governing_ the delivery of multiple projects and programmes, so their life cycle is more cyclical and continuous.
 
 ### The Basic Life Cycle Model
 
 - The simplest model is a project life cycle focused on developing a single output. It follows a logical, linear progression:
-    
+
     1. **Idea/Identification**: An idea is deemed worthy of investigation. High-level requirements are gathered to assess viability. This phase ends with a **gate review** to decide whether to invest in more detailed definition.
-    
+
     2. **Definition**: If approved, the idea is defined in detail, producing a full justification (the business case) and detailed plans. This phase ends with a second, major **gate review** to approve the start of the main delivery work.
-    
+
     3. **Delivery**: The output is created according to the plans.
-    
+
     4. **Closure**: The output is formally accepted and handed over to its new owner, and the project is formally closed.
 
-- This basic model can be extended to show the ultimate purpose of the output—realising benefits:  
+- This basic model can be extended to show the ultimate purpose of the output—realising benefits:
     5. **Benefits Realisation**: This phase occurs after the output is in use, where the benefits outlined in the business case are measured and achieved.
 
-> [!NOTE]  
+> [!NOTE]
 > This fundamental structure can be adapted to many different contexts, such as work performed by a contractor, a project within a programme, or work where the scope evolves over time. The complexity of the scope is a major factor influencing the final shape of the life cycle.
 
 
@@ -64,15 +65,15 @@ Topic: ''
 - The phased structure of a life cycle is the backbone upon which governance mechanisms are built. It provides natural points for oversight, review, and decision-making.
 
 - **Key Governance Mechanisms Enabled by a Phased Life Cycle**:
-    
+
     - **Defined Processes**: The management of each phase can be described as a distinct process with specific activities and deliverables.
-    
+
     - **Stages and Tranches**: The main "Delivery" phase can be subdivided into smaller, more manageable packages of work. These are typically called **stages** in projects and **tranches** in programmes.
-    
+
     - **Gate Reviews**: These are formal decision points at the end of a phase, stage, or tranche. The sponsor reviews performance to date and plans for the next period to decide if the business case remains viable, practical, and achievable before authorising further work.
-    
+
     - **Post-Reviews**: Post-project or post-programme reviews are conducted to capture and document lessons learned, which is a key factor in improving organisational capability maturity.
-    
+
     - **Benefit Reviews**: These reviews formally measure the achievement of benefits against the baseline defined in the business case.
 
 
@@ -81,19 +82,18 @@ Topic: ''
 - The fundamental difference between life cycle approaches is whether the requirements and solution can be fully **defined up-front (serial)** or if they must **evolve throughout the work (parallel)**.
 
 - **1. Serial Life Cycle (e.g., Waterfall)**:
-    
+
     - **Description**: Phases are performed in a strict linear sequence. The output of one phase must be completed and approved before the next phase begins.
-    
+
     - **When to Use**: This approach is suitable when the deliverables can be substantially specified and defined before the main delivery work starts.
 
 - **2. Parallel Life Cycle (e.g., Iterative, Agile)**:
-    
+
     - **Description**: Phases overlap. The definition of one part of the work may happen at the same time as the delivery of another part. There are feedback loops between phases.
-    
+
     - **When to Use**: This approach is necessary when the full specification evolves as the work progresses. It can also be used to **"fast track"** a project by running specification and delivery in parallel to reduce the overall duration.
 
-> [!TIP]  
-> Parallel life cycles are the foundation for delivery methods such as Agile and concurrent engineering. It's important to distinguish the overall P3 management life cycle from the specific technical development life cycle (e.g., Waterfall, V-Model, Scrum) used to create the product itself.
+> [!TIP] Parallel life cycles are the foundation for delivery methods such as Agile and concurrent engineering. It's important to distinguish the overall P3 management life cycle from the specific technical development life cycle (e.g., Waterfall, V-Model, Scrum) used to create the product itself.
 
 
 ## The Project Life Cycle
@@ -121,7 +121,7 @@ Topic: ''
 
 ## The Programme Life Cycle
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Programme life cycles are inherently parallel. While a detailed definition is done upfront to authorize the programme, further detailed definition occurs within each project. Benefits realisation begins as soon as the first project delivers an output and runs in parallel with the rest of the delivery work.
 
 ### A Typical Programme Life Cycle
@@ -136,7 +136,7 @@ Topic: ''
 
 5. **Closure**: The final projects are closed, budgets are reconciled, and the programme management team and infrastructure are demobilised.
 
-> [!NOTE]  
+> [!NOTE]
 > The realisation of benefits will almost always continue long after the programme itself has formally closed. The sponsor and Business Change Managers typically remain in their roles to ensure the full value promised in the business case is achieved.
 
 
@@ -151,13 +151,13 @@ Topic: ''
 - **Initiation (One-off Phase)**: This represents the point at which the organisation decides to establish a formal portfolio and creates the necessary infrastructure and governance to enable the cycle to operate.
 
 - **The Continuous Cycle**: At any given time, aspects of all the following phases will be undertaken simultaneously.
-    
+
     1. **Definition**: The projects, programmes, and business change initiatives required to meet strategic objectives are identified and evaluated.
-    
+
     2. **Categorisation**: The identified initiatives may be grouped into sub-portfolios based on shared characteristics, such as alignment with a specific strategic goal.
-    
+
     3. **Prioritisation**: Based on metrics like strategic value or return on investment, initiatives are prioritised to determine where to focus limited resources.
-    
+
     4. **Balancing**: The portfolio is then reviewed and adjusted to ensure it is balanced in terms of risk, resource usage, cash flow, and the cumulative impact of change across the business.
 
 
@@ -174,3 +174,15 @@ Topic: ''
 
 - **Q:** Why is a portfolio life cycle considered a "cycle" rather than a linear process?
     - **A:** Because portfolio management is a continuous activity of defining, prioritising, and balancing a collection of projects and programmes to align with ongoing strategic objectives, rather than a temporary endeavour with a defined start and end.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance Overview]]
+- **Previous**: [[Learning And Development]]
+- **Next**: [[Management Process]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
