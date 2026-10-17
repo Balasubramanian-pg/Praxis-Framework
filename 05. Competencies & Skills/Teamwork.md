@@ -1,26 +1,26 @@
 ---
-Title: Teamwork 29183b71d8f3802ba937c209f0108ec1
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Teamwork 29183b71d8f3802ba937c209f0108ec1.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Teamwork"
+aliases:
+  - "Teamwork"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/interpersonal-skills
+  - type/competency
+pillar: "Knowledge"
+section: "Interpersonal skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20157.svg)
-
-# Teamwork
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20157.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20157.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20157.svg)Section|Interpersonal skills|
-|![](arrow-circle-down_gray%20157.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Interpersonal skills]]
+> **Pillar**: Knowledge | **Type**: `competency`
 
 # Comprehensive Study Notes: Teamwork
 
@@ -33,9 +33,9 @@ Topic: ''
 ### Goals of Teamwork
 
 - The primary goals of teamwork in a P3 context are to:
-    
+
     1. Create a cohesive **team** from a collection of individuals.
-    
+
     2. Develop and maintain the high **performance** of that team.
 
 ### Teamwork in the P3 Context
@@ -50,9 +50,9 @@ Topic: ''
 ## Models of Teamwork
 
 - Models of teamwork tend to address two key aspects:
-    
+
     1. The nature of the **individuals** who make up the team.
-    
+
     2. The developmental **stages** of the team as a whole.
 
 ### 1. Team Composition Models (The Individuals)
@@ -63,7 +63,7 @@ Topic: ''
 
 - Individuals will perform better in a team context if they are given a role that plays to their natural strengths.
 
-> [!CAUTION]  
+> [!CAUTION]
 > P3 managers are rarely in the position of a sports manager who can select a perfectly balanced team. The make-up of a P3 management team is more typically composed of people who are available at the time. Such teams are unlikely to form an ideal combination of team roles. The manager must therefore work with the individuals they have to develop behaviours that may not be their natural style but are needed by the team.
 
 ### 2. Team Development Models (The Stages)
@@ -114,11 +114,11 @@ Topic: ''
 - In programmes, the P3 manager delegates portions of the work to various sub-teams. This means they are delegating responsibility for **team development** as well as for delivery.
 
 - A programme manager needs to develop teamwork within multiple sub-teams concurrently, such as:
-    
+
     - The central programme management team.
-    
+
     - A "team" of project managers.
-    
+
     - A "team" of business change managers.
 
 - The team working approach can also be applied to groups who do not typically regard themselves as a team but who could benefit from a team culture, for example, a "team" of key suppliers or stakeholders.
@@ -135,7 +135,7 @@ Topic: ''
 
 - It is in the interest of the portfolio that the appropriate type of team working (collaboration and co-operation with a shared vision of the strategic objectives) is encouraged and exploited at all levels to maximise the portfolio's effectiveness.
 
-> [!NOTE]  
+> [!NOTE]
 > Maintaining a team ethos across the broad, diverse, and constantly changing communities within a programme or portfolio will require excellent communication and leadership skills on the part of the P3 manager, closely supported by the sponsor.
 
 
@@ -155,3 +155,14 @@ Topic: ''
 
 - **Q:** How does teamwork differ between a project and a programme?
     - **A:** A project typically has a single, close-knit team. A programme manager must develop teamwork within multiple sub-teams (e.g., a team of project managers, a team of business change managers) and create a cohesive ethos for the programme as a whole.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Interpersonal skills Overview]]
+- **Previous**: [[Solution Architecture]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
