@@ -1,17 +1,27 @@
 ---
-Title: Resource Management 29283b71d8f3806784a4cfb014e534e0
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Resource Management 29283b71d8f3806784a4cfb014e534e0.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Resource Management"
+aliases:
+  - "Resource Management"
+  - "General Principles of Resource Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/resource-management
+  - type/management-area
+pillar: "Knowledge"
+section: "Resource Management"
+subarea: "Management"
+type: "management-area"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Resource Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Resource Management]]
+> **Pillar**: Knowledge | **Type**: `management-area`
 
 # Comprehensive Study Notes: Resource Management
 
@@ -24,37 +34,37 @@ Topic: ''
 ### The Goals of Resource Management
 
 - The primary goals of this function are to:
-    
+
     1. Determine the best way to **resource** the work (the resourcing strategy).
-    
+
     2. **Acquire and mobilise** the necessary resources.
-    
+
     3. **Control** resources throughout the life cycle.
-    
+
     4. **Demobilise** resources at the end of the life cycle.
-    
+
     5. Finalise all **contractual arrangements**.
 
 ### The Three Main Components of Resource Management
 
 1. **Procurement**:
-    
+
     - This is primarily concerned with identifying and selecting **external suppliers**.
-    
+
     - Many of the principles (e.g., clear specification of requirements) can also be applied to securing internal suppliers.
-    
+
     - The degree of formality required will depend on the complexity of the supply chain and the associated risk.
 
 2. **Contract Management**:
-    
+
     - This deals with the continuing relationship between the management team and its suppliers.
-    
+
     - This relationship may be governed by a formal legal **contract**, an internal **Service Level Agreement (SLA)**, or simpler documented agreements for supply.
 
 3. **Mobilisation**:
-    
+
     - This is about getting the **right resources in the right place at the right time**.
-    
+
     - It also covers the reverse exercise of **demobilisation** when the resources are no longer required.
 
 
@@ -71,17 +81,17 @@ Topic: ''
 
 4. **Procure Resources**:
     - This step can be a significant project in itself and must consider factors such as:
-        
+
         - The decision to **make or buy**.
-        
+
         - The use of a single integrated supplier vs. multiple specialist suppliers.
-        
+
         - Formal supplier selection processes (e.g., tendering).
-        
+
         - The desired supplier relationships (e.g., partnership vs. transactional).
-        
+
         - The conditions and forms of contract or agreement.
-        
+
         - Payment methods and internal cross-charging mechanisms.
 
 5. **Mobilise Resources**:
@@ -99,7 +109,7 @@ Topic: ''
 
 - **Internal Resources**: May be governed by formal SLAs or simple Terms of Reference.
 
-> [!CAUTION]  
+> [!CAUTION]
 > All too often, arrangements for the provision of internal resources are informal and undocumented. This can lead to the P3 manager having no real control over whether the right resources are available at the right time. Even small projects benefit from some form of documented agreement between the management team and the departments providing the resources.
 
 
@@ -118,14 +128,14 @@ Topic: ''
 - The programme manager must define how the responsibility for managing resources will be shared between the project and programme levels in a **programme-level resource management plan**.
 
 - The approach should provide co-ordination while delegating sufficient authority to individual projects. The programme manager will need to consider factors such as:
-    
+
     - Elements of the management infrastructure that can be shared between projects.
-    
+
     - Opportunities for **pan-programme procurement** (e.g., negotiating a bulk deal with a major supplier for all projects).
-    
+
     - Structuring tranches to make resource usage more efficient across the programme.
 
-> [IMPORTANT]  
+> [IMPORTANT]
 > Projects and programmes are sometimes initiated without the resource implications being fully understood. All aspects of resource management, particularly the impact on business-as-usual, need to be thoroughly investigated during the definition process.
 
 ### Portfolios
@@ -153,3 +163,14 @@ Topic: ''
 
 - **Q:** What is the key resource management task of a portfolio management team?
     - **A:** To constantly balance the resource demands of the component projects and programmes with the capacity of the host organisation to provide those resources, and to prioritise allocation accordingly.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Resource Management Overview]]
+- **Next**: [[Manage Resources]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
