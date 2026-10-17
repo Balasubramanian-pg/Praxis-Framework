@@ -1,17 +1,26 @@
 ---
-Title: Interpersonal Skills 29283b71d8f3800a9410e3e58df57f93
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Interpersonal Skills 29283b71d8f3800a9410e3e58df57f93.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Interpersonal Skills"
+aliases:
+  - "Interpersonal Skills"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/competencies-skills
+  - type/competency
+pillar: "Competence"
+section: "Competencies & Skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Interpersonal Skills
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Competencies & Skills]]
+> **Pillar**: Competence | **Type**: `competency`
 
 # Comprehensive Study Notes: Interpersonal Skills
 
@@ -21,7 +30,7 @@ Topic: ''
 
 - While subdividing the complexities of human behaviour into distinct functions can be somewhat artificial and theoretical, using simple models provides a useful starting point for individuals to build their own interpersonal skill-set.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The fundamental principles of interpersonal skills do not vary across the range of projects, programmes, and portfolios. However, the context and organisational structures do change, which leads to different challenges and a different emphasis in how these skills are applied.
 
 - When a manager applies these skills with **professionalism** and within an **ethical framework**, they will engender the **trust and respect** that are critical for success.
@@ -59,13 +68,13 @@ Topic: ''
 - **Position**: Leadership appears at the top of the wheel, as it is a primary function of the manager.
 
 - **Application**: A manager must lead both their internal teams and the external stakeholder community, but the approach for each is different.
-    
+
     - **Leading Teams**: This involves two types of leadership:
-        
+
         - **Visionary Leadership**: Ensuring team members understand and are committed to the objectives of the work.
-        
+
         - **Managerial Leadership**: The practical application of leadership through delegating work and actively developing teamwork.
-    
+
     - **Leading Stakeholders**: The stakeholder community does not form a collective team, and delegation is rarely appropriate. Leadership here is expressed more through influencing and negotiation.
 
 ### Team-Oriented Skills
@@ -82,21 +91,21 @@ Topic: ''
 
 - **Negotiation**: This skill is used to reach agreements and resolve differences with stakeholders.
 
-> [!NOTE]  
+> [!NOTE]
 > When dealing with particularly senior or vital stakeholders, the P3 manager will inevitably need to call upon the support of the sponsor, who can leverage their authority and influence.
 
 ### Foundational Skills for All Interactions
 
 - **Conflict Management**:
-    
+
     - Conflict will inevitably arise in some form, whether you are delegating work to a team or influencing stakeholders.
-    
+
     - A manager must have effective conflict management skills, no matter how well-honed their other interpersonal skills may be.
 
 - **Communication**:
-    
+
     - Positioned at the heart of all human interactions.
-    
+
     - It is the central skill that enables all others to be performed effectively.
 
 
@@ -119,3 +128,15 @@ Topic: ''
 
 - **Q:** Do the fundamental principles of interpersonal skills change between a small project and a large portfolio?
     - **A:** No, the fundamental principles do not vary. However, the context and organisational structures change, leading to a different emphasis in their application.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Competencies & Skills Overview]]
+- **Previous**: [[Influencing]]
+- **Next**: [[Interpersonnel Competencies]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
