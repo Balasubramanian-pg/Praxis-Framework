@@ -1,23 +1,51 @@
 ---
-Title: Plan delivery 29183b71d8f3808aabf5c21ec50278a6
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Plan delivery 29183b71d8f3808aabf5c21ec50278a6.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Plan Delivery Competency"
+aliases:
+  - "Delivery Planning Skill"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/delivery-process
+  - type/competency
+pillar: "Competence"
+section: "Delivery Process"
+subarea: "Delivery Competencies"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20118.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Delivery Process]]
+> **Pillar**: Competence | **Type**: `competency`
 
-# Plan delivery
+# Plan Delivery Competency
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20118.svg)Area|Competence|
-|![](arrow-circle-down_gray%20118.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%20118.svg)Section|Delivery competencies|
-|![](arrow-circle-down_gray%20118.svg)Sub Area|Management competencies|
+> [!SUMMARY] Overview
+> Demonstrates the capability to construct detailed stage plans, tranche plans, and work package breakdowns.
+
+## Purpose
+The **Plan Delivery** competency focuses on the creation of operational [[Delivery Plan]]s for individual stages or tranches.
+
+## Performance Criteria
+1. Decompose the stage scope into discrete work packages.
+2. Sequence tasks, calculate resource requirements, and build schedule networks.
+3. Allocate stage budgets and assign risk responses.
+4. Define stage tolerances and obtain sponsor sign-off.
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Delivery Process Overview]]
+- **Previous**: [[Overview of Mobilisation]]
+- **Next**: [[Solutions Development]]
+
+### Related Concepts & Artefacts
+- [[Identification Process]]
+- [[Definition Process]]
+- [[Delivery Process]]
+- [[Closure Process]]
