@@ -1,26 +1,26 @@
 ---
-Title: Negotiation 29183b71d8f3803ca8c1c6722e35305d
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Negotiation 29183b71d8f3803ca8c1c6722e35305d.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Negotiation"
+aliases:
+  - "Negotiation"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/interpersonal-skills
+  - type/competency
+pillar: "Knowledge"
+section: "Interpersonal skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20114.svg)
-
-# Negotiation
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20114.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20114.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20114.svg)Section|Interpersonal skills|
-|![](arrow-circle-down_gray%20114.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Interpersonal skills]]
+> **Pillar**: Knowledge | **Type**: `competency`
 
 # Comprehensive Study Notes: Negotiation
 
@@ -31,31 +31,31 @@ Topic: ''
 ### The Goals of Negotiation
 
 - The primary goals of negotiation in a P3 context are to:
-    
+
     1. Find solutions to issues involving two or more parties.
-    
+
     2. Develop and maintain beneficial relationships between two or more parties.
 
 ### The Context of Negotiation
 
 - The principles of negotiation are applied in many different contexts within P3 management. Two obvious examples that illustrate the breadth of these situations are:
-    
+
     - **Conflict Management**: Addressing personal conflict, which often involves emotional and cultural issues.
-    
+
     - **Procurement**: Negotiating contractual terms and conditions with suppliers, which is often more formal and commercial.
 
 ### Attributes of a Good Negotiator
 
 - Whatever the context, there are common factors that exemplify a good negotiator:
-    
+
     - The ability to describe common goals and boundaries.
-    
+
     - Emotional control and the ability to treat all parties equally.
-    
+
     - Good listening and communication skills.
-    
+
     - Thorough knowledge of bargaining tactics.
-    
+
     - An ability to close a negotiation in a way that secures the desired outcome.
 
 
@@ -64,20 +64,20 @@ Topic: ''
 - A negotiation is often described as having one of two primary "flavours": competitive or collaborative.
 
 - **Competitive Negotiation**:
-    
+
     - This approach is about getting the best deal for one party, regardless of the needs and interests of the other.
-    
+
     - It can easily become a "winner takes all" battle.
-    
+
     - While competitive negotiation should generally be avoided, this may not always be possible.
 
 - **Collaborative Negotiation**:
-    
+
     - This approach seeks to create a "win-win" scenario where all parties involved get part or all of what they were looking for from the negotiation.
-    
+
     - This approach tends to produce longer-term, more stable solutions and minimises the opportunity for future conflict.
 
-> [!NOTE]  
+> [!NOTE]
 > Every individual has a natural preference for the way they negotiate. Models like R.G. Shell's, which is based on Blake and Mouton’s managerial grid, can help individuals understand their own preferred style (e.g., competing, collaborating, compromising, etc.) and adapt it to the situation.
 
 
@@ -86,41 +86,41 @@ Topic: ''
 - Regardless of whether the negotiation is competitive or collaborative, it usually follows a typical procedure with distinct steps.
 
 1. **Plan**:
-    
+
     - All parties should prepare thoroughly before entering a negotiation.
-    
+
     - This includes gathering as much information as possible, setting clear goals for the outcome, and agreeing on an escalation route in case the negotiation is unsuccessful.
-    
+
     - Each party should attempt to understand the cultural, commercial, and ethical background of the others.
 
 2. **Discuss**:
-    
+
     - Set the scene for the negotiation, identify the key issues to be resolved, and clearly communicate the objectives.
-    
+
     - It is vital to listen, question, and provide feedback regularly to confirm a shared understanding.
 
 3. **Propose**:
     - Propose a solution that is clear, specific, and unambiguous.
 
 4. **Bargain**:
-    
+
     - Discuss the proposal in detail.
-    
+
     - Communicate personal or organisational boundaries (non-negotiables) and areas of flexibility.
 
 5. **Agree**:
-    
+
     - Reach a firm agreement on the core issues.
-    
+
     - Document what has been agreed and record any peripheral or outstanding items with agreed timescales for resolving them.
 
 6. **Implement**:
-    
+
     - Communicate the outcome of the negotiation to relevant stakeholders as necessary.
-    
+
     - Update any related P3 management documentation (e.g., contracts, plans, risk registers).
 
-> [!CAUTION]  
+> [!CAUTION]
 > Negotiation is easy to get wrong. The cardinal sin is to enter into negotiations unprepared. This can easily lead to mistakes, such as making opening offers that are clearly unacceptable or rushing discussions under pressure, which can produce outcomes that are difficult to implement. It is important to stay calm and know when to take a break. The result of a negotiation will have repercussions throughout the remainder of the life cycle, so it is worth the investment to get it right.
 
 
@@ -136,8 +136,7 @@ Topic: ''
 
 - **Delivery Phase**: As the project progresses, conflicts between team members will inevitably arise, and the project manager will need to negotiate solutions.
 
-> [!TIP]  
-> In some cases, specialist help may be available from a support office. Even if a dedicated office doesn't exist, it is important for a project manager to know when to ask for help from specialists, such as the host organisation’s HR or Legal departments.
+> [!TIP] In some cases, specialist help may be available from a support office. Even if a dedicated office doesn't exist, it is important for a project manager to know when to ask for help from specialists, such as the host organisation’s HR or Legal departments.
 
 ### Programmes, Portfolios, and Complex Projects
 
@@ -164,3 +163,15 @@ Topic: ''
 
 - **Q:** In a programme or portfolio, what is the key trade-off regarding negotiation and autonomy?
     - **A:** A balance must be struck between removing autonomy from component projects (to negotiate collectively for the whole programme) and allowing them to negotiate independently.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Interpersonal skills Overview]]
+- **Previous**: [[Negotiate]]
+- **Next**: [[Process Competencies]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
