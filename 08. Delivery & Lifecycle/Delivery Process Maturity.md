@@ -1,44 +1,54 @@
 ---
-Title: Delivery Process 29283b71d8f380fcab0dc54a9af7df55
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Delivery Process 29283b71d8f380fcab0dc54a9af7df55.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Delivery Process"
+aliases:
+  - "Delivery Process"
+  - "Delivery Process Maturity"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/delivery-lifecycle
+  - type/process
+pillar: "Method"
+section: "Delivery & Lifecycle"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Delivery Process
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Delivery & Lifecycle]]
+> **Pillar**: Method | **Type**: `process`
 
 # Comprehensive Study Notes: Delivery Process Maturity
 
 ## Overall Goals of the Delivery Process
 
 - The goals of this process are to:
-    
+
     - Delegate responsibility for producing deliverables to the appropriate people.
-    
+
     - Monitor the performance of the work and track it against the delivery plans.
-    
+
     - Take action where necessary to keep the work in line with plans.
-    
+
     - Escalate issues and replan if necessary.
-    
+
     - Formally accept work as it is completed.
-    
+
     - Maintain effective communication with all stakeholders.
 
-> [!IMPORTANT]  
-> How the delivery process is implemented, and therefore how its maturity is assessed, depends heavily on the complexity of the work.  
+> [!IMPORTANT]
+> How the delivery process is implemented, and therefore how its maturity is assessed, depends heavily on the complexity of the work.
 > <br><br>
-> 
+>
 > - Less complex projects will have few work packages, while programmes will have many.
-> 
+>
 > - More complex work will require more sophisticated control techniques (e.g., Earned Value Management) than simpler work (e.g., Gantt-based slip charts).
-> 
+>
 > - Where the work includes delegated work packages using the **development process**, the maturity of the two processes should be the same. The delivery process cannot be at Level 3 if the development process is only at Level 2.
 
 
@@ -47,27 +57,27 @@ Topic: ''
 - At this level, the delivery process is **managed**. Work is formally authorised and tracked, but the co-ordination and control may be less integrated and more reactive than at Level 3.
 
 - **Description**
-    
+
     - The delivery phase is managed separately from the definition phase.
-    
+
     - Where appropriate, the phase is divided into stages or tranches.
 
 - **Authorise work**
     - Work is divided into packages that are formally assigned to teams with defined performance criteria.
 
 - **Co-ordinate and monitor progress**
-    
+
     - Progress is recorded, and its impact is assessed and acted upon.
-    
+
     - Teams working on different work packages are co-ordinated.
 
 - **Update and communicate**
     - Documentation is regularly updated and disseminated in accordance with the communications plan.
 
 - **Corrective action**
-    
+
     - **Exception plans** are produced when necessary (i.e., after a major issue has occurred).
-    
+
     - Work is terminated when a business case is no longer achievable.
 
 - **Accept completed work**
@@ -79,24 +89,24 @@ Topic: ''
 - At this level, the delivery process is based on a **defined, standard process** that is tailored to the context. Management is proactive, and information is consistent and consolidated across all parts of the work.
 
 - **Description**
-    
+
     - A process for the delivery phase is **centrally defined**.
-    
+
     - This standard process is then **tailored** to suit the specific context of the work.
 
 - **Authorise work**
     - The **impact of new work packages** on the performance of existing work packages is proactively assessed before authorisation.
 
 - **Co-ordinate and monitor progress**
-    
+
     - Progress information from multiple work packages is **consistent and consolidated** into a single, coherent picture of overall progress.
-    
+
     - Plans are regularly reviewed, and updated information is formally **fed back** to the work packages.
 
 - **Update and communicate**
-    
+
     - Adherence to the communications plan is actively **monitored and controlled**.
-    
+
     - Key documents are subject to formal **configuration management**.
 
 - **Corrective action**
@@ -122,3 +132,16 @@ Topic: ''
 
 - **Q:** What distinguishes the acceptance of work at Level 3 from Level 2?
     - **A:** At Level 2, deliverables are formally accepted. At Level 3, they are subject to a **consistent, formal acceptance procedure** that includes defined sign-off and handover protocols.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Delivery & Lifecycle Overview]]
+- **Previous**: [[Delivery]]
+- **Next**: [[Develop Products]]
+
+### Related Concepts & Artefacts
+- [[Identification Process]]
+- [[Definition Process]]
+- [[Delivery Process]]
+- [[Closure Process]]
