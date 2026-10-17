@@ -1,17 +1,26 @@
 ---
-Title: Delivery 29283b71d8f3808aa846e4958890209b
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Delivery 29283b71d8f3808aa846e4958890209b.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Delivery"
+aliases:
+  - "Delivery"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/delivery-lifecycle
+  - type/concept
+pillar: "Method"
+section: "Delivery & Lifecycle"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Delivery
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Delivery & Lifecycle]]
+> **Pillar**: Method | **Type**: `concept`
 
 # Comprehensive Study Notes: Delivery Functions
 
@@ -49,27 +58,27 @@ Topic: ''
 ### The Generic Procedural Steps
 
 1. **Plan**:
-    
+
     - This step involves creating a **management plan** for that specific function (e.g., a Risk Management Plan, a Scope Management Plan).
-    
+
     - This plan describes the policies, procedures, tools, and techniques that should be used to manage that function throughout the life cycle.
 
 2. **Initiate**:
-    
+
     - This step covers the mobilisation of the resources required to perform the procedure.
-    
+
     - It's about getting everything in place to be able to execute the plan.
 
 3. **Specific Steps (e.g., Identify, Assess, Respond)**:
-    
+
     - These are the steps that relate to the work that is unique to each function.
-    
+
     - For example, in Risk Management, these steps are "Identify Risks," "Assess Risks," and "Plan Risk Responses." In Finance Management, they are "Estimate Costs" and "Determine Budget."
 
 4. **Review and Report**:
-    
+
     - This is the ongoing monitoring and control step.
-    
+
     - It involves reviewing the performance of the function, gathering data, and reporting progress and issues to the relevant stakeholders.
 
 
@@ -80,19 +89,19 @@ Topic: ''
 - Depending on the life cycle phase, the focus will be on different procedural steps.
 
 - **Example: Risk Management**
-    
+
     - **Identification Phase**: The "Identify" and "Assess" steps will be performed at a high level to understand the major risks and inform the outline business case. The "Plan" step will be very brief.
-    
+
     - **Definition Phase**: The "Plan" step is performed in detail to create the full Risk Management Plan. The "Identify," "Assess," and "Plan Responses" steps are performed in much greater detail to inform the detailed business case and delivery plans.
-    
+
     - **Delivery Phase**: The "Plan Responses" (now "Implement Responses") and "Review and Report" steps are the primary focus, with the identification and assessment steps being repeated to find new and emerging risks.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The ability to perform these procedures in a way that is appropriate to the different life cycle phases is a common element of competence and a key attribute of level 3 capability maturity.
 
 ### Collective Planning and Initiation
 
-> [!NOTE]  
+> [!NOTE]
 > Although the "Plan" and "Initiate" steps are shown separately for each individual function, in practice they will largely be performed collectively for all functions.
 
 - **Planning Step**: The planning for all six delivery functions is normally done as part of preparing the main governance documents (like the Project or Programme Management Plan) during the **definition process**.
@@ -116,3 +125,16 @@ Topic: ''
 
 - **Q:** The ability to tailor the application of functional procedures to different life cycle phases is a key attribute of which level of capability maturity?
     - **A:** Level 3.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Delivery & Lifecycle Overview]]
+- **Previous**: [[Deliver A Project Or Programme]]
+- **Next**: [[Delivery Process Maturity]]
+
+### Related Concepts & Artefacts
+- [[Identification Process]]
+- [[Definition Process]]
+- [[Delivery Process]]
+- [[Closure Process]]
