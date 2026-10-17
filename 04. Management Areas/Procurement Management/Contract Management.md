@@ -1,26 +1,27 @@
 ---
-Title: Contract management 29183b71d8f38099a0dcf449ebb7783a
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Contract management 29183b71d8f38099a0dcf449ebb7783a.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Contract management"
+aliases:
+  - "Contract management"
+  - "Contract Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/resource-management
+  - type/management-area
+pillar: "Knowledge"
+section: "Resource management"
+subarea: "Management"
+type: "management-area"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2041.svg)
-
-# Contract management
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2041.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2041.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%2041.svg)Section|Resource management|
-|![](arrow-circle-down_gray%2041.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Resource management]]
+> **Pillar**: Knowledge | **Type**: `management-area`
 
 # Comprehensive Study Notes: Contract Management
 
@@ -31,22 +32,22 @@ Topic: ''
 ### The Goals of Contract Management
 
 - The primary goals of this function are to:
-    
+
     1. Support the **procurement** process by negotiating the terms and conditions.
-    
+
     2. Formally **document** the contractual agreements.
-    
+
     3. **Monitor** the contractual performance of all parties.
-    
+
     4. Formally **conclude** contracts at the end of the work.
 
 
 ## The Contract Management Procedure
 
 1. **Plan and Initiate**:
-    
+
     - This step defines the scope and objectives of contract management.
-    
+
     - Unless contract management is a major function within the work, it is likely that these steps will be part of a broader **resource management** procedure and plan.
 
 2. **Negotiate Contract**:
@@ -71,53 +72,53 @@ Topic: ''
 ### Universal Principles of a Contract
 
 - While laws vary by jurisdiction, there are general principles that are universal. For a contract to be valid, there must be:
-    
+
     - An **offer** made by one party, which is **accepted** by the other party without qualification.
-    
+
     - An **intention** to create a legal relationship.
-    
+
     - **Consideration** passing from one party to the other (e.g., payment in return for goods/services).
-    
+
     - **Clear and definite terms**.
-    
+
     - **Legality** of the agreement and competence of the parties entering into it.
 
 ### Standard vs. Bespoke Contracts
 
 - **Standard Forms of Contract**:
-    
+
     - Many industries have standard forms of contract (e.g., NEC3 for construction).
-    
+
     - **Advantage**: They take account of established best practice within that industry.
-    
+
     - **Disadvantage**: They may not fully address all the specific risk-sharing or payment requirements for a particular project.
 
 - **Bespoke Contracts**:
-    
+
     - These are contracts that are built from scratch to reflect the specific context and content of the work.
-    
+
     - They are more flexible but require more legal expertise to create.
 
 ### Typical Contract Content
 
 - Whether standard or bespoke, all contracts typically contain similar information, such as:
-    
+
     - A description of the works or services.
-    
+
     - The legal system that the contract will use.
-    
+
     - Responsibilities for design, approvals, and subcontracting.
-    
+
     - Agreed milestones and the completion date.
-    
+
     - Procedures for **change control**, **quality control**, and **testing**.
-    
+
     - **Payment methods** and procedures.
-    
+
     - Clauses on **risk transfer** and **risk sharing**.
-    
+
     - Ownership of assets and **Intellectual Property (IP)**.
-    
+
     - **Dispute management** procedures.
 
 
@@ -131,7 +132,7 @@ Topic: ''
 
 - The P3 manager should not immediately resort to the "letter of the law." They must approach contractual conflict in a measured way, weighing the impact of destroying the relationship with the supplier against the benefits of resolving the dispute in other ways.
 
-> [WARNING]  
+> [WARNING]
 > The P3 manager must ensure their team is aware of how contractual obligations can be created inadvertently by poorly worded communications or inappropriate actions. Case law has confirmed that changes to a contract can be made without formal legal instructions being issued.
 
 ### Concluding the Contract
@@ -178,3 +179,14 @@ Topic: ''
 
 - **Q:** In a programme with multiple suppliers, what is a key contractual risk the programme manager must consider?
     - **A:** The interdependencies between the contracts. The actions of one supplier may adversely affect another, leading to a contractual dispute. The contracts should be drafted to manage this risk.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Resource management Overview]]
+- **Next**: [[Manage Contracts]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
