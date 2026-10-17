@@ -1,17 +1,26 @@
 ---
-Title: Delivery Process 29283b71d8f380be838adfab6e572e5a
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Delivery Process 29283b71d8f380be838adfab6e572e5a.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Delivery Process"
+aliases:
+  - "Delivery Process"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/process
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Delivery Process
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `process`
 
 # Comprehensive Study Notes: The Delivery Process
 
@@ -36,23 +45,23 @@ Topic: ''
 ### The Goals of the Delivery Process
 
 - The primary goals of this process are to:
-    
+
     - Delegate responsibility for producing deliverables to the appropriate people.
-    
+
     - Monitor the performance of the work and track it against the delivery plans.
-    
+
     - Take action where necessary to keep the work in line with the plans.
-    
+
     - Escalate issues and replan if necessary.
-    
+
     - Formally accept work as it is completed.
-    
+
     - Maintain effective communications with all stakeholders.
 
 
 ## The Activities of the Delivery Process
 
-> [NOTE]  
+> [NOTE]
 > This process is a continuous cycle. While the activities are shown as discrete steps in a workflow, a project or programme manager’s day will involve elements of all of them concurrently. The management team will operate this cycle within their defined authority (tolerances). If tolerances are predicted to be exceeded, issues must be escalated to the sponsor.
 
 ### 1. Authorise Work
@@ -109,23 +118,23 @@ Topic: ''
 ## Managing Complexity in Delivery
 
 - As the complexity of the work increases, it becomes necessary to break it up into manageable pieces. This decomposition takes two main forms:
-    
+
     1. **Horizontal Decomposition (Stages/Tranches)**:
-        
+
         - This involves splitting the entire delivery phase into sequential or parallel chunks of time.
-        
+
         - These are called **stages** in a project and **tranches** in a programme.
-        
+
         - This approach enables techniques like go/no-go control at the end of each chunk and facilitates rolling wave planning.
-        
+
         - The boundaries between these stages and tranches are managed by the **Boundaries Process**.
-    
+
     2. **Vertical Decomposition (Delegation)**:
-        
+
         - This involves delegating packages of work to different teams.
-        
+
         - This can take the form of sub-projects or work packages within a project, or projects within a programme.
-        
+
         - The interface with these delegated delivery teams is managed through the **Development Process**.
 
 
@@ -145,3 +154,15 @@ Topic: ''
 
 - **Q:** What is the difference between horizontal and vertical decomposition of the delivery phase?
     - **A:** **Horizontal decomposition** is splitting the work into time-based stages or tranches (managed by the Boundaries Process). **Vertical decomposition** is delegating packages of work to different teams (managed by the Development Process).
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[Definition Process]]
+- **Next**: [[Development Process]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
