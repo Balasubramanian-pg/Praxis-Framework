@@ -1,23 +1,50 @@
 ---
-Title: Initiate a portfolio 29183b71d8f380f280e9fb6e986fd21f
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Initiate a portfolio 29183b71d8f380f280e9fb6e986fd21f.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Initiate A Portfolio Competency"
+aliases:
+  - "Portfolio Initiation Skill"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/portfolio-management
+  - type/competency
+pillar: "Competence"
+section: "Portfolio Management"
+subarea: "Management Competencies"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2080.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Portfolio Management]]
+> **Pillar**: Competence | **Type**: `competency`
 
-# Initiate a portfolio
+# Initiate A Portfolio Competency
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2080.svg)Area|Competence|
-|![](arrow-circle-down_gray%2080.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2080.svg)Section|Deliver a project or programme|
-|![](arrow-circle-down_gray%2080.svg)Sub Area|Management competencies|
+> [!SUMMARY] Overview
+> Demonstrates the capability to design portfolio governance, establish operating models, and define portfolio boundaries.
+
+## Purpose
+The **Initiate A Portfolio** competency demonstrates the ability to establish the framework, policies, and PMO infrastructure required to govern a collection of projects and programmes.
+
+## Performance Criteria
+1. Define portfolio boundaries and strategic objectives.
+2. Design the portfolio governance structure and executive terms of reference.
+3. Establish portfolio management plans for risk, finance, and schedule.
+4. Onboard portfolio management staff and implement tooling.
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Portfolio Management Overview]]
+- **Previous**: [[Communities Of Practice]]
+- **Next**: [[Manage A Portfolio]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
