@@ -1,3 +1,28 @@
+---
+title: "The Discipline of Governance Planning"
+aliases:
+  - "The Discipline of Governance Planning"
+  - "Plan Governance"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance-framework
+  - type/concept
+pillar: "Knowledge"
+section: "Governance & Framework"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance & Framework]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
 # The Discipline of Governance Planning
 
 ## Introduction
@@ -41,3 +66,15 @@ When roles are ill-defined, tasks fall into the gaps, or worse, two people fight
 ## Closing Reflection
 
 Governance is not bureaucratic red tape to be resented. It is the precondition for meaningful action. By establishing the rules of the game, the structure of authority, and the flow of information, you create a protected space where competence can flourish. It is the discipline that keeps the chaos of the world at bay long enough to build something of value.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance & Framework Overview]]
+- **Previous**: [[Mandate]]
+- **Next**: [[Planning]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
