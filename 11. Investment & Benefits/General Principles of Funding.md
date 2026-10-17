@@ -1,15 +1,27 @@
 ---
-Title: Funding 29183b71d8f38064a8fae8a3cb85a0f7
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Funding 29183b71d8f38064a8fae8a3cb85a0f7.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Funding"
+aliases:
+  - "Funding"
+  - "General Principles of Funding"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/investment-benefits
+  - type/guide
+pillar: "Knowledge"
+section: "Investment & Benefits"
+subarea: "Management"
+type: "guide"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Investment & Benefits]]
+> **Pillar**: Knowledge | **Type**: `guide`
 
 # Comprehensive Study Notes: Funding
 
@@ -20,28 +32,28 @@ Topic: ''
 ### The Goals of Funding
 
 - The primary goals of this function are to:
-    
+
     1. Determine the **best way to fund** the work.
-    
+
     2. Secure **commitment** from the fundholders.
-    
+
     3. Manage the **release of funds** throughout the life cycle.
 
 
 ## The Funding Procedure
 
 1. **Identify Funding Sources**:
-    
+
     - The first step is to identify the possible sources of funding. These could be internal, external, or a combination.
-    
+
     - The scale can range from a simple allocation from a single departmental budget to the complex international financing of a joint venture.
-    
+
     - In some cases, the work may be expected to be **self-funding**, with revenues generated from earlier stages of work providing the funds to deliver later stages.
 
 2. **Negotiate Funding Terms**:
-    
+
     - **Internal Funding**: It is unlikely that formal terms need to be negotiated, but conditions may be applied and must be recorded in the finance management plan.
-    
+
     - **External Funding**: Where funding is provided by an external body (e.g., a bank, shareholders), terms and conditions will need to be formally negotiated. This can include interest rates, charges, and procedures for the release of funds. Complex funding arrangements may require specialist expertise.
 
 3. **Secure Funding Commitment**:
@@ -49,16 +61,16 @@ Topic: ''
 
 4. **Administer Funds**:
     - This step involves managing the release of funds in line with the life cycle phases and gate reviews:
-        
+
         - **Initially**: Commit funds for the **identification process** and reserve funds in principle for the definition process.
-        
+
         - **At the end of identification**: Commit funds for the **definition process** and reserve funds in principle for the delivery process.
-        
+
         - **At the end of definition**: Commit funds for the **delivery process**, or at least for the first stage or tranche of work.
-        
+
         - **At each subsequent review**: The release of funds for the next stage or tranche will be dependent upon a viable and re-approved business case.
 
-> [IMPORTANT]  
+> [IMPORTANT]
 > Whether they are internal or external, and whether they are direct recipients of benefits or not, funders must be treated as key stakeholders and managed accordingly.
 
 
@@ -71,9 +83,9 @@ Topic: ''
 - **Larger Projects**: As projects become larger, they often cross departmental boundaries and draw upon multiple budgets. The project sponsor is then more likely to be someone who is impartial and acceptable to the various budget holders. A **project board** may be formed to give representation to the key funding providers.
 
 - **Contractor Projects**: When a contractor delivers a project for a client, the contractor’s funding effectively comes from the client.
-    
+
     - Payments from the client to the contractor are usually based on valuations of work done at agreed points (milestones or regular periods).
-    
+
     - The contractor will often need **bridging finance** to cover the time delay between paying their own bills (for staff, materials, etc.) and receiving the funds from the client.
 
 - **Public-Private Partnerships (PPPs)**: These are complex funding arrangements, often for major infrastructure projects, where governments partner with the private sector. A common model is **BOOT (Build, Own, Operate, Transfer)**, where a private organisation is given a concession to fund, build, and operate a facility for a period of time before transferring it back to the commissioning organisation.
@@ -93,13 +105,13 @@ Topic: ''
 - **Standard Portfolios**: These are often made up of projects delivered for clients. Most of the portfolio budget is simply the aggregation of the various project budgets. However, managing the client projects as a portfolio may provide the opportunity to use the positive cash flow of some projects to provide bridging finance for others, thus avoiding the need for more expensive external funds.
 
 - **Strategic Portfolios**:
-    
+
     - A strategic portfolio is typically funded as part of the organisation's annual or multi-year **business planning cycle**.
-    
+
     - Ideally, the objectives of the portfolio will be delivered within the same time frame as the funding cycle. If not, the portfolio runs the risk of having its funding changed or cut in the next business planning cycle.
-    
+
     - The prioritisation and balancing of projects and programmes within a strategic portfolio will, to a large degree, depend upon how it is funded.
-    
+
     - For example, if there is uncertainty regarding future funding availability, long-term secured funds should be used for the longer, high-priority programmes, while short-term funds should be matched to shorter-term projects.
 
 
@@ -119,3 +131,15 @@ Topic: ''
 
 - **Q:** How does the business planning cycle affect the funding of a strategic portfolio?
     - **A:** The portfolio is typically funded as part of the cycle. If the portfolio's objectives extend beyond the cycle, it runs the risk of having its funding changed or cut in the next cycle, which can impact its component projects and programmes.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Investment & Benefits Overview]]
+- **Previous**: [[Funding]]
+- **Next**: [[Investment Appraisal]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
