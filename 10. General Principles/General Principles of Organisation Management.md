@@ -1,14 +1,27 @@
 ---
-Title: Organisation management 29183b71d8f380cdacc9c6960eb8b002
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Organisation management 29183b71d8f380cdacc9c6960eb8b002.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Organisation management"
+aliases:
+  - "Organisation management"
+  - "General Principles of Organisation Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/general-principles
+  - type/guide
+pillar: "Knowledge"
+section: "General Principles"
+subarea: "Management"
+type: "guide"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|General Principles]]
+> **Pillar**: Knowledge | **Type**: `guide`
 
 # Comprehensive Study Notes: Organisation Management
 
@@ -19,26 +32,26 @@ Topic: ''
 ### The Goals of Organisation Management
 
 - The primary goals of organisation management are to:
-    
+
     1. Design an organisation structure that is appropriate to the scope of the work to be managed.
-    
+
     2. Identify and appoint competent members to the management team.
-    
+
     3. Maintain and adapt the organisation structure throughout the life cycle as needs change.
 
 ### The Organisation Management Procedure
 
 - The procedure for managing the P3 organisation is a simple one:
-    
+
     1. **Plan**: Design an appropriate organisation structure, including role descriptions and policies for appointing staff, often cross-referencing the host organisation's HR policies.
-    
+
     2. **Initiate**: Make the appointments to the roles defined in the plan and deliver any necessary induction or training.
-    
+
     3. **Amend**: Adapt and change the organisation structure as required to meet the changing demands of the work throughout the life cycle.
-    
+
     4. **Close**: Formally close down and disband the organisation structure at the end of the work.
 
-> [-NOTE]  
+> [-NOTE]
 > There is a strong correlation between the "initiate" and "close" steps in organisation management and the "mobilise" and "demobilise" steps in the mobilisation function. The key difference is that organisation management deals with the management team, while mobilisation deals with the delivery resources.
 
 
@@ -47,23 +60,23 @@ Topic: ''
 - The organisational structure of individual projects, programmes, and portfolios will vary according to the context, but in broad terms, the organisation will always have four main levels.
 
 1. **External Level**:
-    
+
     - This represents the body that first mandated the work.
-    
+
     - It could be a company board mandating a portfolio, a client mandating a project, or a programme mandating a sub-project.
-    
+
     - This level delegates the responsibility for looking after its interests to the sponsorship level.
 
 2. **Sponsorship Level**:
-    
+
     - This level provides the crucial link between the management team and the external level.
-    
+
     - The **sponsor** champions the work and owns the business case.
 
 3. **Management Level**:
-    
+
     - This is where the day-to-day responsibility for managing the work resides.
-    
+
     - The sponsorship and management levels together form the **management team** (e.g., project management team, programme management team).
 
 4. **Delivery Level**:
@@ -71,15 +84,15 @@ Topic: ''
 
 ### The Relative Nature of the Levels
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > All the levels in this structure are relative and context-sensitive. For example, a project management team is at the "management level" for its project, but it is at the "delivery level" from the perspective of the programme that commissioned it. From the project team's perspective, the programme management team is their "sponsor". The entire structure depends upon good delegation and control systems.
 
 ### Supporting Functions
 
 - Alongside this main four-level structure are two key supporting functions:
-    
+
     - **Assurance**: An assurance team reports directly to the sponsor and provides confidence that the management and delivery of the work are being conducted effectively and appropriately.
-    
+
     - **Support**: The support function (e.g., a PMO or PSO) provides administrative and technical services to both the management and delivery levels.
 
 ### The Matrix Organisation
@@ -141,3 +154,14 @@ Topic: ''
 
 - **Q:** In a portfolio, what is the role often called that is synonymous with the portfolio management team?
     - **A:** The Project Management Office (PMO).
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|General Principles Overview]]
+- **Previous**: [[Ethics]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
