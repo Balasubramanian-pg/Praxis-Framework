@@ -1,30 +1,40 @@
 ---
-Title: Manage Risk 29283b71d8f380a1a643e76789fcf910
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Manage Risk 29283b71d8f380a1a643e76789fcf910.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Manage Risk Competency"
+aliases:
+  - "Manage Risk"
+  - "Manage Risk Competency"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/investment-benefits
+  - type/competency
+pillar: "Knowledge"
+section: "Investment & Benefits"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Manage Risk
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Investment & Benefits]]
+> **Pillar**: Knowledge | **Type**: `competency`
 
 # Comprehensive Study Notes: Manage Risk Competency
 
 ## Purpose of the Competency
 
 - The purpose of this competency is to demonstrate the ability to achieve the goals of risk management. These goals are to:
-    
+
     - Ensure that levels of **overall risk** within a project, programme, or portfolio are compatible with organisational objectives.
-    
+
     - Ensure that individual **risks and their responses** are identified and managed.
-    
+
     - Minimise the impact of **threats** to the objectives.
-    
+
     - Optimise the realisation of **opportunities** within the scope of the work.
 
 
@@ -33,55 +43,55 @@ Topic: ''
 - An individual must be able to demonstrate the ability to perform the following actions:
 
 - **Plan and initiate risk management**
-    
+
     - This involves defining the approach, procedures, tools, and techniques that will be used for all risk management activities.
-    
+
     - The output is the **risk management plan**, which also documents the roles and responsibilities for risk management.
 
 - **Identify risk events**
-    
+
     - This is the practical application of risk identification techniques.
-    
+
     - It involves working with stakeholders to identify both potential threats and opportunities that could affect the work's objectives.
-    
+
     - This includes using tools like brainstorming, checklists, interviews, and reviewing lessons learned from previous work.
 
 - **Assess the probability and impact of risk events**
-    
+
     - This involves analysing the identified risks to understand their significance.
-    
+
     - For each risk, this means estimating its **probability** (likelihood of occurring) and its potential **impact** on the objectives if it does occur. This can be done using qualitative (e.g., High/Medium/Low) or quantitative methods.
 
 - **Plan responses to risk events**
-    
+
     - This involves deciding on the most appropriate course of action for each significant risk.
-    
+
     - For **threats**, this could be to Avoid, Reduce, Transfer, or Accept the risk.
-    
+
     - For **opportunities**, this could be to Exploit, Enhance, Share, or Reject the opportunity.
 
 - **Implement responses to risk events and maintain acceptable levels of overall risk**
-    
+
     - This is the execution step. It involves carrying out the planned proactive risk responses (e.g., implementing a mitigation action).
-    
+
     - It also involves managing the overall level of risk to ensure it remains within the organisation's risk appetite.
 
 - **Maintain risk management documentation**
-    
+
     - This involves creating and maintaining the key risk documents, primarily the **risk register**.
-    
+
     - The risk register is a living document that records all identified risks, their assessment, their planned responses, their owners, and their current status.
 
 - **Monitor and control risk management**
-    
+
     - This is an ongoing activity throughout the life cycle.
-    
+
     - It involves regularly reviewing the risk register, tracking the effectiveness of risk responses, identifying new and emerging risks, and closing risks that are no longer relevant.
 
 - **Assure the quality of risk management**
     - This involves ensuring that the agreed-upon procedures for managing risk are being followed correctly by the team and that the risk management process itself is effective.
 
-> [NOTE]  
+> [NOTE]
 > The approach an organisation takes to managing risk is highly dependent upon its risk context (its attitude and appetite for risk). This competency must be adjusted to meet the different appetites and attitudes relevant to the specific work. For example, the risk profile of an entrepreneurial tech company is very different from that of an aid charity working in a war zone, and the competency of their staff must reflect this.
 
 
@@ -139,3 +149,14 @@ Topic: ''
 
 - **Q:** What is the difference between risk attitude and risk appetite?
     - **A:** **Risk attitude** is the inherent, natural reaction to uncertainty. **Risk appetite** is the conscious, strategic decision about how much risk to take.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Investment & Benefits Overview]]
+- **Next**: [[Develop Investment Appraisal]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
