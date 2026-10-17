@@ -1,23 +1,54 @@
 ---
-Title: Communication plan 29183b71d8f380869ea2fcd2f8a868a8
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Communication plan 29183b71d8f380869ea2fcd2f8a868a8.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Communication Plan"
+aliases:
+  - "Comms Plan"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/communication-management
+  - type/artefact
+pillar: "Method"
+section: "Communication Management"
+subarea: "Documentation"
+type: "artefact"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2034.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Communication Management]]
+> **Pillar**: Method | **Type**: `artefact`
 
-# Communication plan
+# Communication Plan
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2034.svg)Area|Method|
-|![](arrow-circle-down_gray%2034.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2034.svg)Section|Delivery documents|
-|![](arrow-circle-down_gray%2034.svg)Sub Area|Documentation|
+> [!SUMMARY] Overview
+> A schedule and strategy specifying what messages will be communicated to which stakeholders, through what media, and at what frequency.
+
+## Purpose
+The **Communication Plan** operationalizes the [[Stakeholder Management Plan]] by scheduling exact communications, messages, delivery channels, and feedback loops.
+
+## Contents
+- **Stakeholder Audience**: Target recipient group.
+- **Key Message & Purpose**: What information is conveyed (status, milestone achievement, action needed).
+- **Medium & Channel**: Email, dashboard, town hall, steering meeting.
+- **Frequency**: Daily, weekly, monthly, or event-driven.
+- **Owner**: Person responsible for preparing and sending the message.
+
+## Timing
+Established during the [[Definition Process]] and executed in the [[Delivery Process]].
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Communication Management Overview]]
+- **Previous**: [[Communication]]
+- **Next**: [[General Principles of Information Management]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
