@@ -1,17 +1,26 @@
 ---
-Title: Portfolio Process 29283b71d8f38071a3fbc01de1c8f04a
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Portfolio Process 29283b71d8f38071a3fbc01de1c8f04a.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Portfolio Process"
+aliases:
+  - "Portfolio Process"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/process
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Portfolio Process
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `process`
 
 # Comprehensive Study Notes: Portfolio Processes
 
@@ -29,7 +38,7 @@ Topic: ''
 
 - **Large Structured Portfolio**: At the other end of the scale, a large multinational organisation may have a structured portfolio of projects and programmes designed to meet the **strategic objectives** of a five-year business planning cycle.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The portfolio process model shown in the Praxis Framework is common to all types of portfolio. The differences in scale and complexity are addressed by how the process is applied and tailored, not by using a different process.
 
 
@@ -52,15 +61,15 @@ Topic: ''
 - **Purpose**: This is the core engine of portfolio management, covering the day-to-day and cyclical activities of managing the collection of projects and programmes.
 
 - **Activities**: It is a continuous cycle of activities that includes:
-    
+
     - **Identifying and Defining** potential new projects and programmes for inclusion in the portfolio.
-    
+
     - **Prioritising** the component projects and programmes based on strategic criteria.
-    
+
     - **Balancing** the portfolio to ensure it is achievable in terms of risk, resource capacity, and financial constraints.
-    
+
     - **Co-ordinating** the delivery of the component projects and programmes.
-    
+
     - **Closing** down projects and programmes as they complete or are no longer required.
 
 
@@ -81,3 +90,15 @@ Topic: ''
 - **Q:** What is the primary purpose of a small, standard portfolio, often called the "management of projects"?
 
     - **A:** To co-ordinate resources efficiently and embed good management practice consistently across all projects.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[Overview of Identification Process]]
+- **Next**: [[Prioritisation Process]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
