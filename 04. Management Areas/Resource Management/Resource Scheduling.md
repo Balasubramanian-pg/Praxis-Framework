@@ -1,26 +1,27 @@
 ---
-Title: Resource scheduling 29183b71d8f38034ba46fa9d9880fa15
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Resource scheduling 29183b71d8f38034ba46fa9d9880fa15.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Resource scheduling"
+aliases:
+  - "Resource scheduling"
+  - "Resource Scheduling"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/schedule-management
+  - type/concept
+pillar: "Knowledge"
+section: "Schedule management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20135.svg)
-
-# Resource scheduling
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20135.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20135.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20135.svg)Section|Schedule management|
-|![](arrow-circle-down_gray%20135.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Schedule management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Resource Scheduling
 
@@ -33,51 +34,51 @@ Topic: ''
 ### The Goals of Resource scheduling
 
 - The primary goals of this function are to ensure:
-    
+
     1. **Efficient and effective utilisation** of resources.
-    
+
     2. **Confidence** that the resulting schedule is realistic and achievable.
-    
+
     3. Early identification of resource capacity **bottlenecks and conflicts**.
 
 
 ## The Resource Scheduling Procedure
 
 1. **Allocate Resources**:
-    
+
     - The model of work activities developed in the time scheduling function is used as the basis for allocating resources to each component of work.
-    
+
     - This will comprise quantities of **consumable resources** (e.g., materials) or the **effort** required from **reusable resources** (e.g., people, machinery).
 
 2. **Aggregate Resources**:
-    
+
     - Once resources have been allocated and an initial time schedule has been calculated, the resources required for each time period can be aggregated (summed up).
-    
+
     - The results of this aggregation are normally presented as a **resource histogram**, which shows the total demand for a resource period by period (e.g., day-by-day or week-by-week).
 
 3. **Calculate Schedule (Resource-Limited)**:
-    
+
     - The initial aggregation almost inevitably leads to a demand profile with periods where demand exceeds the available supply (peaks) or where resources are idle (troughs).
-    
+
     - The purpose of this final step is to use resource-limited scheduling techniques to modify the timings of activities to deal with these peaks and troughs.
 
 
 ## Consumable vs. Reusable Resources
 
 - From a scheduling point of view, there are two broad categories of resources:
-    
+
     1. **Consumable Resources**:
-        
+
         - These are typically materials that are used up by an activity (e.g., bricks, concrete, paper).
-        
+
         - The schedule for consumable resources forms the basis of the procurement plan, including details such as the timing of deliveries.
-        
+
         - Scheduling may reveal issues with materials or components that have long lead times and need to be ordered well in advance, sometimes even before the work is fully authorised.
-    
+
     2. **Reusable Resources**:
-        
+
         - These are resources like people and machinery that perform the work but are not consumed by it.
-        
+
         - Reusable resources are rarely, if ever, limitless, and the schedule needs to be reviewed to take these limitations into account. This leads to the techniques of resource-limited scheduling.
 
 
@@ -101,7 +102,7 @@ Topic: ''
 
 - **When to Use**: This approach is more appropriate when there are strict, fixed limits on the available resources and the finish date is flexible. The primary constraint is the **resource**.
 
-> [NOTE]  
+> [NOTE]
 > In reality, a simple smoothing or levelling of all resources simultaneously does not reflect the true situation. Some resources may be flexible while others are not. A better understanding can be achieved through a form of sensitivity analysis where resources are scheduled individually to see their specific impact. Techniques like Critical Chain can also be used to address these issues in a different way.
 
 
@@ -152,3 +153,15 @@ Topic: ''
 
 - **Q:** What is "capacity planning" and at what level is it most important?
     - **A:** It is the process of considering the maximum amount of work an organisation can complete in a given period. It is a key focus for programme and portfolio management teams.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Schedule management Overview]]
+- **Previous**: [[Resource Management Plan]]
+
+### Related Concepts & Artefacts
+- [[Schedule Management Plan]]
+- [[Time Scheduling]]
+- [[Delivery Plan]]
+- [[Manage The Schedule Competency|Manage The Schedule]]
