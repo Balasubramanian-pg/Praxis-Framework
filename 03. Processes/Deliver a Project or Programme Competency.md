@@ -1,21 +1,44 @@
-# Deliver a Project or Programme
+---
+title: "Deliver a Project or Programme"
+aliases:
+  - "Deliver a Project or Programme"
+  - "Deliver a Project or Programme Competency"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/processes
+  - type/process
+pillar: "Method"
+section: "Processes"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Processes]]
+> **Pillar**: Method | **Type**: `process`
 
 # Comprehensive Study Notes: Deliver a Project or Programme Competency
 
 ## Purpose of the Competency
 
 - The purpose of this competency is to demonstrate the ability to achieve the goals of the **delivery process**. This process is the core "engine room" of the project or programme where the work is actively managed, controlled, and executed. The goals are to:
-    
+
     - Delegate responsibility for producing deliverables to the appropriate people.
-    
+
     - Monitor the performance of the work and track it against the delivery plans.
-    
+
     - Take action where necessary to keep the work in line with the plans.
-    
+
     - Escalate issues and replan if necessary.
-    
+
     - Formally accept work as it is completed.
-    
+
     - Maintain effective communication with all stakeholders throughout delivery.
 
 ## Performance Criteria
@@ -23,56 +46,56 @@
 - An individual must be able to demonstrate the ability to perform the following actions:
 
 - **Define, delegate, and accept work packages**
-    
+
     - **Define**: Break down the work of a stage or tranche into logical, manageable units called **work packages**. Each work package must have a clear description, defined products, quality criteria, and constraints (time and cost).
-    
+
     - **Delegate**: Formally assign the responsibility for a work package to a team manager or individual. This must be a clear and unambiguous delegation of authority.
-    
+
     - **Accept**: Formally accept the completed products from the work package, ensuring they have met their quality criteria through inspection and testing, before taking ownership of them.
 
 - **Monitor and co-ordinate progress across work packages**
-    
+
     - This involves the day-to-day management of the delivery phase.
-    
+
     - **Monitor**: Collect progress information from all active work packages (e.g., via checkpoint reports) and consolidate this data to get an accurate overall picture of the stage or tranche's status.
-    
+
     - **Co-ordinate**: Actively manage the interdependencies between different work packages, resolving resource conflicts and ensuring that different teams can co-exist and work effectively.
 
 - **Review and accept completed work**
-    
+
     - This is the formal quality control aspect of the process.
-    
+
     - It involves reviewing the deliverables from a work package against their specification and quality criteria.
-    
+
     - This may involve inspections, testing, or formal demonstrations before formally signing off and accepting the completed work.
 
 - **Predict issues, take corrective action, and escalate as required**
-    
+
     - **Predict**: Use progress information and forecasting techniques to predict potential deviations from the plan _before_ they happen.
-    
+
     - **Corrective Action**: Take appropriate action to resolve deviations and bring the work back in line with the plan, as long as the deviation is predicted to remain within the agreed **tolerances**.
-    
+
     - **Escalate**: If a deviation is predicted to exceed the agreed tolerances, formally escalate this as an **issue** to the sponsor by creating an **Exception Report**.
 
 - **Prepare exception plans and submit for authorisation**
-    
+
     - When a major issue occurs that requires significant re-planning, this involves creating a new delivery plan to show how the issue will be overcome. This new plan is called an **exception plan**.
-    
+
     - This plan must be formally submitted to the sponsor for their review and authorisation before it can be implemented.
 
 - **Maintain effective communication at all times**
-    
+
     - This involves executing the communications plan.
-    
+
     - It includes providing regular progress reports to stakeholders, keeping the team informed of progress and issues, and ensuring there are clear lines of communication for escalating problems.
 
 - **Assure the quality of the process**
-    
+
     - This involves ensuring that the delivery process itself is being conducted effectively and according to the rules set out in the management plans.
-    
+
     - It includes checking that work packages are being properly authorised, progress is being tracked accurately, and issues are being escalated correctly.
 
-> [!NOTE]  
+> [!NOTE]
 > The principles of the delivery process remain the same regardless of scale, but the competency must be adapted to reflect the context. For a small project, the manager may be managing a handful of part-time resources. For a large programme, they may be co-ordinating a vast range of internal and external teams. This could require the competency to include references to more specific functional competencies, like Manage Contracts, or specific control techniques, like Earned Value Management.
 
 ## Knowledge and Understanding
@@ -121,3 +144,15 @@
 
     - **A:** The transfer of ownership of the products from the delivery team to the management team.
 
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Processes Overview]]
+- **Previous**: [[Context of Governance process]]
+- **Next**: [[Goal of Closure process]]
+
+### Related Concepts & Artefacts
+- [[Identification Process]]
+- [[Definition Process]]
+- [[Delivery Process]]
+- [[Closure Process]]
