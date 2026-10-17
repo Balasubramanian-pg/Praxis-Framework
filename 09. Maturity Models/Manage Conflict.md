@@ -1,23 +1,50 @@
 ---
-Title: Manage conflict 29183b71d8f3803a9f31d1106b7ec5a4
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Manage conflict 29183b71d8f3803a9f31d1106b7ec5a4.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Manage Conflict Competency"
+aliases:
+  - "Conflict Resolution Skill"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/interpersonal-competencies
+  - type/competency
+pillar: "Competence"
+section: "Interpersonal Competencies"
+subarea: "Competence"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2095.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Interpersonal Competencies]]
+> **Pillar**: Competence | **Type**: `competency`
 
-# Manage conflict
+# Manage Conflict Competency
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2095.svg)Area|Competence|
-|![](arrow-circle-down_gray%2095.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2095.svg)Section|Interpersonal competencies|
-|![](arrow-circle-down_gray%2095.svg)Sub Area|Management competencies|
+> [!SUMMARY] Overview
+> Demonstrates the capability to identify sources of interpersonal and organizational conflict, applying appropriate resolution styles.
+
+## Purpose
+The **Manage Conflict** competency describes how a leader diagnoses the underlying causes of disputes and applies appropriate resolution strategies (collaborating, compromising, accommodating, competing, or avoiding).
+
+## Performance Criteria
+1. Recognize early symptoms of disagreement before escalation.
+2. Analyze the root causes of conflict (resource scarcity, ambiguous authority, conflicting priorities, personality clash).
+3. Apply the Thomas-Kilmann conflict mode model appropriately to the context.
+4. Mediate disputes impartially, focusing on project outcomes and team health.
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Interpersonal Competencies Overview]]
+- **Previous**: [[General Principles of Capability Maturity]]
+- **Next**: [[Maturity Level 1]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
