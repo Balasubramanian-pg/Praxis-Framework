@@ -1,26 +1,35 @@
 ---
-Title: Process 29283b71d8f380249b7ede8f050b6035
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Process 29283b71d8f380249b7ede8f050b6035.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Process"
+aliases:
+  - "Process"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/process
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Process
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `process`
 
 # Comprehensive Study Notes: Praxis Process Models
 
 ## Introduction to the Process Models
 
 - Praxis provides two distinct process models to guide the management of P3 initiatives:
-    
+
     1. One consolidated model for **projects and programmes**.
-    
+
     2. One separate model for **portfolios**.
 
 
@@ -44,7 +53,7 @@ Topic: ''
 
 - This approach supports the core principle, embraced by Praxis, that describing projects and programmes as two, mutually exclusive types of initiative has more to do with the human desire to categorise than with real, practical differences in how they are managed.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The Praxis method for projects and programmes is not a "one size fits all" approach. It is a single, scalable framework that is adapted to the context and complexity of the specific work being undertaken.
 
 
@@ -70,3 +79,15 @@ Topic: ''
 
 - **Q:** Does Praxis have different process models for standard and structured portfolios?
     - **A:** No, the process model is the same for both. The difference lies in the emphasis and objectives of the management activities within that process.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[Prioritisation Process]]
+- **Next**: [[Risk Context]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
