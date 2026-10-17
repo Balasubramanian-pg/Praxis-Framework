@@ -1,32 +1,58 @@
 ---
-Title: 2 Method
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/2 Method.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "2 Method"
+aliases:
+  - "2 Method"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/concept
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
+# 2 Method
 
 > [!NOTE]
 > 1. The ==**method**== section contains the processes and documentation descriptions for each phase of the P3 life cycle.
 
-[Overview](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Overview%2029283b71d8f380969eeecf0cda6a7475.html)
+[[Overview]]
 
-[Process](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Process%2029283b71d8f380249b7ede8f050b6035.html)
+[[Process]]
 
-[Project & Programme Management](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Project%20&%20Programme%20Management%2029283b71d8f38020b508e0d6712eac8b.html)
+[[Project & Programme Management]]
 
-[Delivery Process](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Delivery%20Process%2029283b71d8f380be838adfab6e572e5a.html)
+[[Delivery Process]]
 
-[Portfolio Process](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Portfolio%20Process%2029283b71d8f38071a3fbc01de1c8f04a.html)
+[[Portfolio Process]]
 
-[Documentation](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Documentation%2029283b71d8f380539073f33ea8100a35.html)
+[[Documentation]]
 
-[Management Plans](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Management%20Plans%2029283b71d8f38026bb1ac8046f486933.html)
+[[Management Plans]]
 
-[Scope Document](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Scope%20Document%2029283b71d8f3807ca685cd0cc9521a01.html)
+[[Scope Document]]
 
-[Delivery Documents](2%20Method%2029183b71d8f380689e47ee87bcb628c0/Delivery%20Documents%2029283b71d8f38048874ce5f6f263f522.html)
+[[Delivery Documents]]
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[1. Knowledge]]
+- **Next**: [[3 Competence]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
