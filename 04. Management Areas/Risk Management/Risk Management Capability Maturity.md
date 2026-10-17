@@ -1,35 +1,45 @@
 ---
-Title: Risk Management 29283b71d8f3807fb66ee429fdcf560d
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Risk Management 29283b71d8f3807fb66ee429fdcf560d.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Risk Management"
+aliases:
+  - "Risk Management"
+  - "Risk Management Capability Maturity"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/risk-management
+  - type/maturity
+pillar: "Knowledge"
+section: "Risk Management"
+subarea: "Management"
+type: "maturity"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Risk Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Risk Management]]
+> **Pillar**: Knowledge | **Type**: `maturity`
 
 # Comprehensive Study Notes: Risk Management Capability Maturity
 
 ## Overall Goal of Risk Management
 
 - The function of Risk Management should:
-    
+
     - Ensure that levels of overall risk are compatible with organisational objectives.
-    
+
     - Ensure that individual risks and responses are identified.
-    
+
     - Minimise the impact of threats to the objectives.
-    
+
     - Optimise the realisation of opportunities within the scope of the work.
 
-> [!IMPORTANT]  
-> A key difference between Level 2 and Level 3 capability in risk management is that at Level 3, techniques are appropriately applied.  
-> <br><br>  
+> [!IMPORTANT]
+> A key difference between Level 2 and Level 3 capability in risk management is that at Level 3, techniques are appropriately applied.
+> <br><br>
 > It is not uncommon for risk management to be over-complicated in relation to the complexity of the work. For example, at Level 2, there may be an over-zealous identification of many minor risks, which can reduce the effectiveness of the function even though the basic goals are achieved. At Level 3, better weighting and analysis ensure that the effort and response planning are proportionate to the significance of the risks.
 
 
@@ -44,9 +54,9 @@ Topic: ''
     - Risk events are assessed in terms of their basic properties: **probability, impact, and timing**.
 
 - **Plan Responses**
-    
+
     - Risk responses are planned for significant risks.
-    
+
     - The activities required to implement these responses are adequately resourced.
 
 - **Implement Responses**
@@ -58,35 +68,35 @@ Topic: ''
 - At this level, risk management is performed according to a **defined, standard process** that is tailored to the context. The techniques are applied appropriately and consistently, and the process is integrated with the organisation's overall strategic approach to risk.
 
 - **Identify**
-    
+
     - A **range of techniques** (e.g., workshops, checklists, interviews) is used to identify appropriate threats and opportunities.
-    
+
     - The identification process is not a one-off activity; risks are **continually reviewed** throughout the life cycle.
 
 - **Assess**
-    
+
     - Risk assessment is conducted from a **number of perspectives**, including strategic, operational, commercial, and internal to the initiative.
-    
+
     - A range of **qualitative and quantitative techniques** (e.g., Probability-Impact Matrix, Monte Carlo analysis) is used _as appropriate_ for the nature of the risk and the complexity of the work.
-    
+
     - The **overall risk** of the project or programme is assessed and matched to the organisation’s stated **risk appetite**.
 
 - **Plan Responses**
-    
+
     - Risk responses are planned according to **organisational policies** that have been adapted as necessary for the specific context of the work.
-    
+
     - These response plans are reviewed throughout the life cycle.
-    
+
     - **All appropriate response types** are utilised for both threats and opportunities.
-    
+
     - Management team members with the **appropriate seniority** are assigned ownership of response activities.
-    
+
     - The responses are developed in line with the organisation’s **risk attitude**.
 
 - **Implement Responses**
-    
+
     - Risk responses are implemented in accordance with the formal risk response plan.
-    
+
     - The **effectiveness** of the implemented responses is actively **monitored**, and the results are fed back into revised plans and future risk assessments.
 
 
@@ -106,3 +116,16 @@ Topic: ''
 
 - **Q:** What is the key activity in "Implement Responses" at Level 3 that is not explicitly stated for Level 2?
     - **A:** The **effectiveness** of the implemented responses is actively **monitored**, and the results are fed back into revised plans.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Risk Management Overview]]
+- **Previous**: [[Risk Management]]
+- **Next**: [[Risk Management Plan]]
+
+### Related Concepts & Artefacts
+- [[Risk Management Plan]]
+- [[Risk Register]]
+- [[Manage Risk Competency|Manage Risk]]
+- [[Delivery Process]]
