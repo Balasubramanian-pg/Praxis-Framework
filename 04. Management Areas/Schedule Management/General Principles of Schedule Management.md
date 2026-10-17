@@ -1,17 +1,27 @@
 ---
-Title: Schedule Management 29283b71d8f380af9339d266734fea37
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Schedule Management 29283b71d8f380af9339d266734fea37.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Schedule Management"
+aliases:
+  - "Schedule Management"
+  - "General Principles of Schedule Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/schedule-management
+  - type/management-area
+pillar: "Knowledge"
+section: "Schedule Management"
+subarea: "Management"
+type: "management-area"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Schedule Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Schedule Management]]
+> **Pillar**: Knowledge | **Type**: `management-area`
 
 # Comprehensive Study Notes: Schedule Management
 
@@ -24,27 +34,27 @@ Topic: ''
 ### The Goals of Schedule Management
 
 - The primary goals of this function are to:
-    
+
     1. Determine realistic **timescales** for the work.
-    
+
     2. Calculate profiles of **resource demand** over time.
-    
+
     3. Present schedule reports in a format that is suitable for different stakeholders.
 
 ### The Schedule Management Procedure
 
 - The procedure for schedule management will vary with the context, but a typical high-level procedure includes the following steps:
-    
+
     1. **Plan**: Define the techniques and approaches that will be used for scheduling (e.g., what software to use, how to estimate).
-    
+
     2. **Initiate**: Ensure the necessary resources for scheduling (e.g., planners, software licenses) are acquired and mobilised.
-    
+
     3. **Define Activities**: Identify and define the work that is needed to deliver the objectives, often based on the outputs of scope management.
-    
+
     4. **Estimate Durations**: Estimate how long each activity will take.
-    
+
     5. **Develop Schedule**: Sequence the activities, apply resources and constraints, and calculate the overall timeline.
-    
+
     6. **Maintain Schedule**: Monitor progress against the schedule, update it with actuals, and re-forecast future dates as part of the control function.
 
 
@@ -53,9 +63,9 @@ Topic: ''
 ### Top-Down and Bottom-Up Approach
 
 - Scheduling involves both top-down and bottom-up principles.
-    
+
     - **Top-Down**: Within a portfolio or programme, work is first identified in large components (e.g., projects within a programme). This may identify top-level constraints (e.g., a deadline) that are passed down to the component projects.
-    
+
     - **Bottom-Up**: Detailed scheduling based on analytical models is then conducted at the project level, and the results of this detailed work are fed back up to the high-level programme or portfolio schedule.
 
 ### The Relationship with the Triple Constraint
@@ -63,9 +73,9 @@ Topic: ''
 - Schedule management is concerned with the **time** aspect of the triple constraint. It is therefore closely inter-related with **scope management** (what to deliver) and **financial management** (the cost to deliver it).
 
 - The relationship between these three elements dictates the scheduling approach:
-    
+
     - **Traditional (e.g., construction)**: Scope is defined first, and the time and cost are derived from that defined scope.
-    
+
     - **Agile**: Time (e.g., a sprint) and/or cost (e.g., the team size) may be the primary constraints, and the scope delivered is dependent upon the time and cost available.
 
 ### "What-If?" Scheduling
@@ -128,3 +138,15 @@ Topic: ''
 
 - **Q:** What is "capacity planning" and why is it important at the portfolio level?
     - **A:** It is the process of ensuring that the necessary resources can be procured to deliver the portfolio. It is important for avoiding resource bottlenecks and conflicting demands across the entire organisation.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Schedule Management Overview]]
+- **Next**: [[Manage The Schedule]]
+
+### Related Concepts & Artefacts
+- [[Schedule Management Plan]]
+- [[Time Scheduling]]
+- [[Delivery Plan]]
+- [[Manage The Schedule Competency|Manage The Schedule]]
