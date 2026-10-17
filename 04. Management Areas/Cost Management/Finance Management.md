@@ -1,45 +1,54 @@
 ---
-Title: Finance Management 29283b71d8f380b29168ecd52a68f9e2
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Finance Management 29283b71d8f380b29168ecd52a68f9e2.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Finance Management"
+aliases:
+  - "Finance Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/cost-management
+  - type/management-area
+pillar: "Knowledge"
+section: "Cost Management"
+subarea: "Management"
+type: "management-area"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Finance Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Cost Management]]
+> **Pillar**: Knowledge | **Type**: `management-area`
 
 # Comprehensive Study Notes: Financial Management Capability Maturity
 
 ## Overall Goal of Financial Management
 
 - The function of Financial Management should:
-    
+
     - Estimate the cost of achieving the objectives.
-    
+
     - Assess the viability of achieving the objectives.
-    
+
     - Secure funds and manage their release throughout the life cycle.
-    
+
     - Set up and run appropriate financial systems.
-    
+
     - Monitor and control expenditure.
 
-> [!IMPORTANT]  
-> This is a summary-level capability that combines the individual capabilities for the functions that make up financial management (Estimating, Investment Appraisal, Funding, Budgeting, and Cost Control).  
-> <br><br>  
-> This summary is most relevant for projects that are entirely funded from a single source and use existing corporate financial control systems.  
-> <br><br>  
+> [!IMPORTANT]
+> This is a summary-level capability that combines the individual capabilities for the functions that make up financial management (Estimating, Investment Appraisal, Funding, Budgeting, and Cost Control).
+> <br><br>
+> This summary is most relevant for projects that are entirely funded from a single source and use existing corporate financial control systems.
+> <br><br>
 > The more detailed, subsidiary capability models for each function should be used in more complex situations, such as where:
-> 
+>
 > - Funding is external or comes from multiple sources.
-> 
+>
 > - The business case requires more sophisticated investment appraisal.
-> 
+>
 > - The scale of the work requires its own dedicated financial control systems.
 
 
@@ -48,9 +57,9 @@ Topic: ''
 - At this level, financial management is **performed and managed**. The goals are generally achieved, but the processes may be basic and rely heavily on existing corporate systems that may not be ideal for project accounting.
 
 - **Estimate Costs**
-    
+
     - Top-down estimates are performed early in the life cycle (e.g., using analogy or expert judgement).
-    
+
     - These are refined with bottom-up estimates as detailed specifications become available.
 
 - **Investment Appraisal**
@@ -60,9 +69,9 @@ Topic: ''
     - Routine, standard sources of internal funding are identified and confirmed.
 
 - **Develop Budget**
-    
+
     - An overall budget for the work is documented.
-    
+
     - Progress reports track actual expenditure against this single, high-level budget.
 
 - **Financial Control**
@@ -83,9 +92,9 @@ Topic: ''
     - A **variety of funding mechanisms** (e.g., internal, external, joint funding) is considered, and the optimum approach is consciously chosen based on an analysis of the options.
 
 - **Develop Budget**
-    
+
     - The budget is more sophisticated. **Separate budgets** are identified for different aspects of the work (e.g., by work package or by cost type).
-    
+
     - Formal budgets for **contingency** (for known risks) and **management reserves** (for unknown risks) are used.
 
 - **Financial Control**
@@ -105,3 +114,16 @@ Topic: ''
 
 - **Q:** What level of detail does financial control at Level 3 provide that Level 2 does not?
     - **A:** Level 3 financial systems can track costs against specific categories as defined in a **Cost Breakdown Structure (CBS)**, whereas Level 2 tracks against a single overall budget.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Cost Management Overview]]
+- **Previous**: [[Develop Budgets And Control Costs]]
+- **Next**: [[Financial Management]]
+
+### Related Concepts & Artefacts
+- [[Finance Management Plan]]
+- [[Budgeting and cost control]]
+- [[Investment Appraisal]]
+- [[Manage The Business Case]]
