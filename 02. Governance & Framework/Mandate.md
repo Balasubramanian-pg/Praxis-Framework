@@ -1,3 +1,28 @@
+---
+title: "The Discipline of the Mandate"
+aliases:
+  - "The Discipline of the Mandate"
+  - "Mandate"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance-framework
+  - type/concept
+pillar: "Knowledge"
+section: "Governance & Framework"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance & Framework]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
 # The Discipline of the Mandate
 
 ## Introduction
@@ -49,3 +74,15 @@ Humility is required here. The mandate acknowledges that we do not yet know the 
 ## Closing Reflection
 
 The mandate is the "Logos" of the project—the word that calls order forth from potential. It establishes the aim, the authority, and the agent. It is the act of will that declares: "This value is worth pursuing, and we commit ourselves to its realization." Without it, there is no direction, only drift.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance & Framework Overview]]
+- **Previous**: [[Governance]]
+- **Next**: [[Plan Governance]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
