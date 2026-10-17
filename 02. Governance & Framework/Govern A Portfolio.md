@@ -1,3 +1,28 @@
+---
+title: "The Discipline of Portfolio Order and Value"
+aliases:
+  - "The Discipline of Portfolio Order and Value"
+  - "Govern A Portfolio"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance-framework
+  - type/concept
+pillar: "Knowledge"
+section: "Governance & Framework"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance & Framework]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
 # The Discipline of Portfolio Order and Value
 
 ## Introduction
@@ -49,3 +74,15 @@ When the data is aggregated, the patterns of failure become visible. This allows
 ## Closing Reflection
 
 Portfolio governance is the exercise of collective wisdom. It is the discipline of aligning action with intent, of recognizing the constraints of reality, and of making the difficult sacrifices necessary for survival. It is the architecture that prevents the organization from being torn apart by its own ambition. It ensures that we do not merely run fast, but that we run in the right direction.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance & Framework Overview]]
+- **Previous**: [[Assurance]]
+- **Next**: [[Governance]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
