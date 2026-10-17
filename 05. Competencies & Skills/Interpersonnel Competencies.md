@@ -1,17 +1,26 @@
 ---
-Title: Interpersonnel Competencies 29283b71d8f380e785bace1f291e3a65
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Interpersonnel Competencies 29283b71d8f380e785bace1f291e3a65.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Interpersonnel Competencies"
+aliases:
+  - "Interpersonnel Competencies"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/competencies-skills
+  - type/competency
+pillar: "Competence"
+section: "Competencies & Skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Interpersonnel Competencies
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Competencies & Skills]]
+> **Pillar**: Competence | **Type**: `competency`
 
 # Comprehensive Study Notes: Interpersonal Competencies
 
@@ -34,21 +43,21 @@ Topic: ''
 
 ### Naming Convention: Function vs. Competency
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The titles of the competencies reflect the fact that competency is about the active implementation of the functions, rather than simply describing what the functions are.
 
 - This is illustrated by a simple change in the naming convention from a noun (the function) to a verb (the competency).
-    
+
     - The function is called **Conflict Management**.
-    
+
     - The corresponding competency is called **Manage Conflict**.
-    
+
     - The function is called **Leadership**.
-    
+
     - The corresponding competency is called **Lead**.
-    
+
     - The function is called **Communication**.
-    
+
     - The corresponding competency is called **Communicate**.
 
 - This shift emphasizes that a competency is not about knowing the theory of conflict management; it is about being able to _actually manage conflict_ effectively in a real-world P3 environment.
@@ -74,3 +83,15 @@ Topic: ''
 
 - **Q:** Are interpersonal skills like leadership and communication unique to P3 management?
     - **A:** No, they are universal skills. The Praxis competencies focus on how these skills are specifically applied within the unique context of projects, programmes, and portfolios.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Competencies & Skills Overview]]
+- **Previous**: [[Interpersonal Skills]]
+- **Next**: [[Leadership]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
