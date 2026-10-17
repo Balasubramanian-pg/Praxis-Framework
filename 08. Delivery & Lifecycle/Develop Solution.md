@@ -1,23 +1,50 @@
 ---
-Title: Develop solution 29183b71d8f38086b11ae6cf36acfa24
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Develop solution 29183b71d8f38086b11ae6cf36acfa24.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Develop Solution Competency"
+aliases:
+  - "Solution Development Skill"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/scope-management
+  - type/competency
+pillar: "Competence"
+section: "Scope Management"
+subarea: "Delivery Competencies"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2059.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Scope Management]]
+> **Pillar**: Competence | **Type**: `competency`
 
-# Develop solution
+# Develop Solution Competency
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2059.svg)Area|Competence|
-|![](arrow-circle-down_gray%2059.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2059.svg)Section|Manage scope|
-|![](arrow-circle-down_gray%2059.svg)Sub Area|Management competencies|
+> [!SUMMARY] Overview
+> Demonstrates the capability to evaluate alternative technical options and design optimal deliverable solutions.
+
+## Purpose
+The **Develop Solution** competency demonstrates the ability to translate business requirements into viable technical and operational concepts.
+
+## Performance Criteria
+1. Analyze user needs and operational constraints.
+2. Generate and evaluate alternative design solutions (feasibility, cost, risk).
+3. Select the optimal approach and construct architectural specifications.
+4. Validate solutions through prototyping and user testing.
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Scope Management Overview]]
+- **Previous**: [[Develop Products]]
+- **Next**: [[Identify A Project Or Programme]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
