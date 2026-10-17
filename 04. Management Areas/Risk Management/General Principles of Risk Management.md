@@ -1,17 +1,27 @@
 ---
-Title: Risk Management 29283b71d8f3803897c9eed136f7aeca
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Risk Management 29283b71d8f3803897c9eed136f7aeca.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Risk Management"
+aliases:
+  - "Risk Management"
+  - "General Principles of Risk Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/risk-management
+  - type/management-area
+pillar: "Knowledge"
+section: "Risk Management"
+subarea: "Management"
+type: "management-area"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Risk Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Risk Management]]
+> **Pillar**: Knowledge | **Type**: `management-area`
 
 # Comprehensive Study Notes: Risk Management
 
@@ -22,13 +32,13 @@ Topic: ''
 ### The Goals of Risk Management
 
 - The primary goals of this function are to:
-    
+
     1. Ensure that the levels of **overall risk** within a project, programme, or portfolio are compatible with organisational objectives and risk appetite.
-    
+
     2. Ensure that individual **risks and their responses** are identified and managed.
-    
+
     3. Minimise the impact of **threats** to the objectives.
-    
+
     4. Optimise the realisation of **opportunities** within the scope of the work.
 
 ### Understanding Risk: Events vs. Uncertainty
@@ -36,19 +46,19 @@ Topic: ''
 - Risk is inherent in all P3 work because each initiative is a unique combination of objectives, solutions, people, and context. Overall risk has two main components: risk events and uncertainty.
 
 - **Risk Event**:
-    
+
     - This is an **identifiable event** that, _if it occurs_, will have an impact on the objectives. The key phrase is "if it occurs."
-    
+
     - Risk events are viewed as either negative or positive:
-        
+
         - **Threat (Negative Risk)**: An event that will have an _adverse_ effect on the objectives if it occurs.
-        
+
         - **Opportunity (Positive Risk)**: An event that can _enhance_ the value of the work or its objectives if it occurs.
 
 - **Uncertainty**:
-    
+
     - This relates to a form of risk that **cannot be identified as a specific risk event**.
-    
+
     - **Examples**: Uncertainty about the performance or reliability of a component when using innovative technology. At a more mundane level, every set of plans has a degree of uncertainty because they are based on estimates of varying accuracy.
 
 
@@ -63,35 +73,35 @@ Topic: ''
     - This step is performed once the work is approved. It ensures the necessary resources needed to manage risk are mobilised.
 
 3. **Identify**:
-    
+
     - This is the first specific step, where risk events and areas of uncertainty are identified. These are documented in the **risk register**.
-    
+
     - Techniques include brainstorming, checklists, interviews, and reviewing lessons learned.
-    
+
     - **The greatest fault** of many P3 managers is to take this step too far. The potential list of risk events is literally endless. Experienced managers are able to sift out the risks that genuinely need to be managed from those that can be left as "background risk."
 
 4. **Assess**:
-    
+
     - The nature of the identified risks is assessed, and, where possible, their potential effect on the objectives is estimated.
-    
+
     - Techniques fall into two main groups:
-        
+
         - **Qualitative Risk Techniques**: Assessing risk based on descriptive scales (e.g., High, Medium, Low probability and impact).
-        
+
         - **Quantitative Risk Techniques**: Using numerical methods to assess risk (e.g., Expected Monetary Value, Monte Carlo analysis).
 
 5. **Plan Responses**:
-    
+
     - Once the risks are understood, the management team decides on how to respond.
-    
+
     - There are various response strategies for both threats (e.g., Avoid, Transfer, Reduce, Accept) and opportunities (e.g., Exploit, Enhance, Share, Accept).
-    
+
     - The planned responses are added to the risk register.
 
 6. **Implement Responses**:
     - Depending on the nature of the planned responses, some are implemented immediately as part of the delivery plans (proactive responses), while others may only come into effect if and when the risk occurs (contingent responses).
 
-> [IMPORTANT]  
+> [IMPORTANT]
 > The procedure is iterative. For example, the assessment of a risk or the planning of a response may lead to the identification of new, secondary risks.
 
 
@@ -103,7 +113,7 @@ Topic: ''
 
 - P3 managers need to identify and manage the behavioural influences of both individuals and groups on the risk procedure.
 
-> [NOTE]  
+> [NOTE]
 > The management of general health and safety risks (hazards) is usually excluded from P3 risk management, as this is traditionally handled by a separate, specialist function within the organisation.
 
 
@@ -112,13 +122,13 @@ Topic: ''
 - The fundamental nature of risk and the principles used to manage it do not vary significantly between projects, programmes, and portfolios. However, the specifics do vary in line with the complexity of the work.
 
 - **As work becomes more complex**:
-    
+
     - Risk events become more numerous and diverse.
-    
+
     - Uncertainty becomes a more influential factor.
-    
+
     - Management of the work becomes distributed (programmes have projects, portfolios have programmes, etc.).
-    
+
     - As a consequence, **risk management also becomes distributed**. This is the key difference between risk management in smaller projects and more complex work.
 
 ### The Challenge of Distributed Risk Management
@@ -134,9 +144,9 @@ Topic: ''
 - All parts of the programme need to work together to understand which risk events should be recorded and managed in the **programme risk register** and which should be recorded and managed at a more "local" level (e.g., a project risk register).
 
 - The basis for this decision is the analysis of the risk and, in particular, the **objectives the risk affects**.
-    
+
     - Risk that has a purely local effect on project objectives can clearly be managed at the project level.
-    
+
     - Risk that directly impacts the overall programme objectives (e.g., the realisation of a benefit) should be managed at the programme level.
 
 - The teams must also be aware of how the impact of a risk can change over time, potentially causing it to move between levels (escalation or de-escalation).
@@ -160,3 +170,15 @@ Topic: ''
 
 - **Q:** What is the primary basis for deciding whether a risk should be managed at the project level or escalated to the programme level?
     - **A:** The **objectives the risk affects**. If it only affects local project objectives, it can be managed at the project level. If it affects overall programme objectives (like a benefit), it should be managed at the programme level.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Risk Management Overview]]
+- **Next**: [[Manage Risk]]
+
+### Related Concepts & Artefacts
+- [[Risk Management Plan]]
+- [[Risk Register]]
+- [[Manage Risk Competency|Manage Risk]]
+- [[Delivery Process]]
