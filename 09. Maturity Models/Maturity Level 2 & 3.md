@@ -1,17 +1,26 @@
 ---
-Title: Maturity Level 2 & 3 29283b71d8f380a7a7efd41b642e4e47
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Maturity Level 2 & 3 29283b71d8f380a7a7efd41b642e4e47.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Maturity Level 2 & 3"
+aliases:
+  - "Maturity Level 2 & 3"
+tags:
+  - praxis-framework
+  - pillar/capability-maturity
+  - section/maturity-models
+  - type/maturity
+pillar: "Capability Maturity"
+section: "Maturity Models"
+subarea: "Management"
+type: "maturity"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Maturity Level 2 & 3
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Maturity Models]]
+> **Pillar**: Capability Maturity | **Type**: `maturity`
 
 # Comprehensive Study Notes: Maturity Levels 2 and 3
 
@@ -24,17 +33,17 @@ Topic: ''
 
 ## The Foundational Principle of Maturity
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > To reach maturity levels 2 and 3, an organisation must first demonstrate a corresponding level of capability in the relevant individual functions. Maturity is then achieved by the ability to co-ordinate and integrate these capable functions within each of the relevant life cycle processes.
-> 
+>
 > In simple terms: **Maturity = Capability + Integration via Processes**
 
 ### The Maturity Hierarchy
 
 - Maturity is built from the ground up. There is a clear hierarchical dependency:
-    
+
     - To reach a level of maturity for **portfolio management**, the component programmes and projects must be managed at a similar level of maturity.
-    
+
     - To reach a level of maturity for **programme management**, the component projects must be managed at a similar level of maturity.
 
 
@@ -47,10 +56,7 @@ Topic: ''
 |**Goals**|The goals of the process are achieved, although some elements of "Level 1 heroics" may still be observed.|The goals of the process are achieved consistently through the effective and efficient application of the process itself.|
 |**Functions**|All functions used to conduct the processes are performed to at least **capability level 2**.|All functions used to conduct the processes are performed to at least **capability level 3**.|
 |**Assurance**|The process is checked to ensure that it is being performed **effectively** (i.e., it is achieving its goals).|The process is checked to ensure it is based on **organisational standards**, has been **tailored** to the context, and is being performed **efficiently**.|
-|**Improvement**|Improvements to processes and procedures are **opportunistic and informal**.|Processes and procedures are **regularly reviewed**. Improvements are made as necessary and are **formally disseminated** throughout the P3 management community.|
-
-
-## Detailed Explanation of Attributes
+|**Improvement**|Improvements to processes and procedures are **opportunistic and informal**.|Processes and procedures are **regularly reviewed**. Improvements are made as necessary and are **formally disseminated** throughout the P3 management community.| ## Detailed Explanation of Attributes
 
 ### Goals
 
@@ -93,3 +99,15 @@ Topic: ''
 
 - **Q:** How does process improvement differ between Level 2 and Level 3?
     - **A:** At Level 2, improvement is opportunistic and informal. At Level 3, it is a regular, formal activity where improvements are systematically captured and disseminated throughout the organisation.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Maturity Models Overview]]
+- **Previous**: [[Maturity Level 1]]
+- **Next**: [[Maturity Level 4 & 5]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
