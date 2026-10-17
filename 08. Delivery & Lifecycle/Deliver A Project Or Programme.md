@@ -1,23 +1,54 @@
 ---
-Title: Deliver a project or programme 29183b71d8f38078b975e212f95743e6
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Deliver a project or programme 29183b71d8f38078b975e212f95743e6.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Deliver A Project Or Programme Process"
+aliases:
+  - "Delivery Execution Process"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/delivery-process
+  - type/process
+pillar: "Method"
+section: "Delivery Process"
+subarea: "Process"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2054.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Delivery Process]]
+> **Pillar**: Method | **Type**: `process`
 
-# Deliver a project or programme
+# Deliver A Project Or Programme Process
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2054.svg)Area|Competence|
-|![](arrow-circle-down_gray%2054.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2054.svg)Section|Process competencies|
-|![](arrow-circle-down_gray%2054.svg)Sub Area|Management competencies|
+> [!SUMMARY] Overview
+> The operational execution process where work packages are managed and controlled.
+
+## Overview
+The **Deliver A Project Or Programme** process represents the day-to-day management engine of delivery.
+
+## Key Steps
+1. **Authorise Work**: Delegate work packages with defined tolerances.
+2. **Monitor & Track**: Collect checkpoint reports and consolidate performance actuals.
+3. **Control & Escalate**: Take corrective actions; raise exception reports for tolerance breaches.
+4. **Accept Deliverables**: Validate quality inspection results before signing off completed work.
+
+## Links
+See [[Delivery Process]] and [[Deliver a Project or Programme Competency]].
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Delivery Process Overview]]
+- **Previous**: [[Define A Project Or Programme]]
+- **Next**: [[Delivery]]
+
+### Related Concepts & Artefacts
+- [[Identification Process]]
+- [[Definition Process]]
+- [[Delivery Process]]
+- [[Closure Process]]
