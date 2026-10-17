@@ -1,17 +1,26 @@
 ---
-Title: Setting 29283b71d8f380ff9691ffade70ff86f
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Setting 29283b71d8f380ff9691ffade70ff86f.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Setting"
+aliases:
+  - "Setting"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/concept
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Setting
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: The Setting in P3 Management
 
@@ -24,12 +33,12 @@ Topic: ''
 - The setting is the primary factor that determines how the work will be managed and governed. It is the starting point for strategic-level P3 management.
 
 - It comprises two main elements:
-    
+
     - **The inherent nature of the work**, which is collectively defined by its **complexity**.
-    
+
     - **The surrounding environment**, which consists of external factors that influence the work.
 
-> [!NOTE]  
+> [!NOTE]
 > Understanding and analyzing the setting is the crucial first step in P3 management. The choice of management methods, governance structures, and the required competencies of the team all depend on a thorough assessment of the setting.
 
 
@@ -42,40 +51,40 @@ Topic: ''
 ### Spectrum of Complexity
 
 - **Low Complexity (Clear and Defined)**:
-    
+
     - **Objectives**: The goals are clear, specific, measurable, and well-defined. There is little to no ambiguity about what needs to be delivered.
-    
+
     - **Methods**: The approach to achieving the objectives involves tried-and-tested methods, familiar processes, and established technology.
-    
+
     - **Example**: Constructing a standard residential house using conventional building techniques. The output is clear, and the delivery process is well-understood.
 
 - **High Complexity (Ambiguous and Uncertain)**:
-    
+
     - **Objectives**: The goals may be vague, ambiguous, or evolve over time. There might be conflicting expectations among stakeholders.
-    
+
     - **Methods**: The path to achieving the objectives is uncertain due to the use of innovative or unfamiliar technology, novel processes, or a high degree of unpredictability.
-    
+
     - **Example**: Developing a first-of-its-kind AI-driven medical diagnosis tool. The final capabilities are not fully known, and the technology is cutting-edge, leading to significant uncertainty.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Complexity is not just about the size or cost of the work. A small project can be highly complex if it involves new technology and ambiguous goals, while a large project can be relatively simple if it is repetitive and uses standard procedures.
 
 ### Factors Contributing to Complexity
 
 - **Structural Complexity**: The number of different components and the relationships between them. This includes:
-    
+
     - The number of tasks and their interdependencies.
-    
+
     - The number and diversity of stakeholders involved.
-    
+
     - The composition of the technical systems and organizational structures.
 
 - **Dynamic Complexity**: The unpredictable behavior of the system over time. This is driven by:
-    
+
     - Feedback loops and non-linear interactions.
-    
+
     - Changes in the environment or requirements during the lifecycle.
-    
+
     - Human behavior and decision-making under pressure.
 
 - **Innovation-Related Complexity**: Arises from the degree of technical innovation. It involves the learning required to work with unfamiliar outcomes, approaches, and tools.
@@ -99,37 +108,37 @@ Topic: ''
 ### Key Environmental Factors
 
 - **Organizational**:
-    
+
     - The structure, culture, and P3 management maturity of the host organization.
-    
+
     - The relationship and interfaces with the permanent, "business-as-usual" parts of the organization.
-    
+
     - The availability of resources and competition for them.
 
 - **Commercial**:
-    
+
     - The contractual relationships with suppliers, partners, and clients.
-    
+
     - The procurement strategy and financial arrangements.
-    
+
     - Market conditions and competitive pressures.
 
 - **Stakeholders**:
-    
+
     - The number of stakeholders and the diversity of their interests, influence, and expectations.
-    
+
     - The political landscape and informal strategies that may impact the work.
 
 - **Geographical**:
-    
+
     - The physical location of the work, team members, and stakeholders.
-    
+
     - Challenges related to different time zones, cultures, and languages in distributed teams.
 
 - **Regulatory and Legal**:
     - Applicable laws, industry standards, and government regulations that must be adhered to.
 
-> [!WARNING]  
+> [!WARNING]
 > The environment is often dynamic and can change unexpectedly. A stable organizational environment can become turbulent due to a merger, or new government regulations can suddenly impact a project's scope. Continuous environmental scanning is a critical management activity.
 
 ### Practical Example: Environmental Impact
@@ -137,13 +146,13 @@ Topic: ''
 - **Project A (Simple Environment)**: An internal IT upgrade within a single, co-located department of a supportive company. The organizational, stakeholder, and geographical factors are straightforward and contained.
 
 - **Project B (Complex Environment)**: A major infrastructure project involving a public-private partnership (P3). The environment is highly complex due to:
-    
+
     - **Organizational**: Interfaces with multiple government agencies and private companies.
-    
+
     - **Stakeholder**: The need to manage politicians, public interest groups, contractors, and investors.
-    
+
     - **Regulatory**: Compliance with extensive environmental, safety, and public procurement laws.
-    
+
     - **Commercial**: Complex contracts that allocate financial and operational risks.
 
 ### Flashcard Q&A
@@ -175,7 +184,7 @@ Topic: ''
 - **Portfolio**: Represents the highest level of aggregation. It is a collection of projects and programmes that are grouped to achieve an organization's strategic business objectives. The components may not be related to each other except at a strategic level.
     - **Focus**: Optimizing investment, managing resources across all initiatives, and ensuring alignment with overall business strategy.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Once the decision is made to classify work as a project, programme, or portfolio, that classification itself becomes a fundamental part of the context. All subsequent applications of management functions, processes, and competencies (such as those outlined in the Praxis Framework) are tailored to fit that specific structure.
 
 ### Flashcard Q&A
@@ -185,3 +194,15 @@ Topic: ''
 
 - **Q:** At what point does the classification of work (as a project, programme, or portfolio) become part of its context?
     - **A:** As soon as the initial decision is made early in the lifecycle. This decision shapes the entire governance and management approach that follows.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[Risk Context]]
+- **Next**: [[Sponsorship Process]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
