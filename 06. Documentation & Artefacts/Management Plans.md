@@ -1,17 +1,26 @@
 ---
-Title: Management Plans 29283b71d8f38026bb1ac8046f486933
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Management Plans 29283b71d8f38026bb1ac8046f486933.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Management Plans"
+aliases:
+  - "Management Plans"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/documentation-artefacts
+  - type/artefact
+pillar: "Method"
+section: "Documentation & Artefacts"
+subarea: "Management"
+type: "artefact"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Management Plans
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Documentation & Artefacts]]
+> **Pillar**: Method | **Type**: `artefact`
 
 # Comprehensive Study Notes: Management Plans
 
@@ -27,7 +36,7 @@ Topic: ''
 
 - They provide the "rulebook" for that area of management.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The principle behind having management plans is simply that there are many functions that need to be managed, and it is important to think about and agree on how that will be done. The range and detail of management plans should always be consistent with the complexity of the work.
 
 ### Timing of Creation
@@ -41,11 +50,11 @@ Topic: ''
 - It may seem odd that high-level scope and delivery documents are produced in the **identification process**, seemingly _before_ the management plans that govern them are created in the definition process.
 
 - This is resolved in a mature organisation:
-    
+
     - **Standard Forms**: The organisation will have **standard, generic management plans** that exist as templates.
-    
+
     - **Identification Phase**: Competent members of the identification team use these standard documents as a guide for their work and documentation during the identification process.
-    
+
     - **Definition Phase**: During the definition process, these standard governance documents are then formally **tailored** to the specific context of the project or programme, providing detailed guidance for all subsequent work.
 
 
@@ -56,23 +65,23 @@ Topic: ''
 ### 1. Policy Section
 
 - This section sets out the high-level rules and principles for the function. It typically includes sections on:
-    
+
     - **Roles and Responsibilities**: Who is responsible for what within this function.
-    
+
     - **Information Management**: How information related to this function will be created, stored, and distributed.
-    
+
     - **Assurance**: How the application of this function will be assured.
-    
+
     - **Budget**: Any specific budget allocated for performing the function itself (e.g., for risk management software or workshops).
-    
+
     - **Interfaces**: How this function interacts with other management functions.
 
 ### 2. Procedure Section
 
 - This section describes the practical application of the policy. It typically includes:
-    
+
     - A definition of the **steps to be used** in performing the function (e.g., the steps of the risk management procedure).
-    
+
     - Detailed recommendations on the **tools and techniques** to be used in each step.
 
 
@@ -84,7 +93,7 @@ Topic: ''
 
 - Conversely, a single, highly complex function may be sub-divided into multiple, more detailed plans.
 
-> [!WARNING]  
+> [!WARNING]
 > There is a danger that the list of potential management plans can appear highly bureaucratic and time-consuming to prepare. This is a misunderstanding of their purpose. A simple, one-page risk management plan for a small project is infinitely better than no plan at all. The goal is to apply the right level of thought and documentation for the level of complexity.
 
 
@@ -104,3 +113,15 @@ Topic: ''
 
 - **Q:** What is the most important principle to remember when deciding on the number and detail of management plans for a project?
     - **A:** That the range and detail of the plans should be consistent with, and appropriate to, the complexity of the work.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Documentation & Artefacts Overview]]
+- **Previous**: [[Manage The Organisation]]
+- **Next**: [[Organisation Management Plan]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
