@@ -1,26 +1,26 @@
 ---
-Title: Leadership 29183b71d8f38000b462e7e3b4153ef0
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Leadership 29183b71d8f38000b462e7e3b4153ef0.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Leadership"
+aliases:
+  - "Leadership"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/interpersonal-skills
+  - type/competency
+pillar: "Knowledge"
+section: "Interpersonal skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2087.svg)
-
-# Leadership
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2087.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2087.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%2087.svg)Section|Interpersonal skills|
-|![](arrow-circle-down_gray%2087.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Interpersonal skills]]
+> **Pillar**: Knowledge | **Type**: `competency`
 
 # Comprehensive Study Notes: Leadership
 
@@ -33,9 +33,9 @@ Topic: ''
 ### The Goals of Leadership
 
 - The primary goals of a leader in a P-3 context are to:
-    
+
     1. Provide **focus** and promote **commitment** to the objectives of the work.
-    
+
     2. **Inspire** team members to successfully achieve those objectives.
 
 ### Transactional vs. Transformational Leadership
@@ -43,19 +43,19 @@ Topic: ''
 - Leadership theory often revolves around the relationship between the leader and their followers. The evolution from McGregor's Theory X and Theory Y managers leads to the concepts of transactional and transformational leaders.
 
 - **Transactional Leadership**:
-    
+
     - This is an **exchange process**. The leader ensures that requirements are agreed upon and that the rewards and penalties for achievement (or lack thereof) are clearly understood.
-    
+
     - It is about setting objectives, communicating plans, and explaining what team members will receive in return for their effort.
-    
+
     - This approach primarily addresses the first goal of leadership (providing focus and commitment) and is reflected in P3 functions like requirements management, contract management, and the definition process.
 
 - **Transformational Leadership**:
-    
+
     - This is a more developmental approach. The leader does everything possible to help people succeed in their own right and become leaders themselves.
-    
+
     - They help people transform themselves and achieve more than was originally intended.
-    
+
     - This approach primarily addresses the second goal of leadership (inspiring the team) and is reflected in the many leadership models that link the style of the leader to the development and maturity of the team being led.
 
 
@@ -64,17 +64,17 @@ Topic: ''
 - The temporary nature of the P3 environment means teams come together for a specific purpose and are then disbanded. This dynamic context requires an adaptable leadership style.
 
 - **Situational Leadership**:
-    
+
     - Models of teamwork (like Tuckman's "forming, storming, norming, performing") show that teams go through distinct development stages.
-    
+
     - Leadership models (like Hersey and Blanchard's Situational Leadership or Blake and Mouton's Managerial Grid) show how the leader’s style must adapt in parallel with the progression of the team.
-    
+
     - For example, a new team may need a more directive style, while a mature, high-performing team requires a more supportive, delegating style. This is the essence of **situational leadership**.
 
 - **Individual Motivation**:
-    
+
     - Teams are made up of individuals, and different individuals are motivated by different things.
-    
+
     - The P3 manager needs to understand the basic principles of motivation (explained in models like Maslow's Hierarchy of Needs and Hertzberg's Two-Factor Theory) to understand both the individuals in the team and their collective development stage.
 
 - **The Life Cycle**:
@@ -83,12 +83,12 @@ Topic: ''
 - **Action-Centred Leadership**:
     - John Adair’s model brings these aspects together, looking at how a leader must constantly balance the needs of the **Task** (the objectives), the **Team**, and the **Individual**.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Ultimately, the position of leader is "granted" by followers who make a conscious decision to follow. That decision will be influenced by the leader using an appropriate style that takes account of the situation, the task, and the readiness of the people to follow. An individual's readiness to follow will also depend on their perception of the leader's "power" (e.g., expert power, legitimate power, referent power).
 
 ### The Challenge for the P3 Manager
 
-> [!WARNING]  
+> [!WARNING]
 > Every individual has their own preferred, natural style of leadership. By far the hardest part of leadership for a P3 manager is having to consciously exhibit different styles of leadership for different teams at different phases of the life cycle, most of which will not be their preferred style.
 
 
@@ -121,13 +121,13 @@ Topic: ''
 ### Programme Leadership Style
 
 - The nature of a programme influences the required leadership style:
-    
+
     - The objectives are more **visionary and fluid** than a project's concrete specifications. A vision is more difficult to communicate and requires a different leadership approach.
-    
+
     - Many of the people who need to be led are themselves **leaders** (project managers, business change managers). A programme manager must establish credibility with a team of leaders, especially when the needs of the programme conflict with the needs of an individual project.
-    
+
     - **Change management** affects a wide range of stakeholders, requiring a leadership style based on influence and communication.
-    
+
     - A programme manager is less likely to gain authority through "expert power" (as they cannot be an expert in all the component projects) and more through visionary leadership ("charisma" or "referent" power).
 
 ### Portfolio Leadership
@@ -157,3 +157,15 @@ Topic: ''
 
 - **Q:** How does the required leadership style change from a project to a programme?
     - **A:** It becomes less about technical expertise and more about being visionary, leading other leaders (the project and business change managers), and managing change across a wide range of stakeholders.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Interpersonal skills Overview]]
+- **Previous**: [[Interpersonnel Competencies]]
+- **Next**: [[Management Competencies]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
