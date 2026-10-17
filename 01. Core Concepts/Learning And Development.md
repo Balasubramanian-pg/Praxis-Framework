@@ -1,26 +1,27 @@
 ---
-Title: Learning and development 29183b71d8f380829a35fb896712d075
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Learning and development 29183b71d8f380829a35fb896712d075.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Learning and development"
+aliases:
+  - "Learning and development"
+  - "Learning And Development"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/professionalism
+  - type/concept
+pillar: "Knowledge"
+section: "Professionalism"
+subarea: "Context"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2088.svg)
-
-# Learning and development
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2088.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2088.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2088.svg)Section|Professionalism|
-|![](arrow-circle-down_gray%2088.svg)Sub Area|Context|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Professionalism]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Learning and Development
 
@@ -31,11 +32,11 @@ Topic: ''
 ### The Goals of Learning and Development
 
 - In an organisational context, the primary goals of learning and development are to:
-    
+
     - Develop **competent individuals** who can perform their roles effectively.
-    
+
     - Encourage an environment and culture of **Continual Professional Development (CPD)**.
-    
+
     - Promote the direct contribution of learning and development to the overall **capability maturity** of the organisation.
 
 ### The Link to Capability Maturity
@@ -44,7 +45,7 @@ Topic: ''
 
 - The framework's defined competencies, which list specific performance and knowledge criteria, are directly aligned with the definitions of capability maturity levels.
 
-> [!NOTE]  
+> [!NOTE]
 > This alignment is crucial. It allows the development of individuals and the development of the organisation to progress simultaneously and in a coordinated way. As individuals become more competent according to the framework, the organisation's overall capability maturity level increases.
 
 ### Identifying Learning Needs
@@ -100,13 +101,13 @@ Topic: ''
 - Organisations need to recognise that supporting CPD for staff is an overarching principle for success.
 
 - Individuals may be part of a single project, programme, or portfolio for several years, and their long-term welfare and development need to be managed accordingly. This requires:
-    
+
     - Appropriate staff induction.
-    
+
     - Clear career development plans.
-    
+
     - Regular skills needs analysis.
-    
+
     - Provision of development and training opportunities.
 
 
@@ -119,13 +120,13 @@ Topic: ''
 ### The CPD Cycle
 
 - CPD, in its most basic form, involves a continuous cycle of four key activities:
-    
+
     1. **Identifying** current and future professional development needs.
-    
+
     2. **Setting** specific and measurable learning objectives.
-    
+
     3. **Planning** and undertaking activities to support that development.
-    
+
     4. **Recording** the activities undertaken and the achievements gained.
 
 ### The Role of Professional Bodies
@@ -139,7 +140,7 @@ Topic: ''
 
 ## A Dynamic Approach
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The learning and development needs of organisations, teams, and individuals are in a constant state of flux. They are continuously changing as everyone attempts to meet the new challenges and competitive forces of the marketplace. This reality requires a dynamic and flexible approach to learning and development, using all the tools and methods available.
 
 
@@ -159,3 +160,15 @@ Topic: ''
 
 - **Q:** What is the role of the P3 manager in their team's learning and development?
     - **A:** To provide an environment that supports learning, and to be involved in performance reviews and career development suggestions for their staff.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Professionalism Overview]]
+- **Previous**: [[Knowledge Management]]
+- **Next**: [[Life Cycle]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
