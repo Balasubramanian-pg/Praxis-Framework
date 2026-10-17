@@ -1,32 +1,41 @@
 ---
-Title: Manage The Finance 29283b71d8f380bfbd50e3d2c8a737cf
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Manage The Finance 29283b71d8f380bfbd50e3d2c8a737cf.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Manage The Finance"
+aliases:
+  - "Manage The Finance"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/portfolio-management
+  - type/concept
+pillar: "Method"
+section: "Portfolio Management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Manage The Finance
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Portfolio Management]]
+> **Pillar**: Method | **Type**: `concept`
 
 # Comprehensive Study Notes: Manage Finance Competency
 
 ## Purpose of the Competency
 
 - The purpose of this competency is to demonstrate the ability to achieve the goals of financial management. These goals are to:
-    
+
     - Estimate the **cost** of achieving the objectives.
-    
+
     - Assess the financial **viability** of achieving the objectives.
-    
+
     - **Secure funds** and manage their release throughout the life cycle.
-    
+
     - Set up and run appropriate **financial systems**.
-    
+
     - **Monitor and control** expenditure against the budget.
 
 
@@ -35,49 +44,49 @@ Topic: ''
 - An individual must be able to demonstrate the ability to perform the following actions:
 
 - **Plan and initiate financial management**
-    
+
     - This involves defining the approach, procedures, systems, and standards that will be used for all financial activities, including estimating, budgeting, funding, and cost control.
-    
+
     - The output is typically a **finance management plan**.
 
 - **Ensure the cost of the work is understood**
-    
+
     - This is the practical application of cost estimating.
-    
+
     - It involves working with the team to produce realistic cost estimates for all aspects of the work, including base costs, contingency for known risks, and an allowance for management reserve.
 
 - **Identify the best means of funding the work**
-    
+
     - This is the practical application of the funding function.
-    
+
     - It involves identifying potential funding sources (internal or external), securing commitment from the fundholders, and establishing the mechanism for the drawdown of funds throughout the life cycle.
 
 - **Apply principles of financial and management accounting**
-    
+
     - This is the core control activity.
-    
+
     - It involves setting up and managing systems to track different types of costs (committed, accrued, actual), forecasting future expenditure, and controlling costs against the approved budget.
 
 - **Maintain financial documentation**
     - This involves creating and maintaining all the key financial documents, including:
-        
+
         - Cost estimates.
-        
+
         - The formal budget.
-        
+
         - Cash flow forecasts.
-        
+
         - Cost reports and variance analyses.
-        
+
         - The financial sections of the business case.
 
 - **Assure the quality of financial management**
-    
+
     - This involves ensuring that the agreed-upon procedures for financial management are being followed correctly.
-    
+
     - It includes checking that estimates are sound, budgets are properly approved, and costs are being tracked and controlled in accordance with the finance management plan.
 
-> [NOTE]  
+> [NOTE]
 > This competency summarises several others (Investment Appraisal, Funding, Budgeting and Cost Control) and should be adjusted to fit the context. Managing finance in a P3 environment inevitably links to, and may overlap with, corporate finance systems. When applying this competency, it is crucial to reflect what is within the authority of the P3 organisation versus what is controlled by the host organisation’s financial systems.
 
 
@@ -101,20 +110,20 @@ Topic: ''
     - Knowing the purpose of key documents like the business case, the budget, the cash flow forecast, and cost reports.
 
 - **The principles of investment appraisal**
-    
+
     - Understanding the key techniques used to assess the financial viability of an investment.
-    
+
     - This includes knowing what **Payback**, **Accounting Rate of Return (ARR)**, **Net Present Value (NPV)**, and **Internal Rate of Return (IRR)** are and when they are used.
 
 - **Principles of funding**
     - Understanding the different sources of funding (internal vs. external) and the mechanisms for securing and managing the release of funds throughout the life cycle.
 
 - **Principles of budgeting and cost control**
-    
+
     - Understanding how to construct a budget, including the three main components: **base cost estimate**, **contingency reserve**, and **management reserve**.
-    
+
     - Knowing how to track different types of costs (committed, accrued, actual) and how to apply controls and tolerances.
-    
+
     - Being aware of more sophisticated control techniques like **Earned Value Management (EVM)** where appropriate.
 
 - **How assurance applies to financial management**
@@ -137,3 +146,15 @@ Topic: ''
 
 - **Q:** What is the key challenge when a project has to use the host organisation's corporate finance systems?
     - **A:** Corporate systems are often designed for departmental, operational accounting and may not easily provide the kind of cost breakdown and reporting needed for project-based accounting.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Portfolio Management Overview]]
+- **Previous**: [[Manage Boundaries]]
+- **Next**: [[Project, Programme And Portfolio Management]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
