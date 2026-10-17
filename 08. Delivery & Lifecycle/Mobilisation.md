@@ -1,26 +1,26 @@
 ---
-Title: Mobilisation 29183b71d8f38011a47bfc75e3d285e3
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Mobilisation 29183b71d8f38011a47bfc75e3d285e3.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Mobilisation"
+aliases:
+  - "Mobilisation"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/resource-management
+  - type/concept
+pillar: "Knowledge"
+section: "Resource management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20110.svg)
-
-# Mobilisation
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20110.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20110.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20110.svg)Section|Resource management|
-|![](arrow-circle-down_gray%20110.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Resource management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Mobilisation
 
@@ -31,13 +31,13 @@ Topic: ''
 ### The Goals of Mobilisation
 
 - The primary goals of this function are to ensure that:
-    
+
     1. Capital assets are operational and accessible.
-    
+
     2. Facilities are operational and accessible.
-    
+
     3. Delivery team members are competent and capable.
-    
+
     4. All resources are redeployed, returned, or disposed of at the end of the work.
 
 ### Mobilisation in the Life Cycle
@@ -71,17 +71,17 @@ Topic: ''
 ### Elements Covered by Mobilisation
 
 - The mobilisation procedure can cover any of the following:
-    
+
     - The management team.
-    
+
     - Premises and office facilities.
-    
+
     - IT hardware, software tools, and telecoms.
-    
+
     - Plant and machinery.
-    
+
     - Internal and external resources (people).
-    
+
     - Governance procedures and systems.
 
 ### Key Mobilisation Challenges
@@ -147,3 +147,15 @@ Topic: ''
 
 - **Q:** How is the mobilisation of a portfolio different from that of a project or programme?
     - **A:** Portfolio mobilisation is typically a one-off project to set up a permanent infrastructure (like a PMO) to manage and co-ordinate projects and programmes on an ongoing basis. It is a strategic, long-term activity.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Resource management Overview]]
+- **Previous**: [[Identify A Project Or Programme]]
+- **Next**: [[Overview of Mobilisation]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
