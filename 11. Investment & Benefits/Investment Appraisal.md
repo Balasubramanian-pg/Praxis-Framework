@@ -1,26 +1,27 @@
 ---
-Title: Investment appraisal 29183b71d8f3808da715f6762135e237
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Investment appraisal 29183b71d8f3808da715f6762135e237.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Investment appraisal"
+aliases:
+  - "Investment appraisal"
+  - "Investment Appraisal"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/financial-management
+  - type/concept
+pillar: "Knowledge"
+section: "Financial management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2082.svg)
-
-# Investment appraisal
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2082.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2082.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%2082.svg)Section|Financial management|
-|![](arrow-circle-down_gray%2082.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Financial management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Investment Appraisal
 
@@ -31,9 +32,9 @@ Topic: ''
 ### The Goals of Investment Appraisal
 
 - The primary goals of this function are to:
-    
+
     1. Assess the financial **viability** of achieving the objectives.
-    
+
     2. Support the production of a robust **business case**.
 
 - **Timing**: Investment appraisal is very focused on the **early phases** of a project or programme. It is performed in parallel with the early work on developing management plans and delivery plans.
@@ -42,19 +43,19 @@ Topic: ''
 ## The Investment Appraisal Procedure
 
 1. **Plan and Initiate**:
-    
+
     - For programmes and portfolios, these steps are necessary to establish **consistent appraisal techniques** across all component projects.
-    
+
     - For stand-alone projects, these steps are typically absorbed within the broader **identification and definition processes**.
 
 2. **Collect Data**:
-    
+
     - This is the first specific step. It involves collecting the relevant information needed for the appraisal.
-    
+
     - During the **identification process**, this data will be "top-down," based on comparative or parametric estimating techniques.
-    
+
     - During the **definition process**, it will be a summary of detailed, "bottom-up" delivery planning.
-    
+
     - This should be done in conjunction with stakeholders to ensure that all relevant subjective (e.g., dis-benefits) and objective inputs have been captured.
 
 3. **Perform Appraisal**:
@@ -69,15 +70,15 @@ Topic: ''
 ### Factors Beyond Cash Flow
 
 - While most investment appraisals are based on cash flows, other important factors may need to be included, such as:
-    
+
     - **Legal Considerations**: A project may be compulsory to conform to new legislation, making a simple return on investment appraisal less relevant.
-    
+
     - **Environmental Impact**: The effects of the work on the natural environment are an increasingly important factor.
-    
+
     - **Social Impact**: For charities or public sector work, the return could be measured in non-financial terms like "quality of life" or "lives saved."
-    
+
     - **Operational Benefits**: These could include less tangible elements like "increased customer satisfaction," "higher staff morale," or "competitive advantage."
-    
+
     - **Risk**: An investment may be justified because it reduces an organisation's business or operational risk.
 
 ### Financial Appraisal Techniques
@@ -85,23 +86,23 @@ Topic: ''
 - At the heart of an investment appraisal is a comparison between investment (cost) and return (benefit). To be objective, both sides should be measured in cash where possible.
 
 - **Payback Method**:
-    
+
     - Calculates the **payback period**—the time it takes for the value of the benefits to equal the cost of the work.
-    
+
     - It is a relatively crude mechanism but can be useful for initial screening of ideas.
 
 - **Accounting Rate of Return (ARR)**:
-    
+
     - Expresses the average annual "profit" from an investment as a percentage of the costs.
-    
+
     - Its main disadvantage is that it **does not take the timing of cash flows into account**.
 
 - **Discounted Cash Flow (DCF) Techniques**:
-    
+
     - These are more appropriate where there is a significant time difference between the expenditure and the financial return, as they account for the time value of money.
-    
+
     - **Net Present Value (NPV)**: Calculates the present value of all cash flows associated with an investment by applying a discount rate. A positive NPV is good; the higher the NPV, the better the investment.
-    
+
     - **Internal Rate of Return (IRR)**: Calculates the discount rate that would give an NPV of zero. This percentage can be compared to the organisation's "hurdle rate" for investments.
 
 ### Challenges in Investment Appraisal
@@ -110,7 +111,7 @@ Topic: ''
 
 - **Quantifying Intangible Benefits**: The potential for optimism is greatest when benefits are difficult to quantify. Assumptions used to assign a financial value to an intangible benefit (e.g., improved staff morale leads to lower recruitment costs) must be carefully documented and reviewed.
 
-> [CAUTION]  
+> [CAUTION]
 > Appraisals should not be overly dependent on non-financial benefits. Anything can be justified through purely subjective views of value. The quantifiable financial benefits should provide a robust foundation for the business case.
 
 
@@ -162,3 +163,15 @@ Topic: ''
 
 - **Q:** How might a portfolio management team use simpler appraisal techniques like payback?
     - **A:** As an initial screening tool to filter out ideas for new projects or programmes that do not meet a basic financial threshold before committing to a more detailed appraisal.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Financial management Overview]]
+- **Previous**: [[General Principles of Funding]]
+- **Next**: [[Manage Benefits]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
