@@ -1,26 +1,26 @@
 ---
-Title: Ethics 29183b71d8f380758ae3edfa0af2f837
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Ethics 29183b71d8f380758ae3edfa0af2f837.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Ethics"
+aliases:
+  - "Ethics"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/professionalism
+  - type/concept
+pillar: "Knowledge"
+section: "Professionalism"
+subarea: "Context"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2062.svg)
-
-# Ethics
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2062.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2062.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2062.svg)Section|Professionalism|
-|![](arrow-circle-down_gray%2062.svg)Sub Area|Context|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Professionalism]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Ethics
 
@@ -35,9 +35,9 @@ Topic: ''
 ### The Goals of Ethics in a P3M Context
 
 - The primary goals of promoting and defining ethics within the P3 management discipline are to:
-    
+
     1. Encourage consistent **ethical behaviour** in all practitioners of project, programme, and portfolio management.
-    
+
     2. Raise the standards of **professionalism** by which P3 managers are judged, and in doing so, raise the overall status of the P3 management profession.
 
 
@@ -48,16 +48,16 @@ Topic: ''
 ### Navigating Different Codes and Laws
 
 - A P3 manager operates within a complex web of ethical and legal guidelines. They need to understand:
-    
+
     - The different moral values and cultural norms of their various **stakeholders**.
-    
+
     - The relevant **national and international laws** that apply to their work (e.g., the UK Bribery Act).
-    
+
     - The **professional codes of conduct** they are bound by.
-    
+
     - The specific **company codes of conduct** of their own organisation, their client, and key suppliers.
 
-> [!WARNING]  
+> [!WARNING]
 > Sometimes, these different sets of guidelines may conflict with one another. While statutory legislation clearly takes precedence, a P3 manager must be acutely aware of where professional codes and company codes may differ. If a professional believes there are conflicts or significant differences in the various codes, they must seek advice or formal direction from a relevant authority (e.g., their professional body, their company's legal department, or their sponsor).
 
 
@@ -74,11 +74,11 @@ Topic: ''
 - The need for ethical behaviour is not limited to the manager alone.
 
 - A project, programme, or portfolio’s ethical values, or its own specific code of conduct, must be:
-    
+
     - **Clearly articulated** to everyone involved.
-    
+
     - **Understood** by all team members.
-    
+
     - **Maintained** by all team members.
 
 - This can be achieved through dedicated training, the provision of specific guidance for difficult situations, and including ethical conduct as part of the formal **assurance** process.
@@ -88,7 +88,7 @@ Topic: ''
 
 - Ethical considerations do not just apply to the management processes (the "how"). The P3 manager must also be aware of the ethical impact of the **outputs, outcomes, and benefits** of the work itself (the "what").
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > One of the most important and prominent examples of this is the focus on environmental sustainability. A truly ethical approach requires that the principles of sustainability are considered in all aspects of project, programme, and portfolio delivery, from the initial option analysis to the final decommissioning of the product.
 
 ### Transparency and Accountability
@@ -114,3 +114,14 @@ Topic: ''
 
 - **Q:** Beyond the management process, where else must a P3 manager consider the ethical impact?
     - **A:** They must consider the ethical impact of the outputs, outcomes, and benefits of the work itself, with environmental sustainability being a key example.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Professionalism Overview]]
+- **Next**: [[General Principles of Organisation Management]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
