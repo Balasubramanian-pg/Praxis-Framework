@@ -1,17 +1,27 @@
 ---
-Title: Financial Management 29283b71d8f3804894e3f87c9bbe29a6
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Financial Management 29283b71d8f3804894e3f87c9bbe29a6.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Financial Management"
+aliases:
+  - "Financial Management"
+  - "General Principles of Financial Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/cost-management
+  - type/management-area
+pillar: "Knowledge"
+section: "Cost Management"
+subarea: "Management"
+type: "management-area"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Financial Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Cost Management]]
+> **Pillar**: Knowledge | **Type**: `management-area`
 
 # Comprehensive Study Notes: Financial Management
 
@@ -22,25 +32,25 @@ Topic: ''
 ### The Goals of Financial Management
 
 - The primary goals of this function are to:
-    
+
     1. Estimate the **cost** of achieving the objectives.
-    
+
     2. Assess the financial **viability** of achieving the objectives.
-    
+
     3. **Secure funds** and manage their release throughout the life cycle.
-    
+
     4. Set up and run appropriate **financial systems**.
-    
+
     5. **Monitor and control** expenditure against the budget.
 
 ### The Three Main Areas of Financial Management
 
 - Financial management is made up of three main, interconnected areas:
-    
+
     1. **Investment Appraisal**: This is the procedure by which the financial viability of the work is assessed. It uses techniques like Net Present Value (NPV), Internal Rate of Return (IRR), and Payback Period. The results are a primary input to the business case.
-    
+
     2. **Funding**: This is concerned with securing the investment required to complete the work and ensuring that the funds are available when needed to support the cash flow.
-    
+
     3. **Budgeting and Cost Control**: This involves estimating the costs, predicting the cash flow based on the schedule, setting the formal budget, and then applying controls to monitor actual expenditure against that budget.
 
 
@@ -58,34 +68,34 @@ Topic: ''
     - This is the first specific step. Cost estimates are made and refined in parallel with other planning procedures that establish the scope, schedule, resources, and risk.
 
 4. **Determine Viability**:
-    
+
     - The estimated costs are balanced against the value of the benefits (as calculated in the benefits management procedure). This viability assessment is documented in the business case.
-    
+
     - Work is approved if it can be shown not only that the benefits outweigh the costs but also that the organisation cannot get a better return by investing the same funds elsewhere (opportunity cost).
 
 5. **Secure Funding**:
-    
+
     - The exercise of securing funds continues in parallel with these steps and aligns with the different phases of the life cycle.
-    
+
     - For example, when a mandate triggers the **identification phase**, it should come with sufficient funding to complete that phase.
-    
+
     - If the brief is approved, that approval should be accompanied by confirmed funds to complete the **definition phase** and an agreement of sufficient funds _in principle_ to complete the entire work.
 
 6. **Develop Budgets**:
-    
+
     - Estimated costs are collated into formal budgets for different aspects of the work.
-    
+
     - These budgets are combined with the delivery schedule to create a **cash flow forecast**.
-    
+
     - Additional budgets may be created to deal with **contingency** (for known risks) and a **management reserve** (for unknown risks), which is often held by the sponsor.
 
 7. **Control Cost**:
-    
+
     - As the work proceeds and money is spent, financial control systems need to be implemented.
-    
+
     - These systems work with the schedule management systems to predict cash flow and then track actual expenditure against the budget, highlighting any variances.
 
-> [IMPORTANT]  
+> [IMPORTANT]
 > The approach to financial management is highly dependent on the policies, procedures, and standards of the host organisation. These, in turn, are affected by the regulatory and legislative environment. The finance management plan must comply with all appropriate standards and enable the exchange of information with the host organisation’s corporate financial systems.
 
 
@@ -99,7 +109,7 @@ Topic: ''
 
 - This can lead to problems where the corporate financial systems are configured to report on an operational, departmental basis (e.g., monthly costs for the IT department) and do not easily facilitate the type of cost breakdown needed for a project (e.g., costs by work package or deliverable).
 
-> [NOTE]  
+> [NOTE]
 > More mature organisations will ensure that their corporate financial systems can exchange data with project scheduling and control systems to overcome this issue.
 
 ### Programmes, Portfolios, and Larger Projects
@@ -107,11 +117,11 @@ Topic: ''
 - Larger projects and programmes may be able to justify their own dedicated financial management systems, and portfolios should certainly have this capability.
 
 - These systems will need to be able to **consolidate financial data** from many different sources, such as:
-    
+
     - The component projects.
-    
+
     - Related business-as-usual activity.
-    
+
     - The top-level management infrastructure (the overheads of the programme/portfolio team).
 
 - **Consistency is a major challenge**, particularly where the work is international (requiring different currencies and accounting standards) or involves multiple companies (e.g., a joint venture). Finance and accounting policies must be consistent across all components to allow for accurate consolidation and reporting.
@@ -136,3 +146,15 @@ Topic: ''
 
 - **Q-:** Why is consistency of financial policies so important in a programme or portfolio?
     - **A:** Without consistency (e.g., in how costs are categorised or currencies are handled), it is impossible to accurately consolidate financial data from all the components to get a true overall picture of financial performance.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Cost Management Overview]]
+- **Previous**: [[Financial Management]]
+
+### Related Concepts & Artefacts
+- [[Finance Management Plan]]
+- [[Budgeting and cost control]]
+- [[Investment Appraisal]]
+- [[Manage The Business Case]]
