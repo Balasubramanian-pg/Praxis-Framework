@@ -1,37 +1,47 @@
 ---
-Title: Change Management 29283b71d8f380b984c9d999b09e3971
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Change Management 29283b71d8f380b984c9d999b09e3971.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Change Management"
+aliases:
+  - "Change Management"
+  - "Change Management Capability Maturity"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/change-management
+  - type/maturity
+pillar: "Knowledge"
+section: "Change Management"
+subarea: "Management"
+type: "maturity"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Change Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Change Management]]
+> **Pillar**: Knowledge | **Type**: `maturity`
 
 # Comprehensive Study Notes: Change Management Capability Maturity
 
 ## Overall Goal of Change Management
 
 - The function of Change Management should:
-    
+
     - Define the organisational change required to convert project outputs into business benefits.
-    
+
     - Ensure the organisation is prepared to implement the change.
-    
+
     - Implement the change and embed it into normal organisational practice.
 
-> [!IMPORTANT]  
-> Capability in change management cannot be achieved by the P3 organisation alone. By its very nature, it inevitably involves people in business-as-usual who do not regard themselves as part of the project or programme.  
-> <br><br>  
+> [!IMPORTANT]
+> Capability in change management cannot be achieved by the P3 organisation alone. By its very nature, it inevitably involves people in business-as-usual who do not regard themselves as part of the project or programme.
+> <br><br>
 > The required level of capability depends on the context:
-> 
+>
 > - **Level 2** is likely to be sufficient for projects implementing non-complex change.
-> 
+>
 > - **Level 3** is an important goal for programmes with complex change objectives.
 
 
@@ -43,15 +53,15 @@ Topic: ''
     - The areas of the organisation that are subject to change are assessed for their **readiness to change**.
 
 - **Prepare**
-    
+
     - Change plans are **communicated** to affected groups.
-    
+
     - Stakeholders are **influenced** to gain their support for the change.
 
 - **Implement**
-    
+
     - The change is implemented in accordance with the organisation’s readiness and the change plans.
-    
+
     - Progress of the change implementation is **monitored and communicated**.
 
 - **Sustain**
@@ -63,26 +73,26 @@ Topic: ''
 - At this level, change management is performed according to a **defined, standard process** that is highly tailored to the context. The approach is proactive, empathetic, and integrated with the organisation's overall control systems.
 
 - **Assess**
-    
+
     - The **underlying characteristics of the organisation** (e.g., its culture, power structures, history with change) are assessed.
-    
+
     - Based on this assessment, the likely reaction to the change is actively **predicted**.
 
 - **Prepare**
     - The preparation for the change is **clearly sensitive to the characteristics of the organisation** and takes the predicted responses into account in its strategy.
 
 - **Implement**
-    
+
     - Individuals affected by the change are actively **supported** (e.g., through coaching, training, and open communication channels).
-    
+
     - The approach to implementing the change is **amended as work proceeds** based on feedback and observed reactions.
-    
+
     - There are **clear links between the control systems** within the project/programme and the control systems within the organisational area subject to change, ensuring alignment.
 
 - **Sustain**
-    
+
     - Formal **plans exist describing how the change will be supported** until it is deemed to be fully embedded in business-as-usual.
-    
+
     - The **effectiveness of the change** is periodically assessed alongside, and as part of, **benefits realisation** reviews, creating a direct link between the two.
 
 
@@ -102,3 +112,15 @@ Topic: ''
 
 - **Q:** At Level 3, how is the preparation for change tailored?
     - **A:** The preparation is **clearly sensitive to the characteristics of the organisation** and takes the predicted responses to the change into account.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Change Management Overview]]
+- **Previous**: [[Change management Artefact]]
+- **Next**: [[Control Scope Change]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
