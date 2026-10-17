@@ -1,35 +1,44 @@
 ---
-Title: Manage Resources 29283b71d8f380c7a808d95dc2011808
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Manage Resources 29283b71d8f380c7a808d95dc2011808.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Manage Resources"
+aliases:
+  - "Manage Resources"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/resource-management
+  - type/concept
+pillar: "Knowledge"
+section: "Resource Management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Manage Resources
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Resource Management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Manage Resources Competency
 
 ## Purpose of the Competency
 
 - The purpose of this competency is to demonstrate the ability to achieve the goals of resource management. These goals are to:
-    
+
     - Determine the **best way to resource** the work.
-    
+
     - **Acquire and mobilise** the necessary resources.
-    
+
     - **Manage** resources throughout the life cycle.
-    
+
     - **Demobilise** resources at the end of the life cycle.
-    
+
     - Finalise all **contractual arrangements**.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > This competency is a high-level summary of several others. On more complex projects and programmes, it is likely that this competency will be supplemented or replaced by more detailed, specialist competencies for Procurement, Contract Management, and Mobilisation. The level of detail required must be tailored to the context of the work and the specific role.
 
 
@@ -38,60 +47,60 @@ Topic: ''
 - An individual must be able to demonstrate the ability to perform the following actions:
 
 - **Plan and initiate resource management**
-    
+
     - This involves defining the overall strategy for resourcing the work.
-    
+
     - It includes creating the **resource management plan**, which outlines the policies and procedures for identifying, acquiring, managing, and releasing all types of resources.
 
 - **Identify the best resourcing method for delivering the scope of work**
-    
+
     - This involves making key strategic decisions, such as the **"make or buy"** analysis (should we build this internally or procure it from an external supplier?).
-    
+
     - It includes deciding on the sourcing strategy (e.g., using a single integrated supplier vs. multiple specialist suppliers).
 
 - **Negotiate the provision of internal resources**
-    
+
     - This is a critical activity, especially in a **matrix organisation**.
-    
+
     - It involves negotiating with functional or line managers to secure the commitment of internal staff.
-    
+
     - This requires strong influencing and conflict management skills, as the P3 manager often has no direct authority over these resources.
-    
+
     - It includes formalising these agreements, where possible, through documents like a **Service Level Agreement (SLA)** or a formal charter.
 
 - **Select and appoint external suppliers**
-    
+
     - This is the practical application of the procurement procedure.
-    
+
     - It involves researching the market, pre-qualifying potential suppliers, running a fair and transparent tender process, evaluating bids, and selecting the best-value supplier.
 
 - **Mobilise resources throughout the life cycle**
-    
+
     - This involves getting the right resources (people, equipment, facilities) in the right place at the right time.
-    
+
     - It includes inducting team members, setting up the physical or virtual workspace, and ensuring everyone has the tools they need to be productive.
 
 - **Administer and control resources**
-    
+
     - This is the day-to-day management of all resources during the delivery phase.
-    
+
     - It involves monitoring the performance and utilisation of resources, administering contracts and SLAs, managing payments, and resolving resource conflicts or shortages.
 
 - **Maintain resource management documentation**
     - This involves creating and maintaining all the key documents related to resources, including:
-        
+
         - The resource management plan.
-        
+
         - Resource schedules and histograms.
-        
+
         - Contracts and Service Level Agreements.
-        
+
         - Procurement documentation.
 
 - **Assure the quality of resource management**
-    
+
     - This involves ensuring that the agreed-upon procedures for resource management are being followed correctly.
-    
+
     - It includes checking that procurement processes are fair and transparent, contracts are being managed effectively, and resources are being used efficiently.
 
 
@@ -143,3 +152,15 @@ Topic: ''
 
 - **Q:** What is the role of the Sponsor in securing internal resources?
     - **A:** The Sponsor plays an important role by using their seniority and influence to ensure that the host organisation and its line managers commit to providing the necessary internal resources to the project or programme.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Resource Management Overview]]
+- **Previous**: [[General Principles of Resource Management]]
+- **Next**: [[Mobilise Resources]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
