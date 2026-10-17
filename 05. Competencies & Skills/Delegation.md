@@ -1,26 +1,26 @@
 ---
-Title: Delegation 29183b71d8f38020a4cbd2ce4240b205
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Delegation 29183b71d8f38020a4cbd2ce4240b205.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Delegation"
+aliases:
+  - "Delegation"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/interpersonal-skills
+  - type/competency
+pillar: "Knowledge"
+section: "Interpersonal skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2053.svg)
-
-# Delegation
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2053.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2053.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%2053.svg)Section|Interpersonal skills|
-|![](arrow-circle-down_gray%2053.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Interpersonal skills]]
+> **Pillar**: Knowledge | **Type**: `competency`
 
 # Comprehensive Study Notes: Delegation
 
@@ -28,31 +28,31 @@ Topic: ''
 
 - **Definition**: Delegation is the practice of giving a person or group the **authority and responsibility** to perform specific activities on behalf of another.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The act of delegation does not transfer accountability. The person who has delegated the work remains accountable for its results.
 
 ### The Goals of Delegation
 
 - The primary goals of delegation in a P3 context are to:
-    
+
     1. Allocate work **effectively** to individuals, teams, and suppliers within the project, programme, or portfolio.
-    
+
     2. Use delegation as a **motivation and development tool** for team members.
 
 ### The Delegation Procedure
 
 - Delegating a work package or task can be seen as a microcosm of the wider P3 environment, sharing many of the same principles. The procedure involves several key steps:
-    
+
     1. **Define and Confirm**: Define the task or work package and confirm that it is something that can and should be delegated.
-    
+
     2. **Select and Assess**: Select a team or individual to perform the work, assess their capability to do it, and identify any training needs.
-    
+
     3. **Specify Role and Outputs**: The manager must clearly specify _what_ needs to be done (the outputs/scope) and also explain the _role_, including the degree of responsibility and authority being transferred.
-    
+
     4. **Agree Resources and Timescales**: Discuss and agree on the resources needed and the required timescales for delivery.
-    
+
     5. **Supervise and Support**: Once the work is underway, the manager should exercise a suitable degree of supervision and provide support as required, without micromanaging.
-    
+
     6. **Provide Feedback**: Feedback should be useful throughout the procedure, but it is formally shown at the end where feedback on the end result is delivered.
 
 ### Delegation as a Tool for Motivation and Development
@@ -66,27 +66,27 @@ Topic: ''
 ### Obstacles to Effective Delegation
 
 - There are numerous potential obstacles, both personal and organisational, in the path of effective delegation. These include:
-    
+
     - Complex lines of authority in a **matrix organisation**.
-    
+
     - The inability of the P3 manager to select the members of their own teams.
-    
+
     - A **blame culture** where an intolerance of mistakes makes people reluctant to accept responsibility.
-    
+
     - A manager's personal **reluctance to delegate** (often expressed as, "By the time I’ve explained it, I could have done it myself.").
 
-> [!NOTE]  
+> [!NOTE]
 > Delegation is an essential component of developing high-performing teams. A competent P3 manager must develop the skills to overcome these personal and organisational obstacles.
 
 
 ## Delegation in Projects, Programmes, and Portfolios
 
 - The principles of delegation are at the very heart of any project, programme, or portfolio method. Delegation is the mechanism by which the entire structure of P3 management functions.
-    
+
     - **Portfolios** delegate work to programmes and projects.
-    
+
     - **Programmes** delegate the production of outputs to projects and delegate change management activities to business change teams.
-    
+
     - **Projects** delegate work packages to suppliers and sub-projects.
 
 ### The Chain of Delegation
@@ -110,12 +110,12 @@ Topic: ''
 - While a task may be clearly defined and delegated, it is inter-related with many other tasks and is therefore subject to change.
 
 - Everyone within the P3 environment should expect change. What undermines the beneficial effects of delegation is **uncontrolled change**.
-    
+
     - At the **project level**, a formal **change control** process will address changes to scope.
-    
+
     - At the **portfolio level**, the co-ordination process will communicate the effects of links and changes between delegated parcels of work.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > At all levels, the delegator has a responsibility to keep the delegatee fully informed. This means not only communicating the changes to the work itself but also taking the time to explain the reasons for the change. This maintains trust and ensures the delegatee remains aligned with the overall objectives.
 
 
@@ -135,3 +135,15 @@ Topic: ''
 
 - **Q:** When delegated work has to be changed, what is the delegator's key responsibility to the delegatee?
     - **A:** To keep them fully informed by explaining not just the changes to the work, but also the reasons for the change.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Interpersonal skills Overview]]
+- **Previous**: [[Delegate]]
+- **Next**: [[Delivery Competencies]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
