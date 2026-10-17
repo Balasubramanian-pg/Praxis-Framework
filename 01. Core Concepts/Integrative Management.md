@@ -1,17 +1,26 @@
 ---
-Title: Integrative Management 29283b71d8f380bc90dcfbd6d35f602f
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Integrative Management 29283b71d8f380bc90dcfbd6d35f602f.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Integrative Management"
+aliases:
+  - "Integrative Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/concept
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Integrative Management
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Integrative Management
 
@@ -24,33 +33,33 @@ Topic: ''
 ### The Overall Goals of Integrative Management
 
 - The goals of the integrative management functions are to:
-    
+
     - Plan all aspects of the work.
-    
+
     - Develop and maintain the justification for the work.
-    
+
     - Monitor and control performance.
-    
+
     - Ensure information is accurate, current, and accessible.
-    
+
     - Establish and maintain a management team.
-    
+
     - Identify and communicate with people affected by the work.
-    
+
     - Ensure that the management of the work is relevant and effective.
 
 
 ## The Integrative Management Functions
 
-> [!NOTE]  
+> [!NOTE]
 > Each integrative function brings together aspects of the fundamental delivery components. For example, the planning function integrates by creating a scope management plan, a schedule management plan, a finance management plan, and so on, uniting them under a single governance structure.
 
 ### 1. Planning
 
 - **Definition**: The planning function has two primary purposes:
-    
+
     1. It sets out the **policies and procedures** for managing each of the fundamental components (the "how to manage").
-    
+
     2. It **defines and estimates** what needs to be done, how it should be done, and when it should be done (the "what, how, and when").
 
 - **Integration**: Every one of the six fundamental delivery procedures has an explicit "plan" step. The integrative planning function brings these individual plans together. Re-planning is an implicit and continuous activity throughout the life cycle.
@@ -72,18 +81,18 @@ Topic: ''
 - **Definition**: The business case is the key document for any project or programme. It states why the work is worth the investment and provides the primary justification for its continuation.
 
 - **Integration**: The business case is perhaps the ultimate integrative document. Preparing and maintaining it requires the summarisation and integration of information from **all the fundamental components**:
-    
+
     - The **scope** defines the objectives.
-    
+
     - The **schedule** and **resources** define the timeline and effort.
-    
+
     - The **finance** function provides the cost estimates.
-    
+
     - The **risk** function qualifies the uncertainty.
-    
+
     - The **change** function defines the benefits to be realised.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The business case weaves together all aspects of delivery into a single, coherent argument for investment. It is the central reference point for all major decisions.
 
 ### 5. Organisation Management
@@ -98,7 +107,7 @@ Topic: ''
 
 - **Integration**: It integrates the human aspect of P3 management. It considers the needs and impacts of the work's scope, schedule, cost, risks, and changes on all stakeholders and plans the communications and engagement needed to maintain their support.
 
-> [!NOTE]  
+> [!NOTE]
 > Organisation management deals with the internal management team. Stakeholder management deals with all people affected by the work, both internal and external.
 
 ### 7. Assurance
@@ -127,3 +136,15 @@ Topic: ''
 
 - **Q:** What is assurance and who is responsible for it?
     - **A:** Assurance is the independent review that ensures the work is being managed according to its approved policies and procedures. The sponsor is responsible for overseeing assurance.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[Initiation Process]]
+- **Next**: [[Introduction to the Praxis Method]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
