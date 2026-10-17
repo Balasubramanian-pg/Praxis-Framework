@@ -1,4 +1,26 @@
-# Planning
+---
+title: "Planning"
+aliases:
+  - "Planning"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance-framework
+  - type/concept
+pillar: "Knowledge"
+section: "Governance & Framework"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance & Framework]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Planning
 
@@ -15,9 +37,9 @@
 ### The Goals of Management Plans
 
 - The goals of these governance-level management plans are to:
-    
+
     1. Describe the principles, policies, and procedures that should be used to manage the work.
-    
+
     2. Provide consistency (by setting standards) with flexibility (by allowing tailoring) across multiple projects and programmes.
 
 - **Examples**: These plans include documents such as the risk management plan, scope management plan, financial management plan, and stakeholder management plan.
@@ -33,13 +55,13 @@
 ### The Goals of Delivery Planning
 
 - The goals of delivery planning are to:
-    
+
     1. Describe the objectives of the project, programme, or portfolio.
-    
+
     2. Define the work required to achieve the objectives and describe how it will be performed.
-    
+
     3. Estimate the resources and finance needed to perform the work.
-    
+
     4. Document these plans and ensure they are updated throughout the life cycle.
 
 ### The Seven Questions of Delivery Planning
@@ -61,9 +83,9 @@
 ## Planning in the Life Cycle
 
 - The P3 life cycle is designed to answer these seven questions in progressive stages.
-    
+
     - **Identification Process**: Outline documentation is developed to answer the questions at a high level.
-    
+
     - **Definition Process**: Subject to approval, detailed delivery plans are produced to answer the questions in much greater detail.
 
 - Once agreed upon at the end of the definition process, the delivery plans provide the **baselines** against which performance will be measured.
@@ -74,7 +96,7 @@
 
 - This is known as the **estimating funnel**.
 
-> [!WARNING]  
+> [!WARNING]
 > This inherent uncertainty in early plans is often ignored or misunderstood by key stakeholders, who may interpret estimates as firm commitments. It is crucial for the P3 manager to communicate this uncertainty and use techniques like Monte Carlo analysis (for schedules) and the use of contingency reserves (for budgets) to manage and provide evidence of the effects of the estimating funnel.
 
 ### Ownership and Development of Plans
@@ -102,9 +124,9 @@
 - It is common to apply the principle of **rolling wave planning**, where earlier stages and tranches are planned in significant detail, while later ones are planned at a higher level and only detailed as they draw closer.
 
 - Programmes and portfolios will have central, high-level plans and delegated, more detailed delivery plans.
-    
+
     - **Example**: A programme may have a high-level schedule showing each project as a single bar on a Gantt chart. Each of those projects will then have its own detailed schedule.
-    
+
     - The challenge for planners is to enable information to flow effectively between the higher and lower levels of the plan while preserving the planning autonomy of the individual project managers.
 
 ### Parent Body Guidance
@@ -130,3 +152,15 @@
 - **Q:** Who owns the management and delivery plans?
 
     - **A:** The P3 Manager.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance & Framework Overview]]
+- **Previous**: [[Plan Governance]]
+- **Next**: [[Provide Assurance]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
