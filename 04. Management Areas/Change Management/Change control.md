@@ -1,15 +1,27 @@
 ---
-Title: Change control 29183b71d8f38095bc33c37e5a4b4509
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Change control 29183b71d8f38095bc33c37e5a4b4509.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Change control"
+aliases:
+  - "Change control"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/change-management
+  - type/concept
+pillar: "Knowledge"
+section: "Change Management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Change Management]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
 # Comprehensive Study Notes: Change Control
 
 ## General Principles of Change Control
@@ -19,74 +31,74 @@ Topic: ''
 ### The Goals of Change Control
 
 - The primary goals of this function are to:
-    
+
     1. Capture stakeholders’ requests to make changes to the baselined scope.
-    
+
     2. Ensure that change requests are only approved if they are **viable and achievable**.
-    
+
     3. Integrate approved changes into the existing scope in a controlled manner.
 
-> [IMPORTANT]  
+> [IMPORTANT]
 > Where scope is well defined early in the life cycle, it is essential for success that any subsequent changes to the approved baselines are rigorously controlled. A formal change control procedure must be established and maintained.
 
 
 ## The Change Control Procedure
 
 1. **Plan**:
-    
+
     - This step defines how the management team will work with stakeholders to handle changes, which can be a significant source of conflict.
-    
+
     - The plan may set limits on the amount of change permissible and must integrate closely with stakeholder management.
-    
+
     - It may even define which stakeholders are allowed to submit requests.
 
 2. **Initiate**:
-    
+
     - This step ensures that the resources needed to manage the change control process are mobilised.
-    
+
     - This sometimes requires the appointment of a formal body called the **Change Control Authority** (or Change Control Board) to ensure that requests are properly assessed and that the procedure is seen to be open and fair.
 
 3. **Request Change**:
-    
+
     - The procedure is triggered when a stakeholder makes a formal change request, providing relevant information about the nature of the change.
-    
+
     - The request is entered into a **change log**, which records all requests and their current status (e.g., pending, approved, rejected, deferred).
 
 4. **Review Change**:
-    
+
     - The change request is first reviewed at a high level to determine its impact on outputs, outcomes, and benefits.
-    
+
     - If necessary, further clarification may be sought from the requester.
-    
+
     - Based on this initial review, a decision is made on whether it is worthwhile to perform a detailed assessment. The request may be rejected at this point.
 
 5. **Assess Change**:
-    
+
     - If a full assessment is justified, all options relating to the change are captured and evaluated. The detailed impact on the delivery plans (scope, schedule, cost, risk, etc.) is assessed.
-    
+
     - To be accepted, a proposed change should be:
-        
+
         - **Beneficial**: It has a positive impact on the business case or provides some other advantage, such as reducing risk.
-        
+
         - **Practical**: It will work in the context of the existing specification and any other changes.
-        
+
         - **Affordable**: Funds are available to pay for the change, perhaps from a dedicated change budget or a management reserve.
 
 6. **Decide Change**:
-    
+
     - Based on the detailed assessment, a recommendation to approve, reject, defer, or request more information is made.
-    
+
     - Pre-defined thresholds will determine who has the authority to make the final decision (e.g., the P3 manager, the sponsor, or the Change Control Authority).
 
 7. **Implement Change**:
-    
+
     - The decision is communicated to the management team and stakeholders.
-    
+
     - If the change is approved, the relevant delivery plans are updated, and the changes are made to existing products or to the specifications for future products.
-    
+
     - Any approved changes must be fed back into the **configuration management** system.
 
-> [NOTE]  
+> [NOTE]
 > There is always the possibility that urgent changes are imposed or pushed through without due process. These should always be retrospectively put through the change control procedure to ensure their impact is properly documented and assessed.
 
 
@@ -139,3 +151,14 @@ Topic: ''
 
 - **Q:** How does change control at the portfolio level differ from the project or programme level?
     - **A:** At the portfolio level, it's less about approving/rejecting change requests and more about assessing the impact of changes in corporate strategy. This assessment may lead to the reprioritisation, cancellation, or initiation of projects and programmes to realign the portfolio with the new strategy.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Change Management Overview]]
+- **Next**: [[Change management]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
