@@ -1,3 +1,28 @@
+---
+title: "The Contextual Architecture of Governance"
+aliases:
+  - "The Contextual Architecture of Governance"
+  - "Context of Governance process"
+tags:
+  - praxis-framework
+  - pillar/method
+  - section/processes
+  - type/process
+pillar: "Method"
+section: "Processes"
+subarea: "Management"
+type: "process"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Processes]]
+> **Pillar**: Method | **Type**: `process`
+
 # The Contextual Architecture of Governance
 
 ## Introduction
@@ -49,3 +74,15 @@ A governance process that blindly executes a plan that is no longer strategicall
 ## Closing Reflection
 
 To understand the context of governance is to practice humility. It is the recognition that the project is part of a larger whole—a nested system of laws, culture, strategy, and power. We do not govern in a void. We govern within a landscape of constraints. To ignore this context is to build a house without checking the soil; no matter how beautiful the structure, it will inevitably collapse.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Processes Overview]]
+- **Next**: [[Deliver a Project or Programme Competency]]
+
+### Related Concepts & Artefacts
+- [[Identification Process]]
+- [[Definition Process]]
+- [[Delivery Process]]
+- [[Closure Process]]
