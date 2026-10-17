@@ -1,26 +1,27 @@
 ---
-Title: Knowledge management 29183b71d8f38073ac04eeead893fe5b
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Knowledge management 29183b71d8f38073ac04eeead893fe5b.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Knowledge management"
+aliases:
+  - "Knowledge management"
+  - "Knowledge Management"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/governance
+  - type/concept
+pillar: "Knowledge"
+section: "Governance"
+subarea: "Context"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2085.svg)
-
-# Knowledge management
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2085.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2085.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2085.svg)Section|Governance|
-|![](arrow-circle-down_gray%2085.svg)Sub Area|Context|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Governance]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Knowledge Management
 
@@ -31,11 +32,11 @@ Topic: ''
 ### The Goals of Knowledge Management
 
 - The primary goals of implementing knowledge management in a P3 context are to:
-    
+
     - Capture useful knowledge from the management of projects, programmes, and portfolios.
-    
+
     - Make the valuable **tacit knowledge** from experienced practitioners available to all.
-    
+
     - Support **capability maturity management** and drive continuous improvement in P3 management across the organisation.
 
 ### Lessons Learned: The Core Practice
@@ -48,7 +49,7 @@ Topic: ''
 
 - Crucially, reviewing lessons learned from previous work is a key activity during the **identification process** of any new project or programme.
 
-> [!CAUTION]  
+> [!CAUTION]
 > Failure to use the experiences and insights from previous work will often lead to a direct repeat of past mistakes, wasting time, money, and resources.
 
 ### Knowledge Management and Capability Maturity
@@ -65,44 +66,44 @@ Topic: ''
 - Knowledge is usually described as taking one of two forms: tacit and explicit.
 
 - **Tacit Knowledge**:
-    
+
     - This is the sum of experiences, insights, observations, and communications that every person holds in their memory.
-    
+
     - Experienced P3 managers, sponsors, and other practitioners have vast amounts of tacit knowledge that they use every day to successfully deliver their work.
-    
+
     - It is personal, contextual, and difficult to formalize and communicate.
 
 - **Explicit Knowledge**:
-    
+
     - This is knowledge that has been expressed and recorded in a way that is accessible to others.
-    
+
     - It is formal and systematic, found in documents, databases, process guides, and frameworks.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > A key role of knowledge management is to capture valuable tacit knowledge and convert it into explicit knowledge, making the experience of seasoned professionals available to everyone in the organisation.
 
 - A mature organisation fosters a culture of learning and development, with knowledge management being one of its most important tools.
 
 - The users of this explicit knowledge will range from novice project managers seeking guidance to experienced portfolio managers facing new and unfamiliar challenges.
 
-> [!NOTE]  
+> [!NOTE]
 > The Praxis Framework itself is a prime example of this concept. It is designed to be a foundation on which tacit knowledge from the entire P3 management community can be recorded and made explicit in a highly accessible way.
 
 
 ## Establishing Knowledge Management
 
 - The key steps involved in establishing a formal knowledge management function within the P3 management organisation include:
-    
+
     - Ensuring genuine and visible **senior management commitment** to the principles of knowledge management.
-    
+
     - Providing **assurance** of the elements of the P3 method that capture and utilise knowledge (e.g., checking that lessons logs are being used).
-    
+
     - Implementing and maintaining a practical **system for storing and maintaining knowledge** (e.g., a knowledge base, a shared repository).
 
 - Capturing internal lessons learned is only one part of creating explicit knowledge. This should be supplemented with external sources through:
-    
+
     - Involvement with broader **communities of practice (CoPs)**.
-    
+
     - Active participation in **professional bodies** and industry groups.
 
 ### Benefits of Knowledge Management
@@ -122,13 +123,13 @@ Topic: ''
 
 - In these situations, success relies heavily on the **individual management team members applying their personal tacit knowledge**.
 
-> [!WARNING]  
+> [!WARNING]
 > When an organisation relies solely on the tacit knowledge of individuals, it risks losing its capability to manage projects when those skilled staff members leave. Their experience and knowledge leave with them.
 
 - Simple actions to mitigate this risk in less mature environments can include:
-    
+
     - The use of **project diaries** that are retained by the organisation.
-    
+
     - Providing dedicated time for project managers to get together to formally or informally **exchange experiences**.
 
 ### Programmes
@@ -164,3 +165,15 @@ Topic: ''
 
 - **Q:** At which level (project, programme, or portfolio) is there the greatest opportunity to establish a formal knowledge management system?
     - **A:** At the **portfolio** level, where the management team has the strategic influence to secure funding and implement a system for the benefit of all its components.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Governance Overview]]
+- **Previous**: [[Introduction to the Praxis Method]]
+- **Next**: [[Learning And Development]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
