@@ -1,26 +1,26 @@
 ---
-Title: Influencing 29183b71d8f380da95b2eb8782f343c2
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Influencing 29183b71d8f380da95b2eb8782f343c2.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Influencing"
+aliases:
+  - "Influencing"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/interpersonal-skills
+  - type/competency
+pillar: "Knowledge"
+section: "Interpersonal skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2076.svg)
-
-# Influencing
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2076.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2076.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%2076.svg)Section|Interpersonal skills|
-|![](arrow-circle-down_gray%2076.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Interpersonal skills]]
+> **Pillar**: Knowledge | **Type**: `competency`
 
 # Comprehensive Study Notes: Influencing
 
@@ -31,50 +31,50 @@ Topic: ''
 ### The Goals of Influencing
 
 - The primary goals of influencing in a P3 context are to:
-    
+
     1. Develop and maintain a high-performing **team**.
-    
+
     2. Persuade **stakeholders** to support the _objectives_ of the work.
-    
+
     3. Persuade **stakeholders** to support the _achievement_ of those objectives (e.g., by providing resources or removing obstacles).
 
 ### Influencing Teams vs. Stakeholders
 
 - **Influencing Teams**:
-    
+
     - Leadership models (like Hersey and Blanchard's Situational Leadership) and teamwork models (like Tuckman's stages of group development) show a common theme: as a team matures and develops, the manager’s style must change from being **authoritative** to being **supportive**.
-    
+
     - In a high-performing team with a supportive manager, one of the manager’s key skills will be influencing. The manager is not so much telling the team members what to do as influencing them to do the right thing and make the right decisions.
 
 - **Influencing Stakeholders**:
-    
+
     - While influencing is a useful skill to back up authority within a team, it is an **essential skill** when the P3 manager has little or no formal authority over a person.
-    
+
     - The stakeholder management function identifies numerous people that the P3 manager needs to influence. This influence may be required to overcome objections, secure resources, or even ask them to help influence others.
 
 
 ## The Practice of Influencing
 
 - Models for the nature and practice of influencing (e.g., from Cialdini or Cohen & Bradford) emphasise two common and fundamental themes:
-    
+
     1. You must first **understand the people** you wish to influence (their motivations, goals, and pressures).
-    
+
     2. You must understand **what you can do for them** in return for what you want them to do for you (the principle of reciprocity or "currencies of exchange").
 
 ### Attributes of a Successful Influencer
 
 - To achieve these two themes, a successful influencer will:
-    
+
     - Understand their own behaviour and how it is perceived by others (self-awareness).
-    
+
     - Have a clear vision of what the work involves and how it affects others.
-    
+
     - **Communicate effectively** using all appropriate means.
-    
+
     - **Negotiate** to find mutually acceptable solutions to issues.
-    
+
     - Understand the **context**, including cultural, social, and political factors.
-    
+
     - Behave **ethically** at all times to build and maintain trust.
 
 ### Sources of Power
@@ -91,7 +91,7 @@ Topic: ''
 
 - A P3 manager must habitually consider the consequences of their actions. An action to positively influence one person may inadvertently have a negative influence on another.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > While an individual’s ability to influence is based largely on their personality and behaviour, it is also dependent on their position in the organisation. Sometimes, even the most skilled P3 manager will need the support of their sponsor, simply because the influencing skills need to be backed up by the kind of authority or credibility that is linked to seniority.
 
 
@@ -150,3 +150,15 @@ Topic: ''
 
 - **Q:** What is the key influencing challenge for a programme manager regarding stakeholders?
     - **A:** To co-ordinate the influencing activities of their various project managers to ensure a consistent and non-conflicting message is delivered to stakeholders who are affected by multiple projects.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Interpersonal skills Overview]]
+- **Previous**: [[Influence]]
+- **Next**: [[Interpersonal Skills]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
