@@ -1,3 +1,28 @@
+---
+title: "Comprehensive Study Notes: Risk Context"
+aliases:
+  - "Comprehensive Study Notes: Risk Context"
+  - "Risk Context"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/core-concepts
+  - type/concept
+pillar: "Knowledge"
+section: "Core Concepts"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
+---
+
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Core Concepts]]
+> **Pillar**: Knowledge | **Type**: `concept`
+
 # Comprehensive Study Notes: Risk Context
 
 ## General Principles of Risk Context
@@ -19,25 +44,25 @@
 ### The Spectrum of Risk Attitudes
 
 - Attitudes can be classified in three main ways:
-    
+
     1. **Risk Averse**:
-        
+
         - As the name suggests, risk-averse people dislike taking risks. They prefer certainty and will often choose a lower but more certain reward over a higher but more uncertain one.
-        
+
         - **Positive Application**: When planning work that is risky in a health and safety context (e.g., construction) or when working in a war zone, being risk-averse is an advantage. It means the planner will adopt a very cautious approach to planning risk responses.
-        
+
         - **Negative Application**: If a project is developing products for an entrepreneurial tech company in a fast-moving, competitive market, being risk-averse is unlikely to help and could lead to missed opportunities.
-    
+
     2. **Risk Seeking**:
-        
+
         - Risk-seeking people are comfortable with uncertainty and are often willing to take on higher levels of risk in the pursuit of higher rewards.
-        
+
         - This attitude is more appropriate for the entrepreneurial tech company mentioned above.
-    
+
     3. **Risk Neutral**:
-        
+
         - Risk-neutral people are balanced in their approach. They make decisions based on expected value, without a strong bias towards or against risk.
-        
+
         - Perhaps this is the best personal attribute for a P3 manager, as it may be easier for them to consciously move towards aversion or seeking as the specific context of the work demands.
 
 ### The Impact of Risk Attitude on Risk Assessment
@@ -58,10 +83,10 @@
 
 - Risk appetite is most evident in the **identification step** of the risk procedure, as it sets the threshold for what is considered an acceptable level of risk to take on.
 
-> [IMPORTANT]  
-> The Difference Between Attitude and Appetite  
+> [IMPORTANT]
+> The Difference Between Attitude and Appetite
 > An organisation's attitude might be generally risk-averse (preferring certainty), but its appetite for a specific, high-priority project might be high (willing to accept significant risk to achieve a strategic goal).
-> 
+>
 > - **Example**: A charity that delivers aid to a war zone must have a **high risk appetite** to even undertake the work. However, its on-the-ground planners will need to have a **risk-averse attitude** to ensure the safety of their teams. Both must reflect the prevailing context of the work.
 
 - A P3 manager needs to understand the host organisation’s risk appetite as it applies to their work, as well as the different risk attitudes of the team members and stakeholders.
@@ -107,3 +132,15 @@
 - **Q:** Does every project in a portfolio need to have the same risk appetite as the overall portfolio?
 
     - **A:** No. The portfolio must be balanced with the overall risk appetite in mind, but it can contain a mix of high-risk and low-risk projects to achieve this balance.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Core Concepts Overview]]
+- **Previous**: [[Process]]
+- **Next**: [[Setting]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
