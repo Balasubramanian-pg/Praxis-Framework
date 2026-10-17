@@ -1,26 +1,27 @@
 ---
-Title: Time scheduling 29183b71d8f380f3a9fed1213ff04eae
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Time scheduling 29183b71d8f380f3a9fed1213ff04eae.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Time scheduling"
+aliases:
+  - "Time scheduling"
+  - "Time Scheduling"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/schedule-management
+  - type/concept
+pillar: "Knowledge"
+section: "Schedule management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%20158.svg)
-
-# Time scheduling
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%20158.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%20158.svg)Pillar|Manage|
-|![](arrow-circle-down_gray%20158.svg)Section|Schedule management|
-|![](arrow-circle-down_gray%20158.svg)Sub Area|Management|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Schedule management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Time Scheduling
 
@@ -31,20 +32,20 @@ Topic: ''
 ### The Goals of Time Scheduling
 
 - The primary goals of this function are to:
-    
+
     1. Construct a logical **model** of the work for use in numerical analysis.
-    
+
     2. Calculate the start and finish **dates** for the components of work.
-    
+
     3. Determine where there is **flexibility** (float) in the schedule.
 
 
 ## The Time Scheduling Procedure
 
 1. **Model**:
-    
+
     - Once the work has been identified (e.g., through a Work Breakdown Structure), a model is built that reflects the sequence of the work and the time required to complete each component.
-    
+
     - This "logical model" must also be supplemented by **external constraints**, such as a regulatory approval date or the delivery of a procured component.
 
 2. **Calculate**:
@@ -53,7 +54,7 @@ Topic: ''
 3. **Present**:
     - The results of the calculation are then presented in a format suitable for the relevant stakeholders (e.g., a Gantt chart, a milestone chart).
 
-> [NOTE]  
+> [NOTE]
 > In reality, these steps are by no means sequential. The model will be adjusted, constraints will be reviewed, and the calculation will be repeated many times in an iterative process to arrive at the optimum schedule.
 
 
@@ -62,16 +63,16 @@ Topic: ''
 ### Choosing the Right Technique
 
 - The choice of scheduling technique depends on the context of the work. Factors affecting the choice include:
-    
+
     - The **life cycle phase** (scheduling in the identification phase is high-level; in the delivery phase, it is detailed).
-    
+
     - Whether the scope is well-defined (**traditional**) or flexible (**agile**).
-    
+
     - Whether the schedule is a **summary** of other schedules (e.g., a programme schedule).
-    
+
     - The **audience** for the information (e.g., a senior stakeholder vs. a delivery team).
 
-> [CAUTION]  
+> [CAUTION]
 > The use of scheduling methods that are inappropriate to the needs of the work can cause significant problems. An overly complex approach is just as bad as an overly simplistic one.
 
 ### Modelling and Calculation Techniques
@@ -80,31 +81,31 @@ Topic: ''
     - The most common mechanism for building a schedule model. It is made up of all the interconnected activities required to achieve the objectives.
 
 - **Critical Path Analysis (CPA)**:
-    
+
     - The simplest form of calculating a schedule based on a network diagram.
-    
+
     - CPA calculates the earliest and latest start and finish dates for all activities.
-    
+
     - Some activities will have flexibility, which is referred to as **float** (or slack).
-    
+
     - The sequence of activities with no float is referred to as the **critical path**. Any delay to an activity on the critical path will delay the entire project.
 
 - **Shortcomings of CPA**:
-    
+
     1. It takes no account of the effect on the schedule of **limited resources**. This is addressed by **resource scheduling**.
-    
+
     2. It assumes a **single-point estimate** of the time required for each activity.
 
 - **Addressing Uncertainty (Range Estimating)**:
-    
+
     - Estimating is an inexact science. It is far more realistic to use a **range of duration estimates** (e.g., optimistic, most likely, pessimistic) rather than a single-point estimate.
-    
+
     - This leads to statistical techniques such as **PERT** (Program Evaluation and Review Technique) or **Monte Carlo analysis**, which calculate a probabilistic finish date rather than a deterministic one.
 
 - **Earned Value Management (EVM)**:
-    
+
     - This is a control technique that combines the effect of both time and cost.
-    
+
     - It measures progress in terms of the "value" of the work completed rather than just the elapsed time, providing more accurate predictions of future performance.
 
 
@@ -113,9 +114,9 @@ Topic: ''
 ### Projects
 
 - Network diagrams are most applicable to **traditional projects** where there is a clear specification for a unique output. They are less suitable for:
-    
+
     - Projects that produce multiple **repetitive products** (e.g., building a housing estate), where techniques like **Line of Balance** may be more appropriate.
-    
+
     - **Agile projects**, where a full specification isn’t available upfront. Agile projects focus more on techniques like **timeboxes**, **sprints**, and **MoSCoW** prioritisation.
 
 - **The Challenge of Scale**: As projects become larger, there is a temptation to build ever-larger and more complex schedule models. However, the larger the model, the harder it is for a manager to have an intuitive feel for cause and effect when making decisions. **Sensitivity analysis** can be useful in assessing the impact of different factors on the schedule.
@@ -155,3 +156,15 @@ Topic: ''
 
 - **Q:** Why is creating a single, detailed schedule for an entire programme generally a bad idea?
     - **A:** It is too complex and unmanageable. It is better to create a hierarchy of linked schedules that reflect the programme's structure, with specialists managing the interdependencies.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Schedule management Overview]]
+- **Previous**: [[Schedule Management Plan]]
+
+### Related Concepts & Artefacts
+- [[Schedule Management Plan]]
+- [[Time Scheduling]]
+- [[Delivery Plan]]
+- [[Manage The Schedule Competency|Manage The Schedule]]
