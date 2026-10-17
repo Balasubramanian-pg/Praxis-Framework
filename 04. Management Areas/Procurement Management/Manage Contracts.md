@@ -1,23 +1,50 @@
 ---
-Title: Manage contracts 29183b71d8f380e9a5bbf938381f2eb1
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Manage contracts 29183b71d8f380e9a5bbf938381f2eb1.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Manage Contracts Competency"
+aliases:
+  - "Contract Administration"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/procurement-management
+  - type/competency
+pillar: "Competence"
+section: "Procurement Management"
+subarea: "Management Competencies"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2096.svg)
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Procurement Management]]
+> **Pillar**: Competence | **Type**: `competency`
 
-# Manage contracts
+# Manage Contracts Competency
 
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2096.svg)Area|Competence|
-|![](arrow-circle-down_gray%2096.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2096.svg)Section|Manage resources|
-|![](arrow-circle-down_gray%2096.svg)Sub Area|Management competencies|
+> [!SUMMARY] Overview
+> Demonstrates the capability to administer, monitor, and enforce legal and commercial agreements with suppliers.
+
+## Purpose
+The **Manage Contracts** competency ensures that supplier obligations, deliverables, milestone payments, and relationship governance adhere to the signed contract.
+
+## Performance Criteria
+1. Monitor supplier progress against contract milestones and quality criteria.
+2. Authorize milestone payments upon verified deliverable acceptance.
+3. Manage formal contractual change orders and dispute resolution.
+4. Close contracts formally, releasing retentions and conducting supplier reviews.
+
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Procurement Management Overview]]
+- **Previous**: [[Contract Management]]
+- **Next**: [[Procurement]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
