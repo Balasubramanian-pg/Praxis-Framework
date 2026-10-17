@@ -1,17 +1,26 @@
 ---
-Title: Scope Document 29283b71d8f3807ca685cd0cc9521a01
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Scope Document 29283b71d8f3807ca685cd0cc9521a01.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Scope Document"
+aliases:
+  - "Scope Document"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/scope-management
+  - type/concept
+pillar: "Knowledge"
+section: "Scope Management"
+subarea: "Management"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Scope Document
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Scope Management]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Scope Documents
 
@@ -33,9 +42,9 @@ Topic: ''
 - **Focus**: They typically focus on the "why" and the "value" of the work.
 
 - **Examples**:
-    
+
     - **Business Case**: Explains the justification for the work (desirability, achievability, viability). Its structure is consistent whether the project is for software, construction, or business change.
-    
+
     - **Benefit Profile**: Details a specific benefit, how it will be measured, and who is responsible for its realisation. This format is applicable across different types of programmes and projects.
 
 ### 2. Technical (Environment-Dependent) Documents
@@ -63,3 +72,15 @@ Topic: ''
 
 - **Q:** Why can't Praxis provide a detailed, standard template for a "specification"?
     - **A:** Because its content is entirely dependent upon the specific technical nature of the work (e.g., software vs. construction). Praxis can only define its purpose, not its detailed content.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Scope Management Overview]]
+- **Previous**: [[Overall Goal of Scope Management]]
+- **Next**: [[Scope Management]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
