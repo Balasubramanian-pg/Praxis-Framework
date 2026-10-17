@@ -1,26 +1,27 @@
 ---
-Title: Communities of practice 29183b71d8f380878a67f778fdf817b3
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Communities of practice 29183b71d8f380878a67f778fdf817b3.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Communities of practice"
+aliases:
+  - "Communities of practice"
+  - "Communities Of Practice"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/professionalism
+  - type/concept
+pillar: "Knowledge"
+section: "Professionalism"
+subarea: "Context"
+type: "concept"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-![](white%2035.svg)
-
-# Communities of practice
-
-|   |   |
-|---|---|
-|![](arrow-circle-down_gray%2035.svg)Area|Knowledge|
-|![](arrow-circle-down_gray%2035.svg)Pillar|Overview|
-|![](arrow-circle-down_gray%2035.svg)Section|Professionalism|
-|![](arrow-circle-down_gray%2035.svg)Sub Area|Context|
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Professionalism]]
+> **Pillar**: Knowledge | **Type**: `concept`
 
 # Comprehensive Study Notes: Communities of Practice (CoPs)
 
@@ -31,9 +32,9 @@ Topic: ''
 ### The Goals of a Community of Practice
 
 - The two primary goals that underpin all CoPs, regardless of their size or formality, are to:
-    
+
     - Share information that helps **individuals** to develop their skills and knowledge.
-    
+
     - Help the **profession** to collectively evolve, innovate, and improve.
 
 
@@ -46,31 +47,31 @@ Topic: ''
 - **Definition**: The domain is the shared area of interest and expertise that brings the community together. It is the common ground that provides a sense of identity and purpose.
 
 - **Examples of Domains**:
-    
+
     - **Broad P3 Management**: A general community for all project, programme, and portfolio management professionals.
-    
+
     - **Specialised Functions**: More focused CoPs dedicated to a specific area, such as:
-        
+
         - Risk Management
-        
+
         - Value Management
-        
+
         - Benefits Realisation
-        
+
         - Agile Methodologies
-    
+
     - **Business Sectors**: CoPs that bring together practitioners from a specific industry to discuss challenges and solutions unique to that sector, such as:
-        
+
         - Construction
-        
+
         - Information Technology (IT)
-        
+
         - Local Government
-        
+
         - Pharmaceuticals
-        
+
         - Financial Services
-    
+
     - **A Single Large Organisation**: An internal CoP for all P3 managers within one company to share knowledge relevant to that organisation's specific processes, tools, and culture.
 
 ### 2. The Community
@@ -78,19 +79,19 @@ Topic: ''
 - **Definition**: The community refers to the people who are members of the CoP and the nature of the relationships and interactions between them. It is the social fabric that fosters learning and collaboration.
 
 - **Examples of Communities**:
-    
+
     - **International and National Professional Bodies**: These are large, formal communities that draw members from across the globe or a specific country.
-        
+
         - International Project Management Association (IPMA)
-        
+
         - Project Management Institute (PMI®)
-        
+
         - Association for Project Management (APM)
-    
+
     - **Regional and Local Groups**: These are often chapters or branches of larger national bodies, or they can be independent groups that allow for face-to-face interaction.
-    
+
     - **Social Media Groups**: Loosely bound and often informal communities on platforms like LinkedIn, where professionals from all over the world can connect and discuss topics of interest.
-    
+
     - **Internal Organisational Communities**: A community composed solely of employees from a single organisation.
 
 ### 3. The Practice
@@ -98,17 +99,17 @@ Topic: ''
 - **Definition**: The practice is the specific way that the community shares information, knowledge, and experience related to its chosen domain. It is the body of shared resources, tools, stories, and methods that the community develops and maintains.
 
 - **Examples of Practices**:
-    
+
     - **Formal Knowledge Management**: Within an organisational CoP, this could involve a structured system with a knowledge base, documented best practices, and formal "lessons learned" sessions.
-    
+
     - **Informal Discussion Groups**: Loose, unstructured conversations on social media platforms or online forums.
-    
+
     - **Meetings and Events**: Regular meetings (virtual or in-person) to exchange views, discuss challenges, and share solutions.
-    
+
     - **Continual Professional Development (CPD) Events**: Organised workshops, webinars, and seminars designed to build specific skills.
-    
+
     - **Publications**: The creation and distribution of newsletters, journals, or blogs to share insights.
-    
+
     - **Accreditations**: Some formal CoPs (like professional bodies) offer professional certifications and accreditations as part of their practice.
 
 
@@ -131,19 +132,19 @@ Topic: ''
 
 ## Challenges and Sustainability
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > It is all too easy for communities to be set up with great enthusiasm and then gradually fade away through a lack of support and engagement. Sustaining a CoP requires a deliberate and ongoing effort.
 
 - **The Need for Corporate Support**:
-    
+
     - Where an organisation sets up an internal Community of Practice as part of its commitment to the P3M discipline, it must recognise that the community cannot survive on enthusiasm alone.
-    
+
     - The CoP will require tangible corporate support and an on-going commitment from leadership.
 
 - **Forms of Essential Support**:
-    
+
     - **Financial Support**: Funding may be needed for event venues, speakers, online platforms, or learning materials.
-    
+
     - **Time Allocation**: Crucially, P3 managers must be allowed and encouraged to dedicate time to take part in CoP activities as part of their regular work, not just in their spare time. It must be seen as a valuable investment, not an overhead.
 
 
@@ -163,3 +164,15 @@ Topic: ''
 
 - **Q:** What is the single most important factor for the long-term survival of an internal, corporate CoP?
     - **A:** On-going corporate support, including both financial resources and allowing employees dedicated time to participate.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Professionalism Overview]]
+- **Previous**: [[Co-ordinate A Portfolio]]
+- **Next**: [[Initiate A Portfolio]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
