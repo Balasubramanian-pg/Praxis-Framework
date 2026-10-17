@@ -1,17 +1,26 @@
 ---
-Title: Capability 29283b71d8f3802b9b03e0b51613bf16
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Capability 29283b71d8f3802b9b03e0b51613bf16.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Capability"
+aliases:
+  - "Capability"
+tags:
+  - praxis-framework
+  - pillar/competence
+  - section/competencies-skills
+  - type/competency
+pillar: "Competence"
+section: "Competencies & Skills"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Capability
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Competencies & Skills]]
+> **Pillar**: Competence | **Type**: `competency`
 
 # Comprehensive Study Notes: Capability
 
@@ -20,9 +29,9 @@ Topic: ''
 - **Definition**: Capability, in the Praxis Framework, refers to an organisation's ability to perform a specific P3 management **function** (e.g., risk management, scope management) effectively and consistently.
 
 - **Structure**: To reach a certain level of capability for a function, an organisation must achieve two types of goals:
-    
+
     1. The **generic goals** that apply to all functions at that level.
-    
+
     2. The **specific goals** of that particular function.
 
 - **Cumulative Nature**: The goals are cumulative. This means to reach level 3 in a function, the organisation must have achieved all the generic and specific goals for both level 2 and level 3.
@@ -111,10 +120,7 @@ Topic: ''
 |**Interfaces**|Interfaces between this and other functions are not understood.|Interfaces are understood and documented.|Interfaces are understood, documented, and acted upon in a consistent manner across the organisation.|
 |**Plan**|Some evidence of tools/techniques, but no formal procedures.|A management plan exists for the performance of the function.|A standard management plan exists, with adjustments to suit the context. It is continually reviewed.|
 |**Initiate**||Members of the management team are competent in the function.|All relevant roles include responsibilities and performance criteria in their descriptions.|
-|**Specific Goals**|||The procedural attributes designed to achieve the specific goals of each individual function are described in their respective sections.|
-
-
-## Flashcard Q&A
+|**Specific Goals**|||The procedural attributes designed to achieve the specific goals of each individual function are described in their respective sections.| ## Flashcard Q&A
 
 - **Q:** What is the key difference between a Level 1 ("Performed") and a Level 2 ("Managed") capability?
     - **A:** At Level 1, the function is performed in an ad-hoc way, succeeding through individual heroics. At Level 2, it is performed consistently according to a defined policy and plan by competent people.
@@ -130,3 +136,14 @@ Topic: ''
 
 - **Q:** How does documentation differ between Level 2 and Level 3?
     - **A:** At Level 2, documentation is sufficient but often inconsistent between projects. At Level 3, all documentation is based on organisational standards, has been tailored to the context, and is under formal configuration control.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Competencies & Skills Overview]]
+- **Next**: [[Competence]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
