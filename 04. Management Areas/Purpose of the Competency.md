@@ -1,31 +1,41 @@
 ---
-Title: Manage Change 29283b71d8f38078ad00fdf9092f89d2
-Area: Projects
-Type: Project
-Status: Draft
-Source: 05. Projects/Project Management/Manage Change 29283b71d8f38078ad00fdf9092f89d2.md
-Created: ''
-Updated: ''
-Tags: ''
-Topic: ''
+title: "Manage Change Competency"
+aliases:
+  - "Manage Change"
+  - "Manage Change Competency"
+tags:
+  - praxis-framework
+  - pillar/knowledge
+  - section/management-areas
+  - type/competency
+pillar: "Knowledge"
+section: "Management Areas"
+subarea: "Management"
+type: "competency"
+status: "published"
+source: "Praxis Framework"
+source_url: "https://www.praxisframework.org"
+created: 2026-10-17
+updated: 2026-10-17
 ---
- 
 
-# Manage Change
+> [!NAV] Navigation
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Management Areas]]
+> **Pillar**: Knowledge | **Type**: `competency`
 
 # Comprehensive Study Notes: Manage Change Competency
 
 ## Purpose of the Competency
 
 - The purpose of this competency is to demonstrate the ability to achieve the goals of **change management**. These goals are to:
-    
+
     1. Define the **organisational change** required to convert project outputs into business benefits.
-    
+
     2. Ensure the organisation is **prepared** to implement the change.
-    
+
     3. **Implement** the change and **embed** it into normal organisational practice.
 
-> [NOTE]  
+> [NOTE]
 > This competency is about managing the people and process side of change within the business, not the technical change to the project's scope (which is handled by change control).
 
 
@@ -34,33 +44,33 @@ Topic: ''
 - An individual must be able to demonstrate the ability to perform the following actions:
 
 - **Plan and initiate change**
-    
+
     - This involves defining the overall approach, principles, roles, and responsibilities for managing the organisational change.
-    
+
     - The output is typically a **change management plan**.
 
 - **Identify the change required to existing practices**
-    
+
     - This involves a detailed analysis of the current state ("as-is") and the desired future state ("to-be").
-    
+
     - The output is a clear definition of the required changes to business processes, systems, organisational structures, and job roles. This is often documented in a **blueprint** at the programme level.
 
 - **Assess the organisation’s readiness to change**
-    
+
     - This involves analysing the organisation's culture, the level of dissatisfaction with the current situation, and the likely sources and strength of resistance to the proposed change.
-    
+
     - It includes assessing the capacity of the affected business units to absorb the change.
 
 - **Communicate and implement change**
-    
+
     - This is the core execution step. It involves communicating a compelling vision for the change, engaging with stakeholders to build support, and implementing the practical steps needed to transition from the old way of working to the new.
-    
+
     - It includes managing resistance and removing obstacles to the change.
 
 - **Ensure that new practices are embedded in business-as-usual**
-    
+
     - This is the "sustain" phase. Change is not complete until the new ways of working have become the normal, everyday practice.
-    
+
     - This involves monitoring the adoption of the new practices, providing ongoing support and training, and reinforcing the new behaviours until they are fully embedded.
 
 - **Maintain change management documentation**
@@ -69,7 +79,7 @@ Topic: ''
 - **Assure the quality of change management**
     - This involves ensuring that the agreed-upon procedures for managing change are being followed correctly and that the change management activities are having the desired effect.
 
-> [IMPORTANT]  
+> [IMPORTANT]
 > The amount of organisational change required can vary considerably, as can the consequences of managing it badly. This competency is relevant to several roles (e.g., Programme Manager, Business Change Manager) that have different perspectives on change. The application of the competency must be matched to the importance of change management in the context of the work and the specific role.
 
 
@@ -97,13 +107,13 @@ Topic: ''
 
 - **Models that describe the nature of organisational change**
     - Being familiar with different models that explain how organisations and individuals react to change, such as:
-        
+
         - **Lewin's** "Unfreeze-Change-Refreeze" model.
-        
+
         - **Kotter's** 8-Step Change Model.
-        
+
         - The **Change Curve** (based on the Kübler-Ross grief cycle).
-        
+
         - The "Formula for Change": C = (A x B x D) > X.
 
 - **How to communicate change**
@@ -138,3 +148,14 @@ Topic: ''
 
 - **Q:** Name two models that can be used to understand the nature of organisational change.
     - **A:** Any two from: Lewin's model (Unfreeze-Change-Refreeze), Kotter's 8-Step Model, or the Change Curve.
+
+
+---
+## Navigation & Related Notes
+- **Up**: [[00 - Overview|Management Areas Overview]]
+- **Previous**: [[Manage the Schedule Competency]]
+
+### Related Concepts & Artefacts
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Capability Maturity]]
+- [[Complexity]]
