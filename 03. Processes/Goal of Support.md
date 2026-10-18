@@ -25,7 +25,7 @@ updated: 2026-10-17
 
 # Goal of Support
 
-> [!SUMMARY] Overview
+> [!Note] Overview
 > The goals and scope of project, programme, and portfolio support offices (PMO).
 
 ## Goals of the Support Function
