@@ -8,6 +8,9 @@ tags:
   - pillar/knowledge
   - section/change-management
   - type/management-area
+  - praxis/data-bi
+  - topic/adoption
+  - discipline/dataops
 pillar: "Knowledge"
 section: "Change Management"
 subarea: "Management"
@@ -133,6 +136,67 @@ updated: 2026-10-17
 
 - The portfolio team must be aware of the cumulative impact of change on the organisation. For example, if multiple projects and programmes are imposing change on a single business unit simultaneously, this can have a negative effect, either because the unit cannot accommodate that level of change or because the multiple changes conflict with each other. The portfolio team is responsible for managing this overall "change capacity".
 
+
+## Praxis for Data & Business Intelligence: Managing Analytics Adoption
+
+In enterprise Data Engineering, Data Analytics, and Business Intelligence (BI) initiatives, change management is frequently the single determinant of project success. A mathematically flawless Lakehouse pipeline and an aesthetically polished dashboard deliver zero business value if operational teams continue running business-critical processes on unversioned desktop spreadsheets.
+
+> [!IMPORTANT] The Analytics Adoption Paradox
+> In software engineering, users are forced to interact with the new interface to perform their daily duties (e.g., ERP entry, CRM updates). In Data & BI, stakeholders have a frictionless, entrenched fallback: **Shadow IT and Excel**. Therefore, Data Project Managers must treat business change management as an active engineering workstream, not an afterthought following production deployment.
+
+```
+Traditional Delivery Trap:
+[Raw Sources] ──> [Lakehouse Pipeline] ──> [Gold BI Dashboard] ──> [Project Declared Complete]
+                                                                        │
+                                              User fallback:            ▼
+                                    [Copy-paste into Excel] ◄── [Dashboard Abandoned]
+
+Praxis Integrated Change Management:
+[Data Engineering Delivery] ──> [Certified Semantic Layer]
+                                       │
+                                       ├─► [User Readiness & BCM Champions]
+                                       ├─► ["Analyze in Excel" Governed Bridges]
+                                       └─► [Systematic Spreadsheet Deprecation]
+                                                    │
+                                                    ▼
+                                    [Audited Benefits Realization (ROI)]
+```
+
+### 1. Applying the Formula for Change to Data Projects: $C = (A \times B \times D) > X$
+
+The Praxis change formula provides a diagnostic model for overcoming user inertia against new data platforms:
+
+| Element | Definition in Data & BI Context | Tactical Project Management Interventions |
+| :--- | :--- | :--- |
+| **$A$ (Dissatisfaction)** | Frustration with the current fragmented data state | Audit and quantify the weekly hours finance and operations spend manually merging CSVs; surface embarrassing metric reconciliations where two departments report different revenue figures to the board. |
+| **$B$ (Desirability)** | The compelling vision of a governed Single Source of Truth (SSOT) | Showcase automated morning refreshes, instantaneous drill-down capability, sub-second query performance on massive datasets, and proactive Slack/Teams anomaly alerts. |
+| **$D$ (Practicality)** | Frictionless initial steps into the new ecosystem | Deliver bite-sized vertical MVP reports rather than monolithic 20-page dashboards; conduct weekly "Data Office Hours"; provide pre-built templates for recurring weekly meetings. |
+| **$X$ (Perceived Cost)** | Friction, learning curve, and loss of perceived control | Overcome the fear of "central IT bottlenecking" by offering self-service exploration workspaces and live connections back to Excel. |
+
+---
+
+### 2. Taming "Excel Addiction" and Deprecating Shadow IT
+
+Business users do not cling to spreadsheets out of malice; they do so because spreadsheets provide autonomy, rapid iteration, and immediate flexibility. Forcing users off spreadsheets abruptly leads to covert resistance and shadow databases (Access, local SQLite, or unauthorized Google Sheets).
+
+Praxis recommends a graduated four-stage migration strategy:
+
+1. **Stage 1: Ingest & Automate (Mirroring)**: Replicate manual spreadsheet logic inside automated Silver/Gold transformation pipelines (dbt/SQL). Verify calculations with users to establish baseline parity.
+2. **Stage 2: The Governed Bridge ("Analyze in Excel")**: Rather than forcing business analysts into a new web dashboard interface immediately, configure XMLA endpoints or Power BI / Tableau "Analyze in Excel" connections. Analysts query certified, enterprise-scale semantic models from inside their familiar Excel pivot interface, eliminating local data scraping while maintaining analytical comfort.
+3. **Stage 3: The Certified Dashboard Migration**: Transition routine operational reporting to managed web dashboards with scheduled delivery, automated row-level security (RLS), and interactive slicing.
+4. **Stage 4: Formal Deprecation and Audit Lock**: Cease email distribution of raw CSV extracts; revoke database credentials for direct read-replicas; redirect upstream source extracts strictly to the central data lakehouse.
+
+---
+
+### 3. Business Change Managers (BCMs) in Modern Data Teams
+
+In complex data transformations, the Project Manager must partner with dedicated Business Change Managers or **Data Product Owners** embedded within business units:
+
+- **Departmental Data Champions**: Identify analytical super-users in Finance, Supply Chain, and Marketing. Train them early on dbt semantic layer concepts, DAX measures, and metadata definitions. They become the first line of peer-to-peer change support.
+- **Enterprise Data Literacy Programs**: Partner with business leadership to institute literacy workshops covering metric provenance, statistical variation vs. actual trends, and proper data interpretation.
+- **Usage Telemetry & Sunsetting**: Track dashboard telemetries (e.g., Power BI Activity Logs, Snowflake query history, Tableau Server telemetry). If a production report has fewer than 5 active monthly users 90 days post-launch, initiate a formal review to either retrain users or decommission the pipeline, preventing expensive compute drift and technical debt.
+
+---
 
 ## Flashcard Q&A
 
