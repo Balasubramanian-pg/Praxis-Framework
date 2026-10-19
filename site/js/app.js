@@ -1,5 +1,6 @@
 // ==========================================================================
-// Praxis Documentation Portal - Atlas Docs Modern Dark Architecture
+// Praxis Wikipedia Portal - Main Application Logic
+// Design: Modern Wikipedia Redesign (Clean Editorial Encyclopedia Architecture)
 // ==========================================================================
 
 (function() {
@@ -8,14 +9,21 @@
   const navTree = data.navigation;
 
   // DOM Elements
-  const dashboardView = document.getElementById("dashboardView");
-  const articleView = document.getElementById("articleView");
+  const articleTitle = document.getElementById("articleTitle");
+  const articleDisambiguation = document.getElementById("articleDisambiguation");
   const articleContainer = document.getElementById("articleContainer");
-  const articleEyebrow = document.getElementById("articleEyebrow");
-  const sidebarNav = document.getElementById("sidebarNav");
+  const sidebarTopicHeading = document.getElementById("sidebarTopicHeading");
+  const contentsList = document.getElementById("contentsList");
+  const vaultNavTree = document.getElementById("vaultNavTree");
   const searchInput = document.getElementById("searchInput");
   const searchResults = document.getElementById("searchResults");
-  const tocList = document.getElementById("tocList");
+
+  // Infobox DOM Elements
+  const infoboxMediaBadge = document.getElementById("infoboxMediaBadge");
+  const infoboxMediaTitle = document.getElementById("infoboxMediaTitle");
+  const infoboxMediaSubtitle = document.getElementById("infoboxMediaSubtitle");
+  const infoboxRows = document.getElementById("infoboxRows");
+  const infoboxRelatedList = document.getElementById("infoboxRelatedList");
 
   // Configure marked if loaded
   if (typeof marked !== "undefined") {
@@ -25,28 +33,6 @@
       headerIds: true,
       mangle: false
     });
-  }
-
-  // Configure Mermaid for Dark Theme
-  if (typeof mermaid !== "undefined") {
-    try {
-      mermaid.initialize({
-        startOnLoad: false,
-        theme: 'dark',
-        themeVariables: {
-          darkMode: true,
-          background: '#11141a',
-          primaryColor: '#1e293b',
-          primaryTextColor: '#f8fafc',
-          primaryBorderColor: '#38bdf8',
-          lineColor: '#64748b',
-          secondaryColor: '#1e2230',
-          tertiaryColor: '#161922'
-        }
-      });
-    } catch (e) {
-      console.warn("Mermaid dark theme init notice:", e);
-    }
   }
 
   // Refresh Lucide Icons helper
@@ -70,7 +56,7 @@
   };
 
   // Markdown Parser
-  function parseMarkdown(md) {
+  function parseMarkdown(md, relPath) {
     if (!md) return "";
 
     // 1. Remove YAML frontmatter
@@ -126,15 +112,13 @@
     return html;
   }
 
-  // Copy Code Snippet Handler
+  // Global Actions
   window.copyCodeSnippet = function(button) {
-    const wrapper = button.closest(".code-block-wrapper") || button.closest(".terminal-box");
+    const wrapper = button.closest(".code-block-wrapper");
     if (!wrapper) return;
-    const codeEl = wrapper.querySelector("pre code") || wrapper.querySelector(".terminal-command");
+    const codeEl = wrapper.querySelector("pre code");
     if (!codeEl) return;
-    const text = codeEl.innerText;
-
-    navigator.clipboard.writeText(text).then(() => {
+    navigator.clipboard.writeText(codeEl.innerText).then(() => {
       button.innerHTML = '<i data-lucide="check"></i> Copied!';
       refreshIcons();
       setTimeout(() => {
@@ -144,227 +128,109 @@
     });
   };
 
-  // Copy Current Page Link Handler
-  window.copyCurrentPageLink = function(btn) {
+  window.shareCurrentPage = function() {
     navigator.clipboard.writeText(window.location.href).then(() => {
-      const orig = btn.innerHTML;
-      btn.innerHTML = '<i data-lucide="check"></i> Copied URL!';
-      refreshIcons();
-      setTimeout(() => {
-        btn.innerHTML = orig;
-        refreshIcons();
-      }, 2000);
+      alert("Page link copied to clipboard!");
     });
   };
 
-  // Ask AI Modal or Quick Insights
-  window.triggerAskAI = function() {
-    searchInput.focus();
-    searchInput.placeholder = "Ask AI: e.g. How does Medallion architecture fit into Praxis Scope?";
+  window.bookmarkCurrentPage = function() {
+    const title = articleTitle ? articleTitle.textContent : "Praxis Note";
+    alert(`Bookmarked "${title}" to your study list.`);
   };
 
-  // Interactive Code Tabs Switcher on Welcome Page
-  const tabCommands = {
-    "macos": "curl -sSf https://praxis-framework.org/install.sh | sh",
-    "homebrew": "brew install praxis-framework/tap/praxis",
-    "docker": "docker run -it -p 8080:8080 ghcr.io/balasubramanian-pg/praxis:latest",
-    "databricks": "pip install praxis-databricks-finops",
-    "snowflake": "CREATE OR REPLACE RESOURCE MONITOR praxis_finops_monitor WITH CREDIT_QUOTA = 500;",
-    "dbt": "dbt run --select tag:praxis_quality_gate",
-    "fabric": "Install-Module Microsoft.Fabric.PraxisGovernance"
+  window.downloadCurrentPage = function() {
+    window.print();
   };
 
-  window.selectCodeTab = function(tabName, btn) {
-    document.querySelectorAll(".code-tab-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    const cmdEl = document.getElementById("terminalCommand");
-    if (cmdEl && tabCommands[tabName]) {
-      cmdEl.textContent = tabCommands[tabName];
-    }
-  };
-
-  // Render Sidebar Navigation
-  function renderSidebar() {
-    sidebarNav.innerHTML = "";
-
-    // 1. Core items
-    const topNav = document.createElement("div");
-    topNav.innerHTML = `
-      <a href="#/home" class="sidebar-nav-link active" id="sidebarWelcomeLink">
-        <span>Welcome</span>
-      </a>
-      <a href="#/article/00%20-%20Praxis%20Framework%20Overview" class="sidebar-nav-link">
-        <span>Get Started</span>
-      </a>
-      <a href="#/article/Complexity" class="sidebar-nav-link">
-        <span>Praxis vs Others</span>
-      </a>
-    `;
-    sidebarNav.appendChild(topNav);
-
-    // 2. Expandable Pillars & Core Sections
-    const pillars = [
-      { name: "01. Core Concepts", moc: "01. Core Concepts/00 - Overview" },
-      { name: "02. Governance & Framework", moc: "02. Governance & Framework/00 - Overview" },
-      { name: "03. Processes & Lifecycle", moc: "03. Processes/00 - Overview" },
-      { name: "04. Management Areas (10)", moc: "04. Management Areas/00 - Overview" },
-      { name: "05. Competencies & Skills", moc: "05. Competencies & Skills/00 - Overview" },
-      { name: "06. Artefacts & Templates", moc: "06. Documentation & Artefacts/00 - Overview" },
-      { name: "07. Portfolio Management", moc: "07. Portfolio Management/00 - Overview" },
-      { name: "08. Delivery & Lifecycle", moc: "08. Delivery & Lifecycle/00 - Overview" },
-      { name: "09. Capability Maturity", moc: "09. Maturity Models/00 - Overview" }
-    ];
-
-    pillars.forEach(p => {
-      const item = document.createElement("a");
-      item.className = "sidebar-nav-link";
-      item.href = `#/article/${encodeURIComponent(p.moc)}`;
-      item.dataset.id = p.moc;
-      item.innerHTML = `
-        <span>${p.name}</span>
-        <svg class="sidebar-chevron lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      `;
-      sidebarNav.appendChild(item);
-    });
-
-    // 3. Section Header: DATA & BI SPECIALIZATION
-    const biHeader = document.createElement("div");
-    biHeader.className = "sidebar-section-header";
-    biHeader.textContent = "Data & BI Specialization";
-    sidebarNav.appendChild(biHeader);
-
-    const biLinks = [
-      { title: "Medallion Architecture", id: "Scope Management" },
-      { title: "Data FinOps & Budgets", id: "General Principles of Financial Management" },
-      { title: "DataOps & Quality Gates", id: "Control" },
-      { title: "Schema Drift & Risk", id: "General Principles of Risk Management" },
-      { title: "Semantic Models & BI", id: "Goal of Change Management" }
-    ];
-
-    biLinks.forEach(b => {
-      const link = document.createElement("a");
-      link.className = "sidebar-nav-link";
-      link.href = `#/article/${encodeURIComponent(b.id)}`;
-      link.dataset.id = b.id;
-      link.innerHTML = `<span>${b.title}</span>`;
-      sidebarNav.appendChild(link);
-    });
-
-    // 4. Complete Vault Folder Hierarchy (Collapsible)
-    const vaultHeader = document.createElement("div");
-    vaultHeader.className = "sidebar-section-header";
-    vaultHeader.textContent = "Vault Structure";
-    sidebarNav.appendChild(vaultHeader);
+  // Render Sidebar Tree (Collapsible Vault Navigation)
+  function renderVaultTree() {
+    if (!vaultNavTree) return;
+    vaultNavTree.innerHTML = "";
 
     navTree.forEach(group => {
       const groupEl = document.createElement("div");
-      groupEl.className = "sidebar-group";
+      groupEl.className = "wiki-vault-folder";
 
       const header = document.createElement("div");
-      header.className = "sidebar-nav-link";
+      header.className = "wiki-vault-folder-title";
       header.innerHTML = `
         <span>${group.clean_name}</span>
-        <svg class="sidebar-chevron lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <svg class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 13px; height: 13px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
       `;
       header.addEventListener("click", () => {
         groupEl.classList.toggle("expanded");
       });
 
-      const subItemsEl = document.createElement("div");
-      subItemsEl.className = "sidebar-sub-items";
+      const itemsEl = document.createElement("div");
+      itemsEl.className = "wiki-vault-folder-items";
 
       group.articles.forEach(art => {
         const item = document.createElement("a");
-        item.className = "sidebar-sub-link";
+        item.className = "wiki-vault-note-link";
         item.href = `#/article/${encodeURIComponent(art.id)}`;
         item.textContent = art.title;
         item.dataset.id = art.id;
-        subItemsEl.appendChild(item);
+        itemsEl.appendChild(item);
       });
 
       if (group.sub_folders && group.sub_folders.length > 0) {
         group.sub_folders.forEach(sub => {
           const subGroup = document.createElement("div");
-          subGroup.className = "sidebar-group";
+          subGroup.className = "wiki-vault-folder";
 
           const subHeader = document.createElement("div");
-          subHeader.className = "sidebar-nav-link";
-          subHeader.style.fontSize = "12.5px";
+          subHeader.className = "wiki-vault-folder-title";
+          subHeader.style.fontSize = "11.5px";
           subHeader.innerHTML = `
             <span>${sub.name}</span>
-            <svg class="sidebar-chevron lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <svg class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
           `;
           subHeader.addEventListener("click", (e) => {
             e.stopPropagation();
             subGroup.classList.toggle("expanded");
           });
 
-          const subSubItems = document.createElement("div");
-          subSubItems.className = "sidebar-sub-items";
+          const subItemsEl = document.createElement("div");
+          subItemsEl.className = "wiki-vault-folder-items";
 
           sub.articles.forEach(subArt => {
             const item = document.createElement("a");
-            item.className = "sidebar-sub-link";
+            item.className = "wiki-vault-note-link";
             item.href = `#/article/${encodeURIComponent(subArt.id)}`;
             item.textContent = subArt.title;
             item.dataset.id = subArt.id;
-            subSubItems.appendChild(item);
+            subItemsEl.appendChild(item);
           });
 
           subGroup.appendChild(subHeader);
-          subGroup.appendChild(subSubItems);
-          subItemsEl.appendChild(subGroup);
+          subGroup.appendChild(subItemsEl);
+          itemsEl.appendChild(subGroup);
         });
       }
 
       groupEl.appendChild(header);
-      groupEl.appendChild(subItemsEl);
-      sidebarNav.appendChild(groupEl);
+      groupEl.appendChild(itemsEl);
+      vaultNavTree.appendChild(groupEl);
     });
 
     refreshIcons();
   }
 
-  // Routing Handler
+  // Route Handler
   function route() {
     const hash = window.location.hash || "#/home";
-    if (hash === "#" || hash === "#/" || hash === "#/home") {
-      showDashboard();
-    } else if (hash.startsWith("#/article/")) {
-      const id = decodeURIComponent(hash.replace("#/article/", ""));
-      showArticle(id);
+    let targetId = "00 - Praxis Framework Overview";
+
+    if (hash.startsWith("#/article/")) {
+      targetId = decodeURIComponent(hash.replace("#/article/", ""));
     }
+
+    displayArticle(targetId);
   }
 
-  function showDashboard() {
-    dashboardView.style.display = "block";
-    articleView.style.display = "none";
-    window.scrollTo(0, 0);
-
-    // Active state in sidebar
-    document.querySelectorAll(".sidebar-nav-link, .sidebar-sub-link").forEach(el => el.classList.remove("active"));
-    const welcome = document.getElementById("sidebarWelcomeLink");
-    if (welcome) welcome.classList.add("active");
-
-    // Static TOC for Welcome Page (Matches Atlas Docs TOC)
-    buildStaticWelcomeTOC();
-    refreshIcons();
-  }
-
-  function buildStaticWelcomeTOC() {
-    if (!tocList) return;
-    tocList.innerHTML = `
-      <li class="toc-item active"><a href="#welcomeIntro">Quick Introduction</a></li>
-      <li class="toc-item"><a href="#installationSec">Installation</a></li>
-      <li class="toc-item"><a href="#schemaAsCodeSec">Schema-as-Code</a></li>
-      <li class="toc-item h3"><a href="#schemaAsCodeSec">Medallion Lakehouse</a></li>
-      <li class="toc-item h3"><a href="#schemaAsCodeSec">Data Contracts & FinOps</a></li>
-      <li class="toc-item h3"><a href="#schemaAsCodeSec">DataOps & Semantic Models</a></li>
-    `;
-  }
-
-  function showArticle(articleId) {
-    // Find article
+  // Display Article & Populate 3 Columns
+  function displayArticle(articleId) {
     let article = articles[articleId];
     if (!article) {
       const base = articleId.split("/").pop();
@@ -372,96 +238,222 @@
     }
 
     if (!article) {
-      articleContainer.innerHTML = `
-        <h1 class="article-title">Document Not Found</h1>
-        <p class="article-body-text">The requested note <code>${articleId}</code> could not be found in the vault.</p>
-        <p><a href="#/home">Return to Welcome Overview</a></p>
+      article = articles["00 - Praxis Framework Overview"] || Object.values(articles)[0];
+    }
+
+    if (!article) return;
+
+    // 1. Column 1: Left Topic Header
+    if (sidebarTopicHeading) {
+      sidebarTopicHeading.textContent = (article.section || "Praxis Framework").toUpperCase();
+    }
+
+    // Set GitHub edit link
+    const editBtn = document.getElementById("actionEditBtn");
+    if (editBtn) {
+      const path = article.rel_path || (article.title + ".md");
+      editBtn.href = `https://github.com/Balasubramanian-pg/Praxis-Framework/edit/main/${encodeURIComponent(path)}`;
+    }
+
+    // 2. Column 2: Center Editorial Article
+    if (articleTitle) {
+      articleTitle.textContent = article.title;
+    }
+
+    if (articleDisambiguation) {
+      articleDisambiguation.innerHTML = `
+        This article discusses <strong>${article.title}</strong> within the Praxis Framework, specialized for <strong>Data Engineering, Analytics, and Business Intelligence</strong> project management.
       `;
-      if (articleEyebrow) articleEyebrow.textContent = "Error";
-      dashboardView.style.display = "none";
-      articleView.style.display = "block";
-      refreshIcons();
-      return;
     }
 
-    if (articleEyebrow) {
-      articleEyebrow.textContent = article.section || "Documentation";
-    }
+    const renderedHtml = parseMarkdown(article.body, article.rel_path);
+    articleContainer.innerHTML = renderedHtml;
 
-    // Render Article Body
-    const renderedBody = parseMarkdown(article.body);
-    articleContainer.innerHTML = renderedBody;
+    // Inject Edit Buttons into Section Headings (like Early life in screenshot)
+    const h2Elements = articleContainer.querySelectorAll("h2");
+    h2Elements.forEach(h2 => {
+      const editIcon = document.createElement("a");
+      editIcon.className = "wiki-heading-edit-btn";
+      editIcon.href = editBtn ? editBtn.href : "#";
+      editIcon.target = "_blank";
+      editIcon.title = "Edit this section on GitHub";
+      editIcon.innerHTML = `<i data-lucide="edit-3"></i>`;
+      h2.appendChild(editIcon);
+    });
 
-    dashboardView.style.display = "none";
-    articleView.style.display = "block";
-    window.scrollTo(0, 0);
+    // 3. Populate Column 1: Dynamic Numbered Table of Contents (CONTENTS)
+    buildNumberedTOC();
 
-    // Dynamic TOC for Article View
-    buildArticleTOC();
+    // 4. Populate Column 3: Wikipedia Infobox
+    buildInfobox(article);
 
-    // Highlight in sidebar & expand parent
-    const welcome = document.getElementById("sidebarWelcomeLink");
-    if (welcome) welcome.classList.remove("active");
-
-    document.querySelectorAll(".sidebar-nav-link, .sidebar-sub-link").forEach(el => {
-      if (el.dataset && (el.dataset.id === article.id || el.dataset.id === article.base_name)) {
-        el.classList.add("active");
-        let parent = el.closest(".sidebar-group");
+    // 5. Update Vault Nav Active State
+    document.querySelectorAll(".wiki-vault-note-link").forEach(link => {
+      if (link.dataset && (link.dataset.id === article.id || link.dataset.id === article.base_name)) {
+        link.classList.add("active");
+        let parent = link.closest(".wiki-vault-folder");
         while (parent) {
           parent.classList.add("expanded");
-          parent = parent.parentElement.closest(".sidebar-group");
+          parent = parent.parentElement.closest(".wiki-vault-folder");
         }
       } else {
-        el.classList.remove("active");
+        link.classList.remove("active");
       }
     });
 
-    // Refresh icons and diagrams
+    window.scrollTo(0, 0);
     refreshIcons();
+
+    // Run Mermaid if present
     if (window.mermaid && typeof window.mermaid.run === "function") {
       try {
         window.mermaid.run({ querySelector: ".mermaid" });
       } catch (err) {
-        console.warn("Mermaid render notice:", err);
+        console.warn("Mermaid notice:", err);
       }
     }
   }
 
-  // Dynamic TOC generator from article headings
-  function buildArticleTOC() {
-    if (!tocList) return;
-    tocList.innerHTML = "";
+  // Build Numbered Table of Contents (1. Early life, 2. Career with dot, 2.1, 2.2)
+  function buildNumberedTOC() {
+    if (!contentsList) return;
+    contentsList.innerHTML = "";
 
-    const headings = articleContainer.querySelectorAll("h1, h2, h3");
+    const headings = articleContainer.querySelectorAll("h2, h3");
     if (headings.length === 0) {
-      tocList.innerHTML = `<li class="toc-item"><a href="#">Overview</a></li>`;
+      contentsList.innerHTML = `<li class="wiki-toc-item active"><a href="#">1. Overview</a><div class="wiki-toc-dot"></div></li>`;
       return;
     }
+
+    let h2Count = 0;
+    let h3Count = 0;
 
     headings.forEach((h, idx) => {
       let slug = h.id;
       if (!slug) {
-        slug = "heading-" + idx;
+        slug = "section-" + idx;
         h.id = slug;
       }
 
       const li = document.createElement("li");
-      li.className = "toc-item" + (h.tagName.toLowerCase() === "h3" ? " h3" : "");
-      if (idx === 0) li.classList.add("active");
+      li.className = "wiki-toc-item";
 
+      let numberPrefix = "";
+      if (h.tagName.toLowerCase() === "h2") {
+        h2Count++;
+        h3Count = 0;
+        numberPrefix = `${h2Count}. `;
+        if (idx === 0) {
+          li.classList.add("active");
+        }
+      } else {
+        h3Count++;
+        numberPrefix = `${h2Count}.${h3Count} `;
+        li.classList.add("sub-item");
+      }
+
+      const cleanText = h.textContent.replace(/<[^>]*>?/gm, "").trim();
       const a = document.createElement("a");
       a.href = "#" + slug;
-      a.textContent = h.textContent.replace(/^#+\s*/, "");
+      a.textContent = numberPrefix + cleanText;
+
       a.addEventListener("click", (e) => {
         e.preventDefault();
         h.scrollIntoView({ behavior: "smooth", block: "start" });
-        document.querySelectorAll(".toc-item").forEach(item => item.classList.remove("active"));
+        document.querySelectorAll(".wiki-toc-item").forEach(item => {
+          item.classList.remove("active");
+          const dot = item.querySelector(".wiki-toc-dot");
+          if (dot) dot.remove();
+        });
         li.classList.add("active");
+        if (!li.querySelector(".wiki-toc-dot")) {
+          const dot = document.createElement("div");
+          dot.className = "wiki-toc-dot";
+          li.appendChild(dot);
+        }
       });
 
       li.appendChild(a);
-      tocList.appendChild(li);
+
+      if (idx === 0 && !li.classList.contains("sub-item")) {
+        const dot = document.createElement("div");
+        dot.className = "wiki-toc-dot";
+        li.appendChild(dot);
+      }
+
+      contentsList.appendChild(li);
     });
+  }
+
+  // Build Wikipedia Infobox / Knowledge Card (Right Column)
+  function buildInfobox(article) {
+    if (!infoboxRows) return;
+
+    // Infobox Header Visual
+    if (infoboxMediaBadge) {
+      const letters = (article.title.replace(/[^a-zA-Z]/g, "").slice(0, 2) || "PX").toUpperCase();
+      infoboxMediaBadge.textContent = letters;
+    }
+    if (infoboxMediaTitle) {
+      infoboxMediaTitle.textContent = article.title;
+    }
+    if (infoboxMediaSubtitle) {
+      infoboxMediaSubtitle.textContent = `${article.pillar || "Knowledge"} Pillar \u2022 Praxis Framework`;
+    }
+
+    // Determine Tags & Discipline Pills
+    const defaultPills = ["DataOps", "FinOps", "Lakehouse", "P3M"];
+    const tagPills = (article.type ? [article.type] : []).concat(defaultPills);
+
+    // Metadata Rows matching screenshot structure
+    const rows = [
+      { label: "Framework", value: "Praxis Framework" },
+      { label: "Pillar", value: `<a href="#/article/1.%20Knowledge" class="wiki-infobox-related-link">${article.pillar || "Knowledge & Method"}</a>` },
+      { label: "Section", value: article.section || "General" },
+      { label: "Lifecycle", value: "Agile Medallion Sprints" },
+      { label: "Discipline", value: "Data & BI Engineering" },
+      {
+        label: "Tags",
+        value: tagPills.map(tag => `<span class="wiki-pill-badge">${tag}</span>`).join("")
+      },
+      { label: "Maintainer", value: '<a href="https://github.com/Balasubramanian-pg" target="_blank" class="wiki-infobox-related-link">Balasubramanian PG</a>' },
+      { label: "License", value: "CC BY-SA 4.0" },
+      { label: "Status", value: "Production Reference" }
+    ];
+
+    infoboxRows.innerHTML = rows.map(r => `
+      <tr class="wiki-infobox-row">
+        <td class="wiki-infobox-label">${r.label}</td>
+        <td class="wiki-infobox-value">${r.value}</td>
+      </tr>
+    `).join("");
+
+    // Populate Related Notes in Infobox
+    if (infoboxRelatedList) {
+      infoboxRelatedList.innerHTML = "";
+      const related = [];
+      for (const [id, art] of Object.entries(articles)) {
+        if (id !== art.id) continue;
+        if (art.id === article.id) continue;
+        if (art.folder === article.folder && !art.id.endsWith("00 - Overview")) {
+          related.push(art);
+        }
+      }
+
+      const candidates = related.slice(0, 4);
+      if (candidates.length > 0) {
+        infoboxRelatedList.innerHTML = candidates.map(c => `
+          <a href="#/article/${encodeURIComponent(c.id)}" class="wiki-infobox-related-link">
+            &bull; ${c.title}
+          </a>
+        `).join("");
+      } else {
+        infoboxRelatedList.innerHTML = `
+          <a href="#/article/00%20-%20Praxis%20Framework%20Overview" class="wiki-infobox-related-link">&bull; Master Framework MOC</a>
+          <a href="#/article/1.%20Knowledge" class="wiki-infobox-related-link">&bull; Knowledge & FinOps Guide</a>
+        `;
+      }
+    }
   }
 
   // Live Search Input Handler
@@ -491,15 +483,15 @@
     matches.sort((a, b) => b.score - a.score);
 
     if (matches.length === 0) {
-      searchResults.innerHTML = '<div style="padding: 14px; color: var(--text-muted); font-size: 13px;">No documentation found.</div>';
+      searchResults.innerHTML = '<div style="padding: 14px; color: var(--text-muted); font-size: 13px;">No encyclopedic entries found.</div>';
       searchResults.style.display = "block";
       return;
     }
 
     searchResults.innerHTML = matches.slice(0, 8).map(m => `
-      <div class="search-result-item" onclick="window.location.hash='#/article/${encodeURIComponent(m.article.id)}'; document.getElementById('searchResults').style.display='none'; document.getElementById('searchInput').value='';">
-        <div class="search-result-title">${m.article.title}</div>
-        <div class="search-result-meta">${m.article.section} &bull; ${m.article.type} &bull; ${(m.article.summary || "").slice(0, 75)}...</div>
+      <div class="wiki-search-item" onclick="window.location.hash='#/article/${encodeURIComponent(m.article.id)}'; document.getElementById('searchResults').style.display='none'; document.getElementById('searchInput').value='';">
+        <div class="wiki-search-item-title">${m.article.title}</div>
+        <div class="wiki-search-item-desc">${m.article.section} &bull; ${m.article.type} &bull; ${(m.article.summary || "").slice(0, 75)}...</div>
       </div>
     `).join("");
     searchResults.style.display = "block";
@@ -507,7 +499,7 @@
 
   // Close search on click outside
   document.addEventListener("click", function(e) {
-    if (!e.target.closest(".search-container")) {
+    if (!e.target.closest(".wiki-search-box")) {
       searchResults.style.display = "none";
     }
   });
@@ -523,7 +515,7 @@
   });
 
   // Initialize
-  renderSidebar();
+  renderVaultTree();
   window.addEventListener("hashchange", route);
   route();
 })();
