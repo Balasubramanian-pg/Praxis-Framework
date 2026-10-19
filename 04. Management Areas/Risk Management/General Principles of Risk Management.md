@@ -3,11 +3,14 @@ title: "Risk Management"
 aliases:
   - "Risk Management"
   - "General Principles of Risk Management"
+  - "Data Risk Management"
 tags:
   - praxis-framework
   - pillar/knowledge
   - section/risk-management
   - type/management-area
+  - discipline/data-governance
+  - discipline/dataops
 pillar: "Knowledge"
 section: "Risk Management"
 subarea: "Management"
@@ -16,12 +19,12 @@ status: "published"
 source: "Praxis Framework"
 source_url: "https://www.praxisframework.org"
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-10-19
 ---
 
 > [!NAV] Navigation
 > **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Risk Management]]
-> **Pillar**: Knowledge | **Type**: `management-area`
+> **Pillar**: Knowledge | **Type**: `management-area` | **Specialization**: Data Risks, Schema Drift & DataOps
 
 # Comprehensive Study Notes: Risk Management
 
@@ -31,148 +34,108 @@ updated: 2026-10-17
 
 ### The Goals of Risk Management
 
-- The primary goals of this function are to:
-
-    1. Ensure that the levels of **overall risk** within a project, programme, or portfolio are compatible with organisational objectives and risk appetite.
-
-    2. Ensure that individual **risks and their responses** are identified and managed.
-
-    3. Minimise the impact of **threats** to the objectives.
-
-    4. Optimise the realisation of **opportunities** within the scope of the work.
+1. Ensure that the levels of **overall risk** within a project, programme, or portfolio are compatible with organisational objectives and risk appetite.
+2. Ensure that individual **risks and their responses** are identified and managed.
+3. Minimise the impact of **threats** to the objectives.
+4. Optimise the realisation of **opportunities** within the scope of the work.
 
 ### Understanding Risk: Events vs. Uncertainty
 
-- Risk is inherent in all P3 work because each initiative is a unique combination of objectives, solutions, people, and context. Overall risk has two main components: risk events and uncertainty.
+- **Risk Event**: An identifiable event that, *if it occurs*, will have an adverse (threat) or beneficial (opportunity) impact on objectives.
+- **Uncertainty**: The non-specific risk inherent in estimations, innovative technology, or rapidly shifting business contexts.
 
-- **Risk Event**:
+---
 
-    - This is an **identifiable event** that, _if it occurs_, will have an impact on the objectives. The key phrase is "if it occurs."
+## Modern Data Risk Management: Five Failure Modes in Data & Analytics
 
-    - Risk events are viewed as either negative or positive:
+In software application development, bugs produce visible compiler or runtime errors. In **Data Engineering and Business Intelligence**, the most catastrophic risks occur **silently**—pipelines run to completion with exit code 0, yet the underlying numbers delivered to executives are completely wrong.
 
-        - **Threat (Negative Risk)**: An event that will have an _adverse_ effect on the objectives if it occurs.
+```
+Traditional IT Risk:       Application Crashes / Server Down (Explicit Failure)
+Data & Analytics Risk:     Pipelines Complete Successfully, but Data is Wrong (Silent Corruption)
+```
 
-        - **Opportunity (Positive Risk)**: An event that can _enhance_ the value of the work or its objectives if it occurs.
+### 1. Schema Drift & Breaking Upstream Contract Changes
 
-- **Uncertainty**:
+- **The Threat**: Upstream software developers alter an operational database (renaming `cust_id` to `customer_uuid`, changing an integer to a string, or dropping a legacy column) without notifying the data team. Ingestion pipelines fail, or worse, load corrupted null values downstream.
+- **Response Strategy**:
+  - **Proactive Mitigation**: Implement strict **Data Contracts** with upstream product teams.
+  - **Technical Defense**: Use schema evolution policies (`mergeSchema` in Delta Lake / Iceberg) and schema registry validation in ingestion tools (Kafka, Fivetran, Airbyte).
 
-    - This relates to a form of risk that **cannot be identified as a specific risk event**.
+### 2. Silent Data Corruption & Semantic Degradation
 
-    - **Examples**: Uncertainty about the performance or reliability of a component when using innovative technology. At a more mundane level, every set of plans has a degree of uncertainty because they are based on estimates of varying accuracy.
+- **The Threat**: Upstream business logic changes (e.g., introducing a new order status code `REFUNDED_PENDING`), causing downstream revenue metrics to double-count transactions. No technical errors occur, but the CEO views inaccurate quarterly sales figures.
+- **Response Strategy**:
+  - **Automated Quality Gates**: Integrate assertions into transformation layers using **dbt test**, **Great Expectations**, or **Soda Core**.
+  - **Fail-Fast Boundaries**: Configure pipelines to halt table promotion from Silver to Gold if primary key uniqueness or null threshold constraints are violated.
 
+### 3. Pipeline SLA Breaches & Latency Drift
+
+- **The Threat**: Unexpected volume spikes (e.g., Black Friday transaction floods) cause 2-hour nightly ETL batch jobs to stretch to 8 hours, failing to refresh executive dashboards before 08:00 AM business standups.
+- **Response Strategy**:
+  - **Auto-Scaling Compute**: Use multi-cluster virtual warehouses and auto-scaling Databricks pools to handle seasonal throughput spikes.
+  - **Observability Alerting**: Establish automated heartbeat monitors alerting Slack/PagerDuty whenever ingestion lag exceeds predefined tolerance thresholds.
+
+### 4. PII Exposure & Regulatory Compliance Violations (GDPR, HIPAA, CCPA)
+
+- **The Threat**: Unstructured logs or new CRM fields containing unmasked Personally Identifiable Information (PII) land in raw object storage (S3/ADLS), violating data residency or compliance laws and exposing the organization to severe regulatory fines.
+- **Response Strategy**:
+  - **Automated PII Scanning**: Run classification routines during Bronze ingestion to detect social security numbers, emails, and payment card data.
+  - **Access Governance**: Enforce dynamic column-level masking and row-level security policies through enterprise data catalogs (Unity Catalog, Microsoft Purview, Snowflake Data Governance).
+
+### 5. Dashboard Abandonment & Business Distrust
+
+- **The Threat**: Business stakeholders discover a discrepancy between the new enterprise Power BI model and their legacy manual Excel spreadsheets. Trust evaporates, stakeholders abandon the certified BI model, and return to ungoverned shadow IT.
+- **Response Strategy**:
+  - **Parallel Run Validation**: Run certified BI models concurrently alongside legacy reports for 30 to 60 days to reconcile and explain mathematical variances.
+  - **Data Lineage Transparency**: Expose interactive data lineage graphs showing users exactly how every metric is calculated from source to report.
+
+---
 
 ## The Risk Management Procedure
 
-- The risk management procedure is an iterative cycle of identification, assessment, and response planning.
-
-1. **Plan**:
-    - This step defines the scope and objectives of risk management and results in the **risk management plan**. This plan should address both tangible risk events and the more difficult-to-quantify aspect of overall uncertainty.
-
-2. **Initiate**:
-    - This step is performed once the work is approved. It ensures the necessary resources needed to manage risk are mobilised.
-
-3. **Identify**:
-
-    - This is the first specific step, where risk events and areas of uncertainty are identified. These are documented in the **risk register**.
-
-    - Techniques include brainstorming, checklists, interviews, and reviewing lessons learned.
-
-    - **The greatest fault** of many P3 managers is to take this step too far. The potential list of risk events is literally endless. Experienced managers are able to sift out the risks that genuinely need to be managed from those that can be left as "background risk."
-
-4. **Assess**:
-
-    - The nature of the identified risks is assessed, and, where possible, their potential effect on the objectives is estimated.
-
-    - Techniques fall into two main groups:
-
-        - **Qualitative Risk Techniques**: Assessing risk based on descriptive scales (e.g., High, Medium, Low probability and impact).
-
-        - **Quantitative Risk Techniques**: Using numerical methods to assess risk (e.g., Expected Monetary Value, Monte Carlo analysis).
-
+1. **Plan**: Establish the **Risk Management Plan**, defining risk thresholds, qualitative severity matrices (Probability vs. Impact), and escalation pathways.
+2. **Initiate**: Appoint Risk Owners across Data Engineering, Analytics, and Business Governance.
+3. **Identify**: Conduct collaborative data failure mode workshops (FMEA) to identify single points of pipeline failure and upstream dependencies.
+4. **Assess**: Quantify data downtime risks using qualitative (RAG rating) and quantitative techniques (Expected Monetary Value of inaccurate regulatory reporting).
 5. **Plan Responses**:
+   - **Avoid**: Refactor single-threaded monolithic pipelines into decoupled micro-pipelines.
+   - **Reduce**: Deploy automated data quality test suites to catch bad records before downstream mart ingestion.
+   - **Transfer**: Secure cloud vendor Service Level Agreements (SLAs) for managed database infrastructure.
+   - **Accept**: Acknowledge non-critical latency in historical analytical models where real-time freshness is not required.
+6. **Implement Responses**: Implement automated retry policies, dead-letter queues (DLQs) for malformed records, and data circuit breakers.
 
-    - Once the risks are understood, the management team decides on how to respond.
-
-    - There are various response strategies for both threats (e.g., Avoid, Transfer, Reduce, Accept) and opportunities (e.g., Exploit, Enhance, Share, Accept).
-
-    - The planned responses are added to the risk register.
-
-6. **Implement Responses**:
-    - Depending on the nature of the planned responses, some are implemented immediately as part of the delivery plans (proactive responses), while others may only come into effect if and when the risk occurs (contingent responses).
-
-> [IMPORTANT]
-> The procedure is iterative. For example, the assessment of a risk or the planning of a response may lead to the identification of new, secondary risks.
-
-
-## The Human Side of Risk
-
-- Risk is inherent in everyday life. Different individuals and groups react to risk in different ways based on their experiences, values, and culture.
-
-- This **risk context** can have a significant impact on the effectiveness of the formal risk management procedure.
-
-- P3 managers need to identify and manage the behavioural influences of both individuals and groups on the risk procedure.
-
-> [NOTE]
-> The management of general health and safety risks (hazards) is usually excluded from P3 risk management, as this is traditionally handled by a separate, specialist function within the organisation.
-
+---
 
 ## Risk Management in Projects, Programmes, and Portfolios
 
-- The fundamental nature of risk and the principles used to manage it do not vary significantly between projects, programmes, and portfolios. However, the specifics do vary in line with the complexity of the work.
+### Projects
+- Manages localized technical risks: Specific API connector rate limits, pipeline performance bottlenecks, or dbt model compilation failures.
 
-- **As work becomes more complex**:
+### Programmes
+- Manages systemic domain risks: Harmonizing master customer definitions across multiple constituent project streams, preventing conflicting business definitions from reaching the enterprise lakehouse.
 
-    - Risk events become more numerous and diverse.
+### Portfolios
+- Manages organizational strategic risk: Assessing data vendor lock-in risks, overall cloud compute budget volatility, and cybersecurity posture across all data platforms.
 
-    - Uncertainty becomes a more influential factor.
-
-    - Management of the work becomes distributed (programmes have projects, portfolios have programmes, etc.).
-
-    - As a consequence, **risk management also becomes distributed**. This is the key difference between risk management in smaller projects and more complex work.
-
-### The Challenge of Distributed Risk Management
-
-- The management team of a programme, for example, must develop a programme-level risk management plan that promotes consistency across all its components. They then delegate responsibility for risk management to the individual project managers and business change managers.
-
-- The challenge arises because **risk does not respect the same boundaries** as the work breakdown structure. Risk events often have an impact beyond their host project or business area.
-
-- The programme management team has to balance the need for delegation with the need for **co-ordination**.
-
-### Co-ordinating Risk Across Levels
-
-- All parts of the programme need to work together to understand which risk events should be recorded and managed in the **programme risk register** and which should be recorded and managed at a more "local" level (e.g., a project risk register).
-
-- The basis for this decision is the analysis of the risk and, in particular, the **objectives the risk affects**.
-
-    - Risk that has a purely local effect on project objectives can clearly be managed at the project level.
-
-    - Risk that directly impacts the overall programme objectives (e.g., the realisation of a benefit) should be managed at the programme level.
-
-- The teams must also be aware of how the impact of a risk can change over time, potentially causing it to move between levels (escalation or de-escalation).
-
-- These same issues of co-ordination and management across levels apply to large complex projects and portfolios, albeit with slightly different emphases.
-
+---
 
 ## Flashcard Q&A
 
-- **Q:** What are the two main components of "overall risk"?
-    - **A:** Identifiable **risk events** and general **uncertainty**.
+- **Q:** Why is "silent data corruption" considered the most dangerous risk in Data & BI projects?
+  - **A:** Because data pipelines complete without error codes, yet corrupt business metrics are delivered to decision-makers, leading to flawed executive choices and regulatory penalties.
 
-- **Q:** What is the difference between a threat and an opportunity?
-    - **A:** A **threat** is a negative risk event that will have an adverse effect on objectives. An **opportunity** is a positive risk event that can enhance the value of the work.
+- **Q:** How do automated DataOps testing gates mitigate schema drift risk?
+  - **A:** They enforce validation checks (uniqueness, type assertions, allowed values) before data is merged from Silver to Gold, preventing malformed upstream data from polluting certified business marts.
 
-- **Q:** What is the most common fault of many P3 managers during risk identification?
-    - **A:** Taking the step too far and creating an endless list of potential risks, rather than sifting out the ones that genuinely need to be managed from "background risk."
+- **Q:** What is the recommended mitigation strategy for "Dashboard Abandonment"?
+  - **A:** Conduct parallel reporting runs alongside legacy spreadsheets for 30 to 60 days, openly reconcile calculation differences, and publish transparent data lineage to build stakeholder trust.
 
-- **Q:** What is the "risk context"?
-    - **A:** The behavioural influences of individuals and groups (their attitudes and reactions to risk) that can have a significant impact on the effectiveness of the risk management procedure.
-
-- **Q:** What is the primary basis for deciding whether a risk should be managed at the project level or escalated to the programme level?
-    - **A:** The **objectives the risk affects**. If it only affects local project objectives, it can be managed at the project level. If it affects overall programme objectives (like a benefit), it should be managed at the programme level.
-
+- **Q:** What is the function of a Dead-Letter Queue (DLQ) in data pipeline risk management?
+  - **A:** It diverts malformed, unparseable source records into an isolated holding container for engineering inspection, allowing the main pipeline to continue processing clean records without aborting the entire batch.
 
 ---
+
 ## Navigation & Related Notes
 - **Up**: [[00 - Overview|Risk Management Overview]]
 - **Next**: [[Manage Risk]]
@@ -180,5 +143,6 @@ updated: 2026-10-17
 ### Related Concepts & Artefacts
 - [[Risk Management Plan]]
 - [[Risk Register]]
-- [[Manage Risk Competency|Manage Risk]]
-- [[Delivery Process]]
+- [[Scope Management|Data Contracts]]
+- [[Control|DataOps Quality Gates]]
+- [[General Principles of Financial Management|FinOps]]
