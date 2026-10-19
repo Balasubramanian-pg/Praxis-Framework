@@ -3,11 +3,14 @@ title: "Financial Management"
 aliases:
   - "Financial Management"
   - "General Principles of Financial Management"
+  - "Data FinOps & Financial Management"
 tags:
   - praxis-framework
   - pillar/knowledge
   - section/cost-management
   - type/management-area
+  - discipline/finops
+  - discipline/data-engineering
 pillar: "Knowledge"
 section: "Cost Management"
 subarea: "Management"
@@ -16,12 +19,12 @@ status: "published"
 source: "Praxis Framework"
 source_url: "https://www.praxisframework.org"
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-10-19
 ---
 
 > [!NAV] Navigation
 > **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Cost Management]]
-> **Pillar**: Knowledge | **Type**: `management-area`
+> **Pillar**: Knowledge | **Type**: `management-area` | **Specialization**: Data FinOps & Cloud Economics
 
 # Comprehensive Study Notes: Financial Management
 
@@ -31,130 +34,118 @@ updated: 2026-10-17
 
 ### The Goals of Financial Management
 
-- The primary goals of this function are to:
-
-    1. Estimate the **cost** of achieving the objectives.
-
-    2. Assess the financial **viability** of achieving the objectives.
-
-    3. **Secure funds** and manage their release throughout the life cycle.
-
-    4. Set up and run appropriate **financial systems**.
-
-    5. **Monitor and control** expenditure against the budget.
+1. Estimate the **cost** of achieving the objectives.
+2. Assess the financial **viability** of achieving the objectives.
+3. **Secure funds** and manage their release throughout the life cycle.
+4. Set up and run appropriate **financial systems**.
+5. **Monitor and control** expenditure against the budget.
 
 ### The Three Main Areas of Financial Management
 
-- Financial management is made up of three main, interconnected areas:
+1. **Investment Appraisal**: Assessing financial viability using techniques like Net Present Value (NPV), Internal Rate of Return (IRR), and Payback Period.
+2. **Funding**: Securing capital and managing cash flow across tranches and project gateways.
+3. **Budgeting and Cost Control**: Predicting cash flow, setting baseline budgets, and monitoring cost variances (EVM / RAG tracking).
 
-    1. **Investment Appraisal**: This is the procedure by which the financial viability of the work is assessed. It uses techniques like Net Present Value (NPV), Internal Rate of Return (IRR), and Payback Period. The results are a primary input to the business case.
+---
 
-    2. **Funding**: This is concerned with securing the investment required to complete the work and ensuring that the funds are available when needed to support the cash flow.
+## Data FinOps & Cloud Economics for Modern Data Platforms
 
-    3. **Budgeting and Cost Control**: This involves estimating the costs, predicting the cash flow based on the schedule, setting the formal budget, and then applying controls to monitor actual expenditure against that budget.
+In traditional IT project management, financial management was focused on capital expenditure (CapEx): purchasing physical servers, SAN storage racks, and multi-year perpetual software licenses. 
 
+In modern **Data Engineering, Analytics, and BI initiatives**, infrastructure operates entirely on consumption-based operational expenditure (OpEx). If unmonitored, an unoptimized SQL query, a runaway cross-join, or an oversized Databricks cluster can consume an entire quarter's cloud budget in a single weekend.
+
+```
+Traditional IT:       [CapEx: Upfront Hardware]  ──>  Static Annual Depreciation
+Modern Data FinOps:   [OpEx: Dynamic Compute]    ──>  Per-Second DBUs / Snowflake Credits
+```
+
+### 1. Databricks DBU & Cluster Cost Governance
+
+- **Databricks Units (DBUs)**: The normalized unit of processing power billed per second on Databricks.
+- **Cluster Governance Policies**:
+  - **Auto-Termination**: Every development cluster must have mandatory auto-termination enabled (15 to 20 minutes maximum idle threshold).
+  - **Job Clusters vs. All-Purpose Clusters**: Production pipeline workflows must execute exclusively on automated **Job Clusters** (which are billed at significantly lower DBU rates than interactive all-purpose clusters).
+  - **Spot Instance Integration**: Non-critical batch ingestion workloads in the Bronze tier should be configured to run on cloud spot/preemptible instances, cutting compute costs by up to 70%.
+  - **Single-Node vs. Multi-Node Sizing**: Data analysts performing exploratory SQL queries should be restricted to single-node clusters rather than multi-worker distributed clusters.
+
+### 2. Snowflake Credit Governance & Virtual Warehouse Sizing
+
+- **Virtual Warehouse Tiering**:
+  - **Scale Up (Sizes XS through 4XL)**: Used strictly for query performance optimization on complex, compute-intensive transformations.
+  - **Scale Out (Multi-Cluster Warehouses)**: Used for handling user concurrency during peak morning executive reporting hours, automatically spinning down clusters when query queues empty.
+- **Resource Monitors**:
+  - Every project environment must have dedicated Resource Monitors configured with automated alerting:
+    - **75% of Monthly Quota**: Notification sent to Data Project Manager and Lead Data Engineer.
+    - **90% of Monthly Quota**: Notification escalated to Project Sponsor.
+    - **100% of Monthly Quota**: Immediate warehouse suspension for non-production environments.
+
+### 3. Lakehouse Storage Economics & Lifecycle Policies
+
+- **Storage Tiering**:
+  - Landing zone object storage (AWS S3, Azure ADLS Gen2, Google Cloud Storage) must implement automated lifecycle policies moving raw ingestion files to Cool tier after 30 days and Cold/Archive tier after 90 days.
+- **Delta Lake / Iceberg Compaction & Vacuuming**:
+  - Ingestion pipelines create thousands of small files. Regular `OPTIMIZE` compaction prevents read degradation.
+  - Outdated table versions and deleted files must be pruned using automated vacuum routines (`VACUUM RETAIN 168 HOURS`) to eliminate ghost storage bloat while maintaining a 7-day time-travel audit window.
+
+### 4. Unit Economics: Cost-per-Query and Cost-per-Pipeline
+
+Effective Data FinOps moves beyond aggregate cloud bills to **unit cost attribution**:
+- **Pipeline Unit Cost**: Calculating the exact monthly compute cost to maintain the "Daily Customer Ingestion Pipeline."
+- **Data Product ROI**: Balancing pipeline operating expense against the business value delivered to downstream users (e.g., spending \$400/month on compute to generate an executive pricing dashboard that drives \$50,000 in margin improvement represents high viability).
+
+---
 
 ## The Financial Management Procedure
 
-- The procedure starts with planning and initiation before moving into the specific steps of estimating, budgeting, and controlling costs.
+1. **Plan**: Formulate the **Finance Management Plan**, defining cloud cost attribution tags, cluster sizing policies, and approval thresholds.
+2. **Initiate**: Establish cloud billing accounts, tag governance, and resource monitoring alerts.
+3. **Estimate Costs**: Combine labor rates (Data Engineers, dbt Developers) with projected monthly cloud compute and SaaS ingestion licensing costs.
+4. **Determine Viability**: Balance estimated pipeline run costs against quantified business efficiency gains and decision velocity in the business case.
+5. **Secure Funding**: Allocate funding tranches across life cycle gateways (Identification spike budget -> Definition architecture budget -> Delivery sprint budget).
+6. **Develop Budgets**: Establish formal budget baselines with contingency reserves for unexpected data volume spikes.
+7. **Control Cost**: Monitor weekly burn rates, analyze query performance outliers, and adjust warehouse auto-suspend timings to prevent budget overruns.
 
-1. **Plan**:
-    - This initial step defines the scope and objectives of financial management for the initiative. It results in the **finance management plan**, which outlines the policies, procedures, and standards to be used.
-
-2. **Initiate**:
-    - This step is performed once the work is approved. It ensures the necessary resources (e.g., cost engineers, accountants, financial systems) are mobilised.
-
-3. **Estimate Costs**:
-    - This is the first specific step. Cost estimates are made and refined in parallel with other planning procedures that establish the scope, schedule, resources, and risk.
-
-4. **Determine Viability**:
-
-    - The estimated costs are balanced against the value of the benefits (as calculated in the benefits management procedure). This viability assessment is documented in the business case.
-
-    - Work is approved if it can be shown not only that the benefits outweigh the costs but also that the organisation cannot get a better return by investing the same funds elsewhere (opportunity cost).
-
-5. **Secure Funding**:
-
-    - The exercise of securing funds continues in parallel with these steps and aligns with the different phases of the life cycle.
-
-    - For example, when a mandate triggers the **identification phase**, it should come with sufficient funding to complete that phase.
-
-    - If the brief is approved, that approval should be accompanied by confirmed funds to complete the **definition phase** and an agreement of sufficient funds _in principle_ to complete the entire work.
-
-6. **Develop Budgets**:
-
-    - Estimated costs are collated into formal budgets for different aspects of the work.
-
-    - These budgets are combined with the delivery schedule to create a **cash flow forecast**.
-
-    - Additional budgets may be created to deal with **contingency** (for known risks) and a **management reserve** (for unknown risks), which is often held by the sponsor.
-
-7. **Control Cost**:
-
-    - As the work proceeds and money is spent, financial control systems need to be implemented.
-
-    - These systems work with the schedule management systems to predict cash flow and then track actual expenditure against the budget, highlighting any variances.
-
-> [IMPORTANT]
-> The approach to financial management is highly dependent on the policies, procedures, and standards of the host organisation. These, in turn, are affected by the regulatory and legislative environment. The finance management plan must comply with all appropriate standards and enable the exchange of information with the host organisation’s corporate financial systems.
-
+---
 
 ## Financial Management in Projects, Programmes, and Portfolios
 
-- Financial management systems need to be appropriate to the scale and complexity of the work. The fundamental principle is always the same: **costs must be controlled and checked to ensure they are not predicted to exceed the value of the expected benefits**.
+### Projects
+- Controls labor spend and specific cloud resource groups tagged for the project.
+- Tracks cost variance using Earned Value Management (EVM) adjusted for cloud burn rates.
 
-### Small Projects
+### Programmes
+- Manages enterprise data platform capacity contracts (e.g., multi-year upfront commitment discounts for AWS, Snowflake, or Microsoft Azure).
+- Allocates shared infrastructure costs across multiple domain project teams using internal chargeback or showback models.
 
-- Smaller projects will not justify the investment in their own dedicated financial systems and will typically use the systems of the host organisation.
+### Portfolios
+- Prioritizes capital across organizational data investments based on strategic alignment, NPV, and projected cloud compute sustainability.
 
-- This can lead to problems where the corporate financial systems are configured to report on an operational, departmental basis (e.g., monthly costs for the IT department) and do not easily facilitate the type of cost breakdown needed for a project (e.g., costs by work package or deliverable).
-
-> [NOTE]
-> More mature organisations will ensure that their corporate financial systems can exchange data with project scheduling and control systems to overcome this issue.
-
-### Programmes, Portfolios, and Larger Projects
-
-- Larger projects and programmes may be able to justify their own dedicated financial management systems, and portfolios should certainly have this capability.
-
-- These systems will need to be able to **consolidate financial data** from many different sources, such as:
-
-    - The component projects.
-
-    - Related business-as-usual activity.
-
-    - The top-level management infrastructure (the overheads of the programme/portfolio team).
-
-- **Consistency is a major challenge**, particularly where the work is international (requiring different currencies and accounting standards) or involves multiple companies (e.g., a joint venture). Finance and accounting policies must be consistent across all components to allow for accurate consolidation and reporting.
-
+---
 
 ## Flashcard Q&A
 
-- **Q:** What are the three main areas of financial management?
-    - **A:** Investment Appraisal, Funding, and Budgeting and Cost Control.
+- **Q:** What is the primary difference between traditional P3M cost management and modern Data FinOps?
+  - **A:** Traditional cost management focuses on upfront capital expenditure (CapEx) and labor. Data FinOps manages dynamic, consumption-based operational expenditure (OpEx) driven by compute units (DBUs, credits) and storage lifecycle policies.
 
-- **Q:** What is the purpose of the Investment Appraisal function?
-    - **A:** To assess the financial viability of the work. Its results are a primary input to the business case.
+- **Q:** How do Databricks Job Clusters reduce pipeline costs compared to All-Purpose Clusters?
+  - **A:** Job clusters are ephemeral and billed at a much lower DBU rate per hour, automatically terminating immediately upon workflow completion.
 
-- **Q:** What is a "cash flow forecast"?
-    - **A:** The combination of the budget (how much will be spent) and the delivery schedule (when it will be spent) to predict the flow of funds over time.
+- **Q:** What is the purpose of Snowflake Resource Monitors in project governance?
+  - **A:** They track credit consumption against predetermined monthly quotas and automatically send alerts or suspend compute when spending limits are reached.
 
-- **Q:** Who owns the funding for the identification phase of a project?
-    - **A:** The funding for the identification phase should be provided along with the initial mandate from the commissioning body.
-
-- **Q:** What is a common problem small projects face when using corporate financial systems?
-    - **A:** Corporate systems are often set up for operational, departmental reporting and do not easily provide the kind of cost breakdown needed to manage a project effectively.
-
-- **Q-:** Why is consistency of financial policies so important in a programme or portfolio?
-    - **A:** Without consistency (e.g., in how costs are categorised or currencies are handled), it is impossible to accurately consolidate financial data from all the components to get a true overall picture of financial performance.
-
+- **Q:** Why must storage lifecycle policies and vacuuming be enforced in Lakehouse architectures?
+  - **A:** Frequent streaming and batch updates create thousands of historical versions of Parquet files; regular vacuuming and cold-tiering prevent exponential cloud storage cost inflation.
 
 ---
+
 ## Navigation & Related Notes
 - **Up**: [[00 - Overview|Cost Management Overview]]
-- **Previous**: [[Financial Management]]
+- **Previous**: [[Financial Management Artefact]]
+- **Next**: [[Develop Budgets And Control Costs]]
 
 ### Related Concepts & Artefacts
-- [[Finance Management Plan]]
-- [[Budgeting and cost control]]
-- [[Investment Appraisal]]
-- [[Manage The Business Case]]
+- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
+- [[Scope Management|Medallion Architecture]]
+- [[General Principles of Risk Management|Data Risks]]
+- [[Control|DataOps Quality Gates]]
+- [[Capability Maturity]]
