@@ -7,6 +7,9 @@ tags:
   - pillar/knowledge
   - section/core-concepts
   - type/process
+  - praxis/data-bi
+  - topic/delivery-process
+  - discipline/dataops
 pillar: "Knowledge"
 section: "Core Concepts"
 subarea: "Management"
@@ -137,6 +140,82 @@ updated: 2026-10-17
 
         - The interface with these delegated delivery teams is managed through the **Development Process**.
 
+
+## Praxis for Data & Business Intelligence: The Medallion Delivery Cadence
+
+In Data Engineering and Business Intelligence projects, traditional waterfall stage gates fail because business stakeholders cannot validate requirements until they see concrete numbers rendered in reports. Conversely, unconstrained agile sprints frequently devolve into messy, unversioned SQL scripts and fragmented data silos.
+
+Praxis resolves this tension by structuring delivery around **Vertical End-to-End Slices** governed by the **Medallion Architecture Delivery Cadence**.
+
+```
+The Anti-Pattern (Horizontal Siloed Delivery):
+[Months 1-3: Ingestion Only] ──► [Months 4-6: Warehousing] ──► [Month 7: BI Reports]
+Result: Zero business feedback for 6 months; requirements drift; high project failure risk.
+
+Praxis Recommended Delivery (Vertical End-to-End Slices):
+Sprint N (Slice 1: Core Orders & Revenue):
+[Bronze Ingestion] ──► [Silver Cleansing] ──► [Gold Star Schema] ──► [Certified Dashboard]
+                                                                            │
+                                                                            ▼ (Value in 2 Weeks)
+Sprint N+1 (Slice 2: Customer Retention & Churn):
+[Bronze Delta CDC] ──► [Silver dbt Models] ──► [Gold Semantic Mart] ──► [Executive Cockpit]
+```
+
+---
+
+### 1. The Four Continuous Delivery Quality Gates
+
+During the **Authorise Work** and **Accept Completed Work** activities of the Delivery Process, data products must traverse four automated and architectural quality gates:
+
+```
+[Upstream Data Source]
+         │
+         ▼
+[Gate 1: Ingestion Gate (Bronze)] ──► Checks: Contract validation, CDC event parity, landing DLQ
+         │
+         ▼
+[Gate 2: Transformation Gate (Silver)] ─► Checks: Primary key uniqueness, zero orphan FKs, dbt test
+         │
+         ▼
+[Gate 3: Semantic Gate (Gold)] ────────► Checks: General Ledger financial reconciliation, metric tests
+         │
+         ▼
+[Gate 4: Business Acceptance Gate (BI)] ─► Checks: User persona sign-off, cold render < 2.0s, RLS audit
+```
+
+| Quality Gate | Phase Owner | Mandatory Acceptance Criteria | Governance Verification Method |
+| :--- | :--- | :--- | :--- |
+| **Gate 1: Ingestion** | Lead Data Engineer | Upstream payload strictly conforms to [[Product Documents#1. The Producer-Consumer Data Contract|Data Contract]]; zero dropped records. | Automated API schema validation; dead-letter queue (DLQ) monitor. |
+| **Gate 2: Transformation** | Analytics Engineer | Zero surrogate key duplicates; referential integrity tests pass 100%; dbt documentation generated. | Pull request CI/CD pipeline (`dbt build --select state:modified+`). |
+| **Gate 3: Semantic Layer** | Analytics Engineer / Modeler | Aggregated revenue matches finance source of truth within 0.001%; certified metric definitions locked. | Automated reconciliation SQL tests against production General Ledger. |
+| **Gate 4: BI Acceptance** | Lead BI Developer / BCM | Cold-cache visual render time $< 2.0$ seconds; Row-Level Security (RLS) validated across all user roles. | Performance Analyzer trace audit; formal UAT sign-off from Department Champion. |
+
+---
+
+### 2. Managing Deviations: Code Rollback vs. Data Time-Travel Rollback
+
+In generic software engineering, the **Corrective Action** activity typically involves reverting a git commit or deploying a previous application container. In Data & BI projects, code rollback alone is insufficient because **bad data may have already persisted into storage**:
+
+1. **Code Reversion**: Reverting the dbt model or Spark transformation script in Git prevents future corruption.
+2. **Storage State Correction (Time Travel)**: Data lakes built on open formats (Delta Lake, Apache Iceberg) provide historical snapshot retention. The team can execute time-travel restoration:
+   ```sql
+   -- Restore corrupted customer dimensions to pre-incident state
+   RESTORE TABLE silver.dim_customers TO TIMESTAMP AS OF '2026-10-18 23:00:00';
+   ```
+3. **Idempotent Backfilling**: Reprocessing historical date partitions with explicit partition overwrites (`INSERT OVERWRITE` or `MERGE`) ensures duplicate rows are not introduced during remediation.
+
+---
+
+### 3. Acceptance of Delegated Work Packages
+
+In Praxis, work packages delegated to internal data squads or external system integrators are formally accepted against the project's **Definition of Done (DoD)**:
+
+- Deliverable code merged into `main` branch via peer-reviewed pull request.
+- 100% passing rate across all automated dbt and Great Expectations test suites.
+- Published table metadata, lineage graph, and data dictionary entries in Unity Catalog or Microsoft Purview.
+- Completed operational runbook documenting pipeline schedules, upstream dependencies, and on-call escalation routes in the [[Control Management Plan]].
+
+---
 
 ## Flashcard Q&A
 
