@@ -25,6 +25,8 @@ updated: 2026-10-17
 > **Praxis** is the free, community-driven, integrated framework for project, programme, and portfolio management (P3M). It uniquely combines **Knowledge**, **Method**, **Competency**, and **Capability Maturity** into a single cohesive taxonomy.
 > 
 > *This vault bridges the gap between traditional project governance and modern data platforms (Databricks, Snowflake, Microsoft Fabric, dbt, Power BI, Unity Catalog), providing actionable P3M for data pipelines, lakehouse architectures, semantic models, and executive BI.*
+>
+> **Flagship Guide**: **[[Praxis for Data and BI|Read the Praxis for Data & Business Intelligence Practitioner Guide]]**
 
 ---
 
