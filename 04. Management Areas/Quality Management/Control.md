@@ -2,185 +2,152 @@
 title: "Control"
 aliases:
   - "Control"
+  - "DataOps Quality Control"
 tags:
   - praxis-framework
   - pillar/knowledge
-  - section/integrative-management
+  - section/quality-management
   - type/concept
+  - discipline/dataops
+  - discipline/quality-engineering
 pillar: "Knowledge"
-section: "Integrative management"
+section: "Quality Management"
 subarea: "Delivery"
 type: "concept"
 status: "published"
 source: "Praxis Framework"
 source_url: "https://www.praxisframework.org"
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-10-19
 ---
 
 > [!NAV] Navigation
-> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Integrative management]]
-> **Pillar**: Knowledge | **Type**: `concept`
+> **Vault**: [[00 - Praxis Framework Overview|Praxis Overview]] > **Section**: [[00 - Overview|Quality Management]]
+> **Pillar**: Knowledge | **Type**: `concept` | **Specialization**: DataOps & Data Quality Gates
 
 # Comprehensive Study Notes: Control
 
 ## General Principles of Control
 
 - **Definition**: Control is the management function that involves monitoring actual performance against approved baselines, updating delivery documents as necessary, and taking corrective action to manage deviations.
-
-- Control is required throughout the entire life cycle, but this explanation is primarily aimed at controlling the **delivery process**.
+- Control is required throughout the entire life cycle, but is primarily concentrated in the **delivery process**.
 
 ### The Goals of Control
 
-- The primary goals of the control function are to:
+1. Review performance against established **baselines**.
+2. Evaluate the effect of actual performance to date on **future plans**.
+3. Take corrective action to restore performance to planning tolerances or negotiate revised baselines.
 
-    1. Review performance against the established **baselines** (from the planning function).
+---
 
-    2. Evaluate the effect of actual performance to date on **future plans**.
+## DataOps Quality Gates & Pipeline Observability
 
-    3. Take action as required to either achieve the original planning targets or agree on revised targets.
+In traditional project control, managers compare weekly work package timesheets against Gantt charts. In modern **Data Engineering, Analytics Engineering, and Business Intelligence**, control is a continuous, automated engineering discipline known as **DataOps**.
 
+Data pipelines process billions of records daily. Manual inspection is impossible; control must be automated directly into the pipeline execution lifecycle through **automated quality gates** and **pipeline observability**.
 
-## The Three Categories of Control
+```
+[Ingestion Pipeline] ──> [Data Quality Gate: dbt / Great Expectations] ──> Pass: Merge to Gold Mart
+                                       │
+                                       └──> Fail: Quarantine to DLQ & PagerDuty Alert
+```
 
-- Control techniques fall into one of three broad categories: cybernetic, go/no-go, and post.
+### 1. Cybernetic Control in DataOps: The Automated Feedback Loop
 
-### 1. Cybernetic Control
+Praxis defines cybernetic control as an active steering mechanism based on a feedback loop:
+1. **System Monitored**: Ongoing lakehouse ingestion and transformation runs.
+2. **Feedback Generated**: Data quality metrics recorded (row counts, null percentages, latency, schema hash).
+3. **Comparison Against Baseline**: Automated assertion checks against predefined tolerances (Data Contracts).
+4. **Corrective Steering**:
+   - If deviations are minor (within warning tolerance): Pipeline completes; warning logged to DataOps telemetry.
+   - If deviations exceed tolerance (e.g., duplicate customer IDs or negative transaction values): Pipeline execution automatically halts before bad data merges into downstream Gold marts.
 
-- **Definition**: This is part of the day-to-day management of the work. The term ‘cybernetic’ is derived from the Greek for "helmsman," and a P3 manager uses cybernetic control to "steer" the project, programme, or portfolio on a continuous basis.
+### 2. The Six Data Quality Dimensions as Control Baselines
 
-- **Key Element**: The key element of cybernetic control is the **feedback loop**.
+Every data asset must have explicit control baselines established across the six universal dimensions of data quality:
 
-    1. A system is monitored.
+| Dimension | Control Baseline Definition | Implementation in Modern Stack |
+| :--- | :--- | :--- |
+| **Freshness (Timeliness)** | Maximum acceptable elapsed time between source event and lakehouse landing | Ingestion heartbeat checks; dbt source freshness tests (`warn_after: 12h, error_after: 24h`) |
+| **Completeness** | Maximum acceptable percentage of missing/null values in critical attributes | Column nullability constraints (`not_null` tests in dbt/Soda) |
+| **Uniqueness** | Prevention of duplicate records in primary keys or grain definitions | Primary key deduplication checks (`unique` test on `order_id`) |
+| **Validity (Conformity)** | Conformance to expected formats, regex patterns, or allowed domain values | `accepted_values: ['PENDING', 'SHIPPED', 'CANCELLED']`; ISO-8601 date validation |
+| **Accuracy** | Values represent real-world events within plausible mathematical bounds | Numeric range assertions (`unit_price > 0`, `discount_rate between 0 and 1`) |
+| **Consistency** | Referential integrity between downstream fact tables and dimensional parent keys | Foreign key relationship assertions (`relationships` test between fact and dimension) |
 
-    2. Feedback on performance is provided.
+### 3. Implementation of Quality Gates: dbt, Great Expectations, and DLT
 
-    3. This feedback is compared to a norm (the baseline plan).
+- **dbt (Data Build Tool) Tests**:
+  - Executed during pipeline transformation: `dbt test --select tag:production_quality_gate`.
+  - Singular SQL assertions and generic tests fail the CI/CD deployment or batch job if constraints are broken.
+- **Delta Live Tables (DLT) Expectations**:
+  - Declarative data quality rules written directly in pipeline DDL:
+    - `CONSTRAINT valid_timestamp EXPECT (order_date IS NOT NULL) ON VIOLATION DROP ROW`
+    - `CONSTRAINT valid_account EXPECT (account_balance >= 0) ON VIOLATION FAIL UPDATE`
+- **Great Expectations / Soda Core**:
+  - Contract validation executed prior to ingestion and prior to reporting model refresh.
 
-    4. Action is taken to align the system back to the norm.
+### 4. Go/No-Go Gateways for Model Promotion (Slim CI)
 
-- **Orders of Control**: The work of the P3 manager is, strictly speaking, **first-order** cybernetic control. The relationship between the P3 manager and their sponsor (who provides oversight and direction based on escalated issues) is **second-order** cybernetic control.
+In DataOps, Go/No-Go control is exercised through automated CI/CD deployment pipelines:
+- **Zero-Copy Clone / Ephemeral Schemas**: When a developer opens a pull request, the CI/CD system creates an isolated temporary schema (e.g., Snowflake zero-copy clone or Databricks temporary catalog).
+- **Automated Regression Testing**: The pipeline compiles and runs all modified models and tests on ephemeral data.
+- **Merge Gate**: Only when 100% of data quality and performance assertions pass does the gate permit merging to the `main` production branch.
 
-- **Tolerances**: These are the pre-agreed, acceptable deviations from the baselines. If performance is outside, or predicted to go outside, the agreed tolerances, this is classed as an **issue** that must be escalated to the sponsor for a decision on corrective action.
+### 5. Post-Control: Incident Post-Mortems & Data Downtime Metrics
 
-### 2. Go/No-Go Control
+When pipeline failures or silent corruption events occur, post-control ensures continuous systemic learning:
+- **Incident Logging in Daily Log & Issue Register**: Recording the root cause (e.g., upstream SAP API deprecation).
+- **Mean Time to Detection (MTTD)**: Measuring the elapsed time between when corrupt data landed and when monitoring flagged it.
+- **Mean Time to Resolution (MTTR)**: Measuring the duration required to isolate, fix, and backfill clean data.
 
-- **Definition**: This form of control is applied at the key decision points built into the life cycle, typically at the end of a phase, stage, or tranche.
-
-- **Process**: It involves a major review of what has been delivered and the justification for continuing. The sponsor considers all available information and makes a formal decision on whether to **proceed** with the remaining work.
-
-- **Outcome**: In extreme cases, a project, programme, or even a portfolio may be terminated at a go/no-go control point because it is no longer justifiable.
-
-### 3. Post-Control
-
-- **Definition**: This type of control is entirely retrospective.
-
-- **Process**: It is concerned with **learning from experience** through formal reviews, such as post-project or post-programme reviews.
-
-- **Linkage**: The outputs of post-control (lessons learned) are a key input to the "review previous lessons" activity in the identification process of future initiatives.
-
+---
 
 ## Control Methods and Techniques
 
-- Specific control methods are used according to the nature and complexity of what is being controlled. All six fundamental components of delivery (scope, schedule, cost, risk, change, resource) need to be controlled.
+- **Cybernetic Control**: Continuous operational steering via pipeline alerts, automated test suites, and RAG status monitoring.
+- **Go/No-Go Control**: Gateway stage-gate approvals between lifecycle phases (e.g., Data Feasibility Gate, Architecture Approval Gate, Production Cutover Gate).
+- **Post-Control**: Retrospective reviews, lessons learned capture, and data platform downtime post-mortems.
 
-- **Schedule Performance**: A common method for illustrating schedule performance is the use of **RAG reports** (Red, Amber, Green).
-
-    - **Green**: Performance is within tolerances and predicted to remain there.
-
-    - **Amber**: Performance is currently within tolerances but is predicted to exceed them soon.
-
-    - **Red**: Performance has already exceeded tolerances.
-
-- **Scope Control (Quality Control)**:
-
-    - In the context of creating outputs, control of scope is effectively the same as **quality control**.
-
-    - It has the most diverse range of techniques, covering inspection, testing, and measurement to verify that deliverables conform to specification, are fit for purpose, and meet stakeholder expectations.
-
-    - Example techniques include crushing concrete samples, reviewing user interfaces, x-raying welds, and following software test scripts.
-
-- **Integrated Control**:
-    - Some techniques bring together multiple elements. The most common is **Earned Value Management (EVM)**, which integrates scope, schedule, and cost performance to provide powerful predictive metrics.
-
-### Time-Driven vs. Event-Driven Controls
-
-- **Event-Driven Controls**: Go/no-go and post-control are event-driven. The events could be life cycle based (the end of a stage or tranche) or feedback-based (when tolerances are exceeded).
-
-- **Time-Driven Controls**: These are more typical of cybernetic control and involve regular, periodic activities such as weekly or monthly reports, periodic reviews, or regular progress meetings.
-
-> [!NOTE]
-> It is the P3 manager’s responsibility to collect progress data and prepare reports, highlighting areas that need attention. In some cases, this work will be done by a support function, freeing the manager to concentrate on decision-making and implementing corrective action.
-
+---
 
 ## Control in Projects, Programmes, and Portfolios
 
 ### Projects
+- Monitored by the Data Project Manager / Scrum Master: Sprint burndown velocity, daily pipeline SLA achievement, and dbt test pass rates.
 
-- The way progress data is collected and reported will depend on the planning techniques used.
+### Programmes
+- Monitored by the Data Programme Director: Cross-project integration milestones, enterprise master data conformity, and platform compute budget variances.
 
-- **Simple Projects**: If the schedule is a simple Gantt chart, progress may be shown as a **slip chart**.
+### Portfolios
+- Monitored by the Chief Data Officer (CDO) / Portfolio Board: Overall platform ROI, organizational data literacy adoption metrics, and regulatory audit compliance.
 
-- **Complex Projects**: As projects become more complex and schedules are based on network diagrams, more sophisticated control techniques like **Earned Value Management (EVM)** or **Critical Chain** can be used.
-    - The more sophisticated the method, the more accurate the predictions. EVM is more predictive than simple critical path analysis because it assumes future performance will be in line with _historical_ performance, not the _original_ plan.
-
-- **Agile Projects**:
-
-    - While traditional projects tend to focus first on controlling time and cost, agile projects focus on controlling **scope**.
-
-    - Control techniques like **Kanban** are used to control the flow of work within short, timeboxed sprints.
-
-    - **Burn-down charts** are often a better way of illustrating progress over a number of sprints than Gantt charts.
-
-### Programmes and Portfolios
-
-- In programmes and portfolios, there will be multiple levels of cybernetic control. A project manager controls their project (level 1); the programme manager (acting as sponsor) provides oversight of the project (level 2); and if the programme is in a portfolio, the portfolio manager provides a third level of control.
-
-- This does not mean multiple people are controlling the project day-to-day. Each level of control deals with a **different degree of detail** and has a different span of control.
-
-- **Key System Requirements**: For this multi-level control system to work, it must explain for each level how:
-
-    - Tolerances will be set.
-
-    - Progress data will be gathered and reported.
-
-    - Interdependencies between different plans will be monitored.
-
-    - Progress information will be **consolidated upwards**.
-
-    - Decisions will be **communicated downwards**.
-
-> [!IMPORTANT]
-> As work becomes more complex, it is vital to focus on Key Performance Indicators (KPIs) rather than trying to monitor everything in great detail. The role of a support office (PSO/PMO) becomes indispensable as complexity increases, providing timely and accurate information to enable good decision-making.
-
+---
 
 ## Flashcard Q&A
 
-- **Q:** What are the three main categories of control?
-    - **A:** Cybernetic, Go/No-Go, and Post.
+- **Q:** How does cybernetic control apply to modern DataOps pipelines?
+  - **A:** It acts as an automated steering feedback loop where continuous pipeline metrics are compared against Data Contract baselines, automatically triggering alerts or halting execution when tolerances are breached.
 
-- **Q:** What is the key element of cybernetic control?
-    - **A:** The feedback loop (monitor, provide feedback, compare to norm, take action).
+- **Q:** Name four of the six universal dimensions of data quality monitored in DataOps.
+  - **A:** Freshness (timeliness), Completeness, Uniqueness, Validity, Accuracy, and Consistency.
 
-- **Q:** What are "tolerances" in the context of control?
-    - **A:** The pre-agreed, acceptable deviations from the baseline plans. Exceeding tolerances triggers an escalation to the sponsor.
+- **Q:** What is the function of Delta Live Tables (DLT) Expectations in pipeline control?
+  - **A:** They define declarative constraints on streaming and batch data, with automated policies to either drop malformed rows, retain with warnings, or fail the entire update.
 
-- **Q:** In an agile project, what is the primary component of delivery that is being controlled?
-    - **A:** Scope.
-
-- **Q:** How does Earned Value Management (EVM) provide a more accurate forecast than simple critical path analysis?
-    - **A:** Because EVM assumes future rates of progress will be in line with historical performance, whereas critical path analysis assumes future progress will be in line with the original plan.
-
-- **Q:** In a multi-level programme or portfolio, what are two key requirements of the control system?
-    - **A:** Any two from: explaining how tolerances are set, how data is reported, how interdependencies are monitored, how information is consolidated upwards, and how decisions are communicated downwards.
-
+- **Q:** How does "Slim CI" implement Go/No-Go control in analytics engineering?
+  - **A:** It automatically compiles and tests modified models in temporary ephemeral schemas during pull requests, preventing untested pipeline code from reaching production.
 
 ---
+
 ## Navigation & Related Notes
-- **Up**: [[00 - Overview|Integrative management Overview]]
+- **Up**: [[00 - Overview|Quality Management Overview]]
+- **Previous**: [[Control Management Plan]]
 - **Next**: [[Exercise Control]]
 
 ### Related Concepts & Artefacts
-- [[00 - Praxis Framework Overview|Praxis Framework Master MOC]]
-- [[Capability Maturity]]
-- [[Complexity]]
+- [[Scope Management|Data Contracts]]
+- [[General Principles of Risk Management|Data Risks]]
+- [[General Principles of Financial Management|FinOps]]
+- [[Issue Register|DataOps Incidents]]
+- [[Delivery Process]]
