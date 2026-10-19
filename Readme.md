@@ -16,6 +16,7 @@ updated: 2026-10-17
 
 > [!TIP] Interactive Obsidian Wiki
 > This repository is fully structured as an **Obsidian Knowledge Vault / Wiki**.
+> - **Specialization Handbook**: **[[Praxis for Data and BI|Praxis for Data & Business Intelligence: The Practitioner's Guide]]**
 > - **Start Here**: **[[00 - Praxis Framework Overview|Open the Master MOC Dashboard]]**
 > - **Explore Pillars**:
 >   - **Pillar 1: Knowledge**: [[01. Core Concepts/00 - Overview|Core Concepts]] | [[04. Management Areas/00 - Overview|Management Areas]]
