@@ -8,6 +8,9 @@ tags:
   - pillar/knowledge
   - section/resource-management
   - type/management-area
+  - praxis/data-bi
+  - topic/resourcing
+  - discipline/dataops
 pillar: "Knowledge"
 section: "Resource Management"
 subarea: "Management"
@@ -146,6 +149,71 @@ updated: 2026-10-17
 
 - This is a key part of the portfolio management process, where the team must prioritise the allocation of limited resources to the initiatives that provide the most strategic value.
 
+
+## Praxis for Data & Business Intelligence: Resourcing the Modern Data Stack
+
+Resource management in modern analytics initiatives requires a dual approach: orchestrating specialized multidisciplinary engineering talent and managing dynamic, consumption-based cloud compute infrastructure. Failing to balance human skill distribution with automated infrastructure provisioning leads to either severe project delivery bottlenecks or runaway cloud expenditure.
+
+```
+Traditional Resourcing Trap (The "Unicorn" Fallacy):
+[1 Overburdened Data Engineer] ──► Ingestion + dbt + Spark + DAX + Governance + Dashboards
+                                           │
+                                           ▼ (Result: Burnout, Technical Debt, 6-Month Backlog)
+
+Praxis Specialized Hub-and-Spoke Operating Model:
+               ┌──────────────── Central Data Platform Team (Hub) ────────────────┐
+               │  - Cloud Infrastructure & Lakehouse Architecture (Terraform)     │
+               │  - Orchestration & CI/CD Frameworks (Airflow / GitHub Actions)    │
+               │  - Enterprise Data Governance & Unity Catalog Metastore           │
+               └────────────────────────────────┬─────────────────────────────────┘
+                                                │
+                 ┌──────────────────────────────┴──────────────────────────────┐
+                 ▼                                                             ▼
+  [Domain Analytics Engineers]                                  [Domain BI & Viz Specialists]
+  - dbt SQL Modeling & Metric Logic                             - Certified Power BI / Tableau UX
+  - Kimball Star Schemas & Contracts                            - DAX Measures & Fast Rendering
+  - Automated Great Expectations Tests                          - Row-Level Security & Adoption
+```
+
+---
+
+### 1. Modern Data Team Roles & Competency Profiles
+
+A common failure in IT data project management is treating "Data Engineer" or "BI Developer" as interchangeable roles. Praxis establishes clear competency boundaries across four primary specialized disciplines:
+
+| Role | Primary Deliverables | Core Technical Tooling | Key Project Risk Mitigated |
+| :--- | :--- | :--- | :--- |
+| **Data Platform Engineer** | Ingestion pipelines, lakehouse infrastructure, cluster compute, networking, security | Spark, Delta Lake, Python, Terraform, Kafka, Azure/AWS | Pipeline fragility, unscalable storage, network security breaches |
+| **Analytics Engineer** | Conformed Silver/Gold models, business metric logic, automated data tests, semantic layer | dbt, SQL, Kimball Dimensional Modeling, Git | Undocumented logic, spaghetti queries, broken business metrics |
+| **BI / Visualization Developer** | Executive dashboards, operational reports, mobile views, interactive drill-paths | Power BI, Tableau, DAX, Tabular Editor, Looker | Dashboard abandonment, poor query performance, confusing visual UX |
+| **Data Governance Steward** | Data contracts, PII classification, catalog curation, access entitlement workflows | Unity Catalog, Collibra, Purview, Alation | Regulatory fines (GDPR/HIPAA), unauthorized access, lack of discovery |
+
+> [!NOTE] The Analytics Engineer Bridge
+> The emergence of the **Analytics Engineer** role directly solves the historic friction between backend Data Engineers (who prioritize infrastructure, streaming, and throughput) and business-facing BI analysts (who prioritize KPIs, calculations, and reporting). The Analytics Engineer applies software engineering practices (version control, automated CI/CD, unit testing) to data transformation and semantic modeling.
+
+---
+
+### 2. Cloud Compute as a Dynamic "Non-Human" Resource
+
+In the cloud-native data landscape (Snowflake, Databricks, BigQuery), computing capacity is an elastic, on-demand resource whose allocation directly impacts the project budget and delivery timeline. 
+
+Praxis requires Data Project Managers to apply structured resource management to cloud infrastructure:
+
+- **Resource Mobilisation (Environment Provisioning)**: Infrastructure as Code (Terraform) must provision dedicated, isolated compute clusters for Development, Staging, and Production. Dev clusters must have aggressive auto-suspend timers (e.g., terminate after 15 minutes of inactivity).
+- **Cluster Sizing & Resource Levelling**: High-throughput nightly ingestion workloads require compute-optimized nodes, whereas complex dbt transformation models benefit from memory-optimized worker pools. Project managers must prevent developers from running ad-hoc exploratory queries on shared production warehouse clusters.
+- **Demobilisation of Ephemeral Resources**: In automated CI/CD pipelines (e.g., dbt Slim CI), ephemeral schemas and short-lived virtual warehouses must be automatically torn down upon pull request merge to prevent orphaned compute costs.
+
+---
+
+### 3. Make vs. Buy: Procurement in Modern Data Platforms
+
+During the **Identify and Specify Resources** step, the Data PM must evaluate the total cost of ownership (TCO) between building custom integrations and purchasing managed SaaS utilities:
+
+1. **Ingestion & Connectors**: Building and maintaining custom API scrapers for 50+ SaaS platforms (Salesforce, Stripe, HubSpot) requires ongoing engineering maintenance. Procuring managed ELT tools (e.g., Fivetran, Airbyte) often reduces ongoing labor costs despite monthly subscription fees.
+2. **Data Observability**: For large enterprises with thousands of data tables, purchasing an anomaly detection platform (e.g., Monte Carlo, Databand) can free up senior data engineers from building custom alerting scrapers.
+3. **Open Standards vs. Vendor Lock-In**: Prioritizing open table formats (Apache Iceberg, Delta Lake) guarantees data portability and prevents proprietary storage lock-in across multi-cloud environments.
+
+---
 
 ## Flashcard Q&A
 
