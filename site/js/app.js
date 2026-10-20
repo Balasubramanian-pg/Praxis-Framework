@@ -288,28 +288,26 @@
     });
   };
 
-  window.navigateToHub = function() {
-    if (window.location.hash === "#/hub") {
-      showHub();
-    } else {
-      window.location.hash = "#/hub";
-    }
+  window.navigateToHub = function(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (typeof cardStackTimer !== "undefined" && cardStackTimer) clearTimeout(cardStackTimer);
+    if (typeof coverflowTimer !== "undefined" && coverflowTimer) clearTimeout(coverflowTimer);
+    window.location.hash = "#/hub";
+    showHub();
   };
 
-  window.navigateToLibrary = function() {
-    if (window.location.hash === "#/library") {
-      showLibrary();
-    } else {
-      window.location.hash = "#/library";
-    }
+  window.navigateToLibrary = function(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (typeof coverflowTimer !== "undefined" && coverflowTimer) clearTimeout(coverflowTimer);
+    window.location.hash = "#/library";
+    showLibrary();
   };
 
-  window.navigateToExplore = function() {
-    if (window.location.hash === "#/explore") {
-      showExplore();
-    } else {
-      window.location.hash = "#/explore";
-    }
+  window.navigateToExplore = function(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (typeof cardStackTimer !== "undefined" && cardStackTimer) clearTimeout(cardStackTimer);
+    window.location.hash = "#/explore";
+    showExplore();
   };
 
   window.navigateToArticle = function(id) {
@@ -476,6 +474,9 @@
 
   // Display Article View
   async function showArticle(queryId) {
+    if (typeof cardStackTimer !== "undefined" && cardStackTimer) clearTimeout(cardStackTimer);
+    if (typeof coverflowTimer !== "undefined" && coverflowTimer) clearTimeout(coverflowTimer);
+
     const art = findArticle(queryId) || articles["00 - Praxis Framework Overview"] || Object.values(articles)[0];
     if (!art) return;
 
@@ -535,6 +536,9 @@
 
   // Display Hub View
   function showHub() {
+    if (typeof cardStackTimer !== "undefined" && cardStackTimer) clearTimeout(cardStackTimer);
+    if (typeof coverflowTimer !== "undefined" && coverflowTimer) clearTimeout(coverflowTimer);
+
     if (viewArticle) {
       viewArticle.style.display = "none";
       viewArticle.classList.remove("active");
@@ -562,6 +566,8 @@
 
   // Display Library 3D Gallery View
   function showLibrary() {
+    if (typeof coverflowTimer !== "undefined" && coverflowTimer) clearTimeout(coverflowTimer);
+
     if (viewArticle) {
       viewArticle.style.display = "none";
       viewArticle.classList.remove("active");
@@ -951,9 +957,89 @@
   let isCoverflowDragging = false;
   let coverflowStartX = 0;
   let coverflowCurrentDeltaX = 0;
+  let coverflowTimer = null;
+  let coverflowClickCooldownUntil = 0;
+
+  // Available high-res conceptual Freepik assets for dynamic note shuffling
+  const freepikStockAssets = [
+    { tag: "Architecture", img: "https://img.freepik.com/free-photo/abstract-polygonal-space-low-poly-dark-background-with-connecting-dots-lines-connection-structure_1258-26978.jpg?w=1000&auto=format&fit=crop&q=80" },
+    { tag: "Governance", img: "https://img.freepik.com/free-photo/glowing-hologram-cyberpunk-futuristic-technology-concept_53876-129759.jpg?w=1000&auto=format&fit=crop&q=80" },
+    { tag: "Finance", img: "https://img.freepik.com/free-photo/glowing-digital-graph-showing-stock-market-data-financial-investment-success-concept-generative-ai_1258-153381.jpg?w=1000&auto=format&fit=crop&q=80" },
+    { tag: "Transformation", img: "https://img.freepik.com/free-photo/digital-brain-artificial-intelligence-neural-network-concept_53876-129756.jpg?w=1000&auto=format&fit=crop&q=80" },
+    { tag: "Execution", img: "https://img.freepik.com/free-photo/ai-nuclear-energy-background-future-innovation-disruptive-technology_53876-129783.jpg?w=1000&auto=format&fit=crop&q=80" },
+    { tag: "Framework", img: "https://img.freepik.com/free-photo/illuminated-geometric-shapes-futuristic-modern-architecture_23-2151624022.jpg?w=1000&auto=format&fit=crop&q=80" },
+    { tag: "Value Duty", img: "https://img.freepik.com/free-photo/futuristic-hologram-artificial-intelligence-hud-dashboard-display_53876-104337.jpg?w=1000&auto=format&fit=crop&q=80" },
+    { tag: "Information", img: "https://img.freepik.com/free-photo/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1000&auto=format&fit=crop&q=80" }
+  ];
+
+  window.shuffleExploreNotes = function() {
+    const allArticles = Object.values(articles).filter(a => a.title && a.body && a.body.length > 50);
+    if (allArticles.length >= 8) {
+      const shuffled = [...allArticles].sort(() => 0.5 - Math.random()).slice(0, 8);
+      exploreNotesData.length = 0;
+      shuffled.forEach((art, i) => {
+        const fp = freepikStockAssets[i % freepikStockAssets.length];
+        const rawSummary = (art.summary || art.body.substring(0, 140)).replace(/[#*`_\[\]]/g, "").trim();
+        exploreNotesData.push({
+          id: `note-${i}`,
+          title: art.title,
+          subtitle: rawSummary.substring(0, 90) + (rawSummary.length > 90 ? "..." : ""),
+          tag: art.section || fp.tag,
+          imageSrc: fp.img,
+          articleId: art.id
+        });
+      });
+      coverflowActiveIndex = 2;
+      coverflowInitialized = false;
+      initCoverflow();
+      scheduleCoverflowAdvance();
+    }
+  };
+
+  function handleCoverflowInteraction() {
+    coverflowClickCooldownUntil = Date.now() + 12000;
+    scheduleCoverflowAdvance();
+  }
+
+  function updateCoverflowStatus(isPaused) {
+    const textEl = document.getElementById("coverflowStatusText");
+    const dotEl = document.querySelector(".coverflow-status-dot");
+    if (!textEl) return;
+    if (isPaused) {
+      const remainingSec = Math.max(1, Math.round((coverflowClickCooldownUntil - Date.now()) / 1000));
+      textEl.textContent = `User interaction hold (resuming in ${remainingSec}s)`;
+      if (dotEl) dotEl.style.background = "#f59e0b";
+    } else {
+      textEl.textContent = "Autoplay motion active (4.5s interval)";
+      if (dotEl) dotEl.style.background = "var(--accent-indigo)";
+    }
+  }
+
+  function scheduleCoverflowAdvance() {
+    if (coverflowTimer) clearTimeout(coverflowTimer);
+    if (!viewExplore || viewExplore.style.display === "none") return;
+
+    const now = Date.now();
+    if (now < coverflowClickCooldownUntil) {
+      const waitRemaining = coverflowClickCooldownUntil - now;
+      updateCoverflowStatus(true);
+      coverflowTimer = setTimeout(scheduleCoverflowAdvance, Math.min(1000, waitRemaining));
+      return;
+    }
+
+    updateCoverflowStatus(false);
+    coverflowTimer = setTimeout(() => {
+      if (!viewExplore || viewExplore.style.display === "none") return;
+      coverflowActiveIndex = (coverflowActiveIndex + 1) % exploreNotesData.length;
+      updateCoverflowDOM(0);
+      scheduleCoverflowAdvance();
+    }, 4500);
+  }
 
   // Display Explore 3D Coverflow Gallery View
   function showExplore() {
+    if (typeof cardStackTimer !== "undefined" && cardStackTimer) clearTimeout(cardStackTimer);
+
     if (viewArticle) {
       viewArticle.style.display = "none";
       viewArticle.classList.remove("active");
@@ -978,6 +1064,7 @@
     if (stageContent) stageContent.scrollTo({ top: 0, behavior: "smooth" });
 
     initCoverflow();
+    scheduleCoverflowAdvance();
     refreshIcons();
   }
 
@@ -985,6 +1072,7 @@
     if (!coverflowViewport) return;
     if (coverflowInitialized) {
       updateCoverflowDOM(0);
+      scheduleCoverflowAdvance();
       return;
     }
     coverflowInitialized = true;
@@ -1035,6 +1123,11 @@
         </button>
       </div>
 
+      <div class="coverflow-status" id="coverflowStatus">
+        <span class="coverflow-status-dot"></span>
+        <span id="coverflowStatusText">Autoplay motion active (4.5s interval)</span>
+      </div>
+
       <div class="coverflow-hint">
         <i data-lucide="mouse-pointer" style="width: 13px; height: 13px;"></i>
         <span>Drag or swipe cards horizontally, or use Arrow keys to explore</span>
@@ -1054,6 +1147,7 @@
           if (artId) window.navigateToArticle(artId);
         } else {
           coverflowActiveIndex = idx;
+          handleCoverflowInteraction();
           updateCoverflowDOM(0);
         }
       });
@@ -1073,12 +1167,14 @@
     if (btnPrev) {
       btnPrev.addEventListener("click", () => {
         coverflowActiveIndex = (coverflowActiveIndex - 1 + exploreNotesData.length) % exploreNotesData.length;
+        handleCoverflowInteraction();
         updateCoverflowDOM(0);
       });
     }
     if (btnNext) {
       btnNext.addEventListener("click", () => {
         coverflowActiveIndex = (coverflowActiveIndex + 1) % exploreNotesData.length;
+        handleCoverflowInteraction();
         updateCoverflowDOM(0);
       });
     }
@@ -1088,6 +1184,7 @@
     dots.forEach(dot => {
       dot.addEventListener("click", () => {
         coverflowActiveIndex = parseInt(dot.dataset.index, 10);
+        handleCoverflowInteraction();
         updateCoverflowDOM(0);
       });
     });
@@ -1119,6 +1216,7 @@
         coverflowActiveIndex = (coverflowActiveIndex + 1) % exploreNotesData.length;
       }
       coverflowCurrentDeltaX = 0;
+      handleCoverflowInteraction();
       updateCoverflowDOM(0, false);
     }
 
@@ -1136,16 +1234,19 @@
         if (e.key === "ArrowLeft") {
           e.preventDefault();
           coverflowActiveIndex = (coverflowActiveIndex - 1 + exploreNotesData.length) % exploreNotesData.length;
+          handleCoverflowInteraction();
           updateCoverflowDOM(0);
         } else if (e.key === "ArrowRight") {
           e.preventDefault();
           coverflowActiveIndex = (coverflowActiveIndex + 1) % exploreNotesData.length;
+          handleCoverflowInteraction();
           updateCoverflowDOM(0);
         }
       });
     }
 
     updateCoverflowDOM(0);
+    scheduleCoverflowAdvance();
     refreshIcons();
   }
 
@@ -1352,6 +1453,11 @@
   // App Initialization
   renderPinnedTopics();
   renderVaultTree();
+
+  if (navHub) navHub.addEventListener("click", window.navigateToHub);
+  if (navExplore) navExplore.addEventListener("click", window.navigateToExplore);
+  if (navLibrary) navLibrary.addEventListener("click", window.navigateToLibrary);
+
   window.addEventListener("hashchange", route);
   route();
 })();
