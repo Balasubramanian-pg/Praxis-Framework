@@ -144,22 +144,31 @@ In enterprise Data Engineering, Data Analytics, and Business Intelligence (BI) i
 > [!IMPORTANT] The Analytics Adoption Paradox
 > In software engineering, users are forced to interact with the new interface to perform their daily duties (e.g., ERP entry, CRM updates). In Data & BI, stakeholders have a frictionless, entrenched fallback: **Shadow IT and Excel**. Therefore, Data Project Managers must treat business change management as an active engineering workstream, not an afterthought following production deployment.
 
-```
-Traditional Delivery Trap:
-[Raw Sources] ──> [Lakehouse Pipeline] ──> [Gold BI Dashboard] ──> [Project Declared Complete]
-                                                                        │
-                                              User fallback:            ▼
-                                    [Copy-paste into Excel] ◄── [Dashboard Abandoned]
+```mermaid
+flowchart TD
+    subgraph TRAP["Traditional Delivery Trap (The Shelfware Cycle)"]
+        direction LR
+        S["Raw Sources"] --> P["Lakehouse Pipeline"]
+        P --> D["Gold BI Dashboard"]
+        D --> C["Project Declared Complete"]
+        C -.->|"Dashboard Abandoned"| F["User Fallback: Copy-paste into Excel"]
+    end
 
-Praxis Integrated Change Management:
-[Data Engineering Delivery] ──> [Certified Semantic Layer]
-                                       │
-                                       ├─► [User Readiness & BCM Champions]
-                                       ├─► ["Analyze in Excel" Governed Bridges]
-                                       └─► [Systematic Spreadsheet Deprecation]
-                                                    │
-                                                    ▼
-                                    [Audited Benefits Realization (ROI)]
+    subgraph PRAXIS["Praxis Integrated Change Management"]
+        direction TB
+        ENG["Data Engineering Delivery"] --> SL["Certified Semantic Layer"]
+        SL --> U1["User Readiness & BCM Champions"]
+        SL --> U2["'Analyze in Excel' Governed Bridges"]
+        SL --> U3["Systematic Spreadsheet Deprecation"]
+        U1 --> ROI["Audited Benefits Realization (ROI)"]
+        U2 --> ROI
+        U3 --> ROI
+    end
+
+    classDef trap fill:#fff1f2,stroke:#f43f5e,stroke-width:1.5px,color:#881337;
+    classDef praxis fill:#f0fdf4,stroke:#10b981,stroke-width:1.5px,color:#064e3b;
+    class TRAP trap;
+    class PRAXIS praxis;
 ```
 
 ### 1. Applying the Formula for Change to Data Projects: $C = (A \times B \times D) > X$
