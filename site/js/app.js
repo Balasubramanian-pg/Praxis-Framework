@@ -476,6 +476,7 @@
   async function showArticle(queryId) {
     if (typeof cardStackTimer !== "undefined" && cardStackTimer) clearTimeout(cardStackTimer);
     if (typeof coverflowTimer !== "undefined" && coverflowTimer) clearTimeout(coverflowTimer);
+    if (typeof window.stopTts === "function") window.stopTts();
 
     const art = findArticle(queryId) || articles["00 - Praxis Framework Overview"] || Object.values(articles)[0];
     if (!art) return;
@@ -538,6 +539,7 @@
   function showHub() {
     if (typeof cardStackTimer !== "undefined" && cardStackTimer) clearTimeout(cardStackTimer);
     if (typeof coverflowTimer !== "undefined" && coverflowTimer) clearTimeout(coverflowTimer);
+    if (typeof window.stopTts === "function") window.stopTts();
 
     if (viewArticle) {
       viewArticle.style.display = "none";
@@ -567,6 +569,7 @@
   // Display Library 3D Gallery View
   function showLibrary() {
     if (typeof coverflowTimer !== "undefined" && coverflowTimer) clearTimeout(coverflowTimer);
+    if (typeof window.stopTts === "function") window.stopTts();
 
     if (viewArticle) {
       viewArticle.style.display = "none";
@@ -1039,6 +1042,7 @@
   // Display Explore 3D Coverflow Gallery View
   function showExplore() {
     if (typeof cardStackTimer !== "undefined" && cardStackTimer) clearTimeout(cardStackTimer);
+    if (typeof window.stopTts === "function") window.stopTts();
 
     if (viewArticle) {
       viewArticle.style.display = "none";
@@ -1316,6 +1320,381 @@
       else dot.classList.remove("active");
     });
   }
+
+  // ==========================================================================
+  // FREE CLIENT-SIDE TEXT-TO-SPEECH (TTS) AUDIO SYNTHESIZER
+  // 8 Distinct Voices (4 Female + 4 Male) via Native Web Speech API (0 API Keys, 100% Free)
+  // ==========================================================================
+
+  const ttsDeck = document.getElementById("ttsDeck");
+  const ttsPlaybackStatus = document.getElementById("ttsPlaybackStatus");
+  const ttsEqualizer = document.getElementById("ttsEqualizer");
+  const ttsProgressBar = document.getElementById("ttsProgressBar");
+  const ttsActiveVoiceName = document.getElementById("ttsActiveVoiceName");
+  const ttsSentenceCounter = document.getElementById("ttsSentenceCounter");
+  const btnTtsPlay = document.getElementById("btnTtsPlay");
+  const ttsPlayIcon = document.getElementById("ttsPlayIcon");
+  const ttsPlayText = document.getElementById("ttsPlayText");
+  const ttsFloatingDock = document.getElementById("ttsFloatingDock");
+  const ttsDockPlayBtn = document.getElementById("ttsDockPlayBtn");
+  const ttsDockPlayIcon = document.getElementById("ttsDockPlayIcon");
+  const ttsDockTitle = document.getElementById("ttsDockTitle");
+  const ttsDockVoice = document.getElementById("ttsDockVoice");
+  const ttsDockEqualizer = document.getElementById("ttsDockEqualizer");
+
+  // 8 Distinct Persona Profiles: 4 Female & 4 Male
+  const ttsVoiceProfiles = {
+    "female-1": {
+      name: "Elena",
+      gender: "female",
+      persona: "Natural & Articulate",
+      pitch: 1.02,
+      rate: 1.0,
+      keywords: ["female", "zira", "jenny", "aria", "samantha", "victoria", "karen", "susan"]
+    },
+    "female-2": {
+      name: "Sophia",
+      gender: "female",
+      persona: "Warm Executive",
+      pitch: 0.92,
+      rate: 0.95,
+      keywords: ["female", "jenny", "samantha", "catherine", "karen", "zira"]
+    },
+    "female-3": {
+      name: "Aria",
+      gender: "female",
+      persona: "Dynamic & Fast",
+      pitch: 1.10,
+      rate: 1.10,
+      keywords: ["female", "aria", "samantha", "zira", "google"]
+    },
+    "female-4": {
+      name: "Victoria",
+      gender: "female",
+      persona: "Refined British RP",
+      pitch: 0.98,
+      rate: 0.96,
+      keywords: ["en-gb", "uk", "british", "victoria", "george", "female"]
+    },
+    "male-1": {
+      name: "Marcus",
+      gender: "male",
+      persona: "Deep Executive",
+      pitch: 0.82,
+      rate: 0.92,
+      keywords: ["male", "david", "guy", "daniel", "mark", "alex", "fred"]
+    },
+    "male-2": {
+      name: "Alexander",
+      gender: "male",
+      persona: "Tech Analytical",
+      pitch: 1.0,
+      rate: 1.05,
+      keywords: ["male", "alexander", "alex", "mark", "david", "guy"]
+    },
+    "male-3": {
+      name: "James",
+      gender: "male",
+      persona: "British Studio",
+      pitch: 0.95,
+      rate: 0.96,
+      keywords: ["en-gb", "uk", "british", "daniel", "oliver", "male"]
+    },
+    "male-4": {
+      name: "David",
+      gender: "male",
+      persona: "Calm Professional",
+      pitch: 0.92,
+      rate: 0.90,
+      keywords: ["david", "male", "guy", "mark", "daniel"]
+    }
+  };
+
+  let selectedVoiceKey = "female-1";
+  let activeSystemVoices = [];
+  let ttsResolvedVoices = {};
+  let ttsSentenceQueue = [];
+  let ttsCurrentSentenceIdx = 0;
+  let ttsPlayState = "stopped"; // "stopped" | "playing" | "paused"
+  let ttsRateMultiplier = 1.0;
+  let ttsMode = "full"; // "full" | "summary"
+  let currentUtterance = null;
+  let ttsCurrentArticleTitle = "";
+
+  function loadAndMapTtsVoices() {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    activeSystemVoices = window.speechSynthesis.getVoices() || [];
+
+    const engVoices = activeSystemVoices.filter(v => (v.lang || "").toLowerCase().startsWith("en"));
+    const pool = engVoices.length > 0 ? engVoices : activeSystemVoices;
+
+    for (const [key, profile] of Object.entries(ttsVoiceProfiles)) {
+      let matchedVoice = null;
+      for (const kw of profile.keywords) {
+        matchedVoice = pool.find(v => {
+          const name = (v.name || "").toLowerCase();
+          const lang = (v.lang || "").toLowerCase();
+          return name.includes(kw) || lang.includes(kw);
+        });
+        if (matchedVoice) break;
+      }
+      if (!matchedVoice && pool.length > 0) {
+        const isFemale = profile.gender === "female";
+        const genderMatch = pool.find(v => {
+          const n = (v.name || "").toLowerCase();
+          return isFemale ? (n.includes("female") || n.includes("woman") || n.includes("zira")) : (n.includes("male") || n.includes("man") || n.includes("david"));
+        });
+        matchedVoice = genderMatch || pool[0];
+      }
+      ttsResolvedVoices[key] = matchedVoice;
+    }
+  }
+
+  if (typeof window !== "undefined" && "speechSynthesis" in window) {
+    loadAndMapTtsVoices();
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.onvoiceschanged = loadAndMapTtsVoices;
+    }
+  }
+
+  // Clean Markdown & Code for clear spoken narration
+  function prepareSpeechText(markdown, mode) {
+    if (!markdown) return [];
+    let text = markdown;
+
+    // Remove code blocks
+    text = text.replace(/```[\s\S]*?```/g, " Code snippet omitted. ");
+    // Remove Mermaid diagram blocks
+    text = text.replace(/```mermaid[\s\S]*?```/g, " Architecture diagram omitted. ");
+    // Remove LaTeX formulas
+    text = text.replace(/\$\$[\s\S]*?\$\$/g, " Mathematical equation. ");
+    text = text.replace(/\$([^\$]+)\$/g, " $1 ");
+    // Remove HTML tags
+    text = text.replace(/<[^>]*>/g, " ");
+    // Convert Markdown links [text](url) -> text
+    text = text.replace(/\[([^\]]+)\]\([^\)]+\)/g, " $1 ");
+    // Convert headers # Title -> Title.
+    text = text.replace(/^#{1,6}\s*(.+)$/gm, "$1. ");
+    // Remove bold/italics
+    text = text.replace(/[*_~`]/g, "");
+    // Remove list markers
+    text = text.replace(/^[-*+]\s+/gm, "");
+    text = text.replace(/^\d+\.\s+/gm, "");
+    // Collapse excess whitespace
+    text = text.replace(/\s+/g, " ").trim();
+
+    if (mode === "summary") {
+      const sentences = text.match(/[^.!?]+[.!?]+(\s|$)/g) || [text];
+      text = sentences.slice(0, 3).join(" ");
+    }
+
+    // Split into speech chunks (~120-160 chars per utterance for seamless browser compatibility)
+    const rawSentences = text.match(/[^.!?]+[.!?]+(\s|$)/g) || [text];
+    const chunks = [];
+    rawSentences.forEach(s => {
+      const trimmed = s.trim();
+      if (trimmed.length > 200) {
+        const sub = trimmed.split(/[,;:]\s*/);
+        sub.forEach(part => {
+          if (part.trim().length > 0) chunks.push(part.trim() + ".");
+        });
+      } else if (trimmed.length > 1) {
+        chunks.push(trimmed);
+      }
+    });
+
+    return chunks.length > 0 ? chunks : [text];
+  }
+
+  window.selectVoice = function(voiceKey) {
+    if (!ttsVoiceProfiles[voiceKey]) return;
+    selectedVoiceKey = voiceKey;
+    const profile = ttsVoiceProfiles[voiceKey];
+
+    // Update active buttons in UI
+    document.querySelectorAll(".tts-voice-btn").forEach(btn => {
+      if (btn.dataset.voice === voiceKey) btn.classList.add("active");
+      else btn.classList.remove("active");
+    });
+
+    if (ttsActiveVoiceName) ttsActiveVoiceName.textContent = `${profile.name} (${profile.persona})`;
+    if (ttsDockVoice) ttsDockVoice.textContent = `Voice: ${profile.name}`;
+
+    // If already playing, restart current sentence with the new voice smoothly
+    if (ttsPlayState === "playing") {
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+      speakCurrentSentence();
+    }
+  };
+
+  window.setTtsRate = function(rate) {
+    ttsRateMultiplier = rate;
+    const rateBtns = [
+      { id: "ttsRate08", val: 0.85 },
+      { id: "ttsRate10", val: 1.0 },
+      { id: "ttsRate12", val: 1.25 },
+      { id: "ttsRate15", val: 1.5 }
+    ];
+    rateBtns.forEach(b => {
+      const el = document.getElementById(b.id);
+      if (el) {
+        if (Math.abs(b.val - rate) < 0.05) el.classList.add("active");
+        else el.classList.remove("active");
+      }
+    });
+
+    if (ttsPlayState === "playing") {
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+      speakCurrentSentence();
+    }
+  };
+
+  window.setTtsMode = function(mode) {
+    ttsMode = mode;
+    const btnFull = document.getElementById("btnTtsModeFull");
+    const btnSum = document.getElementById("btnTtsModeSummary");
+    if (btnFull) btnFull.classList.toggle("active", mode === "full");
+    if (btnSum) btnSum.classList.toggle("active", mode === "summary");
+
+    if (ttsPlayState === "playing") {
+      window.stopTts();
+      window.toggleTtsPlay();
+    }
+  };
+
+  function updateTtsUIState(state) {
+    ttsPlayState = state;
+    const isPlaying = state === "playing";
+    const isPaused = state === "paused";
+
+    if (ttsDeck) {
+      if (isPlaying) ttsDeck.classList.add("speaking");
+      else ttsDeck.classList.remove("speaking");
+    }
+
+    if (ttsFloatingDock) {
+      if (state !== "stopped") ttsFloatingDock.style.display = "flex";
+      else ttsFloatingDock.style.display = "none";
+    }
+
+    if (ttsPlayText) {
+      if (isPlaying) ttsPlayText.textContent = "Pause Audio";
+      else if (isPaused) ttsPlayText.textContent = "Resume Audio";
+      else ttsPlayText.textContent = "Listen to Note";
+    }
+
+    if (ttsPlayIcon) {
+      ttsPlayIcon.setAttribute("data-lucide", isPlaying ? "pause" : "play");
+    }
+    if (ttsDockPlayIcon) {
+      ttsDockPlayIcon.setAttribute("data-lucide", isPlaying ? "pause" : "play");
+    }
+
+    if (ttsPlaybackStatus) {
+      if (isPlaying) ttsPlaybackStatus.textContent = "Synthesizing audio...";
+      else if (isPaused) ttsPlaybackStatus.textContent = "Audio paused";
+      else ttsPlaybackStatus.textContent = "Ready to read note";
+    }
+
+    refreshIcons();
+  }
+
+  function speakCurrentSentence() {
+    if (!("speechSynthesis" in window)) return;
+    if (ttsCurrentSentenceIdx >= ttsSentenceQueue.length) {
+      window.stopTts();
+      if (ttsPlaybackStatus) ttsPlaybackStatus.textContent = "Note reading complete";
+      return;
+    }
+
+    const textChunk = ttsSentenceQueue[ttsCurrentSentenceIdx];
+    const profile = ttsVoiceProfiles[selectedVoiceKey] || ttsVoiceProfiles["female-1"];
+    const utterance = new SpeechSynthesisUtterance(textChunk);
+
+    if (ttsResolvedVoices[selectedVoiceKey]) {
+      utterance.voice = ttsResolvedVoices[selectedVoiceKey];
+    }
+    utterance.pitch = profile.pitch;
+    utterance.rate = profile.rate * ttsRateMultiplier;
+
+    utterance.onstart = function() {
+      updateTtsUIState("playing");
+      updateTtsProgress();
+    };
+
+    utterance.onend = function() {
+      if (ttsPlayState === "playing") {
+        ttsCurrentSentenceIdx++;
+        speakCurrentSentence();
+      }
+    };
+
+    utterance.onerror = function(err) {
+      if (err.error !== "canceled" && err.error !== "interrupted") {
+        console.warn("TTS Utterance notice:", err);
+      }
+    };
+
+    currentUtterance = utterance;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function updateTtsProgress() {
+    const total = ttsSentenceQueue.length;
+    const current = Math.min(ttsCurrentSentenceIdx + 1, total);
+    const pct = total > 0 ? (current / total) * 100 : 0;
+
+    if (ttsProgressBar) ttsProgressBar.style.width = `${pct}%`;
+    if (ttsSentenceCounter) {
+      ttsSentenceCounter.textContent = `Sentence: ${current} / ${total}`;
+    }
+  }
+
+  window.toggleTtsPlay = function() {
+    if (!("speechSynthesis" in window)) {
+      alert("Web Speech API is not supported in this browser.");
+      return;
+    }
+
+    if (ttsPlayState === "playing") {
+      window.speechSynthesis.pause();
+      updateTtsUIState("paused");
+      return;
+    }
+
+    if (ttsPlayState === "paused") {
+      window.speechSynthesis.resume();
+      updateTtsUIState("playing");
+      return;
+    }
+
+    // From stopped state: build queue from current article
+    const curTitle = articleTitle ? articleTitle.textContent : "Praxis Note";
+    ttsCurrentArticleTitle = curTitle;
+    if (ttsDockTitle) ttsDockTitle.textContent = curTitle;
+
+    const art = findArticle(curTitle) || articles[curTitle] || Object.values(articles)[0];
+    const rawText = (art ? art.title + ". " + (art.body || "") : (articleBody ? articleBody.innerText : ""));
+
+    ttsSentenceQueue = prepareSpeechText(rawText, ttsMode);
+    ttsCurrentSentenceIdx = 0;
+
+    if (ttsSentenceQueue.length === 0) return;
+
+    window.speechSynthesis.cancel();
+    speakCurrentSentence();
+  };
+
+  window.stopTts = function() {
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+    ttsCurrentSentenceIdx = 0;
+    currentUtterance = null;
+    updateTtsUIState("stopped");
+    if (ttsProgressBar) ttsProgressBar.style.width = "0%";
+    if (ttsSentenceCounter) ttsSentenceCounter.textContent = "Sentence: 0 / 0";
+  };
 
   // Routing Dispatcher
   function route() {
