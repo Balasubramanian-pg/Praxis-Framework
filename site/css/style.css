@@ -2045,14 +2045,12 @@ html.dark .fan-card {
    ========================================================================== */
 
 .view-explore {
-  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 24px 60px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 44px 24px 60px;
-  overflow-y: auto;
-  overflow-x: hidden;
   width: 100%;
 }
 
@@ -2130,6 +2128,8 @@ html.dark .fan-card {
 
 .coverflow-card {
   position: absolute;
+  top: 10px;
+  left: calc(50% - 140px);
   width: 280px;
   height: 380px;
   border-radius: 20px;
@@ -2311,6 +2311,52 @@ html.dark .coverflow-card.active {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.coverflow-status {
+  font-size: 11.5px;
+  color: var(--text-light);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.coverflow-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-indigo);
+  box-shadow: 0 0 8px var(--accent-indigo);
+  animation: status-pulse 2s infinite;
+}
+
+.explore-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.explore-shuffle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 255, 102, 0.1);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+  color: var(--accent-indigo);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.explore-shuffle-btn:hover {
+  background: var(--accent-indigo);
+  color: #000000;
+  box-shadow: 0 0 14px rgba(0, 255, 102, 0.45);
 }
 
 /* Responsive */
