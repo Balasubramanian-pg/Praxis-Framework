@@ -290,6 +290,115 @@
             </div>
           </header>
 
+          <!-- Free Web Speech API Text-to-Speech Synthesizer Deck -->
+          <div class="tts-deck" id="ttsDeck">
+            <div class="tts-header-row">
+              <div class="tts-brand-pill">
+                <span class="tts-badge">Neural Audio Synthesizer</span>
+                <span class="tts-playback-status" id="ttsPlaybackStatus">Ready to read note</span>
+                <div class="tts-equalizer" id="ttsEqualizer" aria-hidden="true">
+                  <div class="eq-bar"></div>
+                  <div class="eq-bar"></div>
+                  <div class="eq-bar"></div>
+                  <div class="eq-bar"></div>
+                  <div class="eq-bar"></div>
+                </div>
+              </div>
+              <div class="tts-settings-row">
+                <button class="tts-mode-pill active" id="btnTtsModeFull" onclick="window.setTtsMode('full')">Full Article</button>
+                <button class="tts-mode-pill" id="btnTtsModeSummary" onclick="window.setTtsMode('summary')">Executive Summary</button>
+                <div class="tts-speed-selector">
+                  <button class="tts-speed-pill" id="ttsRate08" onclick="window.setTtsRate(0.85)">0.8x</button>
+                  <button class="tts-speed-pill active" id="ttsRate10" onclick="window.setTtsRate(1.0)">1.0x</button>
+                  <button class="tts-speed-pill" id="ttsRate12" onclick="window.setTtsRate(1.25)">1.25x</button>
+                  <button class="tts-speed-pill" id="ttsRate15" onclick="window.setTtsRate(1.5)">1.5x</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="tts-progress-track">
+              <div class="tts-progress-fill" id="ttsProgressBar"></div>
+            </div>
+
+            <!-- 8 Distinct Voices: 4 Female & 4 Male -->
+            <div class="tts-voice-section">
+              <div class="tts-voice-label-row">
+                <span>Select Voice Persona (8 Free Built-in Neural Options)</span>
+                <span id="ttsActiveVoiceName">Elena (Natural)</span>
+              </div>
+              <div class="tts-gender-groups">
+                <!-- 4 Female Voices -->
+                <div class="tts-gender-column">
+                  <div class="tts-gender-heading">
+                    <i data-lucide="sparkles" style="width: 12px; height: 12px;"></i>
+                    <span>4 Women Voice Choices</span>
+                  </div>
+                  <div class="tts-voice-buttons" id="ttsFemaleVoiceButtons">
+                    <button class="tts-voice-btn active" data-voice="female-1" onclick="window.selectVoice('female-1')">
+                      <span class="voice-name">Elena</span>
+                      <span class="voice-desc">Natural &amp; Articulate</span>
+                    </button>
+                    <button class="tts-voice-btn" data-voice="female-2" onclick="window.selectVoice('female-2')">
+                      <span class="voice-name">Sophia</span>
+                      <span class="voice-desc">Warm Executive</span>
+                    </button>
+                    <button class="tts-voice-btn" data-voice="female-3" onclick="window.selectVoice('female-3')">
+                      <span class="voice-name">Aria</span>
+                      <span class="voice-desc">Dynamic &amp; Fast</span>
+                    </button>
+                    <button class="tts-voice-btn" data-voice="female-4" onclick="window.selectVoice('female-4')">
+                      <span class="voice-name">Victoria</span>
+                      <span class="voice-desc">Refined British RP</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 4 Male Voices -->
+                <div class="tts-gender-column">
+                  <div class="tts-gender-heading">
+                    <i data-lucide="radio" style="width: 12px; height: 12px;"></i>
+                    <span>4 Male Voice Choices</span>
+                  </div>
+                  <div class="tts-voice-buttons" id="ttsMaleVoiceButtons">
+                    <button class="tts-voice-btn" data-voice="male-1" onclick="window.selectVoice('male-1')">
+                      <span class="voice-name">Marcus</span>
+                      <span class="voice-desc">Deep Executive</span>
+                    </button>
+                    <button class="tts-voice-btn" data-voice="male-2" onclick="window.selectVoice('male-2')">
+                      <span class="voice-name">Alexander</span>
+                      <span class="voice-desc">Tech Analytical</span>
+                    </button>
+                    <button class="tts-voice-btn" data-voice="male-3" onclick="window.selectVoice('male-3')">
+                      <span class="voice-name">James</span>
+                      <span class="voice-desc">British Studio</span>
+                    </button>
+                    <button class="tts-voice-btn" data-voice="male-4" onclick="window.selectVoice('male-4')">
+                      <span class="voice-name">David</span>
+                      <span class="voice-desc">Calm Professional</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Primary Playback Controls -->
+            <div class="tts-controls-row">
+              <div class="tts-playback-buttons">
+                <button class="tts-btn-play" id="btnTtsPlay" onclick="window.toggleTtsPlay()">
+                  <i data-lucide="play" id="ttsPlayIcon" style="width: 14px; height: 14px;"></i>
+                  <span id="ttsPlayText">Listen to Note</span>
+                </button>
+                <button class="tts-btn-stop" id="btnTtsStop" onclick="window.stopTts()">
+                  <i data-lucide="square" style="width: 12px; height: 12px;"></i>
+                  <span>Stop</span>
+                </button>
+              </div>
+              <div class="tts-playback-status" id="ttsSentenceCounter">
+                <span>Sentence: 0 / 0</span>
+              </div>
+            </div>
+          </div>
+
           <div class="article-body" id="articleBody">
             <!-- Rendered Markdown goes here -->
           </div>
@@ -300,6 +409,26 @@
 
     </main>
 
+  </div>
+
+  <!-- Floating Mini Audio Player Dock -->
+  <div class="tts-floating-dock" id="ttsFloatingDock">
+    <button class="tts-dock-btn" id="ttsDockPlayBtn" onclick="window.toggleTtsPlay()" title="Play or Pause">
+      <i data-lucide="play" id="ttsDockPlayIcon" style="width: 14px; height: 14px;"></i>
+    </button>
+    <div class="tts-dock-info">
+      <span class="tts-dock-title" id="ttsDockTitle">Note Audio</span>
+      <span class="tts-dock-voice" id="ttsDockVoice">Voice: Elena</span>
+    </div>
+    <div class="tts-equalizer" id="ttsDockEqualizer" aria-hidden="true">
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+    </div>
+    <button class="tts-dock-close" onclick="window.stopTts()" title="Stop Reading">
+      <i data-lucide="x" style="width: 13px; height: 13px;"></i>
+    </button>
   </div>
 
   <!-- Vendor Libraries: Marked.js, Lucide Icons, Mermaid.js -->
@@ -326,7 +455,7 @@
 
   <!-- Application Content & Routing Logic -->
   <script src="site/js/content.js"></script>
-  <script src="site/js/app.js?v=2.2"></script>
+  <script src="site/js/app.js?v=2.3"></script>
 
 </body>
 </html>
