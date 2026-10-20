@@ -103,6 +103,10 @@
         </button>
 
         <div class="stage-actions">
+          <button class="theme-toggle-btn" id="themeToggleBtn" onclick="window.toggleTheme()" title="Toggle Dark / Light Mode">
+            <i data-lucide="moon" id="themeToggleIcon" style="width: 15px; height: 15px;"></i>
+            <span id="themeToggleLabel">Dark</span>
+          </button>
           <button class="btn-new-chat" onclick="window.navigateToHub()">
             <i data-lucide="plus"></i>
             <span>New Query</span>
@@ -241,10 +245,10 @@
     }
   </script>
 
-  <script src="site/vendor/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
   <script>
     if (typeof mermaid === 'undefined') {
-      document.write('<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"><\/script>');
+      document.write('<script src="site/vendor/mermaid.min.js"><\/script>');
     }
   </script>
 
