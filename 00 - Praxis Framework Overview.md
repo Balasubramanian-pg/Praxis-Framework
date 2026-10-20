@@ -67,7 +67,7 @@ flowchart LR
     ID --> BR[Brief & Data Feasibility]:::doc
     BR --> DEF[Definition: Lakehouse Design]:::proc
     DEF --> BC[Data Contracts & FinOps Plans]:::doc
-    BC --> DEL[Delivery: Medallion Sprints<br>Bronze > Silver > Gold]:::proc
+    BC --> DEL["Delivery: Medallion Sprints<br>Bronze → Silver → Gold"]:::proc
     DEL --> PROD[Certified BI Models]:::doc
     PROD --> CLO[Closure: DataOps Handover]:::proc
     CLO --> BEN[Realized Decision Velocity]:::doc
