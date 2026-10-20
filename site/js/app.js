@@ -1,10 +1,7 @@
 // ==========================================================================
 // Praxis Framework - Modern Full-Width SaaS Workspace Controller
-// Aesthetic: Ultra-Clean Full-Width Edge-to-Edge Canvas
-// Typography: 100% Avenir Next Cyr Exclusively (Zero Serif)
-// Mathematical Typography: KaTeX Math Engine
-// Diagrams: Native Mermaid Flowcharts
-// Icons: Lucide Open Source Line Icons (Zero Emojis)
+// Features: Dual-Mode Routing, Instant Search, Theme Toggle (Light/Dark),
+// Mathematical Typography (KaTeX), Native Mermaid Diagrams
 // ==========================================================================
 
 (function() {
@@ -35,7 +32,10 @@
   const commandSearchDropdown = document.getElementById("commandSearchDropdown");
   const sidebarSearchInput = document.getElementById("sidebarSearchInput");
 
-  let mermaidCounter = 0;
+  // Theme Elements
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+  const themeToggleIcon = document.getElementById("themeToggleIcon");
+  const themeToggleLabel = document.getElementById("themeToggleLabel");
 
   // Configure marked.js
   if (typeof marked !== "undefined") {
@@ -54,14 +54,61 @@
     }
   }
 
-  // Initialize Mermaid with neutral theme and loose security
+  // --------------------------------------------------------------------------
+  // Theme Manager (Dark / Light Mode Toggle)
+  // --------------------------------------------------------------------------
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    if (themeToggleLabel) {
+      themeToggleLabel.textContent = isDark ? "Light" : "Dark";
+    }
+
+    if (themeToggleIcon) {
+      themeToggleIcon.setAttribute("data-lucide", isDark ? "sun" : "moon");
+    }
+
+    refreshIcons();
+  }
+
+  function initTheme() {
+    const savedTheme = localStorage.getItem("praxis-theme");
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = savedTheme ? savedTheme === "dark" : prefersDark;
+    applyTheme(isDark);
+  }
+
+  window.toggleTheme = function() {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("praxis-theme", isDark ? "dark" : "light");
+    applyTheme(isDark);
+
+    // Re-render Mermaid diagrams with updated theme
+    if (viewArticle && viewArticle.style.display !== "none" && articleBody) {
+      renderMermaidDiagrams(articleBody, true);
+    }
+  };
+
+  initTheme();
+
+  // --------------------------------------------------------------------------
+  // Mermaid Flowchart Renderer
+  // --------------------------------------------------------------------------
+  function getMermaidTheme() {
+    return document.documentElement.classList.contains("dark") ? "dark" : "neutral";
+  }
+
   function initMermaid() {
     if (window.mermaid && typeof window.mermaid.initialize === "function") {
       try {
         window.mermaid.initialize({
           startOnLoad: false,
-          theme: 'neutral',
-          securityLevel: 'loose',
+          theme: getMermaidTheme(),
+          securityLevel: "loose",
           fontFamily: "'Avenir Next Cyr', -apple-system, BlinkMacSystemFont, sans-serif"
         });
       } catch (e) {
@@ -119,13 +166,14 @@
 
     // 5. Wrap Mermaid code blocks (language-mermaid, lang-mermaid, or class containing mermaid)
     html = html.replace(/<pre><code class="(?:language-|lang-)?mermaid">([\s\S]*?)<\/code><\/pre>/gi, function(match, code) {
-      const unescaped = code
+      const cleanCode = code
         .replace(/&lt;/g, "<")
         .replace(/&gt;/g, ">")
         .replace(/&amp;/g, "&")
         .replace(/&quot;/g, '"')
-        .replace(/&#39;/g, "'");
-      return `<div class="mermaid-diagram-wrap"><div class="mermaid-raw" style="display:none;">${unescaped}</div><div class="mermaid-render-target"></div></div>`;
+        .replace(/&#39;/g, "'")
+        .trim();
+      return `<div class="mermaid-diagram-wrap"><pre class="mermaid">${cleanCode}</pre></div>`;
     });
 
     // 6. Wrap standard code blocks with copy button
@@ -166,7 +214,6 @@
         console.warn("KaTeX render error:", err);
       }
     } else {
-      // Retry in 200ms if KaTeX is still loading asynchronously
       setTimeout(() => {
         if (typeof window.renderMathInElement === "function") {
           window.renderMathInElement(container, {
@@ -185,39 +232,36 @@
   }
 
   // Render Mermaid Diagrams via Mermaid API
-  async function renderMermaidDiagrams(container) {
+  async function renderMermaidDiagrams(container, force) {
     if (!container) return;
     if (!window.mermaid) return;
 
-    const wraps = container.querySelectorAll(".mermaid-diagram-wrap");
-    for (let i = 0; i < wraps.length; i++) {
-      const wrap = wraps[i];
-      const rawEl = wrap.querySelector(".mermaid-raw");
-      const targetEl = wrap.querySelector(".mermaid-render-target");
-      if (!rawEl || !targetEl || targetEl.getAttribute("data-rendered")) continue;
+    initMermaid();
 
-      const code = rawEl.textContent.trim();
-      const chartId = "mermaid-chart-" + (++mermaidCounter);
+    const nodes = container.querySelectorAll(".mermaid");
+    if (!nodes || nodes.length === 0) return;
 
-      try {
-        if (typeof window.mermaid.render === "function") {
-          const res = await window.mermaid.render(chartId, code);
-          const svg = typeof res === "string" ? res : (res && res.svg ? res.svg : "");
-          targetEl.innerHTML = svg;
-          targetEl.setAttribute("data-rendered", "true");
-        } else if (typeof window.mermaid.run === "function") {
-          targetEl.innerHTML = `<div class="mermaid">${code}</div>`;
-          await window.mermaid.run({ nodes: targetEl.querySelectorAll(".mermaid") });
-          targetEl.setAttribute("data-rendered", "true");
-        }
-      } catch (err) {
-        console.warn("Mermaid render error on diagram #" + i + ":", err);
-        // Clean up any stray temp elements Mermaid might have appended
-        const stray = document.getElementById("d" + chartId) || document.getElementById(chartId);
-        if (stray) stray.remove();
-        targetEl.innerHTML = `<pre class="mermaid-fallback" style="padding:16px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; font-size:12px; overflow-x:auto;"><code>${code}</code></pre>`;
-        targetEl.setAttribute("data-rendered", "true");
+    // Cache original code for reliable re-rendering across themes
+    nodes.forEach(node => {
+      if (!node.dataset.originalMermaid) {
+        node.dataset.originalMermaid = node.textContent;
+      } else if (force) {
+        node.removeAttribute("data-processed");
+        node.innerHTML = node.dataset.originalMermaid;
       }
+    });
+
+    try {
+      if (typeof window.mermaid.run === "function") {
+        await window.mermaid.run({
+          nodes: Array.from(nodes),
+          suppressErrors: true
+        });
+      } else if (typeof window.mermaid.init === "function") {
+        window.mermaid.init(undefined, nodes);
+      }
+    } catch (err) {
+      console.warn("Mermaid batch run notice:", err);
     }
   }
 
@@ -331,7 +375,6 @@
       const items = document.createElement("div");
       items.className = "vault-folder-items";
 
-      // Direct articles in group
       (group.articles || []).forEach(art => {
         const link = document.createElement("a");
         link.className = "vault-note-link";
@@ -341,7 +384,6 @@
         items.appendChild(link);
       });
 
-      // Subfolders
       (group.sub_folders || []).forEach(sub => {
         const subFolder = document.createElement("div");
         subFolder.className = "vault-folder";
