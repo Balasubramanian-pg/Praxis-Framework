@@ -47,19 +47,19 @@
       </div>
 
       <nav class="sidebar-nav">
-        <a class="nav-link active" id="navHub" onclick="window.navigateToHub()">
+        <a class="nav-link active" id="navHub" href="#/hub" onclick="window.navigateToHub(event)">
           <i data-lucide="home"></i>
           <span>Home</span>
         </a>
-        <a class="nav-link" id="navExplore" onclick="window.navigateToExplore()">
+        <a class="nav-link" id="navExplore" href="#/explore" onclick="window.navigateToExplore(event)">
           <i data-lucide="compass"></i>
           <span>Explore</span>
         </a>
-        <a class="nav-link" id="navLibrary" onclick="window.navigateToLibrary()">
+        <a class="nav-link" id="navLibrary" href="#/library" onclick="window.navigateToLibrary(event)">
           <i data-lucide="library"></i>
           <span>Library</span>
         </a>
-        <a class="nav-link" id="navHistory" onclick="window.navigateToHub()">
+        <a class="nav-link" id="navHistory" href="#/hub" onclick="window.navigateToHub(event)">
           <i data-lucide="history"></i>
           <span>History</span>
         </a>
@@ -252,6 +252,12 @@
             </div>
             <h1 class="explore-title">Explore Note Gallery</h1>
             <p class="explore-subtitle">Swipe or drag across curated visual note portraits spanning data architecture, governance, contracts, and delivery.</p>
+            <div class="explore-actions-row">
+              <button class="explore-shuffle-btn" id="btnExploreShuffle" onclick="window.shuffleExploreNotes()">
+                <i data-lucide="shuffle" style="width: 13px; height: 13px;"></i>
+                <span>Shuffle Vault Notes</span>
+              </button>
+            </div>
           </div>
 
           <!-- Coverflow Drag Viewport -->
@@ -320,7 +326,7 @@
 
   <!-- Application Content & Routing Logic -->
   <script src="site/js/content.js"></script>
-  <script src="site/js/app.js"></script>
+  <script src="site/js/app.js?v=2.2"></script>
 
 </body>
 </html>
