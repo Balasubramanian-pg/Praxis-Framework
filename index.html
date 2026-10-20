@@ -3,1138 +3,253 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praxis Framework - The Free Data & BI P3M Wiki</title>
-
-  <!-- Google Fonts: Newsreader Editorial Serif for Authoritative Encyclopedia Headings -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
-
-  <!-- Inlined Wikipedia Redesign Theme & Local Avenir Next Cyr -->
-  <style>
-/* ==========================================================================
-   Praxis Framework Wikipedia Portal
-   Design: Modern Wikipedia Redesign (Clean Editorial Encyclopedia Architecture)
-   Fonts: Editorial Serif (Headings) + Avenir Next Cyr (Body & UI)
-   Icons: Lucide Open Source Library (Zero Emojis)
-   ========================================================================== */
-
-/* Local Self-Hosted Avenir Next Cyr Fonts */
-@font-face {
-  font-family: 'Avenir Next Cyr';
-  font-style: normal;
-  font-weight: 400;
-  src: url('site/fonts/AvenirNextCyr-Regular.woff') format('woff'),
-       local('Avenir Next Cyr Regular'), local('Avenir Next Cyr'), local('Avenir Next');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Avenir Next Cyr';
-  font-style: normal;
-  font-weight: 500;
-  src: url('site/fonts/AvenirNextCyr-Medium.woff') format('woff'),
-       local('Avenir Next Cyr Medium'), local('Avenir Next Medium');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Avenir Next Cyr';
-  font-style: normal;
-  font-weight: 700;
-  src: url('site/fonts/AvenirNextCyr-Bold.woff') format('woff'),
-       local('Avenir Next Cyr Bold'), local('Avenir Next Bold');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Avenir Next Cyr';
-  font-style: normal;
-  font-weight: 800;
-  src: url('site/fonts/AvenirNextCyr-Heavy.woff') format('woff'),
-       local('Avenir Next Cyr Heavy'), local('Avenir Next Heavy');
-  font-display: swap;
-}
-
-/* Color Variables */
-:root {
-  --bg-canvas: #f8fafc;
-  --bg-sheet: #ffffff;
-  --bg-subtle: #f1f5f9;
-  --border-subtle: #e2e8f0;
-  --border-light: #f1f5f9;
-
-  --text-heading: #0f172a;
-  --text-body: #334155;
-  --text-muted: #64748b;
-  --text-light: #94a3b8;
-
-  --wiki-blue: #2563eb;
-  --wiki-blue-hover: #1d4ed8;
-  --wiki-blue-light: #eff6ff;
-  --wiki-blue-border: #bfdbfe;
-
-  --font-serif: 'Newsreader', 'Playfair Display', 'Charter', 'Georgia', 'Cambria', serif;
-  --font-sans: 'Avenir Next Cyr', 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
-
-  --header-height: 64px;
-  --sidebar-width: 230px;
-  --infobox-width: 320px;
-}
-
-/* Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  background-color: var(--bg-canvas);
-}
-
-body {
-  font-family: var(--font-sans);
-  color: var(--text-body);
-  background-color: var(--bg-canvas);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Lucide Icon Defaults */
-.lucide-icon, i[data-lucide], svg.lucide {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  stroke-width: 2;
-  vertical-align: middle;
-  stroke: currentColor;
-  fill: none;
-}
-
-/* ==========================================================================
-   Header Navigation Bar (Modern Wikipedia Redesign)
-   ========================================================================== */
-.wiki-header {
-  height: var(--header-height);
-  background: #ffffff;
-  border-bottom: 1px solid var(--border-subtle);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 32px;
-}
-
-/* Wikipedia Serif W Logo */
-.wiki-brand-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.wiki-crest-logo {
-  font-family: var(--font-serif);
-  font-size: 32px;
-  font-weight: 700;
-  color: #0f172a;
-  line-height: 1;
-  letter-spacing: -0.04em;
-}
-
-.wiki-brand-text {
-  font-family: var(--font-sans);
-  font-size: 17px;
-  font-weight: 700;
-  color: #0f172a;
-  letter-spacing: -0.01em;
-}
-
-.wiki-brand-badge {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--wiki-blue);
-  background: var(--wiki-blue-light);
-  padding: 2px 8px;
-  border-radius: 9999px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Header Center Search + Language Dropdown */
-.wiki-header-center {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.wiki-search-box {
-  position: relative;
-  width: 380px;
-}
-
-.wiki-search-input-wrap {
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  border-radius: 9999px;
-  padding: 0 16px;
-  height: 38px;
-  transition: all 0.15s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
-}
-
-.wiki-search-input-wrap:focus-within {
-  border-color: var(--wiki-blue);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.wiki-search-icon {
-  color: var(--text-light);
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.wiki-search-input {
-  border: none;
-  background: transparent;
-  outline: none;
-  width: 100%;
-  font-family: inherit;
-  font-size: 13.5px;
-  color: var(--text-heading);
-}
-
-.wiki-search-input::placeholder {
-  color: var(--text-light);
-}
-
-.wiki-search-shortcut {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: #f1f5f9;
-  border-radius: 4px;
-  padding: 2px 6px;
-}
-
-/* Search Dropdown */
-.wiki-search-dropdown {
-  position: absolute;
-  top: 46px;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  max-height: 400px;
-  overflow-y: auto;
-  display: none;
-  z-index: 1000;
-}
-
-.wiki-search-item {
-  padding: 12px 18px;
-  border-bottom: 1px solid var(--border-light);
-  cursor: pointer;
-  transition: background 0.12s ease;
-}
-
-.wiki-search-item:last-child {
-  border-bottom: none;
-}
-
-.wiki-search-item:hover {
-  background: #f8fafc;
-}
-
-.wiki-search-item-title {
-  font-size: 14.5px;
-  font-weight: 700;
-  color: var(--text-heading);
-  margin-bottom: 2px;
-}
-
-.wiki-search-item-desc {
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-/* Language Picker Pill */
-.wiki-lang-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-body);
-  background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  padding: 7px 14px;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.wiki-lang-pill:hover {
-  border-color: #cbd5e1;
-  background: #f8fafc;
-}
-
-/* Header Right Maintainer Profile */
-.wiki-header-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.wiki-user-pill {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--text-heading);
-  cursor: pointer;
-}
-
-.wiki-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 13px;
-  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.2);
-}
-
-.wiki-username {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text-heading);
-}
-
-.wiki-user-chevron {
-  color: var(--text-light);
-}
-
-.wiki-menu-icon {
-  color: var(--text-body);
-  cursor: pointer;
-  padding: 6px;
-  border-radius: 6px;
-  transition: background 0.15s ease;
-}
-
-.wiki-menu-icon:hover {
-  background: #f1f5f9;
-}
-
-/* ==========================================================================
-   3-Column Encyclopedia Layout
-   ========================================================================== */
-.wiki-container {
-  display: flex;
-  min-height: calc(100vh - var(--header-height));
-  background: #ffffff;
-  max-width: 1440px;
-  margin: 0 auto;
-  border-left: 1px solid var(--border-subtle);
-  border-right: 1px solid var(--border-subtle);
-}
-
-/* ==========================================================================
-   Column 1: Left Navigation & Contents Sidebar
-   ========================================================================== */
-.wiki-left-sidebar {
-  width: var(--sidebar-width);
-  min-width: var(--sidebar-width);
-  border-right: 1px solid var(--border-subtle);
-  background: #ffffff;
-  height: calc(100vh - var(--header-height));
-  position: sticky;
-  top: var(--header-height);
-  overflow-y: auto;
-  padding: 28px 20px 40px;
-}
-
-.wiki-left-sidebar::-webkit-scrollbar {
-  width: 4px;
-}
-.wiki-left-sidebar::-webkit-scrollbar-thumb {
-  background: #e2e8f0;
-  border-radius: 4px;
-}
-
-/* Active Topic Title */
-.wiki-topic-heading {
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #0f172a;
-  margin-bottom: 16px;
-}
-
-/* Tabs: ARTICLE | TALK */
-.wiki-tab-strip {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: 20px;
-  padding-bottom: 6px;
-}
-
-.wiki-tab-link {
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  text-decoration: none;
-  padding-bottom: 6px;
-  position: relative;
-  cursor: pointer;
-  transition: color 0.15s ease;
-}
-
-.wiki-tab-link.active {
-  color: var(--wiki-blue);
-}
-
-.wiki-tab-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: -7px;
-  left: 0;
-  right: 0;
-  height: 2.5px;
-  background: var(--wiki-blue);
-  border-radius: 2px;
-}
-
-/* Action Icons List: SHARE, EDIT, BOOKMARK, DOWNLOAD */
-.wiki-action-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 28px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.wiki-action-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--wiki-blue);
-  text-decoration: none;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  padding: 0;
-  font-family: inherit;
-  transition: opacity 0.15s ease;
-}
-
-.wiki-action-item:hover {
-  opacity: 0.75;
-}
-
-.wiki-action-item i {
-  color: var(--wiki-blue);
-  width: 15px;
-  height: 15px;
-}
-
-/* Numbered Table of Contents (CONTENTS) */
-.wiki-contents-title {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #0f172a;
-  margin-bottom: 14px;
-}
-
-.wiki-toc-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 28px;
-}
-
-.wiki-toc-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.wiki-toc-item a {
-  font-size: 13px;
-  color: var(--text-body);
-  text-decoration: none;
-  line-height: 1.4;
-  transition: color 0.15s ease;
-}
-
-.wiki-toc-item a:hover {
-  color: var(--wiki-blue);
-}
-
-.wiki-toc-item.active a {
-  color: var(--wiki-blue);
-  font-weight: 700;
-}
-
-/* Active Dot Indicator (like in screenshot) */
-.wiki-toc-dot {
-  width: 14px;
-  height: 14px;
-  border: 1.5px solid var(--wiki-blue);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.wiki-toc-dot::after {
-  content: '';
-  width: 5px;
-  height: 5px;
-  background: var(--wiki-blue);
-  border-radius: 50%;
-}
-
-.wiki-toc-item.sub-item {
-  padding-left: 14px;
-}
-
-.wiki-toc-item.sub-item a {
-  font-size: 12px;
-  color: var(--wiki-blue);
-}
-
-/* Vault Tree Section in Left Sidebar */
-.wiki-vault-heading {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  margin-top: 24px;
-  margin-bottom: 10px;
-}
-
-.wiki-vault-folder {
-  margin-bottom: 4px;
-}
-
-.wiki-vault-folder-title {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--text-body);
-  padding: 6px 8px;
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: background 0.12s ease;
-}
-
-.wiki-vault-folder-title:hover {
-  background: var(--bg-subtle);
-}
-
-.wiki-vault-folder-items {
-  display: none;
-  padding-left: 10px;
-  border-left: 1px solid var(--border-subtle);
-  margin-left: 8px;
-  margin-top: 2px;
-  margin-bottom: 6px;
-}
-
-.wiki-vault-folder.expanded > .wiki-vault-folder-items {
-  display: block;
-}
-
-.wiki-vault-note-link {
-  display: block;
-  font-size: 12px;
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 4px 6px;
-  border-radius: 4px;
-  transition: all 0.12s ease;
-}
-
-.wiki-vault-note-link:hover {
-  color: var(--wiki-blue);
-  background: #f8fafc;
-}
-
-.wiki-vault-note-link.active {
-  color: var(--wiki-blue);
-  font-weight: 700;
-  background: var(--wiki-blue-light);
-}
-
-/* ==========================================================================
-   Column 2: Center Editorial Article
-   ========================================================================== */
-.wiki-article-main {
-  flex: 1;
-  min-width: 0;
-  padding: 40px 48px 80px;
-  background: #ffffff;
-}
-
-/* Article Title (Serif Display like The Weeknd in screenshot) */
-.wiki-article-title {
-  font-family: var(--font-serif);
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--text-heading);
-  margin-bottom: 16px;
-  line-height: 1.2;
-}
-
-/* Disambiguation / Lead Note Callout */
-.wiki-disambiguation {
-  font-size: 14px;
-  font-style: italic;
-  color: var(--text-muted);
-  background: #f8fafc;
-  border-left: 3px solid #cbd5e1;
-  padding: 12px 18px;
-  border-radius: 0 8px 8px 0;
-  margin-bottom: 24px;
-  line-height: 1.6;
-}
-
-.wiki-disambiguation strong {
-  font-style: normal;
-  color: var(--text-heading);
-}
-
-/* Wikipedia Article Typography */
-.wiki-article-content p {
-  font-size: 15.5px;
-  line-height: 1.8;
-  color: var(--text-body);
-  margin-bottom: 18px;
-}
-
-.wiki-article-content a, a.wikilink {
-  color: var(--wiki-blue);
-  text-decoration: underline;
-  text-underline-offset: 2.5px;
-  font-weight: 600;
-  transition: color 0.12s ease;
-}
-
-.wiki-article-content a:hover, a.wikilink:hover {
-  color: var(--wiki-blue-hover);
-}
-
-.wiki-article-content strong {
-  font-weight: 700;
-  color: var(--text-heading);
-}
-
-/* Section Headings with Edit Pencil Icon (Early life in screenshot) */
-.wiki-article-content h2 {
-  font-family: var(--font-serif);
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--text-heading);
-  margin-top: 40px;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.wiki-heading-edit-btn {
-  color: var(--wiki-blue);
-  font-size: 14px;
-  text-decoration: none;
-  opacity: 0.6;
-  transition: opacity 0.15s ease;
-  display: inline-flex;
-  align-items: center;
-}
-
-.wiki-heading-edit-btn:hover {
-  opacity: 1;
-}
-
-.wiki-article-content h3 {
-  font-family: var(--font-sans);
-  font-size: 17.5px;
-  font-weight: 700;
-  color: var(--text-heading);
-  margin-top: 26px;
-  margin-bottom: 12px;
-}
-
-.wiki-article-content ul, .wiki-article-content ol {
-  margin-top: 8px;
-  margin-bottom: 20px;
-  padding-left: 24px;
-}
-
-.wiki-article-content li {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--text-body);
-  margin-bottom: 6px;
-}
-
-/* Tables */
-.wiki-article-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 24px 0;
-  font-size: 14px;
-  background: #ffffff;
-  border: 1px solid var(--border-subtle);
-}
-
-.wiki-article-content th {
-  background: #f8fafc;
-  color: var(--text-heading);
-  font-weight: 700;
-  text-align: left;
-  padding: 10px 14px;
-  border: 1px solid var(--border-subtle);
-}
-
-.wiki-article-content td {
-  padding: 10px 14px;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-body);
-}
-
-.wiki-article-content tr:nth-child(even) td {
-  background: #fafbfc;
-}
-
-/* Callouts in Wikipedia Style */
-.callout {
-  margin: 24px 0;
-  padding: 16px 20px;
-  border-radius: 8px;
-  background: #f8fafc;
-  border: 1px solid var(--border-subtle);
-  border-left: 4px solid var(--wiki-blue);
-}
-
-.callout-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.callout-title {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--text-heading);
-}
-
-.callout-body {
-  font-size: 14.5px;
-  color: var(--text-body);
-  line-height: 1.6;
-}
-
-.callout-body p:last-child {
-  margin-bottom: 0;
-}
-
-.callout-tip {
-  border-left-color: #10b981;
-  background: #f0fdf4;
-}
-.callout-tip .callout-title { color: #047857; }
-
-.callout-warning {
-  border-left-color: #f59e0b;
-  background: #fffbeb;
-}
-.callout-warning .callout-title { color: #b45309; }
-
-/* Code Blocks */
-.code-block-wrapper {
-  margin: 20px 0;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border-subtle);
-  background: #0f172a;
-}
-
-.code-block-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 14px;
-  background: #1e293b;
-  font-size: 12px;
-  color: #94a3b8;
-}
-
-.copy-code-btn {
-  background: transparent;
-  border: 1px solid #475569;
-  color: #cbd5e1;
-  border-radius: 4px;
-  padding: 2px 8px;
-  font-size: 11px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.wiki-article-content pre {
-  margin: 0;
-  padding: 16px;
-  overflow-x: auto;
-  background: #0f172a;
-  color: #e2e8f0;
-  font-family: var(--font-mono);
-  font-size: 13.5px;
-  line-height: 1.6;
-}
-
-/* Mermaid Diagrams */
-.mermaid-container {
-  background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  border-radius: 10px;
-  padding: 24px;
-  margin: 28px 0;
-  text-align: center;
-  overflow-x: auto;
-}
-
-/* ==========================================================================
-   Column 3: Wikipedia Infobox / Knowledge Card (Right Side)
-   ========================================================================== */
-.wiki-infobox-column {
-  width: var(--infobox-width);
-  min-width: var(--infobox-width);
-  border-left: 1px solid var(--border-subtle);
-  background: #ffffff;
-  padding: 32px 24px 60px;
-}
-
-.wiki-infobox-card {
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-/* Infobox Header Visual / Illustration */
-.wiki-infobox-media {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  padding: 28px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #ffffff;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.wiki-infobox-avatar-badge {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 26px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.wiki-infobox-media-title {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-
-.wiki-infobox-media-subtitle {
-  font-size: 12px;
-  color: #94a3b8;
-}
-
-/* Infobox Key-Value Rows */
-.wiki-infobox-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.wiki-infobox-row {
-  border-bottom: 1px solid var(--border-light);
-}
-
-.wiki-infobox-row:last-child {
-  border-bottom: none;
-}
-
-.wiki-infobox-label {
-  padding: 12px 14px;
-  font-weight: 700;
-  color: var(--text-heading);
-  width: 38%;
-  vertical-align: top;
-  background: #ffffff;
-}
-
-.wiki-infobox-value {
-  padding: 12px 14px;
-  color: var(--text-body);
-  vertical-align: top;
-  background: #ffffff;
-}
-
-/* Capsule Pill Badges (Alternative, R&B, Singer, Songwriter style from screenshot) */
-.wiki-pill-badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--wiki-blue);
-  background: #ffffff;
-  border: 1px solid #bfdbfe;
-  padding: 2px 10px;
-  border-radius: 9999px;
-  margin: 2px 3px 2px 0;
-  text-decoration: none;
-  transition: all 0.12s ease;
-}
-
-.wiki-pill-badge:hover {
-  background: var(--wiki-blue-light);
-  border-color: var(--wiki-blue);
-}
-
-/* Related Notes in Infobox */
-.wiki-infobox-section-title {
-  font-size: 11.5px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #0f172a;
-  padding: 14px 14px 6px;
-  border-top: 1px solid var(--border-subtle);
-  background: #f8fafc;
-}
-
-.wiki-infobox-related-list {
-  padding: 6px 14px 14px;
-  background: #f8fafc;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.wiki-infobox-related-link {
-  font-size: 12.5px;
-  color: var(--wiki-blue);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-/* Responsive Adaptations */
-@media (max-width: 1200px) {
-  .wiki-infobox-column {
-    display: none;
-  }
-}
-
-@media (max-width: 860px) {
-  .wiki-left-sidebar {
-    display: none;
-  }
-  .wiki-article-main {
-    padding: 24px 20px 60px;
-  }
-  .wiki-search-box {
-    width: 220px;
-  }
-}
-
-  </style>
+  <title>Praxis Framework - Modern Data & BI P3M Workspace</title>
+  <link rel="stylesheet" href="site/css/style.css">
 </head>
 <body>
 
-  <!-- Top Navigation Header (Modern Wikipedia Redesign) -->
-  <header class="wiki-header">
-    
-    <!-- Left: Wikipedia Serif W Crest Logo -->
-    <a href="#/home" class="wiki-brand-wrap">
-      <span class="wiki-crest-logo">W</span>
-      <span class="wiki-brand-text">Praxis Wiki</span>
-      <span class="wiki-brand-badge">P3M</span>
-    </a>
-
-    <!-- Center: Rounded Search Bar + Language Dropdown -->
-    <div class="wiki-header-center">
-      <div class="wiki-search-box">
-        <div class="wiki-search-input-wrap">
-          <span class="wiki-search-icon">
-            <i data-lucide="search"></i>
-          </span>
-          <input type="text" id="searchInput" class="wiki-search-input" placeholder="Search Praxis Wiki..." autocomplete="off">
-          <span class="wiki-search-shortcut">/</span>
+  <div class="window-viewport">
+    <div class="app-window">
+      
+      <!-- Window Top Chrome Bar (Tabs + Controls) -->
+      <div class="window-chrome">
+        <div class="window-tabs">
+          <button class="tab-btn-add" title="New Session" onclick="window.navigateToHub()">
+            <i data-lucide="plus"></i>
+          </button>
+          <div class="window-tab active" id="chromeTab" onclick="window.navigateToHub()">
+            <span class="tab-dot" style="background: #3b82f6;"></span>
+            <span id="chromeTabTitle">PraxisHub</span>
+            <i data-lucide="x" class="tab-close-icon"></i>
+          </div>
+          <div class="window-tab" onclick="window.navigateToArticle('Manage The Configuration')">
+            <span class="tab-dot" style="background: #10b981;"></span>
+            <span>GitOps Gates</span>
+          </div>
+          <div class="window-tab" onclick="window.navigateToArticle('Manage Contracts')">
+            <span class="tab-dot" style="background: #f59e0b;"></span>
+            <span>Data Contracts</span>
+          </div>
+          <div class="window-tab" onclick="window.navigateToArticle('Develop Investment Appraisal')">
+            <span class="tab-dot" style="background: #8b5cf6;"></span>
+            <span>Cloud FinOps</span>
+          </div>
         </div>
-        <div id="searchResults" class="wiki-search-dropdown"></div>
+
+        <div class="window-actions">
+          <button class="win-btn" title="Minimize"><i data-lucide="minus"></i></button>
+          <button class="win-btn" title="Expand"><i data-lucide="maximize-2"></i></button>
+          <button class="win-btn" title="Close"><i data-lucide="x"></i></button>
+        </div>
       </div>
 
-      <div class="wiki-lang-pill">
-        <span>English</span>
-        <svg class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </div>
-    </div>
-
-    <!-- Right: Maintainer Profile & Options -->
-    <div class="wiki-header-right">
-      <a href="https://github.com/Balasubramanian-pg" target="_blank" class="wiki-user-pill" title="Maintainer Profile">
-        <div class="wiki-avatar">BP</div>
-        <span class="wiki-username">Balasubramanian PG</span>
-        <svg class="wiki-user-chevron lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </a>
-      <div class="wiki-menu-icon" title="Menu">
-        <svg class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </div>
-    </div>
-
-  </header>
-
-  <!-- 3-Column Modern Wikipedia Redesign Layout -->
-  <div class="wiki-container">
-
-    <!-- Column 1: Left Navigation & Contents Sidebar -->
-    <aside class="wiki-left-sidebar">
-      
-      <!-- Topic Heading -->
-      <div class="wiki-topic-heading" id="sidebarTopicHeading">PRAXIS FRAMEWORK</div>
-
-      <!-- Tab Strip: ARTICLE | TALK -->
-      <div class="wiki-tab-strip">
-        <span class="wiki-tab-link active">ARTICLE</span>
-        <span class="wiki-tab-link">TALK</span>
-      </div>
-
-      <!-- Action Items: SHARE, EDIT, BOOKMARK, DOWNLOAD -->
-      <div class="wiki-action-list">
-        <button class="wiki-action-item" type="button" onclick="window.shareCurrentPage()">
-          <i data-lucide="share-2"></i>
-          <span>SHARE</span>
-        </button>
-        <a id="actionEditBtn" href="https://github.com/Balasubramanian-pg/Praxis-Framework" target="_blank" class="wiki-action-item">
-          <i data-lucide="edit-3"></i>
-          <span>EDIT</span>
-        </a>
-        <button class="wiki-action-item" type="button" onclick="window.bookmarkCurrentPage()">
-          <i data-lucide="bookmark"></i>
-          <span>BOOKMARK</span>
-        </button>
-        <button class="wiki-action-item" type="button" onclick="window.downloadCurrentPage()">
-          <i data-lucide="download"></i>
-          <span>DOWNLOAD</span>
-        </button>
-      </div>
-
-      <!-- Numbered Table of Contents (CONTENTS) -->
-      <div class="wiki-contents-title">CONTENTS</div>
-      <ul class="wiki-toc-list" id="contentsList"></ul>
-
-      <!-- Vault Structure Browser -->
-      <div class="wiki-vault-heading">Vault Navigation</div>
-      <div id="vaultNavTree"></div>
-
-    </aside>
-
-    <!-- Column 2: Center Editorial Article Main Content -->
-    <main class="wiki-article-main">
-      
-      <!-- Article Title (Serif Display like The Weeknd in screenshot) -->
-      <h1 class="wiki-article-title" id="articleTitle">Praxis Framework</h1>
-
-      <!-- Disambiguation / Lead Note Callout -->
-      <div class="wiki-disambiguation" id="articleDisambiguation">
-        This article discusses the integrated framework for project, programme, and portfolio management (P3M), specialized for <strong>Data Engineering, Analytics, and Business Intelligence</strong> initiatives.
-      </div>
-
-      <!-- Main Article Rendered Markdown Body -->
-      <article class="wiki-article-content" id="articleContainer"></article>
-
-    </main>
-
-    <!-- Column 3: Wikipedia Infobox / Knowledge Card (Right Side) -->
-    <aside class="wiki-infobox-column">
-      
-      <div class="wiki-infobox-card">
+      <!-- App Window Body (Sidebar + Main Stage) -->
+      <div class="window-body">
         
-        <!-- Infobox Header Illustration / Avatar -->
-        <div class="wiki-infobox-media">
-          <div class="wiki-infobox-avatar-badge" id="infoboxMediaBadge">PX</div>
-          <div class="wiki-infobox-media-title" id="infoboxMediaTitle">Praxis Framework</div>
-          <div class="wiki-infobox-media-subtitle" id="infoboxMediaSubtitle">Data & BI P3M Encyclopedia</div>
-        </div>
+        <!-- Left Sidebar (260px) -->
+        <aside class="app-sidebar" id="appSidebar">
+          
+          <div class="sidebar-header">
+            <div class="sidebar-brand" onclick="window.navigateToHub()">
+              <div class="brand-icon">
+                <i data-lucide="layers"></i>
+              </div>
+              <span class="brand-name">Praxis</span>
+            </div>
+            <button class="win-btn" title="Toggle Sidebar" onclick="window.toggleSidebar()">
+              <i data-lucide="panel-left-close"></i>
+            </button>
+          </div>
 
-        <!-- Key-Value Metadata Table -->
-        <table class="wiki-infobox-table">
-          <tbody id="infoboxRows"></tbody>
-        </table>
+          <div class="sidebar-search-box">
+            <div class="search-input-pill">
+              <i data-lucide="search" style="width: 14px; height: 14px; color: var(--text-light);"></i>
+              <input type="text" id="sidebarSearchInput" placeholder="Search..." autocomplete="off">
+              <span class="search-kbd">&#8984;K</span>
+            </div>
+          </div>
 
-        <!-- Related Notes / Concepts -->
-        <div class="wiki-infobox-section-title">Related Concepts</div>
-        <div class="wiki-infobox-related-list" id="infoboxRelatedList"></div>
+          <nav class="sidebar-nav">
+            <a class="nav-link active" id="navHub" onclick="window.navigateToHub()">
+              <i data-lucide="home"></i>
+              <span>Home</span>
+            </a>
+            <a class="nav-link" id="navExplore" onclick="window.navigateToArticle('00 - Praxis Framework Overview')">
+              <i data-lucide="compass"></i>
+              <span>Explore</span>
+            </a>
+            <a class="nav-link" id="navLibrary" onclick="window.navigateToArticle('Praxis for Data and BI')">
+              <i data-lucide="library"></i>
+              <span>Library</span>
+            </a>
+            <a class="nav-link" id="navHistory" onclick="window.navigateToHub()">
+              <i data-lucide="history"></i>
+              <span>History</span>
+            </a>
+          </nav>
+
+          <div class="sidebar-scrollable">
+            <div class="sidebar-section-title">PINNED TOPICS</div>
+            <div class="pinned-list" id="pinnedList">
+              <!-- Dynamically populated pinned list -->
+            </div>
+
+            <div class="sidebar-section-title" style="margin-top: 14px;">FRAMEWORK REPOSITORY</div>
+            <div class="vault-tree" id="vaultTree">
+              <!-- Dynamically populated collapsible vault navigation -->
+            </div>
+          </div>
+
+          <!-- Bottom User Profile Card -->
+          <div class="sidebar-user">
+            <div class="user-avatar">BP</div>
+            <div class="user-details">
+              <span class="user-name">Balasubramanian PG</span>
+              <span class="user-role">Lead Architect</span>
+            </div>
+            <button class="user-menu-btn" title="Maintainer GitHub" onclick="window.open('https://github.com/Balasubramanian-pg/Praxis-Framework', '_blank')">
+              <i data-lucide="more-horizontal" style="width: 16px; height: 16px;"></i>
+            </button>
+          </div>
+
+        </aside>
+
+        <!-- Main Stage (Right Canvas) -->
+        <main class="main-stage">
+          
+          <!-- Stage Top Header Bar -->
+          <div class="stage-header">
+            <button class="model-pill" title="Framework Model Engine">
+              <i data-lucide="sparkles" class="spark-icon"></i>
+              <span>iPraxis 4.0</span>
+              <i data-lucide="chevron-down" style="width: 14px; height: 14px; color: var(--text-muted);"></i>
+            </button>
+
+            <div class="stage-actions">
+              <button class="btn-new-chat" onclick="window.navigateToHub()">
+                <i data-lucide="plus"></i>
+                <span>New Query</span>
+              </button>
+              <div class="user-badge-mini" title="Balasubramanian PG">BP</div>
+            </div>
+          </div>
+
+          <!-- Stage Views Container -->
+          <div class="stage-content" id="stageContent">
+            
+            <!-- VIEW A: Assistant & Hub Hero View (Matches Reference Image) -->
+            <div class="view-hub" id="viewHub">
+              
+              <!-- 3D Iridescent Glowing Orb -->
+              <div class="ai-orb-container">
+                <div class="ai-orb"></div>
+              </div>
+
+              <!-- Hero Greeting -->
+              <div class="hero-greeting">
+                <div class="hero-subtitle">How Can I Assist</div>
+                <div class="hero-title">Your <span class="hero-accent-text">Data Project</span> Today?</div>
+              </div>
+
+              <!-- Floating Frosted Command Card -->
+              <div class="command-card-wrapper">
+                <div class="command-card">
+                  <div class="command-input-row">
+                    <i data-lucide="sparkles" class="command-spark"></i>
+                    <input type="text" id="commandInput" placeholder="Ask about Data Contracts, Medallion Architecture, FinOps, P3M..." autocomplete="off">
+                  </div>
+                  <div class="command-footer">
+                    <div class="command-tools">
+                      <button class="tool-pill" onclick="window.quickSearch('Reasoning')">
+                        <i data-lucide="cpu" style="width: 12px; height: 12px;"></i>
+                        <span>Reasoning</span>
+                      </button>
+                      <button class="tool-pill" onclick="window.quickSearch('Medallion')">
+                        <i data-lucide="database" style="width: 12px; height: 12px;"></i>
+                        <span>Medallion</span>
+                      </button>
+                      <button class="tool-pill" onclick="window.quickSearch('FinOps')">
+                        <i data-lucide="dollar-sign" style="width: 12px; height: 12px;"></i>
+                        <span>FinOps</span>
+                      </button>
+                      <button class="tool-pill" onclick="window.quickSearch('Contracts')">
+                        <i data-lucide="file-check" style="width: 12px; height: 12px;"></i>
+                        <span>Contracts</span>
+                      </button>
+                    </div>
+                    <button class="command-send-btn" id="commandSendBtn" onclick="window.handleCommandSubmit()" title="Search or Query">
+                      <i data-lucide="arrow-up" style="width: 16px; height: 16px;"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Instant Search Dropdown -->
+                <div class="search-dropdown hidden" id="commandSearchDropdown"></div>
+              </div>
+
+              <!-- Strategic Topic Recommendation Cards Grid -->
+              <div class="recommendations-grid" id="recommendationsGrid">
+                <a href="#/article/Develop%20Investment%20Appraisal" class="rec-card">
+                  <span class="rec-card-tag">FinOps & TCO</span>
+                  <div class="rec-card-title">Develop Investment Appraisal</div>
+                  <div class="rec-card-desc">3-5 Year Cloud TCO modeling, NPV/IRR formulas, and sensitivity stress-testing against storage growth.</div>
+                </a>
+                <a href="#/article/Deliver%20A%20Project%20Or%20Programme" class="rec-card">
+                  <span class="rec-card-tag">DataOps Lifecycle</span>
+                  <div class="rec-card-title">Deliver A Project Or Programme</div>
+                  <div class="rec-card-desc">Agile Medallion sprint cadence, circuit-breaker quality gates, and automated deployment handovers.</div>
+                </a>
+                <a href="#/article/Manage%20The%20Configuration" class="rec-card">
+                  <span class="rec-card-tag">Configuration & CI</span>
+                  <div class="rec-card-title">Manage The Configuration</div>
+                  <div class="rec-card-desc">GitOps-driven schemas, dbt Slim CI PR validation gates, and TMDL text-based semantic model tracking.</div>
+                </a>
+                <a href="#/article/Manage%20Contracts" class="rec-card">
+                  <span class="rec-card-tag">Procurement & Governance</span>
+                  <div class="rec-card-title">Manage Contracts</div>
+                  <div class="rec-card-desc">Cloud provider commit utilization, SaaS connector MAR caps, and automated Definition of Done gates.</div>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- VIEW B: Article Reading View (Inside Clean SaaS Canvas) -->
+            <article class="view-article" id="viewArticle">
+              
+              <div class="article-top-bar">
+                <div class="breadcrumb-pill" id="articleBreadcrumb">
+                  <i data-lucide="folder" style="width: 13px; height: 13px;"></i>
+                  <span id="breadcrumbCategory">Management Areas</span>
+                  <span>/</span>
+                  <span id="breadcrumbFile">Manage Change</span>
+                </div>
+                <button class="btn-back-hub" onclick="window.navigateToHub()">
+                  <i data-lucide="arrow-left"></i>
+                  <span>Back to Hub</span>
+                </button>
+              </div>
+
+              <header class="article-header">
+                <h1 class="article-title-text" id="articleTitle">Article Title</h1>
+                <div class="article-badges" id="articleBadges">
+                  <span class="article-badge badge-pillar" id="badgePillar">Pillar: Methods</span>
+                  <span class="article-badge badge-data" id="badgeSpecialization">Data & Analytics</span>
+                </div>
+              </header>
+
+              <div class="article-body" id="articleBody">
+                <!-- Rendered Markdown goes here -->
+              </div>
+
+            </article>
+
+          </div>
+
+        </main>
 
       </div>
 
-    </aside>
-
+    </div>
   </div>
 
   <!-- Vendor Libraries: Marked.js, Lucide Icons, Mermaid.js -->
