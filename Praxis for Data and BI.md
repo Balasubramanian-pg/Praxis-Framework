@@ -85,7 +85,7 @@ The Praxis life cycle adapts into an agile, continuous data delivery engine:
 flowchart TD
     REQ["Strategic KPI Request"] --> ID["1. Identification Process<br><b>Action:</b> Data Feasibility Spike<br><b>Deliverable:</b> Brief with Feasibility Annex"]
     ID --> DEF["2. Definition Process<br><b>Action:</b> Architecture & Contract Negotiation<br><b>Deliverable:</b> Signed Data Contracts & Architecture"]
-    DEF --> DEL["3. Delivery Process<br><b>Action:</b> Two-week Medallion Sprints<br><b>Deliverable:</b> Bronze > Silver > Gold > BI Models"]
+    DEF --> DEL["3. Delivery Process<br><b>Action:</b> Two-week Medallion Sprints<br><b>Deliverable:</b> Bronze → Silver → Gold → BI Models"]
     DEL --> CLO["4. Closure Process<br><b>Action:</b> Operational Handover to DataOps<br><b>Deliverable:</b> Pipeline SLAs & Runbooks"]
 
     classDef proc fill:#f0f9ff,stroke:#0284c7,stroke-width:1.5px,color:#0c4a6e;
