@@ -8,6 +8,9 @@ tags:
   - pillar/knowledge
   - section/stakeholder-management
   - type/management-area
+  - praxis/data-bi
+  - topic/stakeholder-management
+  - discipline/dataops
 pillar: "Knowledge"
 section: "Stakeholder Management"
 subarea: "Management"
@@ -153,6 +156,77 @@ updated: 2026-10-17
 > [!WARNING]
 > Stakeholder management can be one of the most challenging activities within a structured portfolio. The broad and significant change management across the entire portfolio can be undermined if there are local areas of the organisation with poor stakeholder commitment.
 
+
+## Praxis for Data & Business Intelligence: Managing the Analytics Stakeholder Matrix
+
+Stakeholder management in Data Engineering and Business Intelligence projects is uniquely complex because data teams sit in the middle of a **two-sided marketplace**: they consume data from operational application owners (who rarely care about analytical reporting) and deliver insights to business executives (who demand absolute accuracy but lack technical data fluency).
+
+```
+The Data Team at the Center of Competing Stakeholder Pressures:
+           ┌────────────────────────────────────────────────────────┐
+           │        Upstream Source Owners (SAP / CRM / ERP)        │
+           │  Priority: High uptime, rapid feature delivery        │
+           │  Friction: View downstream pipelines as secondary     │
+           └───────────────────────────┬────────────────────────────┘
+                                       │
+                                       ▼ (Upstream Schema Changes)
+                     ┌───────────────────────────────────┐
+                     │ Central Data & Analytics Squad    │
+                     │ (Data PM, Analytics Eng, BI Devs) │
+                     └─────────────────┬─────────────────┘
+                                       │
+            ┌──────────────────────────┴──────────────────────────┐
+            ▼                                                     ▼
+┌──────────────────────────────────────┐  ┌──────────────────────────────────────┐
+│  Executive Decision Makers (CFO/VPs) │  │ Department Power Users (Excel Leads) │
+│  Priority: Decision speed, trust     │  │ Priority: Autonomy, speed, ad-hoc    │
+│  Friction: Low patience for delays   │  │ Friction: Fear central IT bottlenecks│
+└──────────────────────────────────────┘  └──────────────────────────────────────┘
+```
+
+---
+
+### 1. The Four Primary Data Stakeholder Archetypes
+
+Praxis defines tailored engagement strategies across four dominant stakeholder archetypes:
+
+| Stakeholder Archetype | Dominant Concerns & Motivations | Primary Project Risk | Tactical Praxis Engagement Strategy |
+| :--- | :--- | :--- | :--- |
+| **Executive Decision Makers** (C-Suite, VP Finance, Head of Sales) | Decision velocity, auditability, single source of truth for revenue and KPIs. | Dashboard abandonment; losing trust after a single bad data incident. | Deliver vertical MVP slices early; establish automated General Ledger reconciliations; schedule monthly adoption reviews. |
+| **Upstream Source Owners** (Core Banking, Salesforce, ERP Leads) | Operational transactional uptime; low database query overhead; developer autonomy. | Breaking downstream pipelines via unannounced schema migrations. | Institute formal [[Product Documents#1. The Producer-Consumer Data Contract|Producer-Consumer Data Contracts]]; integrate contract schema checks into upstream CI/CD pipelines. |
+| **Department Analysts** ("Excel Power Users") | Agility, flexibility, ability to answer ad-hoc questions without waiting for IT. | Reverting to shadow databases and ungoverned desktop spreadsheets. | Provide "Analyze in Excel" live bridges to Gold semantic models; establish weekly Data Office Hours; embed "Data Champions." |
+| **Security & Compliance** (CISO, DPO, Internal Audit) | Zero regulatory liability; GDPR, HIPAA, SOC-2 compliance; least-privilege access. | Project delivery blocked by last-minute compliance and privacy audits. | Involve compliance during the [[Definition Process]]; implement automated PII classification and dynamic column masking in Unity Catalog. |
+
+---
+
+### 2. The Analytics Translator: Bridging Business & Engineering
+
+A common failure in enterprise data initiatives is assigning a pure infrastructure engineer to gather business requirements, resulting in either misunderstood KPIs or technical over-engineering. 
+
+Praxis champions the role of the **Analytics Translator** (often performed by the Data Product Owner or Lead Analytics Engineer):
+
+- **Bi-Directional Translation**: Translates ambiguous business queries (*"We need a 360-degree view of churn"*) into rigorous technical criteria (*"SCD Type-2 customer dimension tracking monthly active subscriptions with 30-day inactivity threshold"*).
+- **Managing Metric Disputes**: When Sales and Marketing calculate "Qualified Lead" differently, the Translator facilitates consensus workshops to standardize enterprise metric definitions in the semantic layer.
+
+---
+
+### 3. Stakeholder Influence-Interest Grid for Modern Data Platforms
+
+```
+HIGH INFLUENCE
+  ▲
+  │ [Upstream Source Owners]              [Executive Sponsors (CFO / CDO)]
+  │ - Strategy: Keep Satisfied            - Strategy: Manage Closely
+  │ - Mechanism: Data Contracts & APIs    - Mechanism: KPI Dashboards & Demos
+  │
+  │ [Security & Legal / CISO]             [Department Power Users & Champions]
+  │ - Strategy: Monitor & Involve Early   - Strategy: Keep Informed & Empower
+  │ - Mechanism: PII Masking & Purview    - Mechanism: Training & Self-Service
+  └────────────────────────────────────────────────────────────────────────►
+LOW INTEREST                                                  HIGH INTEREST
+```
+
+---
 
 ## Flashcard Q&A
 
