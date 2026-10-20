@@ -12,7 +12,11 @@
   // Primary DOM Elements
   const viewHub = document.getElementById("viewHub");
   const viewArticle = document.getElementById("viewArticle");
+  const viewLibrary = document.getElementById("viewLibrary");
+  const cardStackViewport = document.getElementById("cardStackViewport");
   const stageContent = document.getElementById("stageContent");
+  const navLibrary = document.getElementById("navLibrary");
+  const navExplore = document.getElementById("navExplore");
 
   // Article Elements
   const articleTitle = document.getElementById("articleTitle");
@@ -285,6 +289,10 @@
     window.location.hash = "#/hub";
   };
 
+  window.navigateToLibrary = function() {
+    window.location.hash = "#/library";
+  };
+
   window.navigateToArticle = function(id) {
     window.location.hash = `#/article/${encodeURIComponent(id)}`;
   };
@@ -454,10 +462,13 @@
     if (!art) return;
 
     if (viewHub) viewHub.style.display = "none";
+    if (viewLibrary) viewLibrary.style.display = "none";
     if (viewArticle) {
       viewArticle.style.display = "block";
       viewArticle.classList.add("active");
     }
+
+    document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
 
     document.title = `${art.title} - Praxis Framework`;
 
@@ -509,9 +520,14 @@
       viewArticle.style.display = "none";
       viewArticle.classList.remove("active");
     }
+    if (viewLibrary) viewLibrary.style.display = "none";
     if (viewHub) viewHub.style.display = "flex";
 
     document.title = "Praxis Framework - Modern Data & BI P3M Workspace";
+
+    // Active nav links
+    document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+    if (navExplore) navExplore.classList.add("active");
 
     // Clear active links
     document.querySelectorAll(".vault-note-link, .pinned-item").forEach(link => {
@@ -524,10 +540,325 @@
     refreshIcons();
   }
 
+  // Display Library 3D Gallery View
+  function showLibrary() {
+    if (viewArticle) {
+      viewArticle.style.display = "none";
+      viewArticle.classList.remove("active");
+    }
+    if (viewHub) viewHub.style.display = "none";
+    if (viewLibrary) {
+      viewLibrary.style.display = "flex";
+    }
+
+    document.title = "Framework Library Gallery - Praxis Framework";
+
+    // Active nav links
+    document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+    if (navLibrary) navLibrary.classList.add("active");
+
+    document.querySelectorAll(".vault-note-link, .pinned-item").forEach(link => {
+      link.classList.remove("active");
+    });
+
+    if (commandSearchDropdown) commandSearchDropdown.classList.add("hidden");
+    if (stageContent) stageContent.scrollTo({ top: 0, behavior: "smooth" });
+
+    initCardStack();
+    refreshIcons();
+  }
+
+  // 11 Framework Repository Categories with Stock Assets
+  const libraryCategories = [
+    {
+      id: "core-concepts",
+      title: "Core Concepts",
+      description: "Foundational P3M principles, governance paradigms, and systemic alignment across data ecosystems.",
+      imageSrc: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
+      tag: "Foundation",
+      articleId: "General Principles of Funding"
+    },
+    {
+      id: "governance-framework",
+      title: "Governance & Framework",
+      description: "Strategic sponsorship, organizational controls, data contracts, and board-level compliance.",
+      imageSrc: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+      tag: "Control",
+      articleId: "Manage The Configuration"
+    },
+    {
+      id: "processes",
+      title: "Processes",
+      description: "End-to-end delivery phases, gate reviews, and continuous life-cycle orchestration.",
+      imageSrc: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+      tag: "Workflow",
+      articleId: "Identify A Project Or Programme"
+    },
+    {
+      id: "management-areas",
+      title: "Management Areas",
+      description: "Deep domain control across scope, schedule, finance, risk, quality, and change management.",
+      imageSrc: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop",
+      tag: "Operations",
+      articleId: "Manage Change"
+    },
+    {
+      id: "competencies-skills",
+      title: "Competencies & Skills",
+      description: "Professional capability frameworks, role matrices, behavioral proficiencies, and study tracks.",
+      imageSrc: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      tag: "People",
+      articleId: "Manage Change Competency"
+    },
+    {
+      id: "documentation-artefacts",
+      title: "Documentation & Artefacts",
+      description: "Standardized business cases, charters, risk registers, and telemetry schemas.",
+      imageSrc: "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1200&auto=format&fit=crop",
+      tag: "Templates",
+      articleId: "00 - Overview"
+    },
+    {
+      id: "portfolio-management",
+      title: "Portfolio Management",
+      description: "Strategic balance, investment screening, resource capacity, and multi-program prioritization.",
+      imageSrc: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+      tag: "Strategy",
+      articleId: "Portfolio Management"
+    },
+    {
+      id: "delivery-lifecycle",
+      title: "Delivery & Lifecycle",
+      description: "Agile sprints, linear milestones, hybrid transitions, stage boundaries, and benefits realization.",
+      imageSrc: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop",
+      tag: "Execution",
+      articleId: "Plan Delivery"
+    },
+    {
+      id: "maturity-models",
+      title: "Maturity Models",
+      description: "CMMI capability assessments, gap analysis, and structured pathway progression.",
+      imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+      tag: "Assessment",
+      articleId: "Capability Maturity"
+    },
+    {
+      id: "general-principles",
+      title: "General Principles",
+      description: "Ethical standards, sustainability, value duty, and foundational project governance ethos.",
+      imageSrc: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+      tag: "Ethics",
+      articleId: "General Principles"
+    },
+    {
+      id: "investment-benefits",
+      title: "Investment & Benefits",
+      description: "DCF, NPV, and IRR appraisal techniques, optimism bias adjustments, and ROI realization.",
+      imageSrc: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop",
+      tag: "FinOps",
+      articleId: "Develop Investment Appraisal"
+    }
+  ];
+
+  let cardStackActiveIndex = 0;
+  let cardStackClickCooldownUntil = 0;
+  let cardStackTimer = null;
+  let cardStackInitialized = false;
+
+  function initCardStack() {
+    if (!cardStackViewport) return;
+    if (cardStackInitialized) {
+      updateCardStackDOM();
+      scheduleCardStackAdvance();
+      return;
+    }
+    cardStackInitialized = true;
+
+    cardStackViewport.innerHTML = `
+      <div class="card-stack-stage" id="cardStackStage">
+        ${libraryCategories.map((cat, i) => `
+          <div class="fan-card" data-index="${i}" data-article="${cat.articleId}">
+            <img class="fan-card-bg" src="${cat.imageSrc}" alt="${cat.title}" loading="lazy" />
+            <div class="fan-card-gradient"></div>
+            <div class="fan-card-content">
+              <span class="fan-card-tag">${cat.tag}</span>
+              <div class="fan-card-title">${cat.title}</div>
+              <div class="fan-card-desc">${cat.description}</div>
+              <button class="fan-card-action" onclick="event.stopPropagation(); window.navigateToArticle('${cat.articleId}');">
+                <span>Explore Category</span>
+                <i data-lucide="arrow-right" style="width: 13px; height: 13px;"></i>
+              </button>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="card-stack-controls">
+        <button class="card-stack-nav-btn" id="btnCardPrev" title="Previous Card">
+          <i data-lucide="chevron-left" style="width: 16px; height: 16px;"></i>
+        </button>
+
+        <div class="card-stack-dots">
+          ${libraryCategories.map((_, idx) => `
+            <div class="card-stack-dot ${idx === 0 ? 'active' : ''}" data-index="${idx}"></div>
+          `).join("")}
+        </div>
+
+        <button class="card-stack-nav-btn" id="btnCardNext" title="Next Card">
+          <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+        </button>
+      </div>
+
+      <div class="card-stack-status" id="cardStackStatus">
+        <span class="card-stack-status-dot"></span>
+        <span id="cardStackStatusText">Autoplay active (5-10s random interval)</span>
+      </div>
+    `;
+
+    // Click events on cards
+    const cards = cardStackViewport.querySelectorAll(".fan-card");
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        const idx = parseInt(card.dataset.index, 10);
+        if (idx === cardStackActiveIndex) {
+          const artId = card.dataset.article;
+          if (artId) window.navigateToArticle(artId);
+        } else {
+          cardStackActiveIndex = idx;
+          handleCardStackInteraction();
+          updateCardStackDOM();
+        }
+      });
+    });
+
+    // Prev / Next button clicks
+    const btnPrev = document.getElementById("btnCardPrev");
+    const btnNext = document.getElementById("btnCardNext");
+    if (btnPrev) {
+      btnPrev.addEventListener("click", () => {
+        cardStackActiveIndex = (cardStackActiveIndex - 1 + libraryCategories.length) % libraryCategories.length;
+        handleCardStackInteraction();
+        updateCardStackDOM();
+      });
+    }
+    if (btnNext) {
+      btnNext.addEventListener("click", () => {
+        cardStackActiveIndex = (cardStackActiveIndex + 1) % libraryCategories.length;
+        handleCardStackInteraction();
+        updateCardStackDOM();
+      });
+    }
+
+    // Dots click
+    const dots = cardStackViewport.querySelectorAll(".card-stack-dot");
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        cardStackActiveIndex = parseInt(dot.dataset.index, 10);
+        handleCardStackInteraction();
+        updateCardStackDOM();
+      });
+    });
+
+    updateCardStackDOM();
+    scheduleCardStackAdvance();
+    refreshIcons();
+  }
+
+  function handleCardStackInteraction() {
+    // Wait for 15 seconds after a user click before animation resumes
+    cardStackClickCooldownUntil = Date.now() + 15000;
+    scheduleCardStackAdvance();
+  }
+
+  function updateCardStackStatus(isPaused) {
+    const textEl = document.getElementById("cardStackStatusText");
+    const dotEl = document.querySelector(".card-stack-status-dot");
+    if (!textEl) return;
+    if (isPaused) {
+      const remainingSec = Math.max(1, Math.round((cardStackClickCooldownUntil - Date.now()) / 1000));
+      textEl.textContent = `User interaction hold (resuming in ${remainingSec}s)`;
+      if (dotEl) dotEl.style.background = "#f59e0b";
+    } else {
+      textEl.textContent = "Autoplay active (5-10s random interval)";
+      if (dotEl) dotEl.style.background = "#10b981";
+    }
+  }
+
+  function scheduleCardStackAdvance() {
+    if (cardStackTimer) clearTimeout(cardStackTimer);
+
+    const now = Date.now();
+    if (now < cardStackClickCooldownUntil) {
+      const waitRemaining = cardStackClickCooldownUntil - now;
+      updateCardStackStatus(true);
+      cardStackTimer = setTimeout(scheduleCardStackAdvance, Math.min(1000, waitRemaining));
+      return;
+    }
+
+    updateCardStackStatus(false);
+    // Random 5000ms - 10000ms interval
+    const randomInterval = Math.floor(5000 + Math.random() * 5000);
+    cardStackTimer = setTimeout(() => {
+      cardStackActiveIndex = (cardStackActiveIndex + 1) % libraryCategories.length;
+      updateCardStackDOM();
+      scheduleCardStackAdvance();
+    }, randomInterval);
+  }
+
+  function updateCardStackDOM() {
+    if (!cardStackViewport) return;
+    const cards = cardStackViewport.querySelectorAll(".fan-card");
+    const dots = cardStackViewport.querySelectorAll(".card-stack-dot");
+    const len = libraryCategories.length;
+    const maxOffset = 3;
+
+    cards.forEach((card, i) => {
+      let off = i - cardStackActiveIndex;
+      if (off > len / 2) off -= len;
+      if (off < -len / 2) off += len;
+
+      const abs = Math.abs(off);
+      const isVisible = abs <= maxOffset;
+
+      if (!isVisible) {
+        card.style.opacity = "0";
+        card.style.pointerEvents = "none";
+        card.style.transform = `translate3d(${off * 150}px, 60px, -450px) scale(0.82)`;
+        card.classList.remove("active");
+        return;
+      }
+
+      card.style.pointerEvents = "auto";
+      card.style.opacity = "1";
+      const isActive = off === 0;
+
+      if (isActive) card.classList.add("active");
+      else card.classList.remove("active");
+
+      const cardSpacing = 135;
+      const x = off * cardSpacing;
+      const y = abs * 12 + (isActive ? -24 : 0);
+      const z = -abs * 110;
+      const rotateZ = off * 7;
+      const rotateX = isActive ? 0 : 12;
+      const scale = isActive ? 1.04 : (1 - abs * 0.05);
+
+      card.style.zIndex = 100 - abs;
+      card.style.transform = `translate3d(${x}px, ${y}px, ${z}px) rotateZ(${rotateZ}deg) rotateX(${rotateX}deg) scale(${scale})`;
+    });
+
+    dots.forEach((dot, idx) => {
+      if (idx === cardStackActiveIndex) dot.classList.add("active");
+      else dot.classList.remove("active");
+    });
+  }
+
   // Routing Dispatcher
   function route() {
     const hash = window.location.hash || "#/hub";
-    if (hash === "#/hub" || hash === "#/" || hash === "#/home" || hash === "") {
+    if (hash === "#/library" || hash === "#/gallery") {
+      showLibrary();
+    } else if (hash === "#/hub" || hash === "#/" || hash === "#/home" || hash === "") {
       showHub();
     } else if (hash.startsWith("#/article/")) {
       const id = hash.replace("#/article/", "");
