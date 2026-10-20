@@ -8,6 +8,9 @@ tags:
   - pillar/knowledge
   - section/communication-management
   - type/management-area
+  - praxis/data-bi
+  - topic/information-management
+  - discipline/dataops
 pillar: "Knowledge"
 section: "Communication Management"
 subarea: "Management"
@@ -146,6 +149,63 @@ updated: 2026-10-17
 > [NOTE]
 > The portfolio management team is likely to have responsibility for both knowledge management and the development of capability maturity. Since information management is closely linked to both of these areas, the portfolio management team must take a long-term, strategic view to ensure that good practice is embedded in the organisation.
 
+
+## Praxis for Data & Business Intelligence: Metadata, Catalogs & Lineage
+
+In modern enterprise Data & Analytics initiatives, information management transcends traditional file sharing or project folder archiving. It governs the complete **life cycle of technical, business, and operational metadata** across data lakes, warehouses, semantic models, and BI visualization platforms.
+
+Without active metadata and information governance, an enterprise lakehouse rapidly decays into a "data swamp"—a dumping ground of untrusted, unindexed, and duplicative datasets where business analysts cannot verify the provenance or definition of metrics.
+
+```
+                      The Modern Enterprise Metadata Stack
+                      
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│              Central Data Catalog (Unity Catalog / Microsoft Purview)            │
+├─────────────────────────┬─────────────────────────────┬─────────────────────────┤
+│   Technical Metadata    │      Business Metadata      │   Operational Metadata  │
+│ - Schemas & Column DDL  │ - Business Glossary (KPIs)  │ - Ingestion Run Timings │
+│ - Partition Keys        │ - Certified Mart Status     │ - Freshness SLA Checks  │
+│ - Parquet File Formats  │ - Asset Ownership / Domain  │ - Automated Test Audits │
+└────────────┬────────────┴──────────────┬──────────────┴────────────┬────────────┘
+             │                           │                           │
+             ▼                           ▼                           ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                      Automated Column-Level Data Lineage                         │
+│ [Source CRM/ERP] ──► [Bronze Parquet] ──► [Silver dbt] ──► [Gold Mart] ──► [PBI]│
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 1. The Three Tiers of Enterprise Metadata
+
+Praxis structures data information management across three critical metadata categories:
+
+| Metadata Type | Captured Information | Technical Enforcement Tools | Project Management Value |
+| :--- | :--- | :--- | :--- |
+| **Technical Metadata** | Table structures, column data types, nullability, primary/foreign keys, partition schemes. | Database Information Schema, Delta Lake transaction logs, dbt `schema.yml`. | Guarantees pipeline interoperability and automated schema drift detection. |
+| **Business Metadata** | Plain-language definitions of metrics, business terms, calculations, and regulatory classifications (PII, Confidential). | Unity Catalog tags, Purview Business Glossary, dbt Semantic Layer. | Prevents metric disputes (e.g., Sales vs. Finance definitions of "Churn"). |
+| **Operational Metadata** | Pipeline execution duration, row counts processed, memory utilization, Great Expectations test results. | Airflow task logs, dbt artifacts (`run_results.json`), Datadog / Monte Carlo. | Provides empirical data for SLA tracking, FinOps optimization, and root-cause analysis. |
+
+---
+
+### 2. End-to-End Column-Level Lineage
+
+Data lineage is the direct equivalent of configuration records and change tracking in traditional project management. It visualizes the origin, transformation path, and destination of every data element:
+
+- **Impact Analysis (Downstream Tracing)**: Before an engineer modifies or drops a column in an upstream Silver model, lineage reveals exactly which Gold tables, semantic measures, and executive dashboards will be affected.
+- **Root-Cause Analysis (Upstream Tracing)**: When an executive questions an anomalous spike in a dashboard card, lineage traces the calculation backwards through the Gold fact table, through the Silver dbt transformation logic, and back to the specific raw ingestion batch.
+
+---
+
+### 3. Data Governance: Tag-Based Security & Dynamic Masking
+
+Under Praxis information management standards, security is enforced via centralized policy tags rather than hardcoded script permissions:
+
+- **Tag-Based Access Control (TBAC)**: Columns tagged as `classification: pii` automatically trigger dynamic masking (e.g., masking credit card numbers or replacing emails with SHA-256 hashes) for non-privileged analytical query roles.
+- **Self-Service Discoverability**: Secure data catalogs empower business analysts to search for existing certified datasets (e.g., searching "Monthly Recurring Revenue"), view data dictionaries, and request access directly through automated entitlement workflows, eliminating duplicate pipeline development.
+
+---
 
 ## Flashcard Q&A
 
