@@ -581,9 +581,32 @@
     dropdownEl.classList.remove("hidden");
   }
 
-  // Search Input Event Listeners
+  // J.A.R.V.I.S. Core Interactive Handlers & Search Input Listeners
+  const jarvisCore = document.getElementById("jarvisCore");
+  if (jarvisCore && commandInput) {
+    jarvisCore.addEventListener("click", function() {
+      jarvisCore.classList.add("active");
+      commandInput.focus();
+    });
+  }
+
   if (commandInput) {
+    commandInput.addEventListener("focus", function() {
+      if (jarvisCore) jarvisCore.classList.add("active");
+    });
+
+    commandInput.addEventListener("blur", function() {
+      if (jarvisCore && !this.value.trim()) {
+        jarvisCore.classList.remove("active");
+      }
+    });
+
     commandInput.addEventListener("input", function() {
+      if (jarvisCore) {
+        if (this.value.trim().length > 0) {
+          jarvisCore.classList.add("active");
+        }
+      }
       triggerSearch(this.value, commandSearchDropdown);
     });
 
