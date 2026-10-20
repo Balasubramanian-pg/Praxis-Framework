@@ -13,8 +13,11 @@
   const viewHub = document.getElementById("viewHub");
   const viewArticle = document.getElementById("viewArticle");
   const viewLibrary = document.getElementById("viewLibrary");
+  const viewExplore = document.getElementById("viewExplore");
   const cardStackViewport = document.getElementById("cardStackViewport");
+  const coverflowViewport = document.getElementById("coverflowViewport");
   const stageContent = document.getElementById("stageContent");
+  const navHub = document.getElementById("navHub");
   const navLibrary = document.getElementById("navLibrary");
   const navExplore = document.getElementById("navExplore");
 
@@ -286,11 +289,27 @@
   };
 
   window.navigateToHub = function() {
-    window.location.hash = "#/hub";
+    if (window.location.hash === "#/hub") {
+      showHub();
+    } else {
+      window.location.hash = "#/hub";
+    }
   };
 
   window.navigateToLibrary = function() {
-    window.location.hash = "#/library";
+    if (window.location.hash === "#/library") {
+      showLibrary();
+    } else {
+      window.location.hash = "#/library";
+    }
+  };
+
+  window.navigateToExplore = function() {
+    if (window.location.hash === "#/explore") {
+      showExplore();
+    } else {
+      window.location.hash = "#/explore";
+    }
   };
 
   window.navigateToArticle = function(id) {
@@ -299,11 +318,10 @@
 
   window.toggleSidebar = function() {
     if (appSidebar) {
-      appSidebar.classList.toggle("collapsed");
-      if (appSidebar.classList.contains("collapsed")) {
-        appSidebar.style.display = "none";
-      } else {
-        appSidebar.style.display = "flex";
+      const isCollapsed = appSidebar.classList.toggle("collapsed");
+      const expandBtn = document.getElementById("sidebarExpandBtn");
+      if (expandBtn) {
+        expandBtn.style.display = isCollapsed ? "inline-flex" : "none";
       }
     }
   };
@@ -463,6 +481,7 @@
 
     if (viewHub) viewHub.style.display = "none";
     if (viewLibrary) viewLibrary.style.display = "none";
+    if (viewExplore) viewExplore.style.display = "none";
     if (viewArticle) {
       viewArticle.style.display = "block";
       viewArticle.classList.add("active");
@@ -521,13 +540,14 @@
       viewArticle.classList.remove("active");
     }
     if (viewLibrary) viewLibrary.style.display = "none";
+    if (viewExplore) viewExplore.style.display = "none";
     if (viewHub) viewHub.style.display = "flex";
 
     document.title = "Praxis Framework - Modern Data & BI P3M Workspace";
 
     // Active nav links
     document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
-    if (navExplore) navExplore.classList.add("active");
+    if (navHub) navHub.classList.add("active");
 
     // Clear active links
     document.querySelectorAll(".vault-note-link, .pinned-item").forEach(link => {
@@ -547,6 +567,7 @@
       viewArticle.classList.remove("active");
     }
     if (viewHub) viewHub.style.display = "none";
+    if (viewExplore) viewExplore.style.display = "none";
     if (viewLibrary) {
       viewLibrary.style.display = "flex";
     }
@@ -853,11 +874,355 @@
     });
   }
 
+  // ==========================================================================
+  // VIEW D: EXPLORE NOTE GALLERY & COVERFLOW DRAG ENGINE
+  // ==========================================================================
+
+  // Curated vault notes paired with Freepik conceptual technology & cyber portraits
+  const exploreNotesData = [
+    {
+      id: "manage-contracts",
+      title: "Manage Contracts",
+      subtitle: "Formal data sharing agreements, schema enforcement, and producer-consumer SLAs.",
+      tag: "Governance",
+      imageSrc: "https://img.freepik.com/free-photo/glowing-hologram-cyberpunk-futuristic-technology-concept_53876-129759.jpg?w=1000&auto=format&fit=crop&q=80",
+      articleId: "Manage Contracts"
+    },
+    {
+      id: "manage-configuration",
+      title: "Manage The Configuration",
+      subtitle: "Configuration identification, version control, baseline audits, and metadata status accounting.",
+      tag: "Architecture",
+      imageSrc: "https://img.freepik.com/free-photo/abstract-polygonal-space-low-poly-dark-background-with-connecting-dots-lines-connection-structure_1258-26978.jpg?w=1000&auto=format&fit=crop&q=80",
+      articleId: "Manage The Configuration"
+    },
+    {
+      id: "investment-appraisal",
+      title: "Develop Investment Appraisal",
+      subtitle: "Cloud FinOps viability, DCF appraisal techniques, unit economics, and value duty metrics.",
+      tag: "Finance",
+      imageSrc: "https://img.freepik.com/free-photo/glowing-digital-graph-showing-stock-market-data-financial-investment-success-concept-generative-ai_1258-153381.jpg?w=1000&auto=format&fit=crop&q=80",
+      articleId: "Develop Investment Appraisal"
+    },
+    {
+      id: "manage-change",
+      title: "Manage Change",
+      subtitle: "Kotter alignment, behavioral enablement, stakeholder empathy mapping, and adoption.",
+      tag: "Transformation",
+      imageSrc: "https://img.freepik.com/free-photo/digital-brain-artificial-intelligence-neural-network-concept_53876-129756.jpg?w=1000&auto=format&fit=crop&q=80",
+      articleId: "Manage Change"
+    },
+    {
+      id: "plan-delivery",
+      title: "Plan Delivery",
+      subtitle: "Agile sprints, milestone boundaries, linear dependency graphs, and automated gate checks.",
+      tag: "Execution",
+      imageSrc: "https://img.freepik.com/free-photo/ai-nuclear-energy-background-future-innovation-disruptive-technology_53876-129783.jpg?w=1000&auto=format&fit=crop&q=80",
+      articleId: "Plan Delivery"
+    },
+    {
+      id: "praxis-data-bi",
+      title: "Praxis for Data and BI",
+      subtitle: "Modern data platform orchestration, analytics engineering governance, and CMMI maturity.",
+      tag: "Framework",
+      imageSrc: "https://img.freepik.com/free-photo/illuminated-geometric-shapes-futuristic-modern-architecture_23-2151624022.jpg?w=1000&auto=format&fit=crop&q=80",
+      articleId: "Praxis for Data and BI"
+    },
+    {
+      id: "manage-benefits",
+      title: "Manage Benefits",
+      subtitle: "Quantifying business telemetry, KPI outcome verification, and ongoing value tracking.",
+      tag: "Value Duty",
+      imageSrc: "https://img.freepik.com/free-photo/futuristic-hologram-artificial-intelligence-hud-dashboard-display_53876-104337.jpg?w=1000&auto=format&fit=crop&q=80",
+      articleId: "Manage Benefits"
+    },
+    {
+      id: "manage-information",
+      title: "Manage Information",
+      subtitle: "Data stewardship, cataloging, lineage tracking, and information security classification.",
+      tag: "Information",
+      imageSrc: "https://img.freepik.com/free-photo/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1000&auto=format&fit=crop&q=80",
+      articleId: "Manage Information"
+    }
+  ];
+
+  let coverflowActiveIndex = 2;
+  let coverflowInitialized = false;
+  let isCoverflowDragging = false;
+  let coverflowStartX = 0;
+  let coverflowCurrentDeltaX = 0;
+
+  // Display Explore 3D Coverflow Gallery View
+  function showExplore() {
+    if (viewArticle) {
+      viewArticle.style.display = "none";
+      viewArticle.classList.remove("active");
+    }
+    if (viewHub) viewHub.style.display = "none";
+    if (viewLibrary) viewLibrary.style.display = "none";
+    if (viewExplore) {
+      viewExplore.style.display = "flex";
+    }
+
+    document.title = "Explore Vault Notes - Praxis Framework";
+
+    // Active nav links
+    document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+    if (navExplore) navExplore.classList.add("active");
+
+    document.querySelectorAll(".vault-note-link, .pinned-item").forEach(link => {
+      link.classList.remove("active");
+    });
+
+    if (commandSearchDropdown) commandSearchDropdown.classList.add("hidden");
+    if (stageContent) stageContent.scrollTo({ top: 0, behavior: "smooth" });
+
+    initCoverflow();
+    refreshIcons();
+  }
+
+  function initCoverflow() {
+    if (!coverflowViewport) return;
+    if (coverflowInitialized) {
+      updateCoverflowDOM(0);
+      return;
+    }
+    coverflowInitialized = true;
+
+    coverflowViewport.innerHTML = `
+      <div class="coverflow-stage" id="coverflowStage" tabindex="0" role="region" aria-label="Explore Notes Coverflow Gallery">
+        ${exploreNotesData.map((item, idx) => `
+          <div class="coverflow-card ${idx === coverflowActiveIndex ? 'active' : ''}" 
+               data-index="${idx}" 
+               data-article="${item.articleId}"
+               role="button"
+               tabindex="0"
+               aria-label="${item.title}">
+            <div class="coverflow-card-img-wrap">
+              <img class="coverflow-card-img" src="${item.imageSrc}" alt="${item.title}" loading="lazy" />
+              <span class="coverflow-card-badge">${item.tag}</span>
+            </div>
+            <div class="coverflow-card-body">
+              <div>
+                <div class="coverflow-card-title">${item.title}</div>
+                <div class="coverflow-card-desc">${item.subtitle}</div>
+              </div>
+              <div class="coverflow-card-footer">
+                <span>Praxis Vault Note</span>
+                <button class="coverflow-card-action" onclick="event.stopPropagation(); window.navigateToArticle('${item.articleId}');">
+                  <span>Inspect</span>
+                  <i data-lucide="arrow-up-right" style="width: 12px; height: 12px;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+
+      <div class="coverflow-controls">
+        <button class="coverflow-btn" id="btnCoverflowPrev" title="Previous Note (Left Arrow)" aria-label="Previous Note">
+          <i data-lucide="chevron-left" style="width: 18px; height: 18px;"></i>
+        </button>
+
+        <div class="coverflow-dots">
+          ${exploreNotesData.map((_, idx) => `
+            <div class="coverflow-dot ${idx === coverflowActiveIndex ? 'active' : ''}" data-index="${idx}" title="Go to note ${idx + 1}"></div>
+          `).join("")}
+        </div>
+
+        <button class="coverflow-btn" id="btnCoverflowNext" title="Next Note (Right Arrow)" aria-label="Next Note">
+          <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+        </button>
+      </div>
+
+      <div class="coverflow-hint">
+        <i data-lucide="mouse-pointer" style="width: 13px; height: 13px;"></i>
+        <span>Drag or swipe cards horizontally, or use Arrow keys to explore</span>
+      </div>
+    `;
+
+    const stage = document.getElementById("coverflowStage");
+    const cards = coverflowViewport.querySelectorAll(".coverflow-card");
+
+    // Click & Keyboard on cards
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        if (Math.abs(coverflowCurrentDeltaX) > 8) return;
+        const idx = parseInt(card.dataset.index, 10);
+        if (idx === coverflowActiveIndex) {
+          const artId = card.dataset.article;
+          if (artId) window.navigateToArticle(artId);
+        } else {
+          coverflowActiveIndex = idx;
+          updateCoverflowDOM(0);
+        }
+      });
+
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          const artId = card.dataset.article;
+          if (artId) window.navigateToArticle(artId);
+        }
+      });
+    });
+
+    // Prev / Next button clicks
+    const btnPrev = document.getElementById("btnCoverflowPrev");
+    const btnNext = document.getElementById("btnCoverflowNext");
+    if (btnPrev) {
+      btnPrev.addEventListener("click", () => {
+        coverflowActiveIndex = (coverflowActiveIndex - 1 + exploreNotesData.length) % exploreNotesData.length;
+        updateCoverflowDOM(0);
+      });
+    }
+    if (btnNext) {
+      btnNext.addEventListener("click", () => {
+        coverflowActiveIndex = (coverflowActiveIndex + 1) % exploreNotesData.length;
+        updateCoverflowDOM(0);
+      });
+    }
+
+    // Dots click
+    const dots = coverflowViewport.querySelectorAll(".coverflow-dot");
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        coverflowActiveIndex = parseInt(dot.dataset.index, 10);
+        updateCoverflowDOM(0);
+      });
+    });
+
+    // Pointer / Drag Gestures (Mouse & Touch)
+    function onPointerDown(e) {
+      isCoverflowDragging = true;
+      coverflowStartX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+      coverflowCurrentDeltaX = 0;
+      if (stage) stage.style.cursor = "grabbing";
+    }
+
+    function onPointerMove(e) {
+      if (!isCoverflowDragging) return;
+      const clientX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+      coverflowCurrentDeltaX = clientX - coverflowStartX;
+      updateCoverflowDOM(coverflowCurrentDeltaX, true);
+    }
+
+    function onPointerUp() {
+      if (!isCoverflowDragging) return;
+      isCoverflowDragging = false;
+      if (stage) stage.style.cursor = "grab";
+
+      const threshold = 40;
+      if (coverflowCurrentDeltaX > threshold) {
+        coverflowActiveIndex = (coverflowActiveIndex - 1 + exploreNotesData.length) % exploreNotesData.length;
+      } else if (coverflowCurrentDeltaX < -threshold) {
+        coverflowActiveIndex = (coverflowActiveIndex + 1) % exploreNotesData.length;
+      }
+      coverflowCurrentDeltaX = 0;
+      updateCoverflowDOM(0, false);
+    }
+
+    if (stage) {
+      stage.addEventListener("mousedown", onPointerDown);
+      window.addEventListener("mousemove", onPointerMove);
+      window.addEventListener("mouseup", onPointerUp);
+
+      stage.addEventListener("touchstart", onPointerDown, { passive: true });
+      window.addEventListener("touchmove", onPointerMove, { passive: true });
+      window.addEventListener("touchend", onPointerUp);
+
+      // Keyboard navigation
+      stage.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          coverflowActiveIndex = (coverflowActiveIndex - 1 + exploreNotesData.length) % exploreNotesData.length;
+          updateCoverflowDOM(0);
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          coverflowActiveIndex = (coverflowActiveIndex + 1) % exploreNotesData.length;
+          updateCoverflowDOM(0);
+        }
+      });
+    }
+
+    updateCoverflowDOM(0);
+    refreshIcons();
+  }
+
+  function updateCoverflowDOM(dragDelta = 0, isLiveDrag = false) {
+    if (!coverflowViewport) return;
+    const cards = coverflowViewport.querySelectorAll(".coverflow-card");
+    const dots = coverflowViewport.querySelectorAll(".coverflow-dot");
+    const cardSpacing = 190;
+    const dragOffsetRatio = dragDelta / cardSpacing;
+
+    cards.forEach((card, i) => {
+      let offset = (i - coverflowActiveIndex) + dragOffsetRatio;
+
+      const absOffset = Math.abs(offset);
+      const isActive = Math.abs(offset) < 0.5;
+
+      if (isActive) card.classList.add("active");
+      else card.classList.remove("active");
+
+      // Hide distant cards
+      if (absOffset > 3.5) {
+        card.style.opacity = "0";
+        card.style.pointerEvents = "none";
+        card.style.transform = `translate3d(${offset * 160}px, 0, -400px) scale(0.65)`;
+        return;
+      }
+
+      card.style.pointerEvents = "auto";
+      card.style.transition = isLiveDrag ? "none" : "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease, opacity 0.45s ease, border-color 0.3s ease, box-shadow 0.3s ease";
+
+      let x = 0;
+      let rotateY = 0;
+      let z = -absOffset * 100;
+      let scale = 1;
+      let opacity = 1;
+      let brightness = 1;
+
+      if (Math.abs(offset) < 0.1) {
+        x = offset * cardSpacing;
+        rotateY = 0;
+        z = 50;
+        scale = 1.05;
+        opacity = 1;
+        brightness = 1;
+      } else if (offset < 0) {
+        x = offset * cardSpacing - 30;
+        rotateY = Math.min(42, 32 + absOffset * 4);
+        scale = Math.max(0.75, 1 - absOffset * 0.1);
+        opacity = Math.max(0.25, 1 - absOffset * 0.22);
+        brightness = Math.max(0.45, 1 - absOffset * 0.2);
+      } else {
+        x = offset * cardSpacing + 30;
+        rotateY = -Math.min(42, 32 + absOffset * 4);
+        scale = Math.max(0.75, 1 - absOffset * 0.1);
+        opacity = Math.max(0.25, 1 - absOffset * 0.22);
+        brightness = Math.max(0.45, 1 - absOffset * 0.2);
+      }
+
+      card.style.zIndex = Math.round(100 - absOffset * 10);
+      card.style.opacity = opacity.toFixed(2);
+      card.style.filter = brightness < 0.98 ? `brightness(${brightness.toFixed(2)})` : "none";
+      card.style.transform = `translate3d(${x.toFixed(1)}px, 0, ${z.toFixed(1)}px) rotateY(${rotateY.toFixed(1)}deg) scale(${scale.toFixed(2)})`;
+    });
+
+    dots.forEach((dot, idx) => {
+      if (idx === coverflowActiveIndex) dot.classList.add("active");
+      else dot.classList.remove("active");
+    });
+  }
+
   // Routing Dispatcher
   function route() {
     const hash = window.location.hash || "#/hub";
     if (hash === "#/library" || hash === "#/gallery") {
       showLibrary();
+    } else if (hash === "#/explore") {
+      showExplore();
     } else if (hash === "#/hub" || hash === "#/" || hash === "#/home" || hash === "") {
       showHub();
     } else if (hash.startsWith("#/article/")) {
