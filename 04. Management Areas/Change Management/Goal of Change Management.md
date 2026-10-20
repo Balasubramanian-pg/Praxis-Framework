@@ -165,10 +165,8 @@ flowchart TD
         U3 --> ROI
     end
 
-    classDef trap fill:#fff1f2,stroke:#f43f5e,stroke-width:1.5px,color:#881337;
-    classDef praxis fill:#f0fdf4,stroke:#10b981,stroke-width:1.5px,color:#064e3b;
-    class TRAP trap;
-    class PRAXIS praxis;
+    style TRAP fill:#fff1f2,stroke:#f43f5e,stroke-width:1.5px,color:#881337
+    style PRAXIS fill:#f0fdf4,stroke:#10b981,stroke-width:1.5px,color:#064e3b
 ```
 
 ### 1. Applying the Formula for Change to Data Projects: $C = (A \times B \times D) > X$
