@@ -696,16 +696,18 @@ html, body {
 }
 
 .hero-subtitle {
-  font-size: 24px;
-  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 22px;
+  font-weight: 600 !important;
   color: var(--text-main);
   letter-spacing: -0.02em;
   margin-bottom: 4px;
 }
 
 .hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 600 !important;
   color: var(--text-main);
   letter-spacing: -0.02em;
 }
@@ -973,18 +975,40 @@ html, body {
   color: var(--accent-indigo);
 }
 
+/* --------------------------------------------------------------------------
+   Headings: Plus Jakarta Sans Semi Bold (Weight 600)
+   Reduced thickness, refined modern typography
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+.article-title-text,
+.hero-title,
+.hero-subtitle {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+
+/* Extended Background Utility */
+.lab-bg::before {
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+
 /* Article Heading & Metadata */
 .article-header {
   margin-bottom: 28px;
 }
 
 .article-title-text {
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: -0.025em;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 28px;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
   color: var(--text-main);
   margin-bottom: 12px;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .article-badges {
@@ -1023,21 +1047,33 @@ html, body {
   color: #334155;
 }
 
-.article-body h2 {
-  font-size: 22px;
-  font-weight: 800;
+.article-body h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 23px;
+  font-weight: 600 !important;
   color: var(--text-main);
-  margin: 36px 0 16px 0;
+  margin: 32px 0 16px 0;
+  letter-spacing: -0.02em;
+}
+
+.article-body h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 19px;
+  font-weight: 600 !important;
+  color: var(--text-main);
+  margin: 32px 0 14px 0;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border-subtle);
   letter-spacing: -0.015em;
 }
 
 .article-body h3 {
-  font-size: 17px;
-  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 16px;
+  font-weight: 600 !important;
   color: var(--text-main);
   margin: 24px 0 12px 0;
+  letter-spacing: -0.01em;
 }
 
 .article-body p {
