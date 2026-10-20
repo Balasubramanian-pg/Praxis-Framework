@@ -1,8 +1,10 @@
 // ==========================================================================
-// Praxis Framework - Modern SaaS / macOS Workspace Controller
-// Aesthetic: Ultra-Clean Floating macOS Canvas (BeeBot Style)
+// Praxis Framework - Modern Full-Width SaaS Workspace Controller
+// Aesthetic: Ultra-Clean Full-Width Edge-to-Edge Canvas
 // Typography: 100% Avenir Next Cyr Exclusively (Zero Serif)
-// Icons: Lucide Open Source Library (Zero Emojis)
+// Mathematical Typography: KaTeX Math Engine
+// Diagrams: Native Mermaid Flowcharts
+// Icons: Lucide Open Source Line Icons (Zero Emojis)
 // ==========================================================================
 
 (function() {
@@ -14,7 +16,6 @@
   const viewHub = document.getElementById("viewHub");
   const viewArticle = document.getElementById("viewArticle");
   const stageContent = document.getElementById("stageContent");
-  const chromeTabTitle = document.getElementById("chromeTabTitle");
 
   // Article Elements
   const articleTitle = document.getElementById("articleTitle");
@@ -34,6 +35,8 @@
   const commandSearchDropdown = document.getElementById("commandSearchDropdown");
   const sidebarSearchInput = document.getElementById("sidebarSearchInput");
 
+  let mermaidCounter = 0;
+
   // Configure marked.js
   if (typeof marked !== "undefined") {
     marked.setOptions({
@@ -50,6 +53,24 @@
       window.lucide.createIcons();
     }
   }
+
+  // Initialize Mermaid with neutral theme and loose security
+  function initMermaid() {
+    if (window.mermaid && typeof window.mermaid.initialize === "function") {
+      try {
+        window.mermaid.initialize({
+          startOnLoad: false,
+          theme: 'neutral',
+          securityLevel: 'loose',
+          fontFamily: "'Avenir Next Cyr', -apple-system, BlinkMacSystemFont, sans-serif"
+        });
+      } catch (e) {
+        console.warn("Mermaid init notice:", e);
+      }
+    }
+  }
+
+  initMermaid();
 
   // Obsidian Callout Icon Mapping (Strictly Lucide line icons, zero emojis)
   const calloutIconMap = {
@@ -96,10 +117,15 @@
       html = text.split(/\n{2,}/).map(p => `<p>${p}</p>`).join("");
     }
 
-    // 5. Wrap Mermaid code blocks
-    html = html.replace(/<pre><code class="language-mermaid">([\s\S]*?)<\/code><\/pre>/gi, function(match, code) {
-      const unescaped = code.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
-      return `<div class="mermaid-container" style="background:#ffffff; padding:16px; border-radius:12px; margin:20px 0; border:1px solid #e2e8f0;"><div class="mermaid">${unescaped}</div></div>`;
+    // 5. Wrap Mermaid code blocks (language-mermaid, lang-mermaid, or class containing mermaid)
+    html = html.replace(/<pre><code class="(?:language-|lang-)?mermaid">([\s\S]*?)<\/code><\/pre>/gi, function(match, code) {
+      const unescaped = code
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'");
+      return `<div class="mermaid-diagram-wrap"><div class="mermaid-raw" style="display:none;">${unescaped}</div><div class="mermaid-render-target"></div></div>`;
     });
 
     // 6. Wrap standard code blocks with copy button
@@ -119,6 +145,80 @@
     });
 
     return html;
+  }
+
+  // Render LaTeX via KaTeX
+  function renderLaTeX(container) {
+    if (!container) return;
+    if (typeof window.renderMathInElement === "function") {
+      try {
+        window.renderMathInElement(container, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true }
+          ],
+          ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+          throwOnError: false
+        });
+      } catch (err) {
+        console.warn("KaTeX render error:", err);
+      }
+    } else {
+      // Retry in 200ms if KaTeX is still loading asynchronously
+      setTimeout(() => {
+        if (typeof window.renderMathInElement === "function") {
+          window.renderMathInElement(container, {
+            delimiters: [
+              { left: "$$", right: "$$", display: true },
+              { left: "$", right: "$", display: false },
+              { left: "\\(", right: "\\)", display: false },
+              { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+            throwOnError: false
+          });
+        }
+      }, 250);
+    }
+  }
+
+  // Render Mermaid Diagrams via Mermaid API
+  async function renderMermaidDiagrams(container) {
+    if (!container) return;
+    if (!window.mermaid) return;
+
+    const wraps = container.querySelectorAll(".mermaid-diagram-wrap");
+    for (let i = 0; i < wraps.length; i++) {
+      const wrap = wraps[i];
+      const rawEl = wrap.querySelector(".mermaid-raw");
+      const targetEl = wrap.querySelector(".mermaid-render-target");
+      if (!rawEl || !targetEl || targetEl.getAttribute("data-rendered")) continue;
+
+      const code = rawEl.textContent.trim();
+      const chartId = "mermaid-chart-" + (++mermaidCounter);
+
+      try {
+        if (typeof window.mermaid.render === "function") {
+          const res = await window.mermaid.render(chartId, code);
+          const svg = typeof res === "string" ? res : (res && res.svg ? res.svg : "");
+          targetEl.innerHTML = svg;
+          targetEl.setAttribute("data-rendered", "true");
+        } else if (typeof window.mermaid.run === "function") {
+          targetEl.innerHTML = `<div class="mermaid">${code}</div>`;
+          await window.mermaid.run({ nodes: targetEl.querySelectorAll(".mermaid") });
+          targetEl.setAttribute("data-rendered", "true");
+        }
+      } catch (err) {
+        console.warn("Mermaid render error on diagram #" + i + ":", err);
+        // Clean up any stray temp elements Mermaid might have appended
+        const stray = document.getElementById("d" + chartId) || document.getElementById(chartId);
+        if (stray) stray.remove();
+        targetEl.innerHTML = `<pre class="mermaid-fallback" style="padding:16px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; font-size:12px; overflow-x:auto;"><code>${code}</code></pre>`;
+        targetEl.setAttribute("data-rendered", "true");
+      }
+    }
   }
 
   // Global Helpers for UI interactions
@@ -177,6 +277,7 @@
     "Manage The Configuration",
     "Manage Contracts",
     "Manage Change",
+    "Goal of Change Management",
     "Manage Information",
     "Plan Delivery",
     "Identify A Project Or Programme",
@@ -306,7 +407,7 @@
   }
 
   // Display Article View
-  function showArticle(queryId) {
+  async function showArticle(queryId) {
     const art = findArticle(queryId) || articles["00 - Praxis Framework Overview"] || Object.values(articles)[0];
     if (!art) return;
 
@@ -316,10 +417,7 @@
       viewArticle.classList.add("active");
     }
 
-    // Update Chrome Tab
-    if (chromeTabTitle) {
-      chromeTabTitle.textContent = art.title.length > 24 ? art.title.slice(0, 24) + "..." : art.title;
-    }
+    document.title = `${art.title} - Praxis Framework`;
 
     // Breadcrumb
     if (breadcrumbCategory) breadcrumbCategory.textContent = art.section || art.folder || "Knowledge";
@@ -330,9 +428,15 @@
     if (badgePillar) badgePillar.textContent = `Pillar: ${art.pillar || "Knowledge & Methods"}`;
     if (badgeSpecialization) badgeSpecialization.textContent = `Type: ${art.type || "P3M DataOps"}`;
 
-    // Render Body
+    // Render Body Markdown
     const renderedHtml = parseMarkdown(art.body);
     if (articleBody) articleBody.innerHTML = renderedHtml;
+
+    // Render LaTeX equations via KaTeX
+    renderLaTeX(articleBody);
+
+    // Render Mermaid flowcharts
+    await renderMermaidDiagrams(articleBody);
 
     // Highlight active tree links
     document.querySelectorAll(".vault-note-link, .pinned-item").forEach(link => {
@@ -355,15 +459,6 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
 
     refreshIcons();
-
-    // Run Mermaid diagrams
-    if (window.mermaid && typeof window.mermaid.run === "function") {
-      try {
-        window.mermaid.run({ querySelector: ".mermaid" });
-      } catch (err) {
-        console.warn("Mermaid execution note:", err);
-      }
-    }
   }
 
   // Display Hub View
@@ -374,7 +469,7 @@
     }
     if (viewHub) viewHub.style.display = "flex";
 
-    if (chromeTabTitle) chromeTabTitle.textContent = "PraxisHub";
+    document.title = "Praxis Framework - Modern Data & BI P3M Workspace";
 
     // Clear active links
     document.querySelectorAll(".vault-note-link, .pinned-item").forEach(link => {
