@@ -970,6 +970,8 @@ html, body {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
+  fill: currentColor;
+  display: inline-block;
 }
 
 .command-input-row input {
@@ -1019,6 +1021,15 @@ html, body {
   background: #ffffff;
   color: var(--text-main);
   border-color: var(--accent-indigo);
+}
+
+.tool-pill svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .command-send-btn {
