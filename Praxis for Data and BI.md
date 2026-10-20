@@ -81,21 +81,15 @@ Praxis functional management areas are enriched with concrete data platform prac
 
 The Praxis life cycle adapts into an agile, continuous data delivery engine:
 
-```
-[Strategic KPI Request]
-         │
-         ▼
-[1. Identification Process] ──► Action: "Data Feasibility Spike" (inspect source APIs, row depth, NULL rates)
-         │                   Deliverable: [[Brief]] with Data Feasibility Annex
-         ▼
-[2. Definition Process] ──────► Action: Architectural design & contract negotiation
-         │                   Deliverable: Signed [[Product Documents#1. The Producer-Consumer Data Contract|Data Contracts]], Governance Architecture
-         ▼
-[3. Delivery Process] ────────► Action: Two-week Medallion Sprints (Vertical End-to-End Slices)
-         │                   Deliverable: Bronze Ingestion -> Silver dbt Models -> Gold Star Schema -> BI Report
-         ▼
-[4. Closure Process] ─────────► Action: Operational handover to DataOps / Platform Support
-                             Deliverable: Pipeline SLAs, alert runbooks, legacy spreadsheet decommissioning
+```mermaid
+flowchart TD
+    REQ["Strategic KPI Request"] --> ID["1. Identification Process<br><b>Action:</b> Data Feasibility Spike<br><b>Deliverable:</b> Brief with Feasibility Annex"]
+    ID --> DEF["2. Definition Process<br><b>Action:</b> Architecture & Contract Negotiation<br><b>Deliverable:</b> Signed Data Contracts & Architecture"]
+    DEF --> DEL["3. Delivery Process<br><b>Action:</b> Two-week Medallion Sprints<br><b>Deliverable:</b> Bronze > Silver > Gold > BI Models"]
+    DEL --> CLO["4. Closure Process<br><b>Action:</b> Operational Handover to DataOps<br><b>Deliverable:</b> Pipeline SLAs & Runbooks"]
+
+    classDef proc fill:#f0f9ff,stroke:#0284c7,stroke-width:1.5px,color:#0c4a6e;
+    class ID,DEF,DEL,CLO proc;
 ```
 
 ---
@@ -139,28 +133,21 @@ Level 5: Optimizing / Autonomous Data Mesh
 
 The modern data practitioner delivers value through an integrated pipeline where governance, architecture, and reporting intersect:
 
-```
-                  Enterprise Lakehouse & BI Delivery Flow
-                  
-[Operational Apps]  (ERP, CRM, Core Banking, Webhooks)
-         │
-         ▼ (Enforced via Producer-Consumer Data Contracts)
-[Bronze Layer]      Raw, immutable append-only storage (Delta Lake / Apache Iceberg)
-         │          Telemetry: Landing timestamp, source file name, row counts
-         ▼
-[Silver Layer]      Cleaned, conformed, deduplicated models (dbt / SQL)
-         │          Quality: Zero duplicate PKs, valid foreign keys, data types cast
-         ▼
-[Gold Layer]        Curated business dimensional star schemas (Facts & Dimensions)
-         │          Optimization: Pre-aggregated metrics, partition keys, z-ordering
-         ▼
-[Semantic Layer]    Certified enterprise business logic & metrics (dbt Semantic / Power BI)
-         │          Governance: Single Source of Truth for Net Margin, Churn, ARR
-         ▼
-[BI Presentation]   Executive Dashboards, Operational Cockpits, "Analyze in Excel" Bridges
-         │          UX Target: Cold load < 2.0s, slicer response < 800ms, RLS active
-         ▼
-[Business Value]    Accelerated decision velocity, audited financial ROI, zero manual spreadsheets
+```mermaid
+flowchart TD
+    APPS["Operational Apps<br><small>(ERP, CRM, Core Banking, Webhooks)</small>"]
+    APPS -->|"Producer-Consumer Data Contracts"| BRONZE["Bronze Layer (Raw Storage)<br><small>Immutable append-only (Delta/Iceberg)</small>"]
+    BRONZE -->|"dbt Transformations & Cleaning"| SILVER["Silver Layer (Conformed Models)<br><small>Deduplicated, types cast, valid keys</small>"]
+    SILVER -->|"Dimensional Modeling"| GOLD["Gold Layer (Star Schemas)<br><small>Curated Kimball Facts & Dimensions</small>"]
+    GOLD -->|"Certified Metrics"| SEM["Semantic Layer (SSOT)<br><small>dbt Semantic / Power BI Semantic Models</small>"]
+    SEM --> BI["BI Presentation & Decision Layer<br><small>Executive Dashboards & 'Analyze in Excel'</small>"]
+
+    classDef stage fill:#f8fafc,stroke:#64748b,stroke-width:1.5px,color:#0f172a;
+    classDef app fill:#eff6ff,stroke:#3b82f6,stroke-width:2px,color:#1e40af;
+    classDef bi fill:#f0fdf4,stroke:#10b981,stroke-width:2px,color:#064e3b;
+    class APPS app;
+    class BRONZE,SILVER,GOLD,SEM stage;
+    class BI bi;
 ```
 
 ---
