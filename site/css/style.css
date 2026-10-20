@@ -1743,6 +1743,259 @@ h1, h2, h3, h4, h5, h6,
   color: inherit;
 }
 
+/* ==========================================================================
+   Library 3D Gallery View & Card Stack Styles
+   ========================================================================== */
+.view-library {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 24px 60px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.library-header {
+  text-align: center;
+  margin-bottom: 28px;
+  max-width: 640px;
+}
+
+.library-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-indigo);
+  margin-bottom: 12px;
+}
+
+.library-title {
+  font-family: 'Red Hat Display', sans-serif !important;
+  font-size: 30px;
+  font-weight: 700 !important;
+  color: var(--text-main);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.library-subtitle {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* 3D Card Stack Viewport */
+.card-stack-viewport {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-stack-stage {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  user-select: none;
+}
+
+/* 3D Fan Card */
+.fan-card {
+  position: absolute;
+  bottom: 0;
+  width: 480px;
+  max-width: 90vw;
+  height: 300px;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  cursor: pointer;
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.dark .fan-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.fan-card.active {
+  cursor: default;
+  border-color: rgba(99, 102, 241, 0.7);
+  box-shadow: 0 25px 60px -10px rgba(99, 102, 241, 0.4), 0 0 20px rgba(99, 102, 241, 0.25);
+}
+
+.fan-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.fan-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.45) 55%, transparent 100%);
+  pointer-events: none;
+}
+
+.fan-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: #ffffff;
+}
+
+.fan-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  width: max-content;
+  margin-bottom: 8px;
+  color: #f8fafc;
+}
+
+.fan-card-title {
+  font-family: 'Red Hat Display', sans-serif !important;
+  font-size: 22px;
+  font-weight: 700 !important;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.fan-card-desc {
+  font-size: 13px;
+  color: rgba(241, 245, 249, 0.88);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.fan-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: var(--radius-pill);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  width: max-content;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.fan-card-action:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* Dots and Controls */
+.card-stack-controls {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card-stack-nav-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--bg-hover);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.card-stack-nav-btn:hover {
+  background: var(--bg-card);
+  border-color: var(--accent-indigo);
+  color: var(--accent-indigo);
+}
+
+.card-stack-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-stack-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-subtle);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-stack-dot.active {
+  width: 22px;
+  border-radius: 4px;
+  background: var(--accent-indigo);
+}
+
+.card-stack-status {
+  font-size: 11.5px;
+  color: var(--text-light);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-stack-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: status-pulse 2s infinite;
+}
+
+@keyframes status-pulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .app-sidebar {
