@@ -55,7 +55,7 @@
           <i data-lucide="compass"></i>
           <span>Explore</span>
         </a>
-        <a class="nav-link" id="navLibrary" onclick="window.navigateToArticle('Praxis for Data and BI')">
+        <a class="nav-link" id="navLibrary" onclick="window.navigateToLibrary()">
           <i data-lucide="library"></i>
           <span>Library</span>
         </a>
@@ -69,11 +69,6 @@
         <div class="sidebar-section-title">PINNED TOPICS</div>
         <div class="pinned-list" id="pinnedList">
           <!-- Dynamically populated pinned list -->
-        </div>
-
-        <div class="sidebar-section-title" style="margin-top: 14px;">FRAMEWORK REPOSITORY</div>
-        <div class="vault-tree" id="vaultTree">
-          <!-- Dynamically populated collapsible vault navigation -->
         </div>
       </div>
 
@@ -224,6 +219,23 @@
             </a>
           </div>
 
+        </div>
+
+        <!-- VIEW C: Library 3D Gallery View -->
+        <div class="view-library" id="viewLibrary" style="display: none;">
+          <div class="library-header">
+            <div class="library-tag-pill">
+              <i data-lucide="library" style="width: 13px; height: 13px;"></i>
+              <span>Framework Repository</span>
+            </div>
+            <h1 class="library-title">Knowledge Architecture Gallery</h1>
+            <p class="library-subtitle">Interactive 3D Card Stack spanning all 11 core disciplines of the Praxis Data &amp; BI framework.</p>
+          </div>
+
+          <!-- 3D Card Stack Component Viewport -->
+          <div class="card-stack-viewport" id="cardStackViewport">
+            <!-- Dynamic 3D Fan Cards will be rendered here by app.js -->
+          </div>
         </div>
 
         <!-- VIEW B: Article Reading View (Full-Width Responsive Canvas) -->
