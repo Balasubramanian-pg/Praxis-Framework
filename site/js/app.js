@@ -1,6 +1,8 @@
 // ==========================================================================
-// Praxis Wikipedia Portal - Main Application Logic
-// Design: Modern Wikipedia Redesign (Clean Editorial Encyclopedia Architecture)
+// Praxis Framework - Modern SaaS / macOS Workspace Controller
+// Aesthetic: Ultra-Clean Floating macOS Canvas (BeeBot Style)
+// Typography: 100% Avenir Next Cyr Exclusively (Zero Serif)
+// Icons: Lucide Open Source Library (Zero Emojis)
 // ==========================================================================
 
 (function() {
@@ -8,24 +10,31 @@
   const articles = data.articles;
   const navTree = data.navigation;
 
-  // DOM Elements
+  // Primary DOM Elements
+  const viewHub = document.getElementById("viewHub");
+  const viewArticle = document.getElementById("viewArticle");
+  const stageContent = document.getElementById("stageContent");
+  const chromeTabTitle = document.getElementById("chromeTabTitle");
+
+  // Article Elements
   const articleTitle = document.getElementById("articleTitle");
-  const articleDisambiguation = document.getElementById("articleDisambiguation");
-  const articleContainer = document.getElementById("articleContainer");
-  const sidebarTopicHeading = document.getElementById("sidebarTopicHeading");
-  const contentsList = document.getElementById("contentsList");
-  const vaultNavTree = document.getElementById("vaultNavTree");
-  const searchInput = document.getElementById("searchInput");
-  const searchResults = document.getElementById("searchResults");
+  const articleBody = document.getElementById("articleBody");
+  const breadcrumbCategory = document.getElementById("breadcrumbCategory");
+  const breadcrumbFile = document.getElementById("breadcrumbFile");
+  const badgePillar = document.getElementById("badgePillar");
+  const badgeSpecialization = document.getElementById("badgeSpecialization");
 
-  // Infobox DOM Elements
-  const infoboxMediaBadge = document.getElementById("infoboxMediaBadge");
-  const infoboxMediaTitle = document.getElementById("infoboxMediaTitle");
-  const infoboxMediaSubtitle = document.getElementById("infoboxMediaSubtitle");
-  const infoboxRows = document.getElementById("infoboxRows");
-  const infoboxRelatedList = document.getElementById("infoboxRelatedList");
+  // Navigation & Tree
+  const pinnedList = document.getElementById("pinnedList");
+  const vaultTree = document.getElementById("vaultTree");
+  const appSidebar = document.getElementById("appSidebar");
 
-  // Configure marked if loaded
+  // Search Elements
+  const commandInput = document.getElementById("commandInput");
+  const commandSearchDropdown = document.getElementById("commandSearchDropdown");
+  const sidebarSearchInput = document.getElementById("sidebarSearchInput");
+
+  // Configure marked.js
   if (typeof marked !== "undefined") {
     marked.setOptions({
       gfm: true,
@@ -35,14 +44,14 @@
     });
   }
 
-  // Refresh Lucide Icons helper
+  // Refresh Lucide line icons
   function refreshIcons() {
     if (window.lucide && typeof window.lucide.createIcons === "function") {
       window.lucide.createIcons();
     }
   }
 
-  // Obsidian Callout Icon Map
+  // Obsidian Callout Icon Mapping (Strictly Lucide line icons, zero emojis)
   const calloutIconMap = {
     note: "info",
     tip: "lightbulb",
@@ -56,7 +65,7 @@
   };
 
   // Markdown Parser
-  function parseMarkdown(md, relPath) {
+  function parseMarkdown(md) {
     if (!md) return "";
 
     // 1. Remove YAML frontmatter
@@ -69,7 +78,7 @@
       const cleanBody = body.replace(/^>\s?/gm, "").trim();
       const iconName = calloutIconMap[typeLower] || "info";
 
-      return `\n\n<div class="callout callout-${typeLower}"><div class="callout-header"><span class="callout-icon"><i data-lucide="${iconName}"></i></span><span class="callout-title">${cleanTitle}</span></div><div class="callout-body">\n\n${cleanBody}\n\n</div></div>\n\n`;
+      return `\n\n<div class="callout callout-${typeLower}"><div class="callout-header"><i data-lucide="${iconName}"></i><span class="callout-title">${cleanTitle}</span></div><div class="callout-body">\n\n${cleanBody}\n\n</div></div>\n\n`;
     });
 
     // 3. Convert Obsidian Wikilinks: [[Target|Label]] or [[Target]]
@@ -90,18 +99,18 @@
     // 5. Wrap Mermaid code blocks
     html = html.replace(/<pre><code class="language-mermaid">([\s\S]*?)<\/code><\/pre>/gi, function(match, code) {
       const unescaped = code.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
-      return `<div class="mermaid-container"><div class="mermaid">${unescaped}</div></div>`;
+      return `<div class="mermaid-container" style="background:#ffffff; padding:16px; border-radius:12px; margin:20px 0; border:1px solid #e2e8f0;"><div class="mermaid">${unescaped}</div></div>`;
     });
 
     // 6. Wrap standard code blocks with copy button
     html = html.replace(/<pre><code(?: class="language-([^"]*)")?>([\s\S]*?)<\/code><\/pre>/gi, function(match, lang, code) {
-      const language = lang || "text";
+      const language = lang || "code";
       return `
         <div class="code-block-wrapper">
-          <div class="code-block-header">
+          <div class="code-header">
             <span>${language}</span>
-            <button class="copy-code-btn" type="button" onclick="window.copyCodeSnippet(this)">
-              <i data-lucide="copy"></i> Copy
+            <button class="btn-copy-code" type="button" onclick="window.copyCodeSnippet(this)">
+              <i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy
             </button>
           </div>
           <pre><code>${code}</code></pre>
@@ -112,355 +121,292 @@
     return html;
   }
 
-  // Global Actions
+  // Global Helpers for UI interactions
   window.copyCodeSnippet = function(button) {
     const wrapper = button.closest(".code-block-wrapper");
     if (!wrapper) return;
     const codeEl = wrapper.querySelector("pre code");
     if (!codeEl) return;
     navigator.clipboard.writeText(codeEl.innerText).then(() => {
-      button.innerHTML = '<i data-lucide="check"></i> Copied!';
+      button.innerHTML = '<i data-lucide="check" style="width: 12px; height: 12px;"></i> Copied!';
       refreshIcons();
       setTimeout(() => {
-        button.innerHTML = '<i data-lucide="copy"></i> Copy';
+        button.innerHTML = '<i data-lucide="copy" style="width: 12px; height: 12px;"></i> Copy';
         refreshIcons();
       }, 2000);
     });
   };
 
-  window.shareCurrentPage = function() {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-      alert("Page link copied to clipboard!");
+  window.navigateToHub = function() {
+    window.location.hash = "#/hub";
+  };
+
+  window.navigateToArticle = function(id) {
+    window.location.hash = `#/article/${encodeURIComponent(id)}`;
+  };
+
+  window.toggleSidebar = function() {
+    if (appSidebar) {
+      appSidebar.classList.toggle("collapsed");
+      if (appSidebar.classList.contains("collapsed")) {
+        appSidebar.style.display = "none";
+      } else {
+        appSidebar.style.display = "flex";
+      }
+    }
+  };
+
+  window.quickSearch = function(query) {
+    if (commandInput) {
+      commandInput.value = query;
+      commandInput.focus();
+      triggerSearch(query, commandSearchDropdown);
+    }
+  };
+
+  window.handleCommandSubmit = function() {
+    if (!commandInput) return;
+    const q = commandInput.value.trim();
+    if (q) {
+      triggerSearch(q, commandSearchDropdown);
+    }
+  };
+
+  // Pinned Strategic Topics
+  const pinnedTopicIds = [
+    "Manage The Configuration",
+    "Manage Contracts",
+    "Manage Change",
+    "Manage Information",
+    "Plan Delivery",
+    "Identify A Project Or Programme",
+    "Define A Project Or Programme",
+    "Deliver A Project Or Programme",
+    "Develop Investment Appraisal",
+    "Manage Benefits",
+    "Praxis for Data and BI"
+  ];
+
+  function renderPinnedTopics() {
+    if (!pinnedList) return;
+    pinnedList.innerHTML = "";
+
+    pinnedTopicIds.forEach(id => {
+      const art = findArticle(id);
+      const title = art ? art.title : id;
+      const a = document.createElement("a");
+      a.className = "pinned-item";
+      a.href = `#/article/${encodeURIComponent(art ? art.id : id)}`;
+      a.textContent = title;
+      a.dataset.id = art ? art.id : id;
+      pinnedList.appendChild(a);
     });
-  };
+  }
 
-  window.bookmarkCurrentPage = function() {
-    const title = articleTitle ? articleTitle.textContent : "Praxis Note";
-    alert(`Bookmarked "${title}" to your study list.`);
-  };
-
-  window.downloadCurrentPage = function() {
-    window.print();
-  };
-
-  // Render Sidebar Tree (Collapsible Vault Navigation)
+  // Render Collapsible Vault Navigation Tree
   function renderVaultTree() {
-    if (!vaultNavTree) return;
-    vaultNavTree.innerHTML = "";
+    if (!vaultTree) return;
+    vaultTree.innerHTML = "";
 
     navTree.forEach(group => {
-      const groupEl = document.createElement("div");
-      groupEl.className = "wiki-vault-folder";
+      const folder = document.createElement("div");
+      folder.className = "vault-folder";
 
-      const header = document.createElement("div");
-      header.className = "wiki-vault-folder-title";
-      header.innerHTML = `
+      const title = document.createElement("div");
+      title.className = "vault-folder-title";
+      title.innerHTML = `
         <span>${group.clean_name}</span>
-        <svg class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 13px; height: 13px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <i data-lucide="chevron-right" style="width: 13px; height: 13px; transition: transform 0.15s ease;"></i>
       `;
-      header.addEventListener("click", () => {
-        groupEl.classList.toggle("expanded");
+
+      title.addEventListener("click", () => {
+        folder.classList.toggle("expanded");
+        const chevron = title.querySelector("i");
+        if (chevron) {
+          chevron.style.transform = folder.classList.contains("expanded") ? "rotate(90deg)" : "rotate(0deg)";
+        }
       });
 
-      const itemsEl = document.createElement("div");
-      itemsEl.className = "wiki-vault-folder-items";
+      const items = document.createElement("div");
+      items.className = "vault-folder-items";
 
-      group.articles.forEach(art => {
-        const item = document.createElement("a");
-        item.className = "wiki-vault-note-link";
-        item.href = `#/article/${encodeURIComponent(art.id)}`;
-        item.textContent = art.title;
-        item.dataset.id = art.id;
-        itemsEl.appendChild(item);
+      // Direct articles in group
+      (group.articles || []).forEach(art => {
+        const link = document.createElement("a");
+        link.className = "vault-note-link";
+        link.href = `#/article/${encodeURIComponent(art.id)}`;
+        link.textContent = art.title;
+        link.dataset.id = art.id;
+        items.appendChild(link);
       });
 
-      if (group.sub_folders && group.sub_folders.length > 0) {
-        group.sub_folders.forEach(sub => {
-          const subGroup = document.createElement("div");
-          subGroup.className = "wiki-vault-folder";
+      // Subfolders
+      (group.sub_folders || []).forEach(sub => {
+        const subFolder = document.createElement("div");
+        subFolder.className = "vault-folder";
 
-          const subHeader = document.createElement("div");
-          subHeader.className = "wiki-vault-folder-title";
-          subHeader.style.fontSize = "11.5px";
-          subHeader.innerHTML = `
-            <span>${sub.name}</span>
-            <svg class="lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 12px; height: 12px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          `;
-          subHeader.addEventListener("click", (e) => {
-            e.stopPropagation();
-            subGroup.classList.toggle("expanded");
-          });
+        const subTitle = document.createElement("div");
+        subTitle.className = "vault-folder-title";
+        subTitle.style.fontSize = "11.5px";
+        subTitle.innerHTML = `
+          <span>${sub.name}</span>
+          <i data-lucide="chevron-right" style="width: 12px; height: 12px; transition: transform 0.15s ease;"></i>
+        `;
 
-          const subItemsEl = document.createElement("div");
-          subItemsEl.className = "wiki-vault-folder-items";
-
-          sub.articles.forEach(subArt => {
-            const item = document.createElement("a");
-            item.className = "wiki-vault-note-link";
-            item.href = `#/article/${encodeURIComponent(subArt.id)}`;
-            item.textContent = subArt.title;
-            item.dataset.id = subArt.id;
-            subItemsEl.appendChild(item);
-          });
-
-          subGroup.appendChild(subHeader);
-          subGroup.appendChild(subItemsEl);
-          itemsEl.appendChild(subGroup);
+        subTitle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          subFolder.classList.toggle("expanded");
+          const chevron = subTitle.querySelector("i");
+          if (chevron) {
+            chevron.style.transform = subFolder.classList.contains("expanded") ? "rotate(90deg)" : "rotate(0deg)";
+          }
         });
-      }
 
-      groupEl.appendChild(header);
-      groupEl.appendChild(itemsEl);
-      vaultNavTree.appendChild(groupEl);
+        const subItems = document.createElement("div");
+        subItems.className = "vault-folder-items";
+
+        (sub.articles || []).forEach(subArt => {
+          const subLink = document.createElement("a");
+          subLink.className = "vault-note-link";
+          subLink.href = `#/article/${encodeURIComponent(subArt.id)}`;
+          subLink.textContent = subArt.title;
+          subLink.dataset.id = subArt.id;
+          subItems.appendChild(subLink);
+        });
+
+        subFolder.appendChild(subTitle);
+        subFolder.appendChild(subItems);
+        items.appendChild(subFolder);
+      });
+
+      folder.appendChild(title);
+      folder.appendChild(items);
+      vaultTree.appendChild(folder);
     });
 
     refreshIcons();
   }
 
-  // Route Handler
-  function route() {
-    const hash = window.location.hash || "#/home";
-    let targetId = "00 - Praxis Framework Overview";
+  // Article Resolver
+  function findArticle(queryId) {
+    if (!queryId) return null;
+    let art = articles[queryId];
+    if (art) return art;
 
-    if (hash.startsWith("#/article/")) {
-      targetId = decodeURIComponent(hash.replace("#/article/", ""));
+    const decoded = decodeURIComponent(queryId).trim();
+    if (articles[decoded]) return articles[decoded];
+
+    const base = decoded.split("/").pop().replace(/\.md$/i, "").trim().toLowerCase();
+    for (const [id, a] of Object.entries(articles)) {
+      if (a.base_name && a.base_name.toLowerCase() === base) return a;
+      if (a.title && a.title.toLowerCase() === base) return a;
+      if (a.id && a.id.toLowerCase() === base) return a;
     }
-
-    displayArticle(targetId);
+    return null;
   }
 
-  // Display Article & Populate 3 Columns
-  function displayArticle(articleId) {
-    let article = articles[articleId];
-    if (!article) {
-      const base = articleId.split("/").pop();
-      article = articles[base];
+  // Display Article View
+  function showArticle(queryId) {
+    const art = findArticle(queryId) || articles["00 - Praxis Framework Overview"] || Object.values(articles)[0];
+    if (!art) return;
+
+    if (viewHub) viewHub.style.display = "none";
+    if (viewArticle) {
+      viewArticle.style.display = "block";
+      viewArticle.classList.add("active");
     }
 
-    if (!article) {
-      article = articles["00 - Praxis Framework Overview"] || Object.values(articles)[0];
+    // Update Chrome Tab
+    if (chromeTabTitle) {
+      chromeTabTitle.textContent = art.title.length > 24 ? art.title.slice(0, 24) + "..." : art.title;
     }
 
-    if (!article) return;
+    // Breadcrumb
+    if (breadcrumbCategory) breadcrumbCategory.textContent = art.section || art.folder || "Knowledge";
+    if (breadcrumbFile) breadcrumbFile.textContent = art.title;
 
-    // 1. Column 1: Left Topic Header
-    if (sidebarTopicHeading) {
-      sidebarTopicHeading.textContent = (article.section || "Praxis Framework").toUpperCase();
-    }
+    // Title & Badges
+    if (articleTitle) articleTitle.textContent = art.title;
+    if (badgePillar) badgePillar.textContent = `Pillar: ${art.pillar || "Knowledge & Methods"}`;
+    if (badgeSpecialization) badgeSpecialization.textContent = `Type: ${art.type || "P3M DataOps"}`;
 
-    // Set GitHub edit link
-    const editBtn = document.getElementById("actionEditBtn");
-    if (editBtn) {
-      const path = article.rel_path || (article.title + ".md");
-      editBtn.href = `https://github.com/Balasubramanian-pg/Praxis-Framework/edit/main/${encodeURIComponent(path)}`;
-    }
+    // Render Body
+    const renderedHtml = parseMarkdown(art.body);
+    if (articleBody) articleBody.innerHTML = renderedHtml;
 
-    // 2. Column 2: Center Editorial Article
-    if (articleTitle) {
-      articleTitle.textContent = article.title;
-    }
-
-    if (articleDisambiguation) {
-      articleDisambiguation.innerHTML = `
-        This article discusses <strong>${article.title}</strong> within the Praxis Framework, specialized for <strong>Data Engineering, Analytics, and Business Intelligence</strong> project management.
-      `;
-    }
-
-    const renderedHtml = parseMarkdown(article.body, article.rel_path);
-    articleContainer.innerHTML = renderedHtml;
-
-    // Inject Edit Buttons into Section Headings (like Early life in screenshot)
-    const h2Elements = articleContainer.querySelectorAll("h2");
-    h2Elements.forEach(h2 => {
-      const editIcon = document.createElement("a");
-      editIcon.className = "wiki-heading-edit-btn";
-      editIcon.href = editBtn ? editBtn.href : "#";
-      editIcon.target = "_blank";
-      editIcon.title = "Edit this section on GitHub";
-      editIcon.innerHTML = `<i data-lucide="edit-3"></i>`;
-      h2.appendChild(editIcon);
-    });
-
-    // 3. Populate Column 1: Dynamic Numbered Table of Contents (CONTENTS)
-    buildNumberedTOC();
-
-    // 4. Populate Column 3: Wikipedia Infobox
-    buildInfobox(article);
-
-    // 5. Update Vault Nav Active State
-    document.querySelectorAll(".wiki-vault-note-link").forEach(link => {
-      if (link.dataset && (link.dataset.id === article.id || link.dataset.id === article.base_name)) {
+    // Highlight active tree links
+    document.querySelectorAll(".vault-note-link, .pinned-item").forEach(link => {
+      if (link.dataset && (link.dataset.id === art.id || link.dataset.id === art.base_name)) {
         link.classList.add("active");
-        let parent = link.closest(".wiki-vault-folder");
+        let parent = link.closest(".vault-folder");
         while (parent) {
           parent.classList.add("expanded");
-          parent = parent.parentElement.closest(".wiki-vault-folder");
+          const chevron = parent.querySelector(".vault-folder-title i");
+          if (chevron) chevron.style.transform = "rotate(90deg)";
+          parent = parent.parentElement.closest(".vault-folder");
         }
       } else {
         link.classList.remove("active");
       }
     });
 
-    window.scrollTo(0, 0);
+    // Scroll to top
+    if (stageContent) stageContent.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
     refreshIcons();
 
-    // Run Mermaid if present
+    // Run Mermaid diagrams
     if (window.mermaid && typeof window.mermaid.run === "function") {
       try {
         window.mermaid.run({ querySelector: ".mermaid" });
       } catch (err) {
-        console.warn("Mermaid notice:", err);
+        console.warn("Mermaid execution note:", err);
       }
     }
   }
 
-  // Build Numbered Table of Contents (1. Early life, 2. Career with dot, 2.1, 2.2)
-  function buildNumberedTOC() {
-    if (!contentsList) return;
-    contentsList.innerHTML = "";
-
-    const headings = articleContainer.querySelectorAll("h2, h3");
-    if (headings.length === 0) {
-      contentsList.innerHTML = `<li class="wiki-toc-item active"><a href="#">1. Overview</a><div class="wiki-toc-dot"></div></li>`;
-      return;
+  // Display Hub View
+  function showHub() {
+    if (viewArticle) {
+      viewArticle.style.display = "none";
+      viewArticle.classList.remove("active");
     }
+    if (viewHub) viewHub.style.display = "flex";
 
-    let h2Count = 0;
-    let h3Count = 0;
+    if (chromeTabTitle) chromeTabTitle.textContent = "PraxisHub";
 
-    headings.forEach((h, idx) => {
-      let slug = h.id;
-      if (!slug) {
-        slug = "section-" + idx;
-        h.id = slug;
-      }
-
-      const li = document.createElement("li");
-      li.className = "wiki-toc-item";
-
-      let numberPrefix = "";
-      if (h.tagName.toLowerCase() === "h2") {
-        h2Count++;
-        h3Count = 0;
-        numberPrefix = `${h2Count}. `;
-        if (idx === 0) {
-          li.classList.add("active");
-        }
-      } else {
-        h3Count++;
-        numberPrefix = `${h2Count}.${h3Count} `;
-        li.classList.add("sub-item");
-      }
-
-      const cleanText = h.textContent.replace(/<[^>]*>?/gm, "").trim();
-      const a = document.createElement("a");
-      a.href = "#" + slug;
-      a.textContent = numberPrefix + cleanText;
-
-      a.addEventListener("click", (e) => {
-        e.preventDefault();
-        h.scrollIntoView({ behavior: "smooth", block: "start" });
-        document.querySelectorAll(".wiki-toc-item").forEach(item => {
-          item.classList.remove("active");
-          const dot = item.querySelector(".wiki-toc-dot");
-          if (dot) dot.remove();
-        });
-        li.classList.add("active");
-        if (!li.querySelector(".wiki-toc-dot")) {
-          const dot = document.createElement("div");
-          dot.className = "wiki-toc-dot";
-          li.appendChild(dot);
-        }
-      });
-
-      li.appendChild(a);
-
-      if (idx === 0 && !li.classList.contains("sub-item")) {
-        const dot = document.createElement("div");
-        dot.className = "wiki-toc-dot";
-        li.appendChild(dot);
-      }
-
-      contentsList.appendChild(li);
+    // Clear active links
+    document.querySelectorAll(".vault-note-link, .pinned-item").forEach(link => {
+      link.classList.remove("active");
     });
+
+    if (commandSearchDropdown) commandSearchDropdown.classList.add("hidden");
+
+    if (stageContent) stageContent.scrollTo({ top: 0, behavior: "smooth" });
+    refreshIcons();
   }
 
-  // Build Wikipedia Infobox / Knowledge Card (Right Column)
-  function buildInfobox(article) {
-    if (!infoboxRows) return;
-
-    // Infobox Header Visual
-    if (infoboxMediaBadge) {
-      const letters = (article.title.replace(/[^a-zA-Z]/g, "").slice(0, 2) || "PX").toUpperCase();
-      infoboxMediaBadge.textContent = letters;
-    }
-    if (infoboxMediaTitle) {
-      infoboxMediaTitle.textContent = article.title;
-    }
-    if (infoboxMediaSubtitle) {
-      infoboxMediaSubtitle.textContent = `${article.pillar || "Knowledge"} Pillar \u2022 Praxis Framework`;
-    }
-
-    // Determine Tags & Discipline Pills
-    const defaultPills = ["DataOps", "FinOps", "Lakehouse", "P3M"];
-    const tagPills = (article.type ? [article.type] : []).concat(defaultPills);
-
-    // Metadata Rows matching screenshot structure
-    const rows = [
-      { label: "Framework", value: "Praxis Framework" },
-      { label: "Pillar", value: `<a href="#/article/1.%20Knowledge" class="wiki-infobox-related-link">${article.pillar || "Knowledge & Method"}</a>` },
-      { label: "Section", value: article.section || "General" },
-      { label: "Lifecycle", value: "Agile Medallion Sprints" },
-      { label: "Discipline", value: "Data & BI Engineering" },
-      {
-        label: "Tags",
-        value: tagPills.map(tag => `<span class="wiki-pill-badge">${tag}</span>`).join("")
-      },
-      { label: "Maintainer", value: '<a href="https://github.com/Balasubramanian-pg" target="_blank" class="wiki-infobox-related-link">Balasubramanian PG</a>' },
-      { label: "License", value: "CC BY-SA 4.0" },
-      { label: "Status", value: "Production Reference" }
-    ];
-
-    infoboxRows.innerHTML = rows.map(r => `
-      <tr class="wiki-infobox-row">
-        <td class="wiki-infobox-label">${r.label}</td>
-        <td class="wiki-infobox-value">${r.value}</td>
-      </tr>
-    `).join("");
-
-    // Populate Related Notes in Infobox
-    if (infoboxRelatedList) {
-      infoboxRelatedList.innerHTML = "";
-      const related = [];
-      for (const [id, art] of Object.entries(articles)) {
-        if (id !== art.id) continue;
-        if (art.id === article.id) continue;
-        if (art.folder === article.folder && !art.id.endsWith("00 - Overview")) {
-          related.push(art);
-        }
-      }
-
-      const candidates = related.slice(0, 4);
-      if (candidates.length > 0) {
-        infoboxRelatedList.innerHTML = candidates.map(c => `
-          <a href="#/article/${encodeURIComponent(c.id)}" class="wiki-infobox-related-link">
-            &bull; ${c.title}
-          </a>
-        `).join("");
-      } else {
-        infoboxRelatedList.innerHTML = `
-          <a href="#/article/00%20-%20Praxis%20Framework%20Overview" class="wiki-infobox-related-link">&bull; Master Framework MOC</a>
-          <a href="#/article/1.%20Knowledge" class="wiki-infobox-related-link">&bull; Knowledge & FinOps Guide</a>
-        `;
-      }
+  // Routing Dispatcher
+  function route() {
+    const hash = window.location.hash || "#/hub";
+    if (hash === "#/hub" || hash === "#/" || hash === "#/home" || hash === "") {
+      showHub();
+    } else if (hash.startsWith("#/article/")) {
+      const id = hash.replace("#/article/", "");
+      showArticle(id);
+    } else {
+      showArticle(hash.replace(/^#\/?/, ""));
     }
   }
 
-  // Live Search Input Handler
-  searchInput.addEventListener("input", function() {
-    const q = this.value.trim().toLowerCase();
+  // Live Instant Search Engine
+  function triggerSearch(query, dropdownEl) {
+    if (!dropdownEl) return;
+    const q = (query || "").trim().toLowerCase();
     if (!q) {
-      searchResults.style.display = "none";
+      dropdownEl.classList.add("hidden");
+      dropdownEl.innerHTML = "";
       return;
     }
 
@@ -473,9 +419,9 @@
 
       if (titleMatch || summaryMatch || bodyMatch) {
         let score = 0;
-        if (titleMatch) score += 15;
-        if (summaryMatch) score += 6;
-        if (bodyMatch) score += 1;
+        if (titleMatch) score += 20;
+        if (summaryMatch) score += 8;
+        if (bodyMatch) score += 2;
         matches.push({ article: art, score: score });
       }
     }
@@ -483,38 +429,72 @@
     matches.sort((a, b) => b.score - a.score);
 
     if (matches.length === 0) {
-      searchResults.innerHTML = '<div style="padding: 14px; color: var(--text-muted); font-size: 13px;">No encyclopedic entries found.</div>';
-      searchResults.style.display = "block";
+      dropdownEl.innerHTML = '<div style="padding: 12px 14px; font-size: 12px; color: var(--text-muted);">No matching framework notes found.</div>';
+      dropdownEl.classList.remove("hidden");
       return;
     }
 
-    searchResults.innerHTML = matches.slice(0, 8).map(m => `
-      <div class="wiki-search-item" onclick="window.location.hash='#/article/${encodeURIComponent(m.article.id)}'; document.getElementById('searchResults').style.display='none'; document.getElementById('searchInput').value='';">
-        <div class="wiki-search-item-title">${m.article.title}</div>
-        <div class="wiki-search-item-desc">${m.article.section} &bull; ${m.article.type} &bull; ${(m.article.summary || "").slice(0, 75)}...</div>
+    dropdownEl.innerHTML = matches.slice(0, 7).map(m => `
+      <div class="search-result-item" onclick="window.navigateToArticle('${encodeURIComponent(m.article.id)}'); document.getElementById('commandSearchDropdown').classList.add('hidden'); document.getElementById('commandInput').value='';">
+        <div class="search-result-title">${m.article.title}</div>
+        <div class="search-result-meta">${m.article.pillar || 'Knowledge'} &bull; ${m.article.section || 'General'}</div>
       </div>
     `).join("");
-    searchResults.style.display = "block";
-  });
 
-  // Close search on click outside
-  document.addEventListener("click", function(e) {
-    if (!e.target.closest(".wiki-search-box")) {
-      searchResults.style.display = "none";
-    }
-  });
+    dropdownEl.classList.remove("hidden");
+  }
 
-  // Shortcut key (/) or (Ctrl+K)
+  // Search Input Event Listeners
+  if (commandInput) {
+    commandInput.addEventListener("input", function() {
+      triggerSearch(this.value, commandSearchDropdown);
+    });
+
+    commandInput.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        window.handleCommandSubmit();
+      } else if (e.key === "Escape") {
+        if (commandSearchDropdown) commandSearchDropdown.classList.add("hidden");
+      }
+    });
+  }
+
+  if (sidebarSearchInput) {
+    sidebarSearchInput.addEventListener("input", function() {
+      triggerSearch(this.value, commandSearchDropdown);
+    });
+
+    sidebarSearchInput.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        if (commandSearchDropdown) commandSearchDropdown.classList.add("hidden");
+      }
+    });
+  }
+
+  // Global Keyboard Shortcuts (⌘K, Ctrl+K, /)
   document.addEventListener("keydown", function(e) {
-    if ((e.key === "/" || (e.ctrlKey && e.key === "k") || (e.metaKey && e.key === "k")) && document.activeElement !== searchInput) {
+    if ((e.key === "/" || (e.ctrlKey && e.key === "k") || (e.metaKey && e.key === "k")) && document.activeElement !== commandInput && document.activeElement !== sidebarSearchInput) {
       e.preventDefault();
-      searchInput.focus();
+      if (viewHub && viewHub.style.display !== "none" && commandInput) {
+        commandInput.focus();
+      } else if (sidebarSearchInput) {
+        sidebarSearchInput.focus();
+      }
     } else if (e.key === "Escape") {
-      searchResults.style.display = "none";
+      if (commandSearchDropdown) commandSearchDropdown.classList.add("hidden");
     }
   });
 
-  // Initialize
+  // Close search dropdown on click outside
+  document.addEventListener("click", function(e) {
+    if (!e.target.closest(".command-card-wrapper") && !e.target.closest(".sidebar-search-box")) {
+      if (commandSearchDropdown) commandSearchDropdown.classList.add("hidden");
+    }
+  });
+
+  // App Initialization
+  renderPinnedTopics();
   renderVaultTree();
   window.addEventListener("hashchange", route);
   route();
