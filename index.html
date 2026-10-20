@@ -4,252 +4,221 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Praxis Framework - Modern Data & BI P3M Workspace</title>
+  
+  <!-- Modern Avenir Next Cyr Stylesheet -->
   <link rel="stylesheet" href="site/css/style.css">
+
+  <!-- KaTeX Mathematical Formula Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
 
-  <div class="window-viewport">
-    <div class="app-window">
+  <!-- Full-Width Responsive App Layout (Edge-to-Edge) -->
+  <div class="app-layout">
+    
+    <!-- Left Navigation Sidebar (260px) -->
+    <aside class="app-sidebar" id="appSidebar">
       
-      <!-- Window Top Chrome Bar (Tabs + Controls) -->
-      <div class="window-chrome">
-        <div class="window-tabs">
-          <button class="tab-btn-add" title="New Session" onclick="window.navigateToHub()">
-            <i data-lucide="plus"></i>
-          </button>
-          <div class="window-tab active" id="chromeTab" onclick="window.navigateToHub()">
-            <span class="tab-dot" style="background: #3b82f6;"></span>
-            <span id="chromeTabTitle">PraxisHub</span>
-            <i data-lucide="x" class="tab-close-icon"></i>
+      <div class="sidebar-header">
+        <div class="sidebar-brand" onclick="window.navigateToHub()">
+          <div class="brand-icon">
+            <i data-lucide="layers"></i>
           </div>
-          <div class="window-tab" onclick="window.navigateToArticle('Manage The Configuration')">
-            <span class="tab-dot" style="background: #10b981;"></span>
-            <span>GitOps Gates</span>
-          </div>
-          <div class="window-tab" onclick="window.navigateToArticle('Manage Contracts')">
-            <span class="tab-dot" style="background: #f59e0b;"></span>
-            <span>Data Contracts</span>
-          </div>
-          <div class="window-tab" onclick="window.navigateToArticle('Develop Investment Appraisal')">
-            <span class="tab-dot" style="background: #8b5cf6;"></span>
-            <span>Cloud FinOps</span>
-          </div>
+          <span class="brand-name">Praxis</span>
         </div>
+        <button class="win-btn" title="Toggle Sidebar" onclick="window.toggleSidebar()">
+          <i data-lucide="panel-left-close"></i>
+        </button>
+      </div>
 
-        <div class="window-actions">
-          <button class="win-btn" title="Minimize"><i data-lucide="minus"></i></button>
-          <button class="win-btn" title="Expand"><i data-lucide="maximize-2"></i></button>
-          <button class="win-btn" title="Close"><i data-lucide="x"></i></button>
+      <div class="sidebar-search-box">
+        <div class="search-input-pill">
+          <i data-lucide="search" style="width: 14px; height: 14px; color: var(--text-light);"></i>
+          <input type="text" id="sidebarSearchInput" placeholder="Search framework..." autocomplete="off">
+          <span class="search-kbd">&#8984;K</span>
         </div>
       </div>
 
-      <!-- App Window Body (Sidebar + Main Stage) -->
-      <div class="window-body">
+      <nav class="sidebar-nav">
+        <a class="nav-link active" id="navHub" onclick="window.navigateToHub()">
+          <i data-lucide="home"></i>
+          <span>Home</span>
+        </a>
+        <a class="nav-link" id="navExplore" onclick="window.navigateToArticle('00 - Praxis Framework Overview')">
+          <i data-lucide="compass"></i>
+          <span>Explore</span>
+        </a>
+        <a class="nav-link" id="navLibrary" onclick="window.navigateToArticle('Praxis for Data and BI')">
+          <i data-lucide="library"></i>
+          <span>Library</span>
+        </a>
+        <a class="nav-link" id="navHistory" onclick="window.navigateToHub()">
+          <i data-lucide="history"></i>
+          <span>History</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-scrollable">
+        <div class="sidebar-section-title">PINNED TOPICS</div>
+        <div class="pinned-list" id="pinnedList">
+          <!-- Dynamically populated pinned list -->
+        </div>
+
+        <div class="sidebar-section-title" style="margin-top: 14px;">FRAMEWORK REPOSITORY</div>
+        <div class="vault-tree" id="vaultTree">
+          <!-- Dynamically populated collapsible vault navigation -->
+        </div>
+      </div>
+
+      <!-- Bottom User Profile Card -->
+      <div class="sidebar-user">
+        <div class="user-avatar">BP</div>
+        <div class="user-details">
+          <span class="user-name">Balasubramanian PG</span>
+          <span class="user-role">Lead Architect</span>
+        </div>
+        <button class="user-menu-btn" title="Maintainer GitHub" onclick="window.open('https://github.com/Balasubramanian-pg/Praxis-Framework', '_blank')">
+          <i data-lucide="more-horizontal" style="width: 16px; height: 16px;"></i>
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- Main Stage (Right Canvas, Full Width) -->
+    <main class="main-stage">
+      
+      <!-- Stage Top Header Bar -->
+      <div class="stage-header">
+        <button class="model-pill" title="Framework Model Engine" onclick="window.navigateToHub()">
+          <i data-lucide="sparkles" class="spark-icon"></i>
+          <span>iPraxis 4.0</span>
+          <i data-lucide="chevron-down" style="width: 14px; height: 14px; color: var(--text-muted);"></i>
+        </button>
+
+        <div class="stage-actions">
+          <button class="btn-new-chat" onclick="window.navigateToHub()">
+            <i data-lucide="plus"></i>
+            <span>New Query</span>
+          </button>
+          <div class="user-badge-mini" title="Balasubramanian PG">BP</div>
+        </div>
+      </div>
+
+      <!-- Stage Views Container -->
+      <div class="stage-content" id="stageContent">
         
-        <!-- Left Sidebar (260px) -->
-        <aside class="app-sidebar" id="appSidebar">
+        <!-- VIEW A: Assistant & Hub Hero View -->
+        <div class="view-hub" id="viewHub">
           
-          <div class="sidebar-header">
-            <div class="sidebar-brand" onclick="window.navigateToHub()">
-              <div class="brand-icon">
-                <i data-lucide="layers"></i>
+          <!-- 3D Iridescent Glowing Orb -->
+          <div class="ai-orb-container">
+            <div class="ai-orb"></div>
+          </div>
+
+          <!-- Hero Greeting -->
+          <div class="hero-greeting">
+            <div class="hero-subtitle">How Can I Assist</div>
+            <div class="hero-title">Your <span class="hero-accent-text">Data Project</span> Today?</div>
+          </div>
+
+          <!-- Floating Frosted Command Card -->
+          <div class="command-card-wrapper">
+            <div class="command-card">
+              <div class="command-input-row">
+                <i data-lucide="sparkles" class="command-spark"></i>
+                <input type="text" id="commandInput" placeholder="Ask about Data Contracts, Medallion Architecture, FinOps, P3M..." autocomplete="off">
               </div>
-              <span class="brand-name">Praxis</span>
-            </div>
-            <button class="win-btn" title="Toggle Sidebar" onclick="window.toggleSidebar()">
-              <i data-lucide="panel-left-close"></i>
-            </button>
-          </div>
-
-          <div class="sidebar-search-box">
-            <div class="search-input-pill">
-              <i data-lucide="search" style="width: 14px; height: 14px; color: var(--text-light);"></i>
-              <input type="text" id="sidebarSearchInput" placeholder="Search..." autocomplete="off">
-              <span class="search-kbd">&#8984;K</span>
-            </div>
-          </div>
-
-          <nav class="sidebar-nav">
-            <a class="nav-link active" id="navHub" onclick="window.navigateToHub()">
-              <i data-lucide="home"></i>
-              <span>Home</span>
-            </a>
-            <a class="nav-link" id="navExplore" onclick="window.navigateToArticle('00 - Praxis Framework Overview')">
-              <i data-lucide="compass"></i>
-              <span>Explore</span>
-            </a>
-            <a class="nav-link" id="navLibrary" onclick="window.navigateToArticle('Praxis for Data and BI')">
-              <i data-lucide="library"></i>
-              <span>Library</span>
-            </a>
-            <a class="nav-link" id="navHistory" onclick="window.navigateToHub()">
-              <i data-lucide="history"></i>
-              <span>History</span>
-            </a>
-          </nav>
-
-          <div class="sidebar-scrollable">
-            <div class="sidebar-section-title">PINNED TOPICS</div>
-            <div class="pinned-list" id="pinnedList">
-              <!-- Dynamically populated pinned list -->
-            </div>
-
-            <div class="sidebar-section-title" style="margin-top: 14px;">FRAMEWORK REPOSITORY</div>
-            <div class="vault-tree" id="vaultTree">
-              <!-- Dynamically populated collapsible vault navigation -->
-            </div>
-          </div>
-
-          <!-- Bottom User Profile Card -->
-          <div class="sidebar-user">
-            <div class="user-avatar">BP</div>
-            <div class="user-details">
-              <span class="user-name">Balasubramanian PG</span>
-              <span class="user-role">Lead Architect</span>
-            </div>
-            <button class="user-menu-btn" title="Maintainer GitHub" onclick="window.open('https://github.com/Balasubramanian-pg/Praxis-Framework', '_blank')">
-              <i data-lucide="more-horizontal" style="width: 16px; height: 16px;"></i>
-            </button>
-          </div>
-
-        </aside>
-
-        <!-- Main Stage (Right Canvas) -->
-        <main class="main-stage">
-          
-          <!-- Stage Top Header Bar -->
-          <div class="stage-header">
-            <button class="model-pill" title="Framework Model Engine">
-              <i data-lucide="sparkles" class="spark-icon"></i>
-              <span>iPraxis 4.0</span>
-              <i data-lucide="chevron-down" style="width: 14px; height: 14px; color: var(--text-muted);"></i>
-            </button>
-
-            <div class="stage-actions">
-              <button class="btn-new-chat" onclick="window.navigateToHub()">
-                <i data-lucide="plus"></i>
-                <span>New Query</span>
-              </button>
-              <div class="user-badge-mini" title="Balasubramanian PG">BP</div>
-            </div>
-          </div>
-
-          <!-- Stage Views Container -->
-          <div class="stage-content" id="stageContent">
-            
-            <!-- VIEW A: Assistant & Hub Hero View (Matches Reference Image) -->
-            <div class="view-hub" id="viewHub">
-              
-              <!-- 3D Iridescent Glowing Orb -->
-              <div class="ai-orb-container">
-                <div class="ai-orb"></div>
-              </div>
-
-              <!-- Hero Greeting -->
-              <div class="hero-greeting">
-                <div class="hero-subtitle">How Can I Assist</div>
-                <div class="hero-title">Your <span class="hero-accent-text">Data Project</span> Today?</div>
-              </div>
-
-              <!-- Floating Frosted Command Card -->
-              <div class="command-card-wrapper">
-                <div class="command-card">
-                  <div class="command-input-row">
-                    <i data-lucide="sparkles" class="command-spark"></i>
-                    <input type="text" id="commandInput" placeholder="Ask about Data Contracts, Medallion Architecture, FinOps, P3M..." autocomplete="off">
-                  </div>
-                  <div class="command-footer">
-                    <div class="command-tools">
-                      <button class="tool-pill" onclick="window.quickSearch('Reasoning')">
-                        <i data-lucide="cpu" style="width: 12px; height: 12px;"></i>
-                        <span>Reasoning</span>
-                      </button>
-                      <button class="tool-pill" onclick="window.quickSearch('Medallion')">
-                        <i data-lucide="database" style="width: 12px; height: 12px;"></i>
-                        <span>Medallion</span>
-                      </button>
-                      <button class="tool-pill" onclick="window.quickSearch('FinOps')">
-                        <i data-lucide="dollar-sign" style="width: 12px; height: 12px;"></i>
-                        <span>FinOps</span>
-                      </button>
-                      <button class="tool-pill" onclick="window.quickSearch('Contracts')">
-                        <i data-lucide="file-check" style="width: 12px; height: 12px;"></i>
-                        <span>Contracts</span>
-                      </button>
-                    </div>
-                    <button class="command-send-btn" id="commandSendBtn" onclick="window.handleCommandSubmit()" title="Search or Query">
-                      <i data-lucide="arrow-up" style="width: 16px; height: 16px;"></i>
-                    </button>
-                  </div>
+              <div class="command-footer">
+                <div class="command-tools">
+                  <button class="tool-pill" onclick="window.quickSearch('Reasoning')">
+                    <i data-lucide="cpu" style="width: 12px; height: 12px;"></i>
+                    <span>Reasoning</span>
+                  </button>
+                  <button class="tool-pill" onclick="window.quickSearch('Medallion')">
+                    <i data-lucide="database" style="width: 12px; height: 12px;"></i>
+                    <span>Medallion</span>
+                  </button>
+                  <button class="tool-pill" onclick="window.quickSearch('FinOps')">
+                    <i data-lucide="dollar-sign" style="width: 12px; height: 12px;"></i>
+                    <span>FinOps</span>
+                  </button>
+                  <button class="tool-pill" onclick="window.quickSearch('Contracts')">
+                    <i data-lucide="file-check" style="width: 12px; height: 12px;"></i>
+                    <span>Contracts</span>
+                  </button>
                 </div>
-
-                <!-- Instant Search Dropdown -->
-                <div class="search-dropdown hidden" id="commandSearchDropdown"></div>
-              </div>
-
-              <!-- Strategic Topic Recommendation Cards Grid -->
-              <div class="recommendations-grid" id="recommendationsGrid">
-                <a href="#/article/Develop%20Investment%20Appraisal" class="rec-card">
-                  <span class="rec-card-tag">FinOps & TCO</span>
-                  <div class="rec-card-title">Develop Investment Appraisal</div>
-                  <div class="rec-card-desc">3-5 Year Cloud TCO modeling, NPV/IRR formulas, and sensitivity stress-testing against storage growth.</div>
-                </a>
-                <a href="#/article/Deliver%20A%20Project%20Or%20Programme" class="rec-card">
-                  <span class="rec-card-tag">DataOps Lifecycle</span>
-                  <div class="rec-card-title">Deliver A Project Or Programme</div>
-                  <div class="rec-card-desc">Agile Medallion sprint cadence, circuit-breaker quality gates, and automated deployment handovers.</div>
-                </a>
-                <a href="#/article/Manage%20The%20Configuration" class="rec-card">
-                  <span class="rec-card-tag">Configuration & CI</span>
-                  <div class="rec-card-title">Manage The Configuration</div>
-                  <div class="rec-card-desc">GitOps-driven schemas, dbt Slim CI PR validation gates, and TMDL text-based semantic model tracking.</div>
-                </a>
-                <a href="#/article/Manage%20Contracts" class="rec-card">
-                  <span class="rec-card-tag">Procurement & Governance</span>
-                  <div class="rec-card-title">Manage Contracts</div>
-                  <div class="rec-card-desc">Cloud provider commit utilization, SaaS connector MAR caps, and automated Definition of Done gates.</div>
-                </a>
-              </div>
-
-            </div>
-
-            <!-- VIEW B: Article Reading View (Inside Clean SaaS Canvas) -->
-            <article class="view-article" id="viewArticle">
-              
-              <div class="article-top-bar">
-                <div class="breadcrumb-pill" id="articleBreadcrumb">
-                  <i data-lucide="folder" style="width: 13px; height: 13px;"></i>
-                  <span id="breadcrumbCategory">Management Areas</span>
-                  <span>/</span>
-                  <span id="breadcrumbFile">Manage Change</span>
-                </div>
-                <button class="btn-back-hub" onclick="window.navigateToHub()">
-                  <i data-lucide="arrow-left"></i>
-                  <span>Back to Hub</span>
+                <button class="command-send-btn" id="commandSendBtn" onclick="window.handleCommandSubmit()" title="Search or Query">
+                  <i data-lucide="arrow-up" style="width: 16px; height: 16px;"></i>
                 </button>
               </div>
+            </div>
 
-              <header class="article-header">
-                <h1 class="article-title-text" id="articleTitle">Article Title</h1>
-                <div class="article-badges" id="articleBadges">
-                  <span class="article-badge badge-pillar" id="badgePillar">Pillar: Methods</span>
-                  <span class="article-badge badge-data" id="badgeSpecialization">Data & Analytics</span>
-                </div>
-              </header>
-
-              <div class="article-body" id="articleBody">
-                <!-- Rendered Markdown goes here -->
-              </div>
-
-            </article>
-
+            <!-- Instant Search Dropdown -->
+            <div class="search-dropdown hidden" id="commandSearchDropdown"></div>
           </div>
 
-        </main>
+          <!-- Strategic Topic Recommendation Cards Grid -->
+          <div class="recommendations-grid" id="recommendationsGrid">
+            <a href="#/article/Develop%20Investment%20Appraisal" class="rec-card">
+              <span class="rec-card-tag">FinOps & TCO</span>
+              <div class="rec-card-title">Develop Investment Appraisal</div>
+              <div class="rec-card-desc">3-5 Year Cloud TCO modeling, NPV/IRR formulas, and sensitivity stress-testing against storage growth.</div>
+            </a>
+            <a href="#/article/Deliver%20A%20Project%20Or%20Programme" class="rec-card">
+              <span class="rec-card-tag">DataOps Lifecycle</span>
+              <div class="rec-card-title">Deliver A Project Or Programme</div>
+              <div class="rec-card-desc">Agile Medallion sprint cadence, circuit-breaker quality gates, and automated deployment handovers.</div>
+            </a>
+            <a href="#/article/Manage%20The%20Configuration" class="rec-card">
+              <span class="rec-card-tag">Configuration & CI</span>
+              <div class="rec-card-title">Manage The Configuration</div>
+              <div class="rec-card-desc">GitOps-driven schemas, dbt Slim CI PR validation gates, and TMDL text-based semantic model tracking.</div>
+            </a>
+            <a href="#/article/Manage%20Contracts" class="rec-card">
+              <span class="rec-card-tag">Procurement & Governance</span>
+              <div class="rec-card-title">Manage Contracts</div>
+              <div class="rec-card-desc">Cloud provider commit utilization, SaaS connector MAR caps, and automated Definition of Done gates.</div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- VIEW B: Article Reading View (Full-Width Responsive Canvas) -->
+        <article class="view-article" id="viewArticle">
+          
+          <div class="article-top-bar">
+            <div class="breadcrumb-pill" id="articleBreadcrumb">
+              <i data-lucide="folder" style="width: 13px; height: 13px;"></i>
+              <span id="breadcrumbCategory">Management Areas</span>
+              <span>/</span>
+              <span id="breadcrumbFile">Manage Change</span>
+            </div>
+            <button class="btn-back-hub" onclick="window.navigateToHub()">
+              <i data-lucide="arrow-left"></i>
+              <span>Back to Hub</span>
+            </button>
+          </div>
+
+          <header class="article-header">
+            <h1 class="article-title-text" id="articleTitle">Article Title</h1>
+            <div class="article-badges" id="articleBadges">
+              <span class="article-badge badge-pillar" id="badgePillar">Pillar: Methods</span>
+              <span class="article-badge badge-data" id="badgeSpecialization">Data & Analytics</span>
+            </div>
+          </header>
+
+          <div class="article-body" id="articleBody">
+            <!-- Rendered Markdown goes here -->
+          </div>
+
+        </article>
 
       </div>
 
-    </div>
+    </main>
+
   </div>
 
   <!-- Vendor Libraries: Marked.js, Lucide Icons, Mermaid.js -->
@@ -270,9 +239,7 @@
   <script src="site/vendor/mermaid.min.js"></script>
   <script>
     if (typeof mermaid === 'undefined') {
-      document.write('<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"><\/script>');
-    } else {
-      mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
+      document.write('<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"><\/script>');
     }
   </script>
 
